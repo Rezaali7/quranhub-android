@@ -1,2 +1,2 @@
 # QuranHub
-QuranHub Android mobile app.
+QuranHub Android mobile app (work in progress).
