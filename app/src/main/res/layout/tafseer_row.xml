@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_color"
+    android:layoutDirection="rtl"
+    android:id="@+id/parent_layout"
+    >
+
+    <TextView
+        android:id="@+id/aya_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:ellipsize="end"
+        android:layoutDirection="rtl"
+        android:maxLines="1"
+        android:textColor="@color/primary"
+        android:textSize="@dimen/text_size_12"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="بسم الله الرحمن الرحيم الحمد لله رب العالمين الرحمن الرحيم" />
+
+
+    <TextView
+        android:id="@+id/more_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/more"
+        android:textColor="@color/accent"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintBottom_toBottomOf="@id/tafseer_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tafseer_tv"
+        android:paddingEnd="@dimen/_4sdp"
+        android:paddingStart="@dimen/_4sdp"
+        android:textStyle="bold"
+        />
+
+
+
+    <at.blogc.android.views.ExpandableTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tafseer_tv"
+        app:layout_constraintTop_toBottomOf="@id/aya_tv"
+        app:layout_constraintEnd_toStartOf="@id/more_tv"
+        android:layout_marginLeft="8dp"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_8sdp"
+        tools:text="تفسير الايه تفسير الايهتفسير الايهتفسير الايهتفسير الايهتفسير الايهتفسير الايهتفسير الايهتفسير الايهتفسير الايهتفسير الايهf"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:maxLines="4"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:ellipsize="end"
+        app:animation_duration="400"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/numlines_tv"
+        app:layout_constraintStart_toStartOf="@id/tafseer_tv"
+        app:layout_constraintEnd_toEndOf="@id/tafseer_tv"
+        app:layout_constraintTop_toTopOf="@id/tafseer_tv"
+        app:layout_constraintBottom_toBottomOf="@id/tafseer_tv"
+        android:textSize="@dimen/text_size_16"
+        android:visibility="invisible"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dark_gray"
+        app:layout_constraintTop_toBottomOf="@id/tafseer_tv"
+        android:layout_marginTop="@dimen/_12sdp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

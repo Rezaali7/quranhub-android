@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Indonesia
+    -->
+
+    <string name="app_name">Mushaf</string>
+    <string name="fehris_menu">Halaman surat dan juz</string>
+    <string name="topics_menu">Tema</string>
+    <string name="library_menu">Perpustakaan</string>
+    <string name="live_menu">Langsung</string>
+    <string name="plan_menu">Rencana</string>
+    <string name="fwasil_menu">Jeda</string>
+    <string name="favorite_menu">Terperinci</string>
+    <string name="notes_menu">Catatanku</string>
+    <string name="tagweed_menu">Tajwid</string>
+    <string name="tanbehat_menu">Catatan kesalahan</string>
+    <string name="statistcs_menu">Perhitungan</string>
+    <string name="settings_menu">Persiapan</string>
+    <string name="downloads_menu">Pengaturan unduh</string>
+    <string name="myaccount_menu">Rekeningku, tanggunganku</string>
+    <string name="notes_dialog">Perhatian</string>
+    <string name="tafseer_dialog">Tafsir</string>
+    <string name="listen_dialog">Mendengarkan</string>
+    <string name="add_fav">Tambahkan</string>
+    <string name="fasil_dialog">Jeda</string>
+    <string name="share_dialog">Ikut serta</string>
+    <string name="load_image_failed">Terjadi kesalahan dalam unduh gambar</string>
+    <string name="page_info_failed">Terjadi kesalahan dalam membuka keterangan halaman al-Qur\'an</string>
+    <string name="select_aya_fail">Terjadi kesalahan dalam memilih ayat</string>
+    <string name="fasil_note">penyimakan</string>
+    <string name="fasil_read">bacaan</string>
+    <string name="insert_bookmark_failed">Gagal dalam menambah batas ayat</string>
+    <string name="success_insert_bookmark">Berhasil dalam menghafal batas ayat</string>
+    <string name="bookmark_removed">Berhasil menghilangkan batas</string>
+    <string name="bookmark_failed_removed">Terjadi kegagalan dalam menghapus batas, silahkan mencoba lain waktu.</string>
+    <string name="search">Cari</string>
+    <string name="guz2_index">Halaman juz</string>
+    <string name="sura_index">Daftar surat</string>
+    <string name="page_num">Halaman %s</string>
+    <string name="ayas_num">%s ayat</string>
+    <string name="aya_rob3">Rubu\' %s</string>
+    <string name="aya_hezb">Hizib %s</string>
+    <string name="aya_goz2">Juz %s</string>
+    <string name="aya_num">%s Ayat</string>
+
+    <string name="sura_index_failed">Terjadi kesalahan dalam memilih halaman surat</string>
+    <string name="aya">Ayat</string>
+    <string name="chapter">Juz</string>
+    <string name="sura">Surat</string>
+    <string name="hizb">Hizib</string>
+    <string name="rub3">Rubu\'</string>
+    <string name="page">Halaman</string>
+    <string name="bookmark_filter_header">Menampilkan sesuai warna batas</string>
+    <string name="all_bookmark">Semua batas</string>
+    <string name="back">Kembali</string>
+    <string name="show">Menampilkan sesuai warna batas</string>
+    <string name="msg_no_bookmarks">Tidak ada batas yang tersedia</string>
+    <string name="no_internet">Pastikan tersambung dengan internet</string>
+    <string name="mushaf">Halaman</string>
+    <string name="no_space">No available space to downloaded this file</string>
+
+    <string name="download_file">proses pengunduhan</string>
+    <string name="tooltip_quran_night_mode">aktivkan//non aktivkan modus malam</string>
+    <string name="tooltip_quran_search">pencarian dalam Al Qur\'an</string>
+    <string name="trajim_menu">terjemahan</string>
+    <string name="sura_makya">makkiyah</string>
+    <string name="sura_madnya">madaniyah</string>
+    <string name="storage_perm"> Aplikasi ini membutuhkan  memori khusus untuk membuka file </string>
+    <string name="accept_perm">silahkan sepakati untuk setuju</string>
+    <string name="file_not_exist">file tidak ditemukan</string>
+    <string name="download_page_failed">tidak berhasil untuk mendapatkan hasil unduhan anda</string>
+    <string name="no_downloads">tidak ada hasil unduhan yang perlu dirubah</string>
+    <string name="title_activity_settings">pengaturan</string>
+    <string name="settings_category_language">bahasa</string>
+    <string name="settings_category_recitation">pengaturan baca</string>
+    <string name="settings_category_sound">pengaturan suara</string>
+    <string name="settings_category_aboutapp"> tentang aplikasi</string>
+    <string name="setting_quran_recitation">periwayatan Al Qur\'an</string>
+    <string name="setting_app_lang">bahasa sesuai dengan pengguna</string>
+    <string name="setting_screen_reading_backlight">nyalakan layar ketika membaca</string>
+    <string name="setting_last_read_page">simpan secara otomatis terakhir membaca</string>
+    <string name="setting_reading_warnings">peringatan membaca</string>
+    <string name="setting_reading_alarm">waktu pengingat</string>
+    <string name="setting_quran_reader">suara qari\' secara otomatis</string>
+    <string name="setting_audio_download_manager">pengaturan pengunduhan suara</string>
+    <string name="setting_help">bantuan</string>
+    <string name="setting_about_app_version">tentang nuskhah aplikasi</string>
+    <string name="setting_contact_us">hubungi kami</string>
+    <string name="setting_share_app"> bergabung dengan aplikasi</string>
+    <string name="data_failed">gagal dalam pengambilan keterangan</string>
+    <string name="open_file">membuka file pada</string>
+    <string name="in_this_app">dalam program</string>
+    <string name="out_this_app"> program luar</string>
+    <string name="hafs_recitation"> hafs dari ashim</string>
+    <string name="warsh_recitation">warsy dari nafi</string>
+    <string name="app_lang_setting_dialog_title">pilih bahasa program</string>
+    <string name="recitation_setting_dialog_title">pilih riwayat Al Qur\'an</string>
+    <string name="title_activity_first_time_wizard">pengaturan awal</string>
+    <string name="first_wizard_title_app_language_step">pilih bahasa pengguna</string>
+    <string name="first_wizard_title_recitations_step">pilih riwayat Al Qur\'an</string>
+    <string name="first_wizard_hint_recitations">Anda bisa merubah periwayatan memalui pengaturan</string>
+    <string name="next">selanjutnya</string>
+    <string name="finish">selesai</string>
+    <string name="suras">Surat</string>
+    <string name="chapters">Juz</string>
+    <string name="all_hezb">Semua Hizib</string>
+    <string name="all_quarters">Semua Rubu\'</string>
+    <string name="about_app_menu">Tentang Aplikasi</string>
+    <string name="technical_support_menu">Dukungan Teknis</string>
+    <string name="first_wizard_title_translation_languages_step">Pilih bahasa terjemahan Quran</string>
+    <string name="first_wizard_hint_app_langauge">Anda dapat mengubah bahasa aplikasi nanti dari pengaturan.</string>
+    <string name="first_wizard_hint_translation_languages">Anda dapat mengubah bahasa terjemahan nanti dari pengaturan.</string>
+    <string name="tafseer_text">Terjemahan</string>
+    <string name="trajim_book_name">Pilih nama buku</string>
+    <string name="more">Lebih banyak</string>
+    <string name="collapse">Jatuh</string>
+    <string name="translation_text">Terjemahan</string>
+    <string name="translations_dialog_title">Pilih buku terjemahan/tafsir</string>
+    <string name="error_translations_web_service">Gagal mendapatkan terjemahan yang tersedia untuk diunduh!</string>
+    <string name="translation_dowload_permission_rationale">Aplikasi ini memerlukan izin untuk mengunduh berkas terjemahan.</string>
+    <string name="error_download_translation">Unduhan gagal!</string>
+    <string name="setting_quran_translation_lang">Bahasa terjemahan Quran</string>
+    <string name="translation_lang_setting_dialog_title">Pilih bahasa terjemahan Quran</string>
+    <string name="translation_muyassar">Al-Muyassar</string>
+    <string name="no_downloaded_books">Unduhlah buku untuk mendapatkan terjemahan</string>
+    <string name="choose_book">Pilih buku</string>
+    <string name="no_search_result">Tidak ada hasil pencarian!</string>
+    <string name="search_failed">Gagal mendapatkan hasil pencarian!</string>
+    <string name="all_sura">Semua surah</string>
+    <string name="all_guz2">Semua juz \'s</string>
+    <string name="select_hezb_first">Anda harus memilih hizb dahulu</string>
+    <string name="share_using">Sebar menggunakan</string>
+    <string name="select_juz_first">Pilih juz \' pertama</string>
+    <string name="title_options_dialog_filter_guz2_index">Pilih filter</string>
+    
+
+    <string-array name="agza2_name">
+        <item>Juz pertama</item>
+        <item>Juz kedua</item>
+        <item>Juz ketiga</item>
+        <item>Juz keempat</item>
+        <item> Juz kelima</item>
+        <item> Juz keenam</item>
+        <item> Juz ketujuh</item>
+        <item>Juz kedelapan</item>
+        <item> Juz kesembilan</item>
+        <item> Juz kesepuluh</item>
+        <item>Juz kesebelas</item>
+        <item>Juz kedua belas</item>
+        <item>Juz ketiga belas</item>
+        <item>Juz keempat belas</item>
+        <item>Juz kelima belas</item>
+        <item>Juz keenam belas</item>
+        <item>Juz ketujuh belas</item>
+        <item> Juz kedelapan belas</item>
+        <item>Juz kesembilan belas</item>
+        <item>Juz kedua puluh</item>
+        <item>Juz kedua puluh satu</item>
+        <item>Juz kedua puluh dua</item>
+        <item>Juz kedua puluh tiga</item>
+        <item>Juz kedua puluh empat</item>
+        <item>Juz kedua puluh lima</item>
+        <item>Juz kedua puluh enam</item>
+        <item>Juz kedua puluh tujuh</item>
+        <item>Juz kedua puluh delapan</item>
+        <item>Juz kedua puluh sembilan</item>
+        <item>Juz ketiga puluh</item>
+    </string-array>
+
+
+    <string-array name="sura_name">
+        <item>Al-Fãtihah</item>
+        <item>Al-Baqarah</item>
+        <item>Ãli \'Imran</item>
+        <item>An-Nisã</item>
+        <item>Al-Mã-idah</item>
+        <item>Al-An\'ãm</item>
+        <item>Al-A\'rãf</item>
+        <item>Al-Anfãl</item>
+        <item>At-Taubah</item>
+        <item>Yunus</item>
+        <item>Hud</item>
+        <item>Yusuf</item>
+        <item>Ar-Ra\'d</item>
+        <item>Ibrahim</item>
+        <item>Al-Hijr</item>
+        <item>An-Nahl</item>
+        <item>Al-Isrã\'</item>
+        <item>Al-Kahf</item>
+        <item>Maryam</item>
+        <item>Thã Hã</item>
+        <item>Al-Anbiyã</item>
+        <item>Al-Hajj</item>
+        <item>Al-Mu\'minûn</item>
+        <item>An-Nûr</item>
+        <item>Al-Furqãn</item>
+        <item>Asy-Syu\'arã</item>
+        <item>An-Naml</item>
+        <item>Al-Qashash</item>
+        <item>Al-\'Ankabût</item>
+        <item>Ar-Rûm</item>
+        <item>Luqman</item>
+        <item>As-Sajdah</item>
+        <item>Al-Ahzãb</item>
+        <item>Saba\'</item>
+        <item>Fathir</item>
+        <item>Yãsîn</item>
+        <item>Ash-Shãffãt</item>
+        <item>Shãd</item>
+        <item>Az-Zumar</item>
+        <item>Ghãfir</item>
+        <item>Fushshilat</item>
+        <item>Asy-Syûrã</item>
+        <item>Az-Zukhruf</item>
+        <item>Ad-Dukhãn</item>
+        <item>Al-Jãtsiyah</item>
+        <item>Al-Ahqãf</item>
+        <item>Muhammad</item>
+        <item>Al-Fath</item>
+        <item>Al-Hujurãt</item>
+        <item>Qãf</item>
+        <item>Adz-Dzariyãt</item>
+        <item>Ath-Thûr</item>
+        <item>An-Najm</item>
+        <item>Al-Qamar</item>
+        <item>Ar-Rahmãn</item>
+        <item>al-Wãqi\'ah</item>
+        <item>Al-Hadîd</item>
+        <item>Al-Mujãdalah</item>
+        <item>Al-Hasyr</item>
+        <item>Al-Mumtahanah</item>
+        <item>Ash-Shaff</item>
+        <item>Al-Jumu\'ah</item>
+        <item>Al-Munãfiqûn</item>
+        <item>At-Taghãbun</item>
+        <item>Ath-Talãq</item>
+        <item>At-Tahrîm</item>
+        <item>Al-Mulk</item>
+        <item>Al-Qalam</item>
+        <item>Al-Hãqqah</item>
+        <item>Al-Ma\'ãrij</item>
+        <item>Nuh</item>
+        <item>Al-Jin</item>
+        <item>Al-Muzzammil</item>
+        <item>Al-Muddatstsir</item>
+        <item>Al-Qiyãmah</item>
+        <item>Al-Insan</item>
+        <item>Al-Mursalãt</item>
+        <item>An-Naba\'</item>
+        <item>An-Nãzi\'ãt</item>
+        <item>Abasa</item>
+        <item>At-Takwîr</item>
+        <item>Al-Infithãr</item>
+        <item>Al-Muthaffifîn</item>
+        <item>Al-Insyiqãq</item>
+        <item>Al-Burûj</item>
+        <item>Ath-Thãriq</item>
+        <item>Al-A\'lã</item>
+        <item>Al-Ghãsyiyah</item>
+        <item>Al-Fajr</item>
+        <item>Al-Balad</item>
+        <item>Asy-Syams</item>
+        <item>Al-Lail</item>
+        <item>Adh-Dhuhã</item>
+        <item>Asy-Syarh</item>
+        <item>At-Tîn</item>
+        <item>Al-\'Alaq</item>
+        <item>Al-Qadr</item>
+        <item>Al-Bayyyinah</item>
+        <item>Al-Zalzalah</item>
+        <item>Al-\'Ãdiyãt</item>
+        <item>Al-Qãri\'ah</item>
+        <item>At-Takãtsur</item>
+        <item>Al-\'Ashr</item>
+        <item>Al-Humazah </item>
+        <item>Al-Fîl</item>
+        <item>Quraisy</item>
+        <item>Al-Mã\'ûn</item>
+        <item>Al-Kautsar</item>
+        <item>Al-Kãfirûn</item>
+        <item>An-Nashr</item>
+        <item>Al-Masad</item>
+        <item>Al-Ikhlãsh</item>
+        <item>Al-Falaq</item>
+        <item>An-Nãs</item>
+
+    </string-array>
+
+    <string-array name="hezb_name">
+        <item>Hizib pertama</item>
+        <item>Hizib kedua</item>
+    </string-array>
+
+    <string-array name="quarter_name">
+        <item>Rubu\' pertama</item>
+        <item>Rubu\' kedua</item>
+        <item>Rubu\' ketiga</item>
+        <item>Rubu\' keempat</item>
+    </string-array>
+
+
+    <string-array name="subject_category_name">
+        <item>Ketentuan Islam</item>
+        <item>Negara-negara pra-Islam dan orang-orang kafir </item>
+        <item>Manusia </item>
+        <item>Iman dan Orang-orang Beriman</item>
+        <item>Tak terlihat dan Suci</item>
+        <item>Qur\'an </item>
+        <item>Narasi dan sejarah </item>
+        <item>Allah di Qur\'an </item>
+        <item>Alam semesta dan makhluk Allah </item>
+        <item>Jihad, pertempuran dan perang </item>
+        <item>Pemujaan</item>
+        <item>Tidak terklasifikasi</item>
+        <item>Pelanggaran dan dosa berat </item>
+    </string-array>
+
+    <string-array name="subject_name">
+        <item>Pembalasan dan hukuman (Hadd)</item>
+        <item>Mematuhi Allah, Nabi dan pihak berwenang di sekitar kita</item>
+        <item>Keadilan dan loyalitas</item>
+        <item>Dilihat dari wahyu Allah</item>
+        <item>Peraturan untuk bangsa dan umat Islam</item>
+        <item>Zakat</item>
+        <item>Perceraian</item>
+        <item>Ketentuan dan dasar-dasar hubungan suami istri</item>
+        <item>Bunga</item>
+        <item>Hubungan seksual yang tidak halal</item>
+        <item>Moral berbicara dengan utusan Allah, Muhammad SAW.</item>
+        <item>Uang</item>
+        <item>Pernikahan</item>
+        <item>Makanan</item>
+        <item>Kesatuan orang beriman dan bertahan pada tali Allah</item>
+        <item>Pembunuh</item>
+        <item>Memerintahkan yang baik dan melarang yang jahat selain memberikan saran</item>
+        <item>Anak yatim</item>
+        <item>Mengubah arah kiblat sebagai "arah doa"</item>
+        <item>Warisan dan aturannya</item>
+        <item>kebebasan berkeyakinan</item>
+        <item>Kemurtadan</item>
+        <item>Minuman keras</item>
+        <item>Penebusan dosa</item>
+        <item>Agama</item>
+        <item>Kehendak</item>
+        <item>Konsultasi</item>
+        <item>Perjudian</item>
+        <item>Tidak ada paksaan dalam agama</item>
+        <item>Dekorasi</item>
+        <item>Melarang</item>
+        <item>Mengucapkan sumpah</item>
+        <item>Peringatan bagi orang Israel</item>
+        <item>Orang munafik</item>
+        <item>Perselisihan orang Kristen soal mempercayai anakNya sebagai Tuhan, Tuhan melarang</item>
+        <item>Orang-orang kafir</item>
+        <item>Perubahan dari buku surgawi</item>
+        <item>Penghakiman mengenai negara-negara pra-Islam</item>
+        <item>Peringatan terhadap orang-orang dari kitab</item>
+        <item>Tantangan Al-Quran terhadap orang-orang kafir</item>
+        <item>Peringatan bagi orang Kristen</item>
+        <item>Peringatan bagi Muslim oleh bangsa-bangsa sebelumnya</item>
+        <item>Penindakan orang-orang dari kitab</item>
+        <item>Ketentuan masa pra-Islam</item>
+        <item>Peringatan bagi orang Yahudi</item>
+        <item>Penindakan orang-orang kafir</item>
+        <item>Hukum dan peraturan perundang-undangan dari orang-orang Yahudi dan Kristen dan orang-orang dari kitab</item>
+        <item>Deskripsi Manusia</item>
+        <item>Pikiran</item>
+        <item>Penyebab bencana dan kejahatan manusia</item>
+        <item>Deskripsi orang beriman</item>
+        <item>Mimpi dan penjelasannys</item>
+        <item>Saran untuk Muslim</item>
+        <item>Keunggulan orang iman dibanfingkan orang kafir</item>
+        <item>Kebijaksanaan</item>
+        <item>Kepercayaan</item>
+        <item>Badui</item>
+        <item>Sekutu Allah</item>
+        <item>Panggilan Allah</item>
+        <item>Perintah berbuat dan bermoral yang baik</item>
+        <item>Toleransi- perdamaian- mendamaikan  orang-orang</item>
+        <item>Penderitaan dan sedang diuji</item>
+        <item>Kesalehan</item>
+        <item>Hari Penghakiman dan Hari Terakhir</item>
+        <item>Api</item>
+        <item>Surga</item>
+        <item>Iblis</item>
+        <item>malaikat</item>
+        <item>Penciptaan Adam dan Manusia</item>
+        <item>Sihir- Babel- Harut dan Marut</item>
+        <item>Jin</item>
+        <item>Kematian</item>
+        <item>Awal penciptaan</item>
+        <item>Isra (perjalanan jasmani dan rohani malam oleh Nabi Muhammad)</item>
+        <item>Tak terlihat</item>
+        <item>Kursi tahta</item>
+        <item>Tanda-tanda kiamat</item>
+        <item>Waktu kiamat</item>
+        <item>Perantaraan</item>
+        <item>Semangat</item>
+        <item>Deskripsi Surga</item>
+        <item>Qur\'an</item>
+        <item>Huruf-huruf pada awal Sura</item>
+        <item>Keajaiban Quran</item>
+        <item>Menyalin ayat</item>
+        <item>Kisah-kisah para nabi-Musa, AS dan Firaun</item>
+        <item>Kisah-kisah para nabi-Ibrahim, AS</item>
+        <item>Kisah-kisah para nabi-Nuh, AS</item>
+        <item>Kisah-kisah para nabi-Yusuf, AS</item>
+        <item>Contoh</item>
+        <item>Kisah-kisah para nabi-Luth, AS, dan kaumnya</item>
+        <item>Kisah-kisah para nabi-Yesus, AS</item>
+        <item>Kisah-kisah para nabi-Saleh, AS, dan kaum Tamud beserta unta betinanya</item>
+        <item>Kisah-kisah para nabi-Sulaiman, AS</item>
+        <item>Kisah-kisah para nabi-Hud, AS, dan kaumnya</item>
+        <item>Kisah-kisah para nabi-Maryam, AS, ibu Yesus, AS</item>
+        <item>Kisah-kisah para nabi-Syu\'aib, AS</item>
+        <item>Kisah-kisah para nabi-Daud, AS</item>
+        <item>Kisah-kisah para nabi-Adam, AS</item>
+        <item>Mukjizat para nabi</item>
+        <item>Para sahabat gua</item>
+        <item>Dzulkarnain</item>
+        <item>Kisah-kisah para nabi-Zakaria, AS</item>
+        <item>ah-kisah para nabi-Yunus, AS</item>
+        <item>Kisah-kisah para nabi-Ismail, AS</item>
+        <item>Kisah-kisah para nabi-Ilyas, AS</item>
+        <item>Kisah-kisah para nabi-Yohanes, AS</item>
+        <item>Kisah-kisah para nabi-Luqman, AS</item>
+        <item>Sab\'aa</item>
+        <item>Karun</item>
+        <item>Kisah-kisah para nabi-Talut</item>
+        <item>Kain dan Habel</item>
+        <item>Kisah-kisah para nabi-Ayyub, AS</item>
+        <item>Kisah-kisah para nabi-Idris, AS</item>
+        <item>Kisah-kisah para nabi-Ishak, AS</item>
+        <item>kisah-kisah para nabi, Yakub, saw</item>
+        <item>Berkat Allah atas kita</item>
+        <item>Kemampuan Allah</item>
+        <item>Karakteristik Allah SWT</item>
+        <item>Nama-Nama Allah</item>
+        <item>Takdir Allah</item>
+        <item>Belas-kasihan</item>
+        <item>Cinta Allah</item>
+        <item>Keadilan Allah</item>
+        <item>Mukjizat duniawi</item>
+        <item>Mukjizat universal</item>
+        <item>Kehendak Tuhan terhadap negara dan dunia</item>
+        <item>Makhluk, burung dan hewan</item>
+        <item>Perkelahian</item>
+        <item>Jihad demi Allah</item>
+        <item>Perang Uhud</item>
+        <item>Yang meninggalkan pertempuran</item>
+        <item>Perang Badar</item>
+        <item>Perang Al-Ahzab</item>
+        <item>Kesaksian dan Syuhada</item>
+        <item>Perang Hanen</item>
+        <item>Jihad demi Allah</item>
+        <item>Doa dari Al-Quran dan balasannya</item>
+        <item>Amal - berderma demi Allah</item>
+        <item>Doa</item>
+        <item>Ziarah</item>
+        <item>Mencari Pengampunan  Allah</item>
+        <item>Waktu yang dianjurkan untuk penyembahan</item>
+        <item>Tobat</item>
+        <item>Segala puji bagi Allah Yang Mahakuasa</item>
+        <item>Kesabaran dan orang yang sabar</item>
+        <item>Pengampunan</item>
+        <item>Kalikan perbuatan baik</item>
+        <item>Puasa</item>
+        <item>Bimbingan</item>
+        <item>Mengingat Allah</item>
+        <item>Menyebutkan Allah</item>
+        <item>Berpikir tentang ciptaan Allah</item>
+        <item>Hijrah di jalan Allah</item>
+        <item>Tentang pembimbing kami Muhammad SAW</item>
+        <item>Ka\'bah</item>
+        <item>Kunci mata pencaharian</item>
+        <item>Mekkah - Mekkah</item>
+        <item>Orangtua</item>
+        <item>Deskripsi Dunia</item>
+        <item>Masjid</item>
+        <item>Para perusak bumi</item>
+        <item>Perselisihan</item>
+        <item>Ketidakpercayaan</item>
+        <item>melebih-lebihkan</item>
+        <item>Kekikiran</item>
+        <item>Penyair adalah seniman di era pesan</item>
+        <item>Ketidakmurnian</item>
+    </string-array>
+
+
+</resources>

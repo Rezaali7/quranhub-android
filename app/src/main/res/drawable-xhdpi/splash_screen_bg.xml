@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+
+    <item android:id="@+id/background">
+        <bitmap
+            android:gravity="fill"
+            android:src="@drawable/splash_1_bg" />
+    </item>
+
+    <item
+        android:id="@+id/app_logo"
+        android:right="8dp"
+        android:left="8dp"
+        android:bottom="96dp">
+        <bitmap
+            android:gravity="bottom"
+            android:src="@drawable/logo_splash_1" />
+    </item>
+
+</layer-list>

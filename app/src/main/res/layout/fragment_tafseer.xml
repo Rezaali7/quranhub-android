@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="app.quranhub.mushaf.fragments.TafseerFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="@dimen/margin_16"
+        android:paddingBottom="@dimen/margin_16">
+
+        <ImageButton
+            android:id="@+id/hamburger_iv"
+            android:layout_width="@dimen/app_bar_icon_dimen"
+            android:layout_height="@dimen/app_bar_icon_dimen"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_drawer"
+            app:layout_constraintBottom_toTopOf="@id/et_search"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/filter_lang_btn"
+            android:layout_width="@dimen/app_bar_icon_dimen"
+            android:layout_height="@dimen/app_bar_icon_dimen"
+            android:background="?selectableItemBackgroundBorderless"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:src="@drawable/filter_more_gold_ic"
+            app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
+            app:layout_constraintStart_toEndOf="@id/lang_tv"
+            app:layout_constraintTop_toTopOf="@id/hamburger_iv" />
+
+        <TextView
+            android:id="@+id/lang_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:ellipsize="end"
+            android:maxWidth="@dimen/_60sdp"
+            android:maxLines="1"
+            android:text="Bahasa Indonsia"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
+            app:layout_constraintStart_toEndOf="@id/hamburger_iv"
+            app:layout_constraintTop_toTopOf="@id/hamburger_iv" />
+
+        <TextView
+            android:id="@+id/sura_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
+            app:layout_constraintTop_toTopOf="@id/hamburger_iv"
+            app:layout_constraintEnd_toStartOf="@+id/book_tv"
+            app:layout_constraintStart_toEndOf="@+id/filter_lang_btn"
+            tools:text="البقرة" />
+
+        <ImageButton
+            android:id="@+id/filter_sura_btn"
+            android:layout_width="@dimen/app_bar_icon_dimen"
+            android:layout_height="@dimen/app_bar_icon_dimen"
+            android:background="?selectableItemBackgroundBorderless"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:src="@drawable/filter_more_gold_ic"
+            app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
+            app:layout_constraintStart_toEndOf="@id/sura_tv"
+
+            app:layout_constraintTop_toTopOf="@id/hamburger_iv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:maxWidth="@dimen/_70sdp"
+            app:layout_constraintEnd_toStartOf="@id/filter_book_btn"
+            app:layout_constraintTop_toTopOf="@id/hamburger_iv"
+            app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
+            android:text="الميسر"
+            android:textSize="@dimen/text_size_12"
+            android:textColor="@color/white_color"
+            android:id="@+id/book_tv" />
+
+        <ImageButton
+            android:id="@+id/filter_book_btn"
+            android:layout_width="@dimen/app_bar_icon_dimen"
+            android:layout_height="@dimen/app_bar_icon_dimen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/hamburger_iv"
+            app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:src="@drawable/filter_more_gold_ic"
+            android:background="?selectableItemBackgroundBorderless" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:background="@drawable/search_bar"
+            android:drawableStart="@drawable/search_bar_white_small_ic"
+            android:drawablePadding="8dp"
+            android:hint="@string/search"
+            android:inputType="textNoSuggestions"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/hint_grey"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hamburger_iv" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/tafseer_rv" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/progrees_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

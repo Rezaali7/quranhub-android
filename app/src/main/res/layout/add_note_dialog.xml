@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/corner_white_dialog">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_corner_bg"
+            android:fontFamily="@font/custom_bold_font"
+            android:ellipsize="end"
+            android:gravity="start|center_vertical"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:text="@string/add_note"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/text_size_18"
+            app:layout_constraintEnd_toEndOf="@id/note_type_group"
+            app:layout_constraintStart_toStartOf="@id/note_type_group"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/note_type_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:minWidth="@dimen/filter_dialog_width"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+            <RadioButton
+                android:id="@+id/memorize_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:checked="true"
+                android:text="@string/general_comment"
+                android:textSize="@dimen/text_size_12" />
+
+            <RadioButton
+                android:id="@+id/comment_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:text="@string/momerize_mistake"
+                android:textSize="@dimen/text_size_12" />
+
+            <RadioButton
+                android:id="@+id/tajweed_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:text="@string/tajweed_mistake"
+                android:textSize="@dimen/text_size_12" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/add_note_et"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@drawable/text_input_bg"
+            android:gravity="top"
+            android:hint="@string/write_here"
+            android:paddingEnd="@dimen/_4sdp"
+            android:paddingStart="@dimen/_4sdp"
+            android:textSize="@dimen/text_size_14"
+            app:layout_constraintEnd_toEndOf="@id/note_type_group"
+            app:layout_constraintStart_toStartOf="@id/note_type_group"
+            app:layout_constraintTop_toBottomOf="@id/note_type_group" />
+
+        <TextView
+            android:id="@+id/voice_status_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="@string/add_voice"
+            android:textSize="@dimen/text_size_14"
+            app:layout_constraintStart_toStartOf="@id/add_note_et"
+            app:layout_constraintTop_toBottomOf="@id/add_note_et" />
+
+        <Chronometer
+            android:id="@+id/recorder_chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/add_note_et"
+            app:layout_constraintTop_toBottomOf="@id/add_note_et" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="gone"
+            android:text="0:00"
+            app:layout_constraintEnd_toEndOf="@id/add_note_et"
+            app:layout_constraintTop_toBottomOf="@id/add_note_et"
+            android:id="@+id/voice_timer_tv"
+            />
+
+        <ImageView
+            android:id="@+id/add_recorder_iv"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/corner_primary_dialog"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/player_record_white_ic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/voice_status_tv"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/voice_status_tv"
+            android:background="@drawable/corner_primary_dialog"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:id="@+id/player_container"
+            >
+            <ImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_20sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/player_play_white_ic"
+                android:paddingStart="@dimen/_8sdp"
+                android:id="@+id/play_iv"
+                />
+
+            <SeekBar
+                android:id="@+id/recorder_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginStart="8dp"
+                android:indeterminate="false"
+                android:progress="0"
+                android:progressDrawable="@drawable/audio_seekbar_bg"
+                android:thumbTint="@android:color/transparent"
+                android:thumb="@color/white_color"
+                app:layout_constraintBottom_toBottomOf="@id/play_iv"
+                app:layout_constraintStart_toEndOf="@id/play_iv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/play_iv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/player_container"
+            app:layout_constraintTop_toTopOf="@id/player_container"
+            app:layout_constraintBottom_toBottomOf="@id/player_container"
+            android:src="@drawable/ic_delete"
+            android:id="@+id/remove_record_iv"
+            />
+
+
+        <TextView
+            android:id="@+id/note_detailes_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/note_details"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@+id/add_note_et"
+            app:layout_constraintStart_toStartOf="@+id/add_note_et"
+            app:layout_constraintTop_toBottomOf="@id/add_recorder_iv"
+            />
+
+        <androidx.constraintlayout.widget.Group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/record_group"
+            app:constraint_referenced_ids="player_container, remove_record_iv"
+            android:visibility="gone"
+            />
+
+
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/corner_primary_dialog"
+            android:text="@string/back"
+            android:textColor="@color/white_color"
+            app:layout_constraintEnd_toEndOf="@+id/add_note_et"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/save_btn"
+            app:layout_constraintTop_toBottomOf="@id/note_detailes_tv" />
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:background="@drawable/corner_primary_dialog"
+            android:text="@string/add_fav"
+            android:textColor="@color/white_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cancel_btn"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@+id/add_note_et"
+            app:layout_constraintTop_toTopOf="@id/cancel_btn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

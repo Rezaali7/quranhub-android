@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#275a48</color>
+    <color name="colorPrimaryDark">#021D14</color>
+    <color name="colorPrimaryLight">#618679</color>
+    <color name="colorAccent">#E8AD5B</color>
+    <color name="colorControlHighlight">#33BDBDBD</color>
+
+    <color name="white_color">#FFFFFF</color>
+    <color name="black_color">#000000</color>
+    <color name="transparent_color">#00000000</color>
+
+    <color name="aya_shadow_color">#3DB28752</color>
+    <color name="aya_shadow_color_night_mode">#3DE8AF6A</color>
+    <color name="slidemenu_selector_tint">#E8AD5B</color>
+    <color name="slidemenu_selector_text_color">#285b49</color>
+    <color name="hint_grey">#B9C8C3</color>
+    <color name="light_gray">#F0F0F0</color>
+    <color name="dialog_color">#285B49</color>
+    <color name="red_color">#dd1452</color>
+    <color name="dark_gray">#DAA5A5A5</color>
+    <color name="text_color">#464545</color>
+    <color name="dark_opt_gray">#7ABBBBBB</color>
+    <color name="green_color">#0a9f6a</color>
+
+
+    <array name="bookmark_colors">
+        <item>#ef9a9a</item>
+        <item>@color/md_pink_500</item>
+        <item>@color/md_purple_500</item>
+        <item>@color/md_deep_purple_500</item>
+        <item>@color/md_indigo_500</item>
+        <item>@color/md_blue_500</item>
+        <item>@color/md_cyan_500</item>
+        <item>@color/md_teal_500</item>
+        <item>@color/md_green_500</item>
+        <item>@color/md_light_green_500</item>
+        <item>@color/md_lime_500</item>
+        <item>@color/md_yellow_500</item>
+        <item>@color/md_amber_500</item>
+        <item>@color/md_orange_500</item>
+        <item>@color/md_deep_orange_500</item>
+        <item>@color/md_brown_500</item>
+        <item>@color/md_grey_500</item>
+        <item>@color/md_blue_grey_500</item>
+        <item>#3E2723</item>
+    </array>
+</resources>

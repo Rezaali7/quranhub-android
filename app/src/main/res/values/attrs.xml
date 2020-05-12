@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MushafSettingsCategory">
+        <attr name="categoryTitle" format="string" localization="suggested" />
+    </declare-styleable>
+
+    <declare-styleable name="MushafSetting">
+        <attr name="settingName" format="string" localization="suggested" />
+        <attr name="currentValue" format="string" localization="suggested" />
+    </declare-styleable>
+
+    <declare-styleable name="MushafSettingSwitch">
+        <attr name="switchSettingName" format="string" localization="suggested" />
+        <attr name="switchChecked" format="boolean" />
+    </declare-styleable>
+
+</resources>

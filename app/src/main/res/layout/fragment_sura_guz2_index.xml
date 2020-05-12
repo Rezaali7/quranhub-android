@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.quranhub.mushaf.fragments.BookmarksFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/_12sdp" />
+
+        <ImageButton
+            android:id="@+id/hamburger_iv"
+            android:layout_width="@dimen/app_bar_icon_dimen"
+            android:layout_height="@dimen/app_bar_icon_dimen"
+            android:layout_marginStart="@dimen/margin_16"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_drawer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline_top" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="@dimen/tab_bar_width"
+            android:layout_height="@dimen/tab_bar_height"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:background="@drawable/tabs_container"
+            app:layout_constraintBottom_toTopOf="@id/et_search"
+            app:layout_constraintEnd_toStartOf="@id/filter_btn"
+            app:layout_constraintStart_toEndOf="@id/hamburger_iv"
+            app:layout_constraintTop_toTopOf="@id/guideline_top"
+            app:tabBackground="@drawable/tab"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@android:color/transparent"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/primary"
+            app:tabTextAppearance="@style/CustomTabText"
+            app:tabTextColor="@android:color/white">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/sura_index_tab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/sura_index" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/guz2_index_tab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/guz2_index" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <ImageButton
+            android:id="@+id/filter_btn"
+            android:layout_width="@dimen/app_bar_icon_dimen"
+            android:layout_height="@dimen/app_bar_icon_dimen"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/filter_more_gold_ic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline_top" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:background="@drawable/search_bar"
+            android:drawableStart="@drawable/search_bar_white_small_ic"
+            android:drawablePadding="8dp"
+            android:ems="10"
+            android:hint="@string/search"
+            android:inputType="textNoSuggestions"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/hint_grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/index_container"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progrees_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/index_container"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

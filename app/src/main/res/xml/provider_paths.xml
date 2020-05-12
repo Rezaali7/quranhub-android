@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <!-- give permission to other apps to open this app files in only external storage path(Android/data/com.example.mustafa.downloaddemo) -->
+    <external-path
+        name="files_root"
+        path="Android/data/app.quranhub" />
+
+
+    <!-- give permission to other apps to open this app files in all external storage -->
+
+    <external-path
+        name="external_storage_root"
+        path="." />
+
+</paths>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/corner_primary_dialog"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/_6sdp"
+    android:paddingBottom="@dimen/_6sdp">
+
+    <ImageView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/player_play_white_ic"
+        android:paddingStart="@dimen/_8sdp"
+        android:id="@+id/play_iv"
+        />
+
+    <SeekBar
+        android:id="@+id/recorder_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:indeterminate="false"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:progress="0"
+        android:progressDrawable="@drawable/audio_seekbar_bg"
+        android:thumb="@color/white_color"
+        android:thumbTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@id/play_iv"
+        app:layout_constraintStart_toEndOf="@id/play_iv"
+        app:layout_constraintTop_toTopOf="@+id/play_iv" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_14"
+        android:text="00:00"
+        app:layout_constraintStart_toEndOf="@id/recorder_progress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white_color"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:id="@+id/recorder_time_tv"
+        />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@drawable/vertical_shadow"
+        android:layout_marginStart="@dimen/_8sdp"
+        app:layout_constraintStart_toEndOf="@id/recorder_time_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/seperator"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        app:layout_constraintStart_toEndOf="@id/seperator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:src="@drawable/ic_delete"
+        android:id="@+id/remove_record_iv"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

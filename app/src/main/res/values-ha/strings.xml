@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Hausa
+    -->
+
+    <string name="app_name">ALKUR\'ANI</string>
+    <string name="fehris_menu">SURORIN DAKE CHIKIN AL QURANI</string>
+    <string name="topics_menu">jigogi</string>
+    <string name="library_menu">dakin dakin karatu</string>
+    <string name="live_menu">kai tsaye</string>
+    <string name="plan_menu">shirin</string>
+    <string name="fwasil_menu">alamomi</string>
+    <string name="favorite_menu">fi so</string>
+    <string name="notes_menu">bayanai na</string>
+    <string name="tagweed_menu">tajweed</string>
+    <string name="tanbehat_menu">kuskure kuskure</string>
+    <string name="statistcs_menu">kididdigar</string>
+    <string name="settings_menu">saitunan</string>
+    <string name="downloads_menu">saukewa </string>
+    <string name="myaccount_menu">asusu na</string>
+    <string name="notes_dialog">bayanai na</string>
+    <string name="tafseer_dialog">fassara</string>
+    <string name="listen_dialog">sauraro</string>
+    <string name="add_fav">kari</string>
+    <string name="fasil_dialog">alamomi</string>
+    <string name="share_dialog">raba</string>
+    <string name="load_image_failed">kuskure wajen sauke hoto</string>
+    <string name="page_info_failed">kuskure wajen samun shafin Al Kur\'ani</string>
+    <string name="select_aya_fail">rashin nasara wajen zaben aya</string>
+    <string name="fasil_note">bayanin</string>
+    <string name="fasil_read">karatun</string>
+    <string name="insert_bookmark_failed">rashin nasara wajen hadin alamomi da aya</string>
+    <string name="success_insert_bookmark">an sami nasara wajen ceton alamomi</string>
+    <string name="bookmark_removed">cire alamomi</string>
+    <string name="bookmark_failed_removed">ka kaso goge wannan alamomi, ka kuma maimetawa</string>
+    <string name="search">bincike</string>
+    <string name="guz2_index">wajen izu</string>
+    <string name="sura_index">wajen surori</string>
+    <string name="page_num">shafuka %s</string>
+    <string name="ayas_num">%s ayoyi</string>
+    <string name="aya_rob3">kwata %s</string>
+    <string name="aya_hezb">Hizb %s</string>
+    <string name="aya_goz2">izu %s</string>
+    <string name="aya_num">Ayoyi %s</string>
+
+    <string name="sura_index_failed">Kasawar samun asalin Surah</string>
+    <string name="aya">aya</string>
+    <string name="sura">Chapter</string>
+    <string name="chapter">izu</string>
+    <string name="hizb">Hizb</string>
+    <string name="rub3">kwata</string>
+    <string name="page">shafi</string>
+    <string name="bookmark_filter_header">nuna ta alamomi ko kala</string>
+    <string name="all_bookmark">duk alamomi</string>
+    <string name="back">baya</string>
+    <string name="show">Nuna ta</string>
+    <string name="msg_no_bookmarks">babu alamomi a nan</string>
+    <string name="no_internet">ka duba hadin intanet</string>
+    <string name="mushaf">Al Kur\'ani</string>
+    <string name="no_space">No available space to downloaded this file</string>
+
+    <string name="download_file">saukewa</string>
+    <string name="tooltip_quran_night_mode">kunna/kashe yanayin dare</string>
+    <string name="tooltip_quran_search">bincike a cikin Al Qur\'ani</string>
+    <string name="trajim_menu">fassara</string>
+    <string name="sura_makya">makkan</string>
+    <string name="sura_madnya">madinah</string>
+    <string name="storage_perm">wannan aikace-aikace na bukatar izinin duba ajiyar cikin wayan ku don don bude fayil din</string>
+    <string name="accept_perm">don allah ka ba da izini</string>
+    <string name="file_not_exist">ba a ga fayil din ba</string>
+    <string name="download_page_failed">an kasa samun saukewan fiyil</string>
+    <string name="no_downloads">babu wani gyara a kan saukewa</string>
+    <string name="title_activity_settings">saitunan</string>
+    <string name="settings_category_language">harshen</string>
+    <string name="settings_category_recitation">saitin karatu</string>
+    <string name="settings_category_sound">saitin sauti</string>
+    <string name="settings_category_aboutapp">a wannan aikacaikace</string>
+    <string name="setting_quran_recitation">yadda ake karanta Al qur\'ani</string>
+    <string name="setting_app_lang">harshen mai dubawa</string>
+    <string name="setting_screen_reading_backlight">juyawa hasken allo yayin karatun</string>
+    <string name="setting_last_read_page">ajiyar atomatic daga shafin da aka karanto karshe</string>
+    <string name="setting_reading_warnings">bayanin kula akan karatun</string>
+    <string name="setting_reading_alarm">lokacin Alam</string>
+    <string name="setting_quran_reader">sautin karatun atomatic</string>
+    <string name="setting_audio_download_manager">mai sauke sauti</string>
+    <string name="setting_help">taimako</string>
+    <string name="setting_about_app_version">a kan aikace-aikace</string>
+    <string name="setting_contact_us">a tuntibemu</string>
+    <string name="setting_share_app">ka raba wannan aikace-aikace</string>
+    <string name="data_failed">an kasa samun bayanai</string>
+    <string name="open_file">bude fayil a</string>
+    <string name="in_this_app">a cikin software</string>
+    <string name="out_this_app">software da ke waje</string>
+    <string name="hafs_recitation">Hafs from Asem</string>
+    <string name="warsh_recitation">Warsh from Nafe\'</string>
+    <string name="app_lang_setting_dialog_title">zabi harshen software</string>
+    <string name="recitation_setting_dialog_title">zabi yanayin karatun Al kun\'ani da ka ke so</string>
+    <string name="title_activity_first_time_wizard">saitunan farko</string>
+    <string name="first_wizard_title_app_language_step">zabi harshen mai amfani da wannan</string>
+    <string name="first_wizard_title_recitations_step">zabi yanayin karatun Al kun\'ani da ka ke so</string>
+    <string name="first_wizard_hint_recitations">za ka iya chanza harshen daga baya a saituna</string>
+    <string name="next">da wadannan</string>
+    <string name="finish">karewa</string>
+    <string name="suras">Surahs</string>
+    <string name="chapters">Izu</string>
+    <string name="all_hezb">Duk hizb</string>
+    <string name="all_quarters">Duk kwata</string>
+    <string name="about_app_menu">Game da dandamalin</string>
+    <string name="technical_support_menu">Goyon bayan Fasaha</string>
+    <string name="first_wizard_title_translation_languages_step">Zabi harshen fassarar Alkur\'ani</string>
+    <string name="first_wizard_hint_app_langauge">Za ka iya canza harshen dandamalin anjima daga Saituna</string>
+    <string name="first_wizard_hint_translation_languages">Ka iya canza harshen fassara anjima a daga saituna</string>
+    <string name="tafseer_text">Fassara</string>
+    <string name="trajim_book_name">Zabi sunan littafi</string>
+    <string name="more">Kari</string>
+    <string name="collapse">Rushe</string>
+    <string name="translation_text">Fassara</string>
+    <string name="translations_dialog_title">Zabi Fassara/Littafin Tafsir</string>
+    <string name="error_translations_web_service">Ba a yi nasarar samun fassarori don saukewa ba!</string>
+    <string name="translation_dowload_permission_rationale">Dandamalin na bukatar izini don sauke shafin fasara</string>
+    <string name="error_download_translation">Ba a yi nasarar saukewa ba!</string>
+    <string name="setting_quran_translation_lang">Harshen fassarar Alkur\'ani</string>
+    <string name="translation_lang_setting_dialog_title">Zabi harshen fassarar Alkur\'ani</string>
+    <string name="translation_muyassar">Al-Muyassar</string>
+    <string name="no_downloaded_books">Sauke littafi don samun fassarar sa</string>
+    <string name="choose_book">Zabi littafi</string>
+    <string name="no_search_result">Babu sakamakon bincike!</string>
+    <string name="search_failed">Ba a yi nasarar samun sakamakon bincike ba!</string>
+    <string name="all_sura">Dukan Surori</string>
+    <string name="all_guz2">Dukan Juzozi</string>
+    <string name="select_hezb_first">Yakamata ka fara da zabin Hizb</string>
+    <string name="share_using">Yada ta wurin amfani da</string>
+    <string name="select_juz_first">Da farko ka zabi Juz</string>
+    <string name="title_options_dialog_filter_guz2_index">Zabi mataci</string>
+
+    <string-array name="agza2_name">
+        <item>izzu/babi na daya</item>
+        <item>izzu/babi na biyu</item>
+        <item>izzu/babina uku</item>
+        <item>izzu/babi na hudu</item>
+        <item>izzu/babina biyar</item>
+        <item>izzu/babi na shida</item>
+        <item>izzu/babi na bakwai</item>
+        <item>izzu/babi na takwas</item>
+        <item>izzu/babi na tara</item>
+        <item>izzu/babi na goma</item>
+        <item>izzu/babi na sha daya</item>
+        <item>izzu/babi na sha biyu</item>
+        <item>izzu/babi na sha uku</item>
+        <item>izzu/babi na sha hudu</item>
+        <item>izzu/babi na sha biyar</item>
+        <item>izzu/babi na sha shida</item>
+        <item>izzu/babi na sha bakwai</item>
+        <item>izzu/babi na sha takwas</item>
+        <item>izzu/babi na sha tara</item>
+        <item>izzu/babi na ashirin</item>
+        <item>izzu/babi na ashirin da daya</item>
+        <item>izzu/babi na ashirin da biyu</item>
+        <item>izzu/babi na ashirin da uku</item>
+        <item>izzu/babi na ashrin da hudu</item>
+        <item>izzu/babi na ashrin da biyar</item>
+        <item>izzu/babi na ashirin da shida</item>
+        <item>izzu/babi na ashirin da bakwai</item>
+        <item>izzu/babi na ashrin da takwas</item>
+        <item>izzu/babi na ashrin da tara</item>
+        <item>izzu/babi na talatin</item>
+
+    </string-array>
+
+
+    <string-array name="sura_name">
+        <item>Al-Fatihah </item>
+        <item>Al-Baqarah </item>
+        <item>Al \'Imran</item>
+        <item>An-Nisa</item>
+        <item>Al-Ma\'idah</item>
+        <item>Al-An\'am</item>
+        <item>Al-\'Araf</item>
+        <item>Al-Anfal</item>
+        <item>At-Tawbah </item>
+        <item>Yunus</item>
+        <item>Hud</item>
+        <item>Yusuf </item>
+        <item>Ar-Ra\'d</item>
+        <item>Ibrahim </item>
+        <item>Al-Hijr</item>
+        <item>An-Nahl </item>
+        <item>Al-Isra\'</item>
+        <item>Al-Kahf</item>
+        <item>Maryam</item>
+        <item>Ta-Ha</item>
+        <item>Al-Anbiya</item>
+        <item>Al-Hajj</item>
+        <item>Al-Mu\'minun</item>
+        <item>An-Nur </item>
+        <item>Al-Furqan</item>
+        <item>Ash-Shu\'ara\'</item>
+        <item>An-Naml</item>
+        <item>Al-Qasas</item>
+        <item>Al-\'Ankabut</item>
+        <item>Ar-Rum</item>
+        <item>Luqman</item>
+        <item>As-Sajdah</item>
+        <item>Al-Ahzab</item>
+        <item>Saba\'</item>
+        <item>Fatir</item>
+        <item>Ya-Sin</item>
+        <item>As-Saffat</item>
+        <item>Sad</item>
+        <item>Az-Zumar</item>
+        <item>Ghafir </item>
+        <item>Fussilat </item>
+        <item>Ash-Shura</item>
+        <item>Az-Zukhruf </item>
+        <item>Ad-Dukhan </item>
+        <item>Al-Jathiyah</item>
+        <item>Al-Ahqaf </item>
+        <item>Muhammad</item>
+        <item>Al-Fath </item>
+        <item>Al-Hujurat</item>
+        <item>Qaf</item>
+        <item>Adh-Dhariyat </item>
+        <item>At-Tur </item>
+        <item>An-Najm</item>
+        <item>Al-Qamar </item>
+        <item>Ar-Rahman</item>
+        <item>Al-Waqi\'ah</item>
+        <item>Al-Hadid</item>
+        <item>Al-Mujadilah </item>
+        <item>Al-Hashr </item>
+        <item>Al-Mumtahanah </item>
+        <item>As-Saff </item>
+        <item>Al-Jumu\'ah </item>
+        <item>Al-Munafiqun </item>
+        <item>At-Taghabun</item>
+        <item>At-Talaq</item>
+        <item>At-Tahrim</item>
+        <item>Al-Mulk </item>
+        <item>Al-Qalam </item>
+        <item>Al-Haqqah </item>
+        <item>Al-Ma\'arij </item>
+        <item>Nuh</item>
+        <item>Al-Jinn</item>
+        <item>Al-Muzzammil </item>
+        <item>AL-Muddaththir </item>
+        <item>Al-Qiyamah </item>
+        <item>Al-Insan</item>
+        <item>Al-Mursalat </item>
+        <item>An-Naba\'</item>
+        <item>An-Nazi\'at </item>
+        <item>Abasa</item>
+        <item>At-Takwir </item>
+        <item>Al-Infitar </item>
+        <item>Al-Mutaffifin </item>
+        <item>Al-Inshiqaq</item>
+        <item>Al-Buruj </item>
+        <item>At-Tariq</item>
+        <item>Al-A\'la </item>
+        <item>Al-Ghashiyah </item>
+        <item>Al-Fajr </item>
+        <item>Al-Balad </item>
+        <item>Ash-Shams</item>
+        <item>Al-Layl </item>
+        <item>Ad-Duha</item>
+        <item>Al-Sharh </item>
+        <item>At-Tin</item>
+        <item>Al-\'Alaq</item>
+        <item>Al-Qadr </item>
+        <item>Al-Bayyinah </item>
+        <item>Al-Zalzalah</item>
+        <item>Al-\'Adiyat</item>
+        <item>Al-Qari\'ah </item>
+        <item>Al-Takathur </item>
+        <item>Al-\'Asr </item>
+        <item>Al-Humazah </item>
+        <item>Al-Fil</item>
+        <item>Quraysh </item>
+        <item>Al-Ma\'un</item>
+        <item>Al-Kawthar</item>
+        <item>Al-Kafirun </item>
+        <item>An-Nasr</item>
+        <item>Al-Masad</item>
+        <item>Al-Ikhlas</item>
+        <item>Al-Falaq</item>
+        <item>An-Nas</item>
+
+    </string-array>
+
+    <string-array name="hezb_name">
+        <item>Hizb/babi na daya</item>
+        <item>Hizb/babi na biyu</item>
+    </string-array>
+
+    <string-array name="quarter_name">
+        <item>kwata/babi na daya</item>
+        <item>kwata/babi na biyu</item>
+        <item>kwata/babina uku</item>
+        <item>kwata/babi na hudu</item>
+    </string-array>
+
+    <string-array name="subject_category_name">
+    <item>Sharuddan Addinin Islama/ Sharuddan Addinin Musulunci</item>
+    <item>Al\'ummai da Kafirai kafin isowar addinin musulunci</item>
+    <item>Mutum / dan adam</item>
+    <item>Imani da Muminai</item>
+    <item>Gaibi da Tsaro</item>
+    <item>Alkur\'an</item>
+    <item>Labaru da Tarihi</item>
+    <item>Allah cikin Alkur\'ani</item>
+    <item>Duniya da halittun Allah</item>
+    <item>Jihadi, fadace-fadce da kuma yake-yake</item>
+    <item>Sujada</item>
+    <item>Mara Kayaddi</item>
+    <item>Zalunci da zunubai munana</item>
+    </string-array>
+
+
+    <string-array name="subject_name">
+        <item>Sakamako da azaba</item>
+        <item>Yin biyayya da Allah, Annabinsa da mutane masu iko tsakanin mu </item>
+        <item>Adalci, yin gaskiya da biyayya</item>
+        <item>Yin hukunci da wahayin Allah</item>
+        <item>Bayani da dokoki saboda al\'umma da kuma Musulmai</item>
+        <item>Zakka</item>
+        <item>Saki</item>
+        <item>Sharuɗɗai da mahimman abubuwa a dangantakar aure</item>
+        <item> riba</item>
+        <item>Haramtaccen jima\'i</item>
+        <item>Halaye masu kyau na yin magana da Manzon Allah, Muhammdu (Tsira da amincin Allah su tabbata a Gareshi)</item>
+        <item>Kudi</item>
+        <item>Aure</item>
+        <item>Abinci</item>
+        <item>Hadin Kan muminai da kuma rikon igiyar Allah</item>
+        <item>Mai kisan kai</item>
+        <item>Haɗakar da alkhairi da haramta aikata mummunan aiki ba tare da bada shawara ba</item>
+        <item>Marayu</item>
+        <item>Canza jagorancin Qibla "shugabancin addu\'a"</item>
+        <item>Gado da kuma dokokinsa</item>
+        <item>Yancin yin imani</item>
+        <item>Ridda</item>
+        <item>Abubuwan sa  maye</item>
+        <item>Fansa</item>
+        <item>Addini</item>
+        <item> Takadar odar gado</item>
+        <item>Shawarwari</item>
+        <item>Chacha</item>
+        <item>Babu tilastawa cikin addini</item>
+        <item>Ado</item>
+        <item>Haramtawa</item>
+        <item>Yin rantsuwa</item>
+        <item>Yin gargadi ga \'ya\'yan Isra\'ila</item>
+        <item>Munafukai</item>
+        <item>Maƙarƙashiya na Krista a gaskanta da dan kamar Allah, Allah ya haramta</item>
+        <item>Kafirai</item>
+        <item>Canje-canje na littattafan da suka sauko daga sama</item>
+        <item>Hukunci game da al\'ummai kafin isowar musulunci</item>
+        <item>Gargaɗi ga mutanen littafi</item>
+        <item>Kalubalancin Alkur\'ani ga kafirai</item>
+        <item>Gargadi ga Kiristoci</item>
+        <item>Yin gargadi ga Musulmai da al\'ummomi da suka gabata</item>
+        <item>Yadda za a bi da mutanen littafi</item>
+        <item>Sharuddan zamanin da ya gabata kafin isowar musulunci</item>
+        <item>Gargadi ga Yahudawa</item>
+        <item>yadda za a bi da kafirai</item>
+        <item>Dokokin Yahudawa da Kiristoci da kuma mutanen littafi</item>
+        <item>Bayani na mutum / Bayani na dan Adam</item>
+        <item>Hankali</item>
+        <item>dalilin aukuwar bala\'i da mugunta ga mutum</item>
+        <item>Bayani na masu imani</item>
+        <item>Mafarkai da kuma bayanin su.</item>
+        <item>Shawarwari ga Musulmi</item>
+        <item>Muhimmancin mai imani a bisan kafiri</item>
+        <item>Hikima</item>
+        <item>Imani</item>
+        <item>Makiyaya</item>
+        <item>Abõkan Allah</item>
+        <item>Kira saboda Allah</item>
+        <item>Umurnai na ayyukan adalci da halin kirki</item>
+        <item>Juriya- zaman lafiya- yin sulhu tsakanin mutane</item>
+        <item>Cuta da kuma jarabawa</item>
+        <item>taƙawa</item>
+        <item>Ranar Shari\'a da Ranar Lahira</item>
+        <item>Wuta</item>
+        <item>Aljanna</item>
+        <item>Aljani</item>
+        <item>Mala\'iku</item>
+        <item>Halitan Adamu da mutum / Halitan Adamu da dan Adam</item>
+        <item>Sihiri- Babel- Harut da Marut</item>
+        <item>Aljannu</item>
+        <item>Mutuwa / Rasuwa</item>
+        <item>Masoman Halitta / Farkon halitta</item>
+        <item>Isra (tafiya ta jiki da ta ruhaniya ta annabi Muhammad</item>
+        <item>Gaibi</item>
+        <item>Kursiyi - (Matashin kafa)</item>
+        <item>Alamun Sa\'a</item>
+        <item>Lokacin Sa\'a</item>
+        <item>Cẽto</item>
+        <item>Ruhu</item>
+        <item>Bayanin Aljanna</item>
+        <item>Alkur\'ani</item>
+        <item>haruffa da ke farkon Surori</item>
+        <item>Mu\'ujjizan Alkur\'ani</item>
+        <item>Kwafan ayoyi</item>
+        <item>Labarun Annabawa - Musa, aminci ya tabbata a gare shi</item>
+        <item>Labarun Annabawa - Ibrahim, aminci ya tabbata a gare shi</item>
+        <item>Labarun Annabawa - Nuhu, aminci ya tabbata a gare shi</item>
+        <item>Labarun Annabawa - Yusif, aminci ya tabbata a gare shi</item>
+        <item>Misalai</item>
+        <item>Labarun Annabawa - Lut, aminci ya tabbata a gare shi da mutanen sa</item>
+        <item>Labarun Annabawa - Isah, aminci ya tabbata a gare shi</item>
+        <item>Labarun Annabawa - Salihu, aminci ya tabbat a gare shi da Samudawa mutanensa da kuma rãƙuma</item>
+        <item>Labarun Annabawa - Sulaimanu, aminci ya tabbata a gare shi</item>
+        <item>Labarun Annabawa - Hud, aminci ya tabbata a gare shi da mutanensa</item>
+        <item>Labarun Annabawa - Maraym, aminci ya tabbata a gare ta, mahaifiyar Isah, aminici ya tabbata a gare ta</item>
+        <item>Labarun Annabawa - Shu\'aibu, aminic ya tabbata a gare shi</item>
+        <item>Labarun Annabawa - Dawuda, aminci ya tabbata a gare shi</item>
+        <item>Labarun Annabawa - Adamu, aminci ya tabbata a gare shi</item>
+        <item>Mu\'ujjizan Annabawa</item>
+        <item>Sahabbai na kogo</item>
+        <item>Zul-karnain</item>
+        <item>Labarun Annabawa - Zakariya, aminci ya tabbata a gare shi</item>
+        <item>Labarun Annabawa - Inusa, aminci ya tabbata a gare shi</item>
+        <item>Labarun Annabawa - Isma\'il, aminci ya tabbata a gare shi</item>
+        <item>Labarun Annabawa - Illiyasu, aminci ya tabbata a gare shi</item>
+        <item>Labarun Annabawa - Yahaya, aminci ya tabbata a gare shi</item>
+        <item>Labarun Annabawa - Lukman, aminci ya tabbata a gare shi</item>
+        <item>Sab\'aa</item>
+        <item>Qaran</item>
+        <item>Labarun Annabawa - Sha\'ul</item>
+        <item>Kabil da Habil</item>
+        <item>Labarun annabawa - Ayyuba, aminci ya tabbata a gare shi</item>
+        <item>Labarun annabawa - Idris, aminci ya tabbata a gare shi</item>
+        <item>Labarun annabawa - Ishaku, aminci ya tabbata a gare shi</item>
+        <item>Labarun annabawa - Yakubu</item>
+        <item>Albarkun Allah a kan mu</item>
+        <item>Ikon Allah</item>
+        <item>Halayyan Allah, Madaukakin Tsarki</item>
+        <item>Sunayen Allah</item>
+        <item>Makomar Allah</item>
+        <item>Rahama</item>
+        <item>Kaunar Allah</item>
+        <item>Hukuncin Allah</item>
+        <item>Mu\'ujjizan duniya</item>
+        <item>Mu\'ujjizan duniya</item>
+        <item>Aunin Allah na al\'ummai da kuma duniya</item>
+        <item>Halitta, tsuntsaye da dabbobi</item>
+        <item>Yin fada</item>
+        <item>Yin jihadi saboda Allah</item>
+        <item>Yakin Uhudu</item>
+        <item>Wanene ya bar fada </item>
+        <item>Yakin Badr</item>
+        <item>Yakin Al-Ahzab</item>
+        <item>Shaida da Shahidai</item>
+        <item>Yakin Hanen</item>
+        <item>Yin jihadi saboda Allah</item>
+        <item>Addu\'a daga cikin Alkur\'ani da kuma amshi</item>
+        <item>Sadaka - Ciyarwa sabo da Allah</item>
+        <item> Addu\'a</item>
+        <item>Aikin Hajji</item>
+        <item>Neman gafara da kuma gafarar Allah</item>
+        <item>Lokatan da aka shawarta don yin Sujada</item>
+        <item>Tuba</item>
+        <item>Yabo ya tabatta ga Allah, mai dukan iko</item>
+        <item>Hakuri da mahakurta</item>
+        <item>Gafara / Yafewa</item>
+        <item>Ninka kyawawan ayyuka</item>
+        <item>Azumi</item>
+        <item>Jagoranci</item>
+        <item>Tunawa da Allah</item>
+        <item>Ambatar Allah</item>
+        <item>Yin tunani kan halittar Allah</item>
+        <item>Hegira a kan hanyar Allah</item>
+        <item>Game da shugaban mu, Muhammadu tsira da aminci su tabbata a gare shi</item>
+        <item>Ka\'aba</item>
+        <item>mabudan rayuwa</item>
+        <item>Makka</item>
+        <item>Iyaye</item>
+        <item>Bayanin Duniya</item>
+        <item>Massalatai</item>
+        <item>Masu lalata duniya</item>
+        <item>Jayayya</item>
+        <item>Kafirci</item>
+        <item>Karawa</item>
+        <item>Rowa</item>
+        <item>Mawaka ne masu zane-zane a zamanin Annabci</item>
+        <item>Rashin Tsarki</item>
+    </string-array>
+</resources>

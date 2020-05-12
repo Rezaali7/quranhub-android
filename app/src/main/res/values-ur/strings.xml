@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Urdu
+    -->
+
+    <string name="app_name">مصحف</string>
+    <string name="fehris_menu">سورتوں اور پاروں کی فہرست</string>
+    <string name="topics_menu">موضوعات</string>
+    <string name="library_menu">لائبریری</string>
+    <string name="live_menu">براہ راست</string>
+    <string name="plan_menu">پلان</string>
+    <string name="fwasil_menu">وقفے</string>
+    <string name="favorite_menu">پسندیدہ</string>
+    <string name="notes_menu">میرے نوٹس</string>
+    <string name="tagweed_menu">تجوید</string>
+    <string name="tanbehat_menu">غلطیوں کی تنبیہات</string>
+    <string name="statistcs_menu">اعداد و شمار</string>
+    <string name="settings_menu">ترتیبات</string>
+    <string name="downloads_menu">ڈاؤن لوڈز کی ترتیب</string>
+    <string name="myaccount_menu">میرا اکاؤنٹ</string>
+    <string name="notes_dialog">نوٹس</string>
+    <string name="tafseer_dialog">تفسیر</string>
+    <string name="listen_dialog">سنیے</string>
+    <string name="add_fav">اضافہ کیجیے</string>
+    <string name="fasil_dialog">وقفہ</string>
+    <string name="share_dialog">اشتراک کریں</string>
+    <string name="load_image_failed">تصویر لوڈ کرنے میں خرابی آگئی ہے!</string>
+    <string name="page_info_failed">قرآن کریم کا صفحہ حاصل کرنے میں خرابی آگئی ہے۔</string>
+    <string name="select_aya_fail">آیت کا انتخاب نہیں ہوسکا</string>
+    <string name="fasil_note">نوٹ وقفہ</string>
+    <string name="fasil_read">وقفہ قرات</string>
+    <string name="sura">سورت</string>
+    <string name="insert_bookmark_failed">آیت میں وقفہ شامل نہیں ہوسکا!</string>
+    <string name="success_insert_bookmark">وقفہ کامیابی سے محفوظ ہوگیا ہے!</string>
+    <string name="bookmark_removed">وقفہ ختم کردیا گیا ہے</string>
+    <string name="bookmark_failed_removed">یہ وقفہ ختم کرنے میں خرابی آگئی ہے۔ براہِ مہربانی دوبارہ کوشش کیجیے</string>
+    <string name="search">تلاش</string>
+    <string name="guz2_index">پاروں کی فہرست</string>
+    <string name="sura_index">سورتوں کی فہرست</string>
+    <string name="page_num">صفحہ %s</string>
+    <string name="ayas_num">c</string>
+    <string name="aya_rob3">چوتھائی %s</string>
+    <string name="aya_hezb">حزب %s</string>
+    <string name="aya_goz2">پارہ %s</string>
+
+    <string name="aya_num">آیه %s</string>
+    <string name="sura_index_failed">سورتوں کی فہرست نہیں نکالی جاسکی</string>
+    <string name="aya">آیت </string>
+    <string name="chapter">جزو</string>
+    <string name="hizb">حزب</string>
+    <string name="rub3">چوتھائی</string>
+    <string name="page">صفحہ</string>
+    <string name="bookmark_filter_header">وقفہ کے رنگ کے حساب دیکھیں</string>
+    <string name="all_bookmark">تمام وقفے</string>
+    <string name="back">واپس</string>
+    <string name="show">دیکھیے</string>
+    <string name="msg_no_bookmarks">کوئی وقفہ موجود نہیں</string>
+    <string name="no_internet">انٹرنیٹ چیک کیجیے</string>
+    <string name="mushaf">قرآن کریم</string>
+    <string name="no_space">No available space to downloaded this file</string>
+
+    <string name="download_file">لوڈنگ ہورہی ہے</string>
+    <string name="tooltip_quran_night_mode">نائٹ موڈ آن / آف کیجیے</string>
+    <string name="tooltip_quran_search">قرآن مجید میں تلاش</string>
+    <string name="trajim_menu">تراجم</string>
+    <string name="sura_makya">مکی</string>
+    <string name="sura_madnya">مدنی</string>
+    <string name="storage_perm">اس فائل کو فائل کھولنے کے لئے آپ کی اسٹوریج تک رسائی کی ضرورت ہے</string>
+    <string name="accept_perm">برائے مہربانی اجازت منظور کریں</string>
+    <string name="file_not_exist">فائل موجود نہیں ہے</string>
+    <string name="download_page_failed">لوڈنگ حاصل نہیں ہوسکی</string>
+    <string name="no_downloads">تبدیلی کے لئے کوئی لوڈنگ موجود نہیں ہے</string>
+    <string name="title_activity_settings">ترتیبات</string>
+    <string name="settings_category_language">زبان</string>
+    <string name="settings_category_recitation">پڑھنے کی ترتیبات</string>
+    <string name="settings_category_sound">آواز کی ترتیبات</string>
+    <string name="settings_category_aboutapp">اِس ایپ کے بارے میں</string>
+    <string name="setting_quran_recitation">قرآن مجید کی روایت</string>
+    <string name="setting_app_lang">صارف کی زبان</string>
+    <string name="setting_screen_reading_backlight">پڑھنے کے دوران اسکرین کی روشنی</string>
+    <string name="setting_last_read_page">آخری پڑھنے کا مقام کو آٹو سیو کریں</string>
+    <string name="setting_reading_warnings">پڑھنے سے متعلق تنبیہات</string>
+    <string name="setting_reading_alarm">تنبیہہ کا وقت</string>
+    <string name="setting_quran_reader">آٹومیٹک قاری کی آواز</string>
+    <string name="setting_audio_download_manager">آواز ڈاؤن لوڈز کی ترتیبات </string>
+    <string name="setting_help">مدد</string>
+    <string name="setting_about_app_version">ایپ کے ورژن کے بارے میں</string>
+    <string name="setting_contact_us">ہم سے رابطہ کیجئے</string>
+    <string name="setting_share_app">ایپ شیئر کیجیے</string>
+    <string name="data_failed">ڈیٹا حاصل نہیں ہوسکا</string>
+    <string name="open_file">فائل کھولیے</string>
+    <string name="in_this_app">پروگرام میں</string>
+    <string name="out_this_app">بیرونی پروگرام</string>
+    <string name="hafs_recitation">حفص عن عاصم</string>
+    <string name="warsh_recitation">ورش عن نافع</string>
+    <string name="app_lang_setting_dialog_title">پروگرام کی زبان کا انتخاب</string>
+    <string name="recitation_setting_dialog_title">قرآن مجید کی روایت کا انتخاب</string>
+    <string name="title_activity_first_time_wizard">ابتدائی ترتیبات</string>
+    <string name="first_wizard_title_app_language_step">صارف کی زبان کا انتخاب</string>
+    <string name="first_wizard_title_recitations_step">قرآن مجید کی روایت کا انتخاب</string>
+    <string name="first_wizard_hint_recitations">آپ ترتیبات کے بعد بھی روایت تبدیل کرسکتے ہیں</string>
+    <string name="next">اگلا</string>
+    <string name="finish">بند کریں</string>
+    <string name="suras">سورتوں</string>
+    <string name="chapters">پاروں</string>
+    <string name="all_hezb" >تمام حزب</string>
+    <string name="all_quarters">تمام چوتھائی</string>
+    <string name="about_app_menu">ایپ کے متعلق</string>
+    <string name="technical_support_menu">ٹیکنیکل سپورٹ</string>
+    <string name="first_wizard_title_translation_languages_step">ترجمے کی زبان کا انتخاب کریں</string>
+    <string name="first_wizard_hint_app_langauge">آپ ایپ کی زبان بعد میں ترتیبات سے تبدیل کر سکتے ہیں</string>
+    <string name="first_wizard_hint_translation_languages">آپ ترجمے کی زبان بعد میں ترتیبات سے تبدیل کر سکتے ہیں</string>
+    <string name="tafseer_text">ترجمہ</string>
+    <string name="trajim_book_name">کتاب کے نام کا انتخاب کریں</string>
+    <string name="more">مزید</string>
+    <string name="collapse">بند کریں</string>
+    <string name="translation_text">ترجمہ</string>
+    <string name="translations_dialog_title">ترجمہ/تفسیر کی کتاب کا انتخاب کریں</string>
+    <string name="error_translations_web_service">ڈاؤنلوڈ کیلئے میسر ترجمہ حاصل نہیں ہو سکا</string>
+    <string name="translation_dowload_permission_rationale">ترجمے والی فائل ڈاؤنلوڈ کرنے کیلئے اس ایپ کو اجازت درکار ہے</string>
+    <string name="error_download_translation">ڈاؤنلوڈ ناکام رہا</string>
+    <string name="setting_quran_translation_lang">قرآنی ترجمے کی زبان</string>
+    <string name="translation_lang_setting_dialog_title">قرآنی ترجمے کی زبان کا انتخاب کریں</string>
+    <string name="translation_muyassar">المیسر</string>
+    <string name="no_downloaded_books">ترجمہ حاصل کرنے کیلئے کتاب ڈاؤنلوڈ کریں</string>
+    <string name="choose_book">کتاب کا انتخاب کریں</string>
+    <string name="no_search_result">آپکی تلاش کے کوئی نتائج نہیں</string>
+    <string name="search_failed">آپکی تلاش کے نتائج حاصل نہیں ہو سکے</string>
+    <string name="all_sura">تمام سورتیں</string>
+    <string name="all_guz2">تمام پارے</string>
+    <string name="select_hezb_first">پہلے حزب کا انتخاب کیجئے</string>
+    <string name="share_using">شئیر کریں </string>
+    <string name="select_juz_first">پہلے پارے کا انتخاب کیجیئے</string>
+    <string name="title_options_dialog_filter_guz2_index">فلٹر کا انتخاب کریں</string>
+
+    <string-array name="agza2_name">
+        <item>پہلا پارہ</item>
+        <item>دوسرا پارہ</item>
+        <item>تیسرا پارہ</item>
+        <item>چوتھا پارہ</item>
+        <item>پانچواں پارہ</item>
+        <item>چھٹا پارہ</item>
+        <item>ساتواں پارہ</item>
+        <item>آٹھواں پارہ</item>
+        <item>نواں پارہ</item>
+        <item>دسواں پارہ</item>
+        <item>گیارہواں پارہ</item>
+        <item>بارہواں پارہ</item>
+        <item>تیرہواں پارہ</item>
+        <item>چودھواں پارہ</item>
+        <item>پندرھواں پارہ</item>
+        <item>سولھواں پارہ</item>
+        <item>سترھواں پارہ</item>
+        <item>اٹھارھواں پارہ</item>
+        <item>انیسواں پارہ</item>
+        <item>بیسواں پارہ</item>
+        <item>اکیسواں پارہ</item>
+        <item>بائیسواں پارہ</item>
+        <item>تئیسواں پارہ</item>
+        <item>چوبیسواں پارہ</item>
+        <item>پچیسواں پارہ</item>
+        <item>چھبیسواں پارہ</item>
+        <item>ستائیسواں پارہ</item>
+        <item>اٹھاویسواں پارہ</item>
+        <item>انتیسواں پارہ</item>
+        <item>تیسواں پارہ</item>
+    </string-array>
+
+    <string-array name="sura_name">
+        <item>الفاتحة</item>
+        <item>البقرة</item>
+        <item>آل عمران</item>
+        <item>النساء</item>
+        <item>المائدة</item>
+        <item>الأنعام</item>
+        <item>الأعراف</item>
+        <item>الأنفال</item>
+        <item>التوبة</item>
+        <item>يونس</item>
+        <item>هود</item>
+        <item>يوسف</item>
+        <item>الرعد</item>
+        <item>إِبراهيم</item>
+        <item>الحجر</item>
+        <item>النحل</item>
+        <item>الإِسراء</item>
+        <item>الكهف</item>
+        <item>مريم</item>
+        <item>طه</item>
+        <item>الأنبياء</item>
+        <item>الحج</item>
+        <item>المؤمنون</item>
+        <item>النور</item>
+        <item>الفرقان</item>
+        <item>الشعراء</item>
+        <item>النمل</item>
+        <item>القصص</item>
+        <item>العنكبوت</item>
+        <item>الروم</item>
+        <item>لقمان</item>
+        <item>السجدة</item>
+        <item>الأحزاب</item>
+        <item>سبأ</item>
+        <item>فاطر</item>
+        <item>يس</item>
+        <item>الصافات</item>
+        <item>ص</item>
+        <item>الزمر</item>
+        <item>غافر</item>
+        <item>فصلت</item>
+        <item>الشورى</item>
+        <item>الزخرف</item>
+        <item>الدخان</item>
+        <item>الجاثية</item>
+        <item>الأحقاف</item>
+        <item>محمد</item>
+        <item>الفتح</item>
+        <item>الحجرات</item>
+        <item>ق</item>
+        <item>الذاريات</item>
+        <item>الطور</item>
+        <item>النجم</item>
+        <item>القمر</item>
+        <item>الرحمن</item>
+        <item>الواقعة</item>
+        <item>الحديد</item>
+        <item>المجادلة</item>
+        <item>الحشر</item>
+        <item>الممتحنة</item>
+        <item>الصف</item>
+        <item>الجمعة</item>
+        <item>المنافقون</item>
+        <item>التغابن</item>
+        <item>الطلاق</item>
+        <item>التحريم</item>
+        <item>الملك</item>
+        <item>القلم</item>
+        <item>الحاقة</item>
+        <item>المعارج</item>
+        <item>نوح</item>
+        <item>الجن</item>
+        <item>المزمل</item>
+        <item>المدثر</item>
+        <item>القيامة</item>
+        <item>الإِنسان</item>
+        <item>المرسلات</item>
+        <item>النبأ</item>
+        <item>النازعات</item>
+        <item>عبس</item>
+        <item>التكوير</item>
+        <item>الانفطار</item>
+        <item>المطففين</item>
+        <item>الانشقاق</item>
+        <item>البروج</item>
+        <item>الطارق</item>
+        <item>الأعلى</item>
+        <item>الغاشية</item>
+        <item>الفجر</item>
+        <item>البلد</item>
+        <item>الشمس</item>
+        <item>الليل</item>
+        <item>الضحى</item>
+        <item>الشرح</item>
+        <item>التين</item>
+        <item>العلق</item>
+        <item>القدر</item>
+        <item>البينة</item>
+        <item>الزلزلة</item>
+        <item>العاديات</item>
+        <item>القارعة</item>
+        <item>التكاثر</item>
+        <item>العصر</item>
+        <item>الهمزة </item>
+        <item>الفيل</item>
+        <item>قريش</item>
+        <item>الماعون</item>
+        <item>الكوثر</item>
+        <item>الكافرون</item>
+        <item>النصر</item>
+        <item>المسد</item>
+        <item>الإِخلاص</item>
+        <item>الفلق</item>
+        <item>الناس</item>
+    </string-array>
+
+    <string-array name="hezb_name">
+        <item>پہلا حزب</item>
+        <item>دوسرا حزب</item>
+    </string-array>
+
+    <string-array name="quarter_name">
+        <item>پہلا چوتھائی</item>
+        <item>دوسرا چوتھائی</item>
+        <item>تیسرا چوتھائی</item>
+        <item>چوتھا چوتھائی</item>
+    </string-array>
+
+    <string-array name="subject_category_name">
+    <item>اسلام کے احکامات</item>
+    <item>اسلام سے پہلے کی قومیں اور کفار</item>
+    <item>انسان</item>
+    <item>ایمان اور ایمان والے</item>
+    <item>غیب اور برزخ</item>
+    <item>قرآن</item>
+    <item>قصے اور تاریخ</item>
+    <item>قرآن میں اللہ</item>
+    <item>کائنات اور اللہ کی مخلوقات</item>
+    <item>جہاد، معرکے اور جنگیں</item>
+    <item>عبادات</item>
+    <item>غیر مصنف</item>
+    <item>مفاسد اور بڑے گناہ</item>
+    </string-array>
+
+    <string-array name="subject_name">
+        <item>قصاص اور حدود</item>
+        <item>اللہ، رسول اور حکام کی اطاعت کرو </item>
+        <item>عدل، انصاف اور وفاداری</item>
+        <item>اللہ کی وحی کے مطابق انصاف کرنا</item>
+        <item>مسلمانوں اور امت کیلئے احکامات اور قوانین</item>
+        <item>زکوة</item>
+        <item>طلاق</item>
+        <item>نکاح کے احکامات اور اصول</item>
+        <item>سود</item>
+        <item>زنا</item>
+        <item>اللہ کے رسول صلی االلہ علیہ وسلم سے بات کرنے کے اداب </item>
+        <item>مال</item>
+        <item>نکاح</item>
+        <item>کھانا</item>
+        <item>مومنین کا اتحاد اور اللہ کی رسی کو تھامنا</item>
+        <item>قاتل</item>
+        <item>اچھے کی ترغیب دینا اور برے سے روکنا اور نصیحت کرنا</item>
+        <item>یتیم</item>
+        <item>قبلے کا رخ بدلنا</item>
+        <item>وراثت اور اسکے احکامات</item>
+        <item>عقیدہ کی آزادی </item>
+        <item>ارتداد</item>
+        <item>شراب</item>
+        <item>کفارہ</item>
+        <item>دین</item>
+        <item>وصیت</item>
+        <item>مشورہ</item>
+        <item>جوا</item>
+        <item>دین میں جبر نہیں</item>
+        <item>سجاوٹ</item>
+        <item>حرام کرنا</item>
+        <item>حلف لینا</item>
+        <item>بنی اسرائیل کو تنبیہ</item>
+        <item>منافقین</item>
+        <item>یہودیوں کا اللہ کا بیٹا ماننے کا تنازع، معاذ اللہ</item>
+        <item>کفار</item>
+        <item>آسمانی کتابوں میں ترمیم</item>
+        <item>اسلام سے پہلے کی امتوں کیلئے حکم</item>
+        <item>اہل کتاب کیلئے تنبیہ</item>
+        <item>کفار کیلئے قرآنی چیلنج</item>
+        <item>نصرانیوں کیلئے تنبیہ</item>
+        <item>مسلمانوں کو پچھلی امتوں سے تنبیہ کرنا</item>
+        <item>اہل کتاب کے ساتھ معاملہ</item>
+        <item>جاہلیت کے وقت کے احکامات</item>
+        <item>یہود کیلئے تنبیہ</item>
+        <item>کفار کے ساتھ معاملہ</item>
+        <item>یہودیوں، نصرانیویں اور اہل کتاب کے قوانین اور شریعت</item>
+        <item>انسان کی توصیف</item>
+        <item>عقل</item>
+        <item>انسان کیلئے مشکلات اور شر کی وجہ</item>
+        <item>مومنین کے اوصاف</item>
+        <item>خواب اور انکی تفسیر</item>
+        <item>مسلمانوں کیلئے نصیحتیں</item>
+        <item>مومن کا کافر سے افضل ہونا</item>
+        <item>حکمت</item>
+        <item>ایمان</item>
+        <item>بدو</item>
+        <item>اولیاء اللہ</item>
+        <item>اللہ کیلئے بلانا</item>
+        <item>اچھے اعمال اور اخلاق کے احکام</item>
+        <item>برداشت ۔ سلامتی ۔ لوگوں کے درمیان صلح</item>
+        <item>مبتلا ہونا اور امتحان میں ہونا</item>
+        <item>نیکی</item>
+        <item>آخری روز اور حساب</item>
+        <item>آگ</item>
+        <item>جنت</item>
+        <item>شیطان</item>
+        <item>فرشتے</item>
+        <item>آدم اور انسان کی تخلیق</item>
+        <item>جادو ۔ بابل ۔ ہاروت اور ماروت</item>
+        <item>جن</item>
+        <item>موت</item>
+        <item>تخلیق کی ابتداء</item>
+        <item>معراج</item>
+        <item>غیب</item>
+        <item>عرش ۔ کرسی</item>
+        <item>قیامت کی نشانیاں</item>
+        <item>قیامت کا وقت</item>
+        <item>شفاعت</item>
+        <item>روح</item>
+        <item>جنت کی توصیف</item>
+        <item>قرآن</item>
+        <item>سورتوں کے شروع کے حروف</item>
+        <item>قرآنی معجزات</item>
+        <item>آیات کے نسخے</item>
+        <item>انبیاء کے قصے ۔ موسی علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ ابراہیم علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ نوح علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ یوسف علیہ السلام</item>
+        <item>مثالیں</item>
+        <item>انبیاء کے قصے ۔ لوط علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ عیسی علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ صالح علیہ السلام اور انکی قوم ثود اور اونٹنی</item>
+        <item>انبیاء کے قصے ۔ سليمان علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ هود علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ مریم علیہ السلام ۔ عیسی علیہ السلام کی والدہ</item>
+        <item>انبیاء کے قصے ۔ شعیب علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ داود علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ آدم علیہ السلام</item>
+        <item>انبیاء کے معجزات</item>
+        <item>غار کے ساتھی</item>
+        <item>اصحاب کھف</item>
+        <item>انبیاء کے قصے ۔ زکریا علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ یونس علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ اسماعیل علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ الیاس علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ یحیی علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ لقمان علیہ السلام</item>
+        <item>سباء</item>
+        <item>قارون</item>
+        <item>انبیاء کے قصے ۔ طالوت </item>
+        <item>ہابیل اور قابیل </item>
+        <item>انبیاء کے قصے ۔ ایوب علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ ادریس علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ اسحاق علیہ السلام</item>
+        <item>انبیاء کے قصے ۔ یعقوب علیہ السلام</item>
+        <item>ہمارے اوپر اللہ تعالی کی نعمتیں</item>
+        <item>اللہ کی قدرت</item>
+        <item>اللہ عزوجل کی صفات</item>
+        <item>اللہ کے نام</item>
+        <item>اللہ کی قدرت</item>
+        <item>رحمت</item>
+        <item>اللہ کی محبت</item>
+        <item>اللہ کا عدل</item>
+        <item>زمینی نشانیاں</item>
+        <item>کائنات کی نشانیاں</item>
+        <item>اللہ کی دنیا اور امتوں کیلئے تدابیر</item>
+        <item>مخلوق، پرندے اور حیوانات</item>
+        <item>لڑائی</item>
+        <item>اللہ کی خاطر جہاد</item>
+        <item>احد کا معرکہ</item>
+        <item>جس نے لڑائی چھوڑی</item>
+        <item>بدر کا معرکہ</item>
+        <item>احزاب کا معرکہ</item>
+        <item>شہادت اور شھداء</item>
+        <item>حنین کا معرکہ</item>
+        <item>جہاد</item>
+        <item>قرآن کی دعا اور اسکا جواب</item>
+        <item>صدقہ ۔ اللہ کی راہ میں خرچنا</item>
+        <item>نماز</item>
+        <item>حج</item>
+        <item>استغفار اور اللہ سے مغفرت مانگنا</item>
+        <item>عبادت کے محبوب اوقات</item>
+        <item>توبہ</item>
+        <item>تعریف اور شکر اللہ تعالی کیلئے</item>
+        <item>صبر اور صبر کرنےوالے</item>
+        <item>عفو درگزر</item>
+        <item>حسنات کو دگنا کر دینا</item>
+        <item>روزہ</item>
+        <item>ہدایت</item>
+        <item>ذکر اذکار</item>
+        <item>ذکر</item>
+        <item>اللہ کی مخلوق کا سوچنا</item>
+        <item>اللہ کی راہ میں ہجرت</item>
+        <item>ہمارے آقا محمد صلی اللہ علیہ وسلم کے بارے میں</item>
+        <item>کعبہ</item>
+        <item>رزق کی کنجیاں</item>
+        <item>مکہ ۔ بکہ</item>
+        <item>والدین</item>
+        <item>دنیا کی توصیف</item>
+        <item>مساجد</item>
+        <item>زمین میں فساد پیدا کرنیوالے</item>
+        <item>فتنہ</item>
+        <item>طاغوت</item>
+        <item>اسراف</item>
+        <item>بخل</item>
+        <item>رسالت کے دور میں شعراء آرٹسٹ ہیں</item>
+        <item>نجاست</item>
+    </string-array>
+
+</resources>

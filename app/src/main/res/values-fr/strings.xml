@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        French
+    -->
+
+    <string name="app_name">Coran</string>
+    <string name="fehris_menu">Index sourates et parties</string>
+    <string name="topics_menu">Thèmes</string>
+    <string name="library_menu">Bibliothèque</string>
+    <string name="live_menu">Direct</string>
+    <string name="plan_menu">Plan</string>
+    <string name="fwasil_menu">Mises en pause</string>
+    <string name="favorite_menu">Mes favorites</string>
+    <string name="notes_menu">Mes observations</string>
+    <string name="tagweed_menu">Tajweed</string>
+    <string name="tanbehat_menu">Alerte d\'erreur</string>
+    <string name="statistcs_menu">Statistiques</string>
+    <string name="settings_menu">Paramètres</string>
+    <string name="downloads_menu">Gestion téléchargements</string>
+    <string name="myaccount_menu">Mon compte</string>
+    <string name="notes_dialog">Notes</string>
+    <string name="tafseer_dialog">Interprétation</string>
+    <string name="listen_dialog">Écouter</string>
+    <string name="add_fav">Ajouter</string>
+    <string name="fasil_dialog">Mise en pause</string>
+    <string name="share_dialog">Partager</string>
+    <string name="load_image_failed">Une erreur s\'est produite lors du chargement de la Sourate !</string>
+    <string name="page_info_failed">Une erreur s\'est produite lors de l\'accès aux données de la page du Coran !</string>
+    <string name="select_aya_fail">Impossible de choisir le verset !</string>
+    <string name="fasil_note">Note</string>
+    <string name="sura">Sourate</string>
+    <string name="fasil_read">Lecture</string>
+    <string name="insert_bookmark_failed">Impossible d\'ajouter une mise en pause au verset !</string>
+    <string name="success_insert_bookmark">Mise en pause enregistrée avec succès !</string>
+    <string name="bookmark_removed">La mise en pause a été supprimée</string>
+    <string name="bookmark_failed_removed">Échec de la suppression de cette mise en pause. Veuillez réessayer !</string>
+    <string name="search">Rechercher</string>
+    <string name="guz2_index">Parties</string>
+    <string name="sura_index">Sourtes</string>
+    <string name="page_num">Page %s</string>
+    <string name="ayas_num">%s versets</string>
+    <string name="aya_rob3">Quart %s</string>
+    <string name="aya_hezb">Section %s</string>
+    <string name="aya_goz2">Partie %s</string>
+    <string name="aya_num">%s Verset</string>
+
+    <string name="sura_index_failed">Impossible d\'ouvrir l\'index des Sourates</string>
+    <string name="aya">Versetn</string>
+    <string name="chapter">Partie</string>
+    <string name="hizb">Section</string>
+    <string name="rub3">Quart</string>
+    <string name="page">Page</string>
+    <string name="bookmark_filter_header">Affichage selon couleur de mise en pause</string>
+    <string name="all_bookmark">Toutes les mises en pause</string>
+    <string name="back">Retour</string>
+    <string name="show">Voir</string>
+    <string name="msg_no_bookmarks">Aucune mise en pause disponible</string>
+    <string name="no_internet">Vérifiez votre connexion Internet</string>
+    <string name="mushaf">Le coran</string>
+    <string name="no_space">No available space to downloaded this file</string>
+
+    <string name="download_file">Chargement</string>
+    <string name="tooltip_quran_night_mode">Activer / désactiver le mode nuit</string>
+    <string name="tooltip_quran_search">Rechercher dans le Coran</string>
+    <string name="trajim_menu">Traductions</string>
+    <string name="sura_makya">Mecquoise</string>
+    <string name="sura_madnya">Médinoise</string>
+    <string name="storage_perm">Cette application a besoin d\'accéder à votre espace de stockage pour ouvrir le fichier.</string>
+    <string name="accept_perm">S\'il vous plaît accepter la permission</string>
+    <string name="file_not_exist">Le fichier n\'existe pas</string>
+    <string name="download_page_failed">Impossible d\'accéder vos téléchargements</string>
+    <string name="no_downloads">Il n\'y a aucun téléchargement à modifier</string>
+    <string name="title_activity_settings">Paramètres</string>
+    <string name="settings_category_language">Langue</string>
+    <string name="settings_category_recitation">Paramètres de lecture</string>
+    <string name="settings_category_sound">Paramètres sonores</string>
+    <string name="settings_category_aboutapp">À propos de l\'application</string>
+    <string name="setting_quran_recitation">La lecture du Coran</string>
+    <string name="setting_app_lang">Langue de l\'interface utilisateur</string>
+    <string name="setting_screen_reading_backlight">Illumine l\'écran en lisant</string>
+    <string name="setting_last_read_page">Enregistrement automatiquement au dernier emplacement de lecture</string>
+    <string name="setting_reading_warnings">Lire les alertes</string>
+    <string name="setting_reading_alarm">Temps d\'alarme</string>
+    <string name="setting_quran_reader">Lecteur de voix automatique</string>
+    <string name="setting_audio_download_manager">Gérer les téléchargements de sons</string>
+    <string name="setting_help">Aide</string>
+    <string name="setting_about_app_version">À propos de la version de l\'application</string>
+    <string name="setting_contact_us">Contactez nous</string>
+    <string name="setting_share_app">Partager l\'application</string>
+    <string name="data_failed">Impossible de récupérer les données</string>
+    <string name="open_file">Ouvrez le fichier dans</string>
+    <string name="in_this_app">Dans le programme</string>
+    <string name="out_this_app">Programme externe</string>
+    <string name="hafs_recitation">Hafs d\'Asim</string>
+    <string name="warsh_recitation">Warsh de Nafi</string>
+    <string name="app_lang_setting_dialog_title">Sélectionnez langue pro</string>
+    <string name="recitation_setting_dialog_title">Choisissez la lecture du Coran</string>
+    <string name="title_activity_first_time_wizard">Paramètres initiaux</string>
+    <string name="first_wizard_title_app_language_step">Choisissez la langue de l\'interface utilisateur</string>
+    <string name="first_wizard_title_recitations_step">Choisissez la lecture du Coran</string>
+    <string name="first_wizard_hint_recitations">Vous pouvez changer la lecture plus tard à partir des paramètres.</string>
+    <string name="next">Suivant</string>
+    <string name="finish">Fermer</string>
+    <string name="suras">Sourates</string>
+    <string name="chapters">Parties</string>
+    <string name="all_hezb">Toutes sections</string>
+    <string name="all_quarters">Toutes quarts</string>
+    <string name="about_app_menu">A propos de l\'application</string>
+    <string name="technical_support_menu">Support technique</string>
+    <string name="first_wizard_title_translation_languages_step">Choisissez la langue de traduction du Coran</string>
+    <string name="first_wizard_hint_app_langauge">Vous pouvez modifier la langue de l\'application ultérieurement à partir des paramètres.</string>
+    <string name="first_wizard_hint_translation_languages">Vous pouvez modifier la langue de traduction ultérieurement à partir des paramètres.</string>
+    <string name="tafseer_text">Traduction</string>
+    <string name="trajim_book_name">Choisissez le nom du livre</string>
+    <string name="more">Plus</string>
+    <string name="collapse">Effondrer</string>
+    <string name="translation_text">Traduction</string>
+    <string name="translations_dialog_title">Choisissez la traduction / tafseer du livre</string>
+    <string name="error_translations_web_service">Impossible de télécharger les traductions!</string>
+    <string name="translation_dowload_permission_rationale">L\'application a besoin de l\'autorisation pour télécharger le fichier de traduction.</string>
+    <string name="error_download_translation">Échec du téléchargement!</string>
+    <string name="setting_quran_translation_lang">Langue de traduction du Coran</string>
+    <string name="translation_lang_setting_dialog_title">Choisissez la langue de traduction du Coran</string>
+    <string name="translation_muyassar">Al-Muyassar</string>
+    <string name="no_downloaded_books">Téléchargez un livre pour obtenir la traduction</string>
+    <string name="choose_book">Choisissez un livre</string>
+    <string name="no_search_result">Il n\'y a pas de résultat de recherche!</string>
+    <string name="search_failed">Impossible d\'obtenir le résultat de la recherche!</string>
+    <string name="all_sura">Toutes les sourates</string>
+    <string name="all_guz2">Tous les juz\'s</string>
+    <string name="select_hezb_first">Vous devriez d\'abord choisir le hizb</string>
+    <string name="share_using">Partagez en utilisant</string>
+    <string name="select_juz_first">Sélectionnez juz\' d\'abord</string>
+    <string name="title_options_dialog_filter_guz2_index">Choisissez le filtre</string>
+
+
+    <string-array name="subject_category_name">
+        <item>Dispositions de l\'islam</item>
+        <item>Les nations préislamiques et les mécréants</item>
+        <item>L\'Être Humain</item>
+        <item>Croyance et croyants</item>
+        <item>L\'Invisible et le Purgatoire</item>
+        <item>Le Coran</item>
+        <item>Récits et histoire</item>
+        <item>Allah dans le Coran</item>
+        <item>Univers et les créatures d\'Allah</item>
+        <item>Jihad, batailles et guerres</item>
+        <item>Culte</item>
+        <item>Non classé</item>
+        <item>les abus et les péchés capitaux</item>
+    </string-array>
+    
+    <string-array name="subject_name">
+    <item>La vengeance et la punition (Hadd)</item>
+    <item>Obéir à Allah, à son prophète et aux personnes ayant autorité parmi nous</item>
+    <item>Justice, équité et loyauté</item>
+    <item>Juger par la révélation d\'Allah</item>
+    <item>Dispositions et règlements pour la nation et les musulmans</item>
+    <item>Zakat</item>
+    <item>Divorce</item>
+    <item>Les dispositions et les bases de la relation conjugale</item>
+    <item>Intérêt</item>
+    <item>Adultère  </item>
+    <item>la moralité de parler avec le  Messager d\'Allah Muhammad, que la paix et les bénédictions soient sur lui.</item>
+    <item>Argent</item>
+    <item>Mariage</item>
+    <item>Aliments</item>
+    <item>L\'unité des croyants et tenant la corde d\'Allah</item>
+    <item>Le meurtre</item>
+    <item>Joindre le bien, interdire le mal et donner les conseils</item>
+    <item>Orphelins</item>
+    <item>Changer la direction de la Qibla "direction de la prière"</item>
+    <item>Héritage et ses règlements</item>
+    <item>la liberté de croyance</item>
+    <item>Apostasie</item>
+    <item>Intoxicants</item>
+    <item>Expiation</item>
+    <item>Religion</item>
+    <item>Testament</item>
+    <item>Consultation</item>
+    <item>Jeux d\'argent</item>
+    <item>Il n\'y a pas de contrainte en religion</item>
+    <item>Décoration</item>
+    <item>Interdiction</item>
+    <item>Prêter serment</item>
+    <item>Attention aux fils d\'Israël</item>
+    <item>Les hypocrites</item>
+    <item>La dispute des chrétiens en croyant en le fils comme Dieu, Dieu nous en préserve</item>
+    <item>Mécréants</item>
+    <item>Altération des livres célestes</item>
+    <item>Le jugement concernant les nations préislamiques</item>
+    <item>Mise en garde contre les gens du livre</item>
+    <item>Un défi coranique contre les mécréants</item>
+    <item>Avertissement aux chrétiens</item>
+    <item>Mise en garde des musulmans par les nations précédentes</item>
+    <item>traitement des gens du livre</item>
+    <item>les dispositions de la période préislamique</item>
+    <item>avertissant aux juifs</item>
+    <item>traitement des mécréants</item>
+    <item>Lois et législations des juifs, des chrétiens et des gens du livre</item>
+    <item>Description de l\'être humain</item>
+    <item>Esprit</item>
+    <item>la cause des désastres et du mal pour l\'être humain</item>
+    <item>Description des croyants</item>
+    <item>Les rêves et leurs explications</item>
+    <item>conseils pour le musulman</item>
+    <item>La supériorité du croyant sur le mécréant</item>
+    <item>Sagesse</item>
+    <item>Croyance</item>
+    <item>Bédouins</item>
+    <item>Les alliés d\'Allah</item>
+    <item>Appeler pour l\'amour d\'Allah</item>
+    <item>Ordres pour des actes justes et la morale</item>
+    <item>Tolérance - paix - réconciliation entre les hommes</item>
+    <item>Infliction et en cours de test</item>
+    <item>Piété</item>
+    <item>Jour du jugement et le dernier jour</item>
+    <item>Feu</item>
+    <item>paradis</item>
+    <item>Le démon</item>
+    <item>anges</item>
+    <item>Création d\'Adam et de l\'homme</item>
+    <item>Magie - Babel - Harut et Marut</item>
+    <item>Jin</item>
+    <item>Mort</item>
+    <item>Le début de la création</item>
+    <item>Isra (voyage nocturne physique et spirituel du prophète Mahomet</item>
+    <item>L\'Invisible</item>
+    <item>Trône - Kursi (Repose-pieds)</item>
+    <item>Les signes de l\'heure</item>
+    <item>Date de l\'heure</item>
+    <item>Intercession</item>
+    <item>Esprit</item>
+    <item>La description du paradis</item>
+    <item>Coran</item>
+    <item>les lettres au début des sourates</item>
+    <item>Miracles coraniques</item>
+    <item>Abrogation des vers</item>
+    <item>les histoires des prophètes - Moïse, que la paix soit sur lui, et  le pharaon</item>
+    <item>les histoires des prophètes-Abraham, que la paix soit sur lui</item>
+    <item>les histoires des prophètes-Noé, que la paix soit sur lui</item>
+    <item>les histoires des prophètes-Joseph, que la paix soit sur lui</item>
+    <item>Exemples</item>
+    <item>les histoires des prophètes - Lot, que la paix soit sur lui, et  son peuple</item>
+    <item>les histoires des prophètes - Jésus, que la paix soit sur lui</item>
+    <item>les histoires des prophètes-Salih, que la paix soit sur lui, et son peuple Thamud et la chamelle.</item>
+    <item>les histoires des prophètes-Soloman, que la paix soit sur lui</item>
+    <item>les histoires des prophètes-Hud, que la paix soit sur lui, et son peuple \'Aad</item>
+    <item>les histoires des prophètes-Maryam, que la paix soit sur elle, la mère de Jésus, que la paix soit sur lui.</item>
+    <item>les histoires des prophètes-Shuaib, que la paix soit sur lui</item>
+    <item>les histoires des prophètes-Devid, que la paix soit sur lui</item>
+    <item>les histoires des prophètes-Adam, que la paix soit sur lui</item>
+    <item>Miracles des prophètes</item>
+    <item>les compagnons de la grotte</item>
+    <item>Dhul-Qarnain</item>
+    <item>les histoires des prophètes - Zacharie, que la paix soit sur lui</item>
+    <item>les histoires des prophètes - Yunus,  que la paix soit sur lui</item>
+    <item>les histoires des prophètes - Ismaël, que la paix soit sur lui</item>
+    <item>les histoires des prophètes - lyas (Elias),  que la paix soit sur lui</item>
+    <item>les histoires des prophètes - Yahya, que la paix soit sur lui</item>
+    <item>les histoires des prophètes - Luqman,  que la paix soit sur lui</item>
+    <item>Sab\'aa</item>
+    <item>Qaroon</item>
+    <item>les histoires des prophètes - Talut</item>
+    <item>Caïn et Abel</item>
+    <item>les histoires des prophètes - Ayoub, que la paix soit sur lui</item>
+    <item>les histoires des prophètes, Idris,  que la paix soit sur lui</item>
+    <item>les histoires des prophètes, Isaac, que la paix soit sur lui</item>
+    <item>les histoires des prophètes, Jacop, que la paix soit sur lui</item>
+    <item>les bénédictions d\'Allah sur nous</item>
+    <item>la capacité d\'Allah</item>
+    <item>les caractéristiques d\'Allah, l\'Exalté et Glorifié</item>
+    <item>les noms d\'Allah</item>
+    <item>le destin d\'Allah</item>
+    <item>Pitié</item>
+    <item>L\'amour d\'Allah</item>
+    <item>Justice d\'Allah</item>
+    <item>miracles terrestres</item>
+    <item>Miracles universels</item>
+    <item>La mesure de Dieu pour les nations et le  monde</item>
+    <item>Créatures, oiseaux et animaux</item>
+    <item>Combat</item>
+    <item>Le djihad pour Allah</item>
+    <item>Bataille Uhud</item>
+    <item>Qui a quitté les combats</item>
+    <item>Bataille de Badr</item>
+    <item>Bataille d\'Al-Ahzab</item>
+    <item>martyre et martyrs</item>
+    <item>Bataille de Hanen</item>
+    <item>Le djihad pour Allah</item>
+    <item>Prière du Coran et réponse</item>
+    <item>Charité - dépenser pour Allah</item>
+    <item>Prière</item>
+    <item>Pèlerinage</item>
+    <item>Expiation  et demande du pardon d\'Allah</item>
+    <item>Temps recommandés pour adoration</item>
+    <item>Repentir</item>
+    <item>Louange à Allah, le Tout-Puissant</item>
+    <item>Patience et les patients</item>
+    <item>Le pardon</item>
+    <item>Multipliez les bonnes actions</item>
+    <item>Jeûne</item>
+    <item>Offrande </item>
+    <item>Invocations </item>
+    <item>Invoquer Allah</item>
+    <item>Penser à la création de Dieu</item>
+    <item>Hégire dans le chemin d\'Allah</item>
+    <item>À propos de notre maître Muhammad, que la paix et les bénédictions soient sur lui</item>
+    <item>Ka\'aba</item>
+    <item>Clés du gagne-pain</item>
+    <item>La Mecque </item>
+    <item>Les Parents</item>
+    <item>Description du monde</item>
+    <item>Mosquées</item>
+    <item>Les corrupteurs de la terre</item>
+    <item>le Conflit</item>
+    <item>L\'incrédulité</item>
+    <item>Dissipation </item>
+    <item>Avarice</item>
+    <item>Les poètes sont les artistes à l\'ère du message</item>
+    <item>Impureté</item>
+</string-array>
+
+    <string-array name="agza2_name">
+        <item>Partie I</item>
+        <item>Partie II</item>
+        <item>Partie III</item>
+        <item>Partie IV</item>
+        <item>Partie v</item>
+        <item>Partie VI</item>
+        <item>Partie VII</item>
+        <item>Partie VIII</item>
+        <item>Partie IX</item>
+        <item>Partie X</item>
+        <item>Partie XI</item>
+        <item>Partie XII</item>
+        <item>Partie XIII</item>
+        <item>Partie xiv</item>
+        <item>Partie XV</item>
+        <item>Partie XVI</item>
+        <item>Partie XVII</item>
+        <item>Partie XVIII</item>
+        <item>Partie XIX</item>
+        <item>Partie XX</item>
+        <item>Partie XXI</item>
+        <item>Partie XXII</item>
+        <item>Partie XXIII</item>
+        <item>Partie XXIV</item>
+        <item>Partie XXV</item>
+        <item>Partie XXVI</item>
+        <item>Partie XXVII</item>
+        <item>Partie XXVIII</item>
+        <item>Partie XXIX</item>
+        <item>Partie XXX</item>
+    </string-array>
+
+    <string-array name="sura_name">
+        <item>Al-Fatiha</item>
+        <item>Al-Baqara</item>
+        <item>Al-Imran</item>
+        <item>An-Nisa</item>
+        <item>Al-Ma\'ida</item>
+        <item>Al-An\'am</item>
+        <item>Al-A\'raf</item>
+        <item>Al-Anfal</item>
+        <item>At-Tawba</item>
+        <item>Yunus</item>
+        <item>Hud</item>
+        <item>Yusuf</item>
+        <item>Ar-Ra\'d</item>
+        <item>Ibrahim</item>
+        <item>Al-Hijr</item>
+        <item>An-Nahl</item>
+        <item>Al-Isra</item>
+        <item>Al-Kahf</item>
+        <item>Maryam</item>
+        <item>Ta-Ha</item>
+        <item>Al-Anbiya</item>
+        <item>Al-Hajj</item>
+        <item>Al-Mu\'minun</item>
+        <item>An-Nur</item>
+        <item>Al-Furqan</item>
+        <item>Ach-Chu\'ara</item>
+        <item>An-Naml</item>
+        <item>Al-Qasas</item>
+        <item>Al-\'Ankabut</item>
+        <item>Ar-Rum</item>
+        <item>Luqman</item>
+        <item>As-Sajda</item>
+        <item>Al-Ahzab</item>
+        <item>Saba</item>
+        <item>Fatir</item>
+        <item>Ya Sin</item>
+        <item>As-Saaffat </item>
+        <item>Sad</item>
+        <item>Az-Zumar</item>
+        <item>Al-Ghafir</item>
+        <item>Fussilat</item>
+        <item>Ash-Shura</item>
+        <item>Az-Zukhruf</item>
+        <item>Ad-Dukhan</item>
+        <item>Al-Jathiya</item>
+        <item>Al-Ahqaf</item>
+        <item>Muhammad</item>
+        <item>Al-Fath</item>
+        <item>Al-Hujraat</item>
+        <item>Qaf</item>
+        <item>Adh-Dhariyat</item>
+        <item>At-Tur</item>
+        <item>An-Najm</item>
+        <item>Al-Qamar</item>
+        <item>Ar-Rahman</item>
+        <item>Al-Waqi\'a</item>
+        <item>Al-Hadid</item>
+        <item>Al-Mujadila</item>
+        <item>Al-Hachr</item>
+        <item>Al-Mumtahina</item>
+        <item>As-Saff</item>
+        <item>Al-Jumua</item>
+        <item>Al-Munafiqoon</item>
+        <item>At-Taghabun</item>
+        <item>At-Talaq</item>
+        <item>At-Tahrim</item>
+        <item>Al-Mulk</item>
+        <item>Al-Qalam</item>
+        <item>Al-Haaqqa</item>
+        <item>Al-Maarij</item>
+        <item>Nuh</item>
+        <item>Al-Jinn</item>
+        <item>Al-Muzzammil</item>
+        <item>Al-Muddathir</item>
+        <item>Al-Qiyama</item>
+        <item>Al-Insan</item>
+        <item>Al-Mursalat</item>
+        <item>An-Naba</item>
+        <item>An-Naziat</item>
+        <item>Abasa</item>
+        <item>At-Takwir</item>
+        <item>Al-Infitar</item>
+        <item>Al-Mutaffifin</item>
+        <item>Al-Inshiqaq</item>
+        <item>Al-Buruj</item>
+        <item>At-Tariq</item>
+        <item>Al-Ala</item>
+        <item>Al-Ghashiya</item>
+        <item>Al-Fajr</item>
+        <item>Al-Balad</item>
+        <item>Ash-Shams</item>
+        <item>Al-Layl</item>
+        <item>Ad-Dhuha</item>
+        <item>Al-Inshirah</item>
+        <item>At-Tin</item>
+        <item>Al-\'Alaq</item>
+        <item>Al-Qadr</item>
+        <item>Al-Bayyina</item>
+        <item>Al-Zalzala</item>
+        <item>Al-Adiyat </item>
+        <item>Al-Qaria</item>
+        <item>At-Takathur</item>
+        <item>Al-Asr</item>
+        <item>Al-Humaza</item>
+        <item>Al-Fil</item>
+        <item>Quraish</item>
+        <item>Al-Ma\'un</item>
+        <item>Al-Kawthar</item>
+        <item>Al-Kafirun</item>
+        <item>An-Nasr</item>
+        <item>Al-Massad</item>
+        <item>Al-Ikhlas</item>
+        <item>Al-Falaq</item>
+        <item>Al-Nas</item>
+    </string-array>
+
+    <string-array name="hezb_name">
+        <item>Section I</item>
+        <item>Section II</item>
+    </string-array>
+
+    <string-array name="quarter_name">
+        <item>Quart I</item>
+        <item>Quart II</item>
+        <item>Quart III</item>
+        <item>Quart IV</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!---->
+    <!-- 10 Inch screens (1.5 * standard sizes) -->
+    <!---->
+
+    <dimen name="sidemenu_bg_height">190dp</dimen>
+    <dimen name="sidemenu_logo_width">200dp</dimen>
+    <dimen name="sidemenu_logo_height">170dp</dimen>
+
+    <dimen name="margin_2">8dp</dimen>
+    <dimen name="margin_4">16dp</dimen>
+    <dimen name="margin_6">20dp</dimen>
+    <dimen name="margin_8">24dp</dimen>
+    <dimen name="margin_12">28dp</dimen>
+    <dimen name="margin_16">32dp</dimen>
+    <dimen name="margin_24">36dp</dimen>
+    <dimen name="margin_32">48dp</dimen>
+    <dimen name="margin_64">96dp</dimen>
+
+    <dimen name="text_size_8">12sp</dimen>
+    <dimen name="text_size_10">16sp</dimen>
+    <dimen name="text_size_12">18sp</dimen>
+    <dimen name="text_size_14">20sp</dimen>
+    <dimen name="text_size_16">24sp</dimen>
+    <dimen name="text_size_18">24sp</dimen>
+    <dimen name="text_size_20">26sp</dimen>
+
+    <dimen name="icon_dialog_size">35dp</dimen>
+    <dimen name="page_num_border_size">70dp</dimen>
+    <dimen name="dialog_margin">20dp</dimen>
+
+    <dimen name="mushaf_footer_icon_dimen">80dp</dimen>
+    <dimen name="custom_toolbar_height">152dp</dimen>
+    <dimen name="tab_bar_width">400dp</dimen>
+    <dimen name="tab_bar_height">36dp</dimen>
+    <dimen name="bookmark_item_body_height">88dp</dimen>
+    <dimen name="filter_dialog_width">550dp</dimen>
+    <dimen name="failed_img_dimens">240dp</dimen>
+    <dimen name="logo_splash_dimens">300dp</dimen>
+    <dimen name="imgea1_splash_dimens">130dp</dimen>
+    <dimen name="imgea2_splash_dimens">100dp</dimen>
+
+</resources>
