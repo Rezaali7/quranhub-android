@@ -12,16 +12,16 @@ import androidx.lifecycle.MutableLiveData;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.quranhub.mushaf.model.DisplayableBookmark;
-import io.reactivex.Single;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.schedulers.Schedulers;
 import app.quranhub.R;
 import app.quranhub.mushaf.data.db.MushafDatabase;
 import app.quranhub.mushaf.data.db.UserDatabase;
 import app.quranhub.mushaf.data.entity.AyaBookmark;
 import app.quranhub.mushaf.data.entity.BookmarkType;
 import app.quranhub.mushaf.data.entity.Sura;
+import app.quranhub.mushaf.model.DisplayableBookmark;
+import io.reactivex.Single;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 public class BookmarksInteractorImp implements BookmarksInteractor {
 
@@ -71,8 +71,8 @@ public class BookmarksInteractorImp implements BookmarksInteractor {
                 displayableBookmark.setGuz2Number(ayaBookmarks.get(i).getAya().getJuz());
                 displayableBookmark.setPageNumber(ayaBookmarks.get(i).getAya().getPage());
 
-                for(int j = 0 ; j < types.size() ; j++) {
-                    if(types.get(j).getTypeId() == ayaBookmarks.get(i).getBookmarkTypeId()) {
+                for (int j = 0; j < types.size(); j++) {
+                    if (types.get(j).getTypeId() == ayaBookmarks.get(i).getBookmarkTypeId()) {
                         displayableBookmark.setColorIndex(types.get(j).getColorIndex());
                         break;
                     }
@@ -131,7 +131,7 @@ public class BookmarksInteractorImp implements BookmarksInteractor {
 
     @Override
     public LiveData<List<BookmarkType>> getBookmarkTypes() {
-         return userDatabase.getBookmarkDao().getBookmarkTypesLiveData();
+        return userDatabase.getBookmarkDao().getBookmarkTypesLiveData();
     }
 
 }

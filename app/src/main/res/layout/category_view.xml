@@ -18,8 +18,7 @@
         tools:text="Category"
         android:textSize="@dimen/text_size_14"
         android:textColor="@color/text_color"
-        android:gravity="center"
-        />
+        android:gravity="center" />
 
     <View
         android:layout_width="match_parent"
@@ -31,6 +30,5 @@
         android:layout_marginEnd="@dimen/_34sdp"
         android:layout_marginTop="@dimen/_8sdp"
         android:background="@color/dark_gray"
-        android:id="@+id/seperator"
-        />
+        android:id="@+id/seperator" />
 </androidx.constraintlayout.widget.ConstraintLayout>

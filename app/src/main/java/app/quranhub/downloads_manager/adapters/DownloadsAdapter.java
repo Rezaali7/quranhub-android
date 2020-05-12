@@ -11,11 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import app.quranhub.R;
 import app.quranhub.downloads_manager.model.DisplayableDownload;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import app.quranhub.R;
 
 public class DownloadsAdapter extends RecyclerView.Adapter<DownloadsAdapter.ViewHolder> {
 
@@ -135,7 +135,9 @@ public class DownloadsAdapter extends RecyclerView.Adapter<DownloadsAdapter.View
     public interface ItemClickListener {
 
         void onClickItem(DisplayableDownload displayableDownload, int position);
+
         void onDeleteItem(DisplayableDownload displayableDownload, int position);
+
         void onDownloadItem(DisplayableDownload displayableDownload, int position);
 
     }

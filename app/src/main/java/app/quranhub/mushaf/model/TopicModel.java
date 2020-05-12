@@ -6,7 +6,7 @@ import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 import java.util.List;
 
 public class TopicModel extends ExpandableGroup<TopicCategory> {
-    
+
     private String topicName;
     private boolean isExpandable;
     private List<TopicCategory> topicCategories;

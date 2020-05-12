@@ -20,14 +20,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import app.quranhub.mushaf.adapter.BookmarkTypeAdapter;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import app.quranhub.R;
+import app.quranhub.mushaf.adapter.BookmarkTypeAdapter;
 import app.quranhub.mushaf.data.entity.BookmarkType;
 import app.quranhub.mushaf.listener.ItemSelectionListener;
 import app.quranhub.utils.DialogUtil;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class BookmarkEditDialog extends DialogFragment implements ItemSelectionListener<Integer> {
 
@@ -88,7 +88,7 @@ public class BookmarkEditDialog extends DialogFragment implements ItemSelectionL
     }
 
     private void setDialogTypeViews() {
-        if(editDialog) {
+        if (editDialog) {
             showBtn.setText(getString(R.string.edit));
             allBookmarkIv.setVisibility(View.GONE);
             allBookmarkTv.setVisibility(View.GONE);
@@ -119,7 +119,7 @@ public class BookmarkEditDialog extends DialogFragment implements ItemSelectionL
         adapter = new BookmarkTypeAdapter(bookmarkTypes, getActivity(), this);
         typesRv.setLayoutManager(new LinearLayoutManager(getActivity()));
         typesRv.setAdapter(adapter);
-        if(selectedFilter == 0) {
+        if (selectedFilter == 0) {
             adapter.hideCheck();
         } else {
             allBookmarkIv.setVisibility(View.GONE);

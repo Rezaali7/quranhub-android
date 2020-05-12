@@ -8,12 +8,12 @@ import androidx.annotation.NonNull;
 
 import java.util.List;
 
+import app.quranhub.mushaf.data.db.MushafDatabase;
 import app.quranhub.mushaf.data.entity.HizbQuarter;
 import app.quranhub.mushaf.model.SearchModel;
 import io.reactivex.Single;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
-import app.quranhub.mushaf.data.db.MushafDatabase;
 
 public class TopicInteractorImp implements TopicInteractor {
 
@@ -50,8 +50,8 @@ public class TopicInteractorImp implements TopicInteractor {
             }
             for (int i = 0; i < searchModels.size(); i++) {
                 int hezbQuarterData = ayaHezbQuarterIndex[searchModels.get(i).getId()];
-                int hezb = ((hezbQuarterData-1)/4 )%2+1;
-                int quarter = ((hezbQuarterData-1)%4) +1;
+                int hezb = ((hezbQuarterData - 1) / 4) % 2 + 1;
+                int quarter = ((hezbQuarterData - 1) % 4) + 1;
                 searchModels.get(i).setHezb(hezb);
                 searchModels.get(i).setQuarter(quarter);
             }

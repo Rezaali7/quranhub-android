@@ -14,12 +14,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import app.quranhub.R;
+import app.quranhub.utils.DialogUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
-import app.quranhub.R;
-import app.quranhub.utils.DialogUtil;
 
 /**
  * A {@code DialogFragment} to confirm deletion action.

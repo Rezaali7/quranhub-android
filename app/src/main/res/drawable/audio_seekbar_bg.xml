@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@android:id/background"
-        >
-        <shape android:shape="rectangle"
+    <item android:id="@android:id/background">
+        <shape
+            android:shape="rectangle"
             android:tint="@color/white_color">
-            <corners android:radius="8dp"/>
+            <corners android:radius="8dp" />
             <size android:height="@dimen/_10sdp" />
 
         </shape>
@@ -12,12 +12,14 @@
     <item android:id="@android:id/progress">
         <scale android:scaleWidth="100%">
             <selector>
-                <item android:state_enabled="false"
+                <item
+                    android:state_enabled="false"
                     android:drawable="@android:color/transparent" />
                 <item>
-                    <shape android:shape="rectangle"
+                    <shape
+                        android:shape="rectangle"
                         android:tint="@color/green_color">
-                        <corners android:radius="8dp"/>
+                        <corners android:radius="8dp" />
                         <size android:height="@dimen/_10sdp" />
 
                     </shape>

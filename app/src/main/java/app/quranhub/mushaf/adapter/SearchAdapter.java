@@ -12,11 +12,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.quranhub.R;
+import app.quranhub.mushaf.listener.ItemSelectionListener;
 import app.quranhub.mushaf.model.SearchModel;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import app.quranhub.R;
-import app.quranhub.mushaf.listener.ItemSelectionListener;
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder> {
 

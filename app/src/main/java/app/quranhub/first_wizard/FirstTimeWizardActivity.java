@@ -19,9 +19,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import app.quranhub.Constants;
 import app.quranhub.R;
 import app.quranhub.base.BaseActivity;
@@ -29,6 +26,9 @@ import app.quranhub.main.MainActivity;
 import app.quranhub.utils.LocaleUtil;
 import app.quranhub.utils.PreferencesUtils;
 import app.quranhub.utils.interfaces.Searchable;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 import static android.view.View.LAYOUT_DIRECTION_LTR;
 import static android.view.View.LAYOUT_DIRECTION_RTL;

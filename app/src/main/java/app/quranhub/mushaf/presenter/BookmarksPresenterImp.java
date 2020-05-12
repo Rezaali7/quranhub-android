@@ -2,8 +2,8 @@ package app.quranhub.mushaf.presenter;
 
 import androidx.annotation.NonNull;
 
-import app.quranhub.mushaf.view.BookmarksView;
 import app.quranhub.base.BasePresenterImp;
+import app.quranhub.mushaf.view.BookmarksView;
 
 public class BookmarksPresenterImp extends BasePresenterImp<BookmarksView>
         implements BookmarksPresenter<BookmarksView> {

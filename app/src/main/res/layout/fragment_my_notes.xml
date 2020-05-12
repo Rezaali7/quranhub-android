@@ -33,7 +33,6 @@
             app:layout_constraintTop_toTopOf="@id/guideline_top" />
 
 
-
         <ImageButton
             android:id="@+id/edit_btn"
             android:layout_width="@dimen/app_bar_icon_dimen"
@@ -69,8 +68,7 @@
             android:textSize="@dimen/text_size_18"
             app:layout_constraintStart_toEndOf="@+id/hamburger_iv"
             app:layout_constraintTop_toTopOf="@+id/hamburger_iv"
-            app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
-            />
+            app:layout_constraintBottom_toBottomOf="@id/hamburger_iv" />
 
         <ImageButton
             android:id="@+id/ib_finish_edit"
@@ -100,8 +98,7 @@
             android:textColorHint="@color/hint_grey"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -113,8 +110,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/notes_rv"
-        tools:listitem="@layout/note_item"
-        />
+        tools:listitem="@layout/note_item" />
 
     <ProgressBar
         android:layout_width="wrap_content"
@@ -123,8 +119,7 @@
         app:layout_constraintStart_toStartOf="@id/notes_rv"
         app:layout_constraintEnd_toEndOf="@id/notes_rv"
         app:layout_constraintTop_toTopOf="@id/notes_rv"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <TextView
         android:id="@+id/no_notes_tv"

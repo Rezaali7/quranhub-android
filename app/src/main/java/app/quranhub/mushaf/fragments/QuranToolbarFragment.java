@@ -15,11 +15,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import app.quranhub.R;
+import app.quranhub.utils.interfaces.ToolbarActionsListener;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import app.quranhub.R;
-import app.quranhub.utils.interfaces.ToolbarActionsListener;
 
 public class QuranToolbarFragment extends Fragment {
 
@@ -86,7 +86,7 @@ public class QuranToolbarFragment extends Fragment {
     }
 
     @OnClick(R.id.ic_bookmark)
-    void onClickBookmark(){
+    void onClickBookmark() {
         toolbarActionsListener.onBookmarkClick();
     }
 
@@ -100,6 +100,7 @@ public class QuranToolbarFragment extends Fragment {
 
     /**
      * Control page dir icon.
+     *
      * @param pageDir either {@link #PAGE_DIR_LEFT} or {@link #PAGE_DIR_RIGHT}.
      */
     public void setPageDir(int pageDir) {

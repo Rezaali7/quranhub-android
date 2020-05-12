@@ -83,7 +83,6 @@ public class DownloadRequestInfo implements Parcelable {
     }
 
     /**
-     *
      * @param dirPath The absolute path of the directory in which to put the downloaded file.
      *                <p>
      *                If passed {@code null}, the file will be downloaded to the directory specified
@@ -99,7 +98,6 @@ public class DownloadRequestInfo implements Parcelable {
     }
 
     /**
-     *
      * @param fileName A name for the downloaded file.
      *                 <p>
      *                 If passed {@code null}, the file will be named with its name in the download URL.
@@ -177,7 +175,8 @@ public class DownloadRequestInfo implements Parcelable {
          * Using relative URLs is generally preferred if you download multiple files that exists on the
          * same server and share the same base URL. If using relative URLs, the base URL must be provided
          * to {@link PRDownloaderService#init(String, String, String)}
-         * @param url The file download URL.
+         *
+         * @param url           The file download URL.
          * @param isUrlRelative Whether the {@code url} that you have provided is relative or absolute.
          */
         public Builder(@NonNull String url, boolean isUrlRelative) {

@@ -20,14 +20,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.quranhub.mushaf.model.DisplayableBookmark;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import app.quranhub.Constants;
 import app.quranhub.R;
 import app.quranhub.mushaf.listener.ItemSelectionListener;
+import app.quranhub.mushaf.model.DisplayableBookmark;
 import app.quranhub.utils.LocaleUtil;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.ViewHolder>
         implements Filterable {

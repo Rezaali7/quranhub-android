@@ -26,14 +26,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import app.quranhub.mushaf.adapter.BookmarkTypeAdapter;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import app.quranhub.R;
+import app.quranhub.mushaf.adapter.BookmarkTypeAdapter;
 import app.quranhub.mushaf.data.entity.BookmarkType;
 import app.quranhub.mushaf.listener.ItemSelectionListener;
 import app.quranhub.utils.DialogUtil;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class AddBookmarkDialog extends DialogFragment implements ItemSelectionListener<Integer> {
 
@@ -105,8 +105,8 @@ public class AddBookmarkDialog extends DialogFragment implements ItemSelectionLi
         int[] colors = getActivity().getResources().getIntArray(R.array.bookmark_colors);
         palette.setSelectedColor(colors[0]);
         palette.setOnColorSelectedListener(color -> {
-            for(int i = 0 ;i < colors.length ; i++) {
-                if(color == colors[i]) {
+            for (int i = 0; i < colors.length; i++) {
+                if (color == colors[i]) {
                     colorIndex = i;
                     break;
                 }

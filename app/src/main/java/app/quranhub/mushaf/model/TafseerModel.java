@@ -56,7 +56,7 @@ public class TafseerModel {
 
     public static List<TafseerModel> map(List<Translation> translations, List<TafseerModel> ayasTafseer) {
         List<TafseerModel> tafseerModels = new ArrayList<>();
-        for(int i=0 ; i<translations.size() ; i++) {
+        for (int i = 0; i < translations.size(); i++) {
             tafseerModels.add(new TafseerModel(ayasTafseer.get(i).getText(), translations.get(i).getText(), ayasTafseer.get(i).getPure_text()));
         }
         return tafseerModels;

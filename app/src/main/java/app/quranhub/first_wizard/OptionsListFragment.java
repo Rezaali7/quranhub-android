@@ -16,11 +16,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.quranhub.R;
+import app.quranhub.utils.interfaces.Searchable;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import app.quranhub.R;
-import app.quranhub.utils.interfaces.Searchable;
 
 /**
  * Activities that contain this fragment must implement the
@@ -67,7 +67,7 @@ public class OptionsListFragment extends Fragment implements OptionsListAdapter.
      * this fragment using the provided parameters.
      */
     public static OptionsListFragment newInstance(@NonNull ArrayList<String> options
-            , @Nullable int [] optionsThumbnailsDrawableIds, int selectedOptionPosition, int requestCode) {
+            , @Nullable int[] optionsThumbnailsDrawableIds, int selectedOptionPosition, int requestCode) {
         OptionsListFragment fragment = new OptionsListFragment();
         Bundle args = new Bundle();
         args.putStringArrayList(ARG_OPTIONS, options);
@@ -96,7 +96,7 @@ public class OptionsListFragment extends Fragment implements OptionsListAdapter.
      * this fragment using the provided parameters.
      */
     public static OptionsListFragment newInstance(@NonNull Context context, @NonNull int[] optionsStrResIds
-            , @Nullable int [] optionsThumbnailsDrawableIds, int selectedOptionPosition, int requestCode) {
+            , @Nullable int[] optionsThumbnailsDrawableIds, int selectedOptionPosition, int requestCode) {
         ArrayList<String> options = new ArrayList<>();
         for (int strResId : optionsStrResIds) {
             options.add(context.getString(strResId));

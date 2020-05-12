@@ -11,6 +11,8 @@ import androidx.lifecycle.MutableLiveData;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.quranhub.mushaf.data.db.MushafDatabase;
+import app.quranhub.mushaf.data.db.UserDatabase;
 import app.quranhub.mushaf.data.entity.Note;
 import app.quranhub.mushaf.model.DisplayedNote;
 import app.quranhub.mushaf.model.MyNoteModel;
@@ -20,8 +22,6 @@ import io.reactivex.Single;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
-import app.quranhub.mushaf.data.db.MushafDatabase;
-import app.quranhub.mushaf.data.db.UserDatabase;
 
 public class NotesInteractorImp implements NotesInteractor {
 

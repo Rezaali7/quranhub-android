@@ -71,7 +71,7 @@ public interface AyaDao {
     Single<List<SearchModel>> getSuraJuzHezbSearchResult(String inputSearch, int selectedSura, int selectedJuz, int startHezbInterval, int endHezbInterval);
 
     @Query("select sura, sura_aya, pure_text,text, page from aya where id IN(:ayaIds)")
-    Single<List<MyNoteModel>> getNoteData(List<Integer>ayaIds);
+    Single<List<MyNoteModel>> getNoteData(List<Integer> ayaIds);
 
     @Query("select DISTINCT (page), sura from aya ")
     Single<List<PageSuras>> getSuraPage();

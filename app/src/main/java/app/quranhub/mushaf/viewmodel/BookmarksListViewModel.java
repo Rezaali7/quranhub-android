@@ -13,13 +13,13 @@ import androidx.lifecycle.MediatorLiveData;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.quranhub.mushaf.model.DisplayableBookmark;
-import app.quranhub.mushaf.model.HizbQuarterDataModel;
 import app.quranhub.mushaf.data.dao.HizbQuarterDao;
 import app.quranhub.mushaf.data.db.MushafDatabase;
 import app.quranhub.mushaf.data.entity.BookmarkType;
 import app.quranhub.mushaf.interactor.BookmarksInteractor;
 import app.quranhub.mushaf.interactor.BookmarksInteractorImp;
+import app.quranhub.mushaf.model.DisplayableBookmark;
+import app.quranhub.mushaf.model.HizbQuarterDataModel;
 
 public class BookmarksListViewModel extends AndroidViewModel {
 
@@ -106,12 +106,11 @@ public class BookmarksListViewModel extends AndroidViewModel {
     }
 
     public void getBookmarkTypes() {
-        bookmarkTypeLiveData =  bookmarksInteractor.getBookmarkTypes();
+        bookmarkTypeLiveData = bookmarksInteractor.getBookmarkTypes();
         bookmarksTypes.addSource(bookmarkTypeLiveData, types -> {
             bookmarksTypes.setValue(types);
         });
     }
-
 
 
     public interface BookmarkMapperListener {

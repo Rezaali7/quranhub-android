@@ -24,20 +24,20 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import app.quranhub.R;
 import app.quranhub.mushaf.adapter.Guz2IndexAdapter;
 import app.quranhub.mushaf.listener.QuranNavigationCallbacks;
 import app.quranhub.mushaf.model.SuraIndexModelMapper;
+import app.quranhub.mushaf.presenter.SuraGuz2IndexPresenter;
+import app.quranhub.mushaf.presenter.SuraGuz2IndexPresenterImp;
 import app.quranhub.mushaf.view.SuraGuz2IndexView;
+import app.quranhub.settings.dialogs.OptionsListDialogFragment;
+import app.quranhub.utils.ScreenUtil;
+import app.quranhub.utils.interfaces.ToolbarActionsListener;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
-import app.quranhub.R;
-import app.quranhub.mushaf.presenter.SuraGuz2IndexPresenter;
-import app.quranhub.mushaf.presenter.SuraGuz2IndexPresenterImp;
-import app.quranhub.settings.dialogs.OptionsListDialogFragment;
-import app.quranhub.utils.ScreenUtil;
-import app.quranhub.utils.interfaces.ToolbarActionsListener;
 
 
 public class SuraGuz2IndexFragment extends Fragment implements SuraGuz2IndexView, OptionsListDialogFragment.ItemSelectionListener {
@@ -95,8 +95,7 @@ public class SuraGuz2IndexFragment extends Fragment implements SuraGuz2IndexView
         if (context instanceof ToolbarActionsListener && context instanceof QuranNavigationCallbacks) {
             toolbarActionsListener = (ToolbarActionsListener) context;
             quranNavigationCallbacks = (QuranNavigationCallbacks) context;
-        }
-        else {
+        } else {
             throw new RuntimeException("The parent activity must implement ToolbarActionsListener" +
                     " & QuranNavigationCallbacks interfaces.");
         }

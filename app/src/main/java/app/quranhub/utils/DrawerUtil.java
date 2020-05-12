@@ -12,13 +12,11 @@ import androidx.annotation.NonNull;
 
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.interfaces.OnCheckedChangeListener;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
-import com.mikepenz.materialdrawer.model.SwitchDrawerItem;
 
-import app.quranhub.mushaf.fragments.SuraGuz2IndexFragment;
 import app.quranhub.R;
+import app.quranhub.mushaf.fragments.SuraGuz2IndexFragment;
 
 public final class DrawerUtil {
 
@@ -132,7 +130,7 @@ public final class DrawerUtil {
                                 .withSelectedIcon(R.drawable.downloads_gold_sidemenu_ic)
                                 .withSelectedTextColorRes(R.color.slidemenu_selector_tint)
                                 .withSelectable(false)
-                        )
+                )
                 .withOnDrawerItemClickListener((view, position, drawerItem) -> {
                     if (drawerItem != null) {
                         switch ((int) drawerItem.getIdentifier()) {

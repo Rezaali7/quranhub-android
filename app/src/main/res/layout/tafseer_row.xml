@@ -7,8 +7,7 @@
     android:layout_height="wrap_content"
     android:background="@color/white_color"
     android:layoutDirection="rtl"
-    android:id="@+id/parent_layout"
-    >
+    android:id="@+id/parent_layout">
 
     <TextView
         android:id="@+id/aya_tv"
@@ -42,9 +41,7 @@
         app:layout_constraintStart_toEndOf="@id/tafseer_tv"
         android:paddingEnd="@dimen/_4sdp"
         android:paddingStart="@dimen/_4sdp"
-        android:textStyle="bold"
-        />
-
+        android:textStyle="bold" />
 
 
     <at.blogc.android.views.ExpandableTextView
@@ -62,7 +59,7 @@
         android:maxLines="4"
         android:layout_marginEnd="@dimen/_4sdp"
         android:ellipsize="end"
-        app:animation_duration="400"/>
+        app:animation_duration="400" />
 
     <TextView
         android:layout_width="0dp"
@@ -73,15 +70,13 @@
         app:layout_constraintTop_toTopOf="@id/tafseer_tv"
         app:layout_constraintBottom_toBottomOf="@id/tafseer_tv"
         android:textSize="@dimen/text_size_16"
-        android:visibility="invisible"
-        />
+        android:visibility="invisible" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:background="@color/dark_gray"
         app:layout_constraintTop_toBottomOf="@id/tafseer_tv"
-        android:layout_marginTop="@dimen/_12sdp"
-        />
+        android:layout_marginTop="@dimen/_12sdp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

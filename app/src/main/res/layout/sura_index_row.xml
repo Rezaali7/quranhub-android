@@ -53,8 +53,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="سوره الفاتحه"
-            />
+            tools:text="سوره الفاتحه" />
 
         <ImageView
             android:layout_width="@dimen/_20sdp"
@@ -73,8 +72,7 @@
             android:src="@drawable/gold_ornament_surah_ic"
             app:layout_constraintBottom_toTopOf="@+id/child_view"
             app:layout_constraintTop_toTopOf="parent"
-            android:id="@+id/right_sura_border"
-            />
+            android:id="@+id/right_sura_border" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -112,8 +110,7 @@
                 tools:text="مكيه"
                 android:id="@+id/sura_type"
                 android:textSize="@dimen/text_size_14"
-                android:text="@{suraIndex.sura_type}"
-                />
+                android:text="@{suraIndex.sura_type}" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -126,8 +123,7 @@
                 app:layout_constraintStart_toEndOf="@+id/sura_type"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginStart="@dimen/margin_12"
-                android:text="@{@string/aya_num(suraIndex.num_of_aya)}"
-                />
+                android:text="@{@string/aya_num(suraIndex.num_of_aya)}" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -168,8 +164,7 @@
                 app:layout_constraintEnd_toStartOf="@id/sura_hezb_num"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginEnd="@dimen/margin_12"
-                android:text="@{@string/aya_goz2(suraIndex.guz)}"
-                />
+                android:text="@{@string/aya_goz2(suraIndex.guz)}" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

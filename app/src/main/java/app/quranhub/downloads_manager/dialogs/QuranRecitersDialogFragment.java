@@ -27,9 +27,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.quranhub.Constants;
+import app.quranhub.R;
+import app.quranhub.downloads_manager.network.api.RecitersApi;
+import app.quranhub.downloads_manager.network.model.RecitersResponse;
+import app.quranhub.mushaf.data.dao.SheikhDao;
+import app.quranhub.mushaf.data.db.UserDatabase;
 import app.quranhub.mushaf.data.entity.Sheikh;
 import app.quranhub.mushaf.network.ApiClient;
 import app.quranhub.settings.dialogs.OptionsListAdapter;
+import app.quranhub.utils.DialogUtil;
+import app.quranhub.utils.FragmentUtil;
+import app.quranhub.utils.PreferencesUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -37,15 +46,6 @@ import butterknife.Unbinder;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import app.quranhub.Constants;
-import app.quranhub.R;
-import app.quranhub.downloads_manager.network.api.RecitersApi;
-import app.quranhub.downloads_manager.network.model.RecitersResponse;
-import app.quranhub.mushaf.data.dao.SheikhDao;
-import app.quranhub.mushaf.data.db.UserDatabase;
-import app.quranhub.utils.DialogUtil;
-import app.quranhub.utils.FragmentUtil;
-import app.quranhub.utils.PreferencesUtils;
 
 /**
  * A {@code DialogFragment} that displays the available Quran reciters for the user to choose from.
@@ -57,9 +57,9 @@ import app.quranhub.utils.PreferencesUtils;
  */
 public class QuranRecitersDialogFragment extends DialogFragment
         implements OptionsListAdapter.ItemClickListener {
-    
+
     private static final String TAG = QuranRecitersDialogFragment.class.getSimpleName();
-    
+
     private static final String ARG_RECITATION_ID = "ARG_RECITATION_ID";
     private static final String ARG_SELECTED_RECITER_ID = "ARG_SELECTED_RECITER_ID";
 
@@ -108,7 +108,7 @@ public class QuranRecitersDialogFragment extends DialogFragment
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param recitationId A recitation ID as in {@link Constants.RECITATIONS}.
+     * @param recitationId      A recitation ID as in {@link Constants.RECITATIONS}.
      * @param selectedReciterId The current selected reciter ID.
      * @return A new instance of fragment QuranRecitersDialogFragment.
      */
@@ -125,10 +125,9 @@ public class QuranRecitersDialogFragment extends DialogFragment
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof  ReciterSelectionListener) {
+        if (context instanceof ReciterSelectionListener) {
             reciterSelectionListener = (ReciterSelectionListener) context;
-        }
-        else if (getParentFragment() instanceof ReciterSelectionListener) {
+        } else if (getParentFragment() instanceof ReciterSelectionListener) {
             reciterSelectionListener = (ReciterSelectionListener) getParentFragment();
         } else {
             throw new RuntimeException("Activities or parent fragments that shows this DialogFragment"

@@ -13,12 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.quranhub.R;
 import app.quranhub.mushaf.model.TafseerModel;
+import app.quranhub.utils.PreferencesUtils;
 import at.blogc.android.views.ExpandableTextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import app.quranhub.R;
-import app.quranhub.utils.PreferencesUtils;
 
 public class TafseerAdapter extends RecyclerView.Adapter<TafseerAdapter.ViewHolder> {
 
@@ -54,7 +54,7 @@ public class TafseerAdapter extends RecyclerView.Adapter<TafseerAdapter.ViewHold
         holder.tafseerTv.setText(model.getTafseer());
         holder.linesTv.setText(model.getTafseer());
 
-        if(model.isExpandable()) {
+        if (model.isExpandable()) {
             holder.tafseerTv.expand();
         } else {
             holder.tafseerTv.collapse();
@@ -72,7 +72,7 @@ public class TafseerAdapter extends RecyclerView.Adapter<TafseerAdapter.ViewHold
         });
 
 
-        if(!PreferencesUtils.getAppLangSetting(context).equals("ar") && !PreferencesUtils.getQuranTranslationLanguage(context).equals("ar")) {             // !LocaleUtil.getTranslationLanguage().equals("ar")
+        if (!PreferencesUtils.getAppLangSetting(context).equals("ar") && !PreferencesUtils.getQuranTranslationLanguage(context).equals("ar")) {             // !LocaleUtil.getTranslationLanguage().equals("ar")
             holder.parentLayout.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
         }
 

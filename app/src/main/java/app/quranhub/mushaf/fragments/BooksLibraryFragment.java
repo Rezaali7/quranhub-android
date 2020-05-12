@@ -16,11 +16,11 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.tabs.TabLayout;
 
+import app.quranhub.R;
+import app.quranhub.utils.interfaces.ToolbarActionsListener;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import app.quranhub.R;
-import app.quranhub.utils.interfaces.ToolbarActionsListener;
 
 public class BooksLibraryFragment extends Fragment {
 
@@ -46,7 +46,6 @@ public class BooksLibraryFragment extends Fragment {
     EditText searchEt;
     @BindView(R.id.edit_btn)
     ImageView editBtn;
-
 
 
     @Override
@@ -80,7 +79,7 @@ public class BooksLibraryFragment extends Fragment {
             selectedTab = savedInstanceState.getInt(STATE_SELECTED_TAB);
             inputSearch = savedInstanceState.getString(STATE_INPUT_SEARCH);
             isEditable = savedInstanceState.getBoolean(STATE_EDITABLE);
-            if(isEditable) {
+            if (isEditable) {
                 editBtn.setImageResource(R.drawable.check_gold_ic);
             }
         }
@@ -106,7 +105,7 @@ public class BooksLibraryFragment extends Fragment {
                 inputSearch = s.toString();
                 if (tabLayout.getSelectedTabPosition() == LIBRARY_TAB && libraryFragment != null) {
                     libraryFragment.search(inputSearch);
-                } else if(tabLayout.getSelectedTabPosition() == BOOKS_TAB && bookDataFragment != null){
+                } else if (tabLayout.getSelectedTabPosition() == BOOKS_TAB && bookDataFragment != null) {
                     bookDataFragment.search(inputSearch);
                 }
             }
@@ -168,7 +167,7 @@ public class BooksLibraryFragment extends Fragment {
 
     @OnClick(R.id.edit_btn)
     public void onEditClick() {
-        if(isEditable) {
+        if (isEditable) {
             editBtn.setImageResource(R.drawable.edit_gold_ic);
             bookDataFragment.toggleNormalMode();
         } else {

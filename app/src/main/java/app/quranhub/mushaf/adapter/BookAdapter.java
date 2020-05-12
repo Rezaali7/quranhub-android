@@ -14,13 +14,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import app.quranhub.R;
 import app.quranhub.mushaf.data.entity.Book;
 import app.quranhub.mushaf.listener.ItemSelectionListener;
 import app.quranhub.mushaf.network.model.BookContent;
 import app.quranhub.utils.LocaleUtil;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
 

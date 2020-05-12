@@ -16,12 +16,12 @@ import androidx.fragment.app.DialogFragment;
 
 import java.util.Objects;
 
+import app.quranhub.Constants;
+import app.quranhub.R;
 import app.quranhub.mushaf.model.BookmarkModel;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import app.quranhub.Constants;
-import app.quranhub.R;
 
 public class AyaActionsDialog extends DialogFragment {
 

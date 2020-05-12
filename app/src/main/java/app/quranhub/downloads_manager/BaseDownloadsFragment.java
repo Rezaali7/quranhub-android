@@ -25,13 +25,13 @@ import org.greenrobot.eventbus.ThreadMode;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 import app.quranhub.R;
 import app.quranhub.downloads_manager.adapters.DownloadsAdapter;
 import app.quranhub.downloads_manager.model.DisplayableDownload;
 import app.quranhub.downloads_manager.network.QuranAudioDownloaderService;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * Base for downloads screen fragments.
@@ -209,7 +209,9 @@ public abstract class BaseDownloadsFragment extends Fragment
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onDownloadFinishEvent(QuranAudioDownloaderService.DownloadFinishEvent event) {
         refresh();
-    };
+    }
+
+    ;
 
     @Override
     public void onDestroyView() {
@@ -245,9 +247,13 @@ public abstract class BaseDownloadsFragment extends Fragment
     public interface DownloadsManagerNavigationCallbacks {
 
         void gotoDownloadsRecitations();
+
         void gotoDownloadsReciters(int recitationId);
+
         void gotoDownloadsSuras(int recitationId, @NonNull String reciterId, @NonNull String reciterName);
+
         void openRecitersDialog(int recitationId);
+
         void openAudioDownloadAmountDialog(int recitationId, @NonNull String reciterId);
 
     }

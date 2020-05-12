@@ -9,14 +9,14 @@ import androidx.annotation.NonNull;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.quranhub.mushaf.data.db.MushafDatabase;
+import app.quranhub.mushaf.data.entity.QuranSubject;
+import app.quranhub.mushaf.data.entity.QuranSubjectCategory;
 import app.quranhub.mushaf.model.TopicCategory;
 import app.quranhub.mushaf.model.TopicModel;
 import io.reactivex.Single;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
-import app.quranhub.mushaf.data.db.MushafDatabase;
-import app.quranhub.mushaf.data.entity.QuranSubject;
-import app.quranhub.mushaf.data.entity.QuranSubjectCategory;
 
 public class SubjectInteractorImp implements SubjectInteractor {
 
@@ -35,8 +35,8 @@ public class SubjectInteractorImp implements SubjectInteractor {
     @Override
     public void getSubjects(List<String> subjects, List<String> subjectsCategory) {
 
-  //      List<String> subjects = Arrays.asList(context.getResources().getStringArray(R.array.subject_name));
-   //     List<String> subjectsCategory = Arrays.asList(context.getResources().getStringArray(R.array.subject_category_name));
+        //      List<String> subjects = Arrays.asList(context.getResources().getStringArray(R.array.subject_name));
+        //     List<String> subjectsCategory = Arrays.asList(context.getResources().getStringArray(R.array.subject_category_name));
 
         Single<List<QuranSubject>> quranSubjects = mushafDatabase.getQuranSubjectDao().getAll().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
 
@@ -46,9 +46,9 @@ public class SubjectInteractorImp implements SubjectInteractor {
             List<TopicModel> results = new ArrayList<>();
             List<TopicCategory> topicCategories = new ArrayList<>();
             int topicIndex = 0;
-            for(int i = 0; i< quranSubjects1.size() ; i++) {
+            for (int i = 0; i < quranSubjects1.size(); i++) {
 
-                if(i > 0 && quranSubjects1.get(i).getCategory() != quranSubjects1.get(i-1).getCategory()) {
+                if (i > 0 && quranSubjects1.get(i).getCategory() != quranSubjects1.get(i - 1).getCategory()) {
                     results.add(new TopicModel(subjectsCategory.get(topicIndex), topicCategories));
                     topicIndex++;
                     topicCategories = new ArrayList<>();

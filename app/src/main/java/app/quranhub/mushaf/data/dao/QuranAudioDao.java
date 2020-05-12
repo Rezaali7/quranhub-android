@@ -8,9 +8,9 @@ import androidx.room.Query;
 
 import java.util.List;
 
-import io.reactivex.Single;
 import app.quranhub.mushaf.data.entity.AyaRecorder;
 import app.quranhub.mushaf.data.entity.QuranAudio;
+import io.reactivex.Single;
 
 
 @Dao

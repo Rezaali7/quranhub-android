@@ -16,8 +16,7 @@
         android:src="@drawable/bookmark_red"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/type_tv"
-        app:layout_constraintBottom_toBottomOf="@id/type_tv"
-        />
+        app:layout_constraintBottom_toBottomOf="@id/type_tv" />
 
     <TextView
         android:id="@+id/type_tv"
@@ -51,8 +50,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:background="@drawable/material_drawer_shadow_bottom"
         android:id="@+id/seperator1"
-        android:visibility="invisible"
-        />
+        android:visibility="invisible" />
 
     <View
         android:layout_width="0dp"
@@ -60,6 +58,5 @@
         app:layout_constraintTop_toBottomOf="@id/seperator1"
         android:layout_marginTop="@dimen/_2sdp"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/dark_gray"
-        />
+        android:background="@color/dark_gray" />
 </androidx.constraintlayout.widget.ConstraintLayout>

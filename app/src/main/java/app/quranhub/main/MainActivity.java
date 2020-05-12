@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.mikepenz.materialdrawer.Drawer;
 
 import app.quranhub.Constants;
+import app.quranhub.R;
 import app.quranhub.audio_manager.AyaAudioService;
 import app.quranhub.base.BaseActivity;
 import app.quranhub.downloads_manager.DownloadsManagerActivity;
@@ -27,7 +28,6 @@ import app.quranhub.mushaf.fragments.TopicAyaFragment;
 import app.quranhub.mushaf.listener.QuranNavigationCallbacks;
 import app.quranhub.mushaf.model.TopicCategory;
 import app.quranhub.settings.SettingsActivity;
-import app.quranhub.R;
 import app.quranhub.utils.DrawerUtil;
 import app.quranhub.utils.PreferencesUtils;
 import app.quranhub.utils.SharedPrefsUtil;
@@ -76,10 +76,10 @@ public class MainActivity extends BaseActivity
     }
 
     private void dismissAudioPopup() {
-        if(isDismissAllow && currentFragment.equals("mushaf")) {
+        if (isDismissAllow && currentFragment.equals("mushaf")) {
             isDismissAllow = false;
             Fragment fragment = getSupportFragmentManager().findFragmentByTag("Mushaf");
-            if(fragment != null && fragment instanceof Mus7fFragment) {
+            if (fragment != null && fragment instanceof Mus7fFragment) {
                 ((Mus7fFragment) fragment).dismissAudioPopup();
             }
         }
@@ -113,11 +113,10 @@ public class MainActivity extends BaseActivity
         Mus7fFragment mus7fFragment;
 
         // get current aya id if Main activity is launched from audio notification OR launch app with audio notification app
-        if((getIntent().getExtras() != null && getIntent().getExtras().getBoolean(AyaAudioService.FROM_NOTIFICATION)) || SharedPrefsUtil.getBoolean(this, AyaAudioService.SERVICE_RUNNING, false)) {
+        if ((getIntent().getExtras() != null && getIntent().getExtras().getBoolean(AyaAudioService.FROM_NOTIFICATION)) || SharedPrefsUtil.getBoolean(this, AyaAudioService.SERVICE_RUNNING, false)) {
             int ayaId = SharedPrefsUtil.getInteger(this, AyaAudioService.AYA_ID_KEY, 1);
             mus7fFragment = Mus7fFragment.newNotifcationInstance(ayaId);
-        }
-        else if (PreferencesUtils.getLastReadPageSetting(this)) {
+        } else if (PreferencesUtils.getLastReadPageSetting(this)) {
             int pageNumber = Constants.QURAN.NUM_OF_PAGES - SharedPrefsUtil.getInteger(this
                     , "last_open_page", Constants.QURAN.NUM_OF_PAGES - 1);
             mus7fFragment = Mus7fFragment.newInstance(pageNumber);
@@ -136,7 +135,7 @@ public class MainActivity extends BaseActivity
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        if((getIntent().getExtras() != null && getIntent().getExtras().getBoolean(AyaAudioService.FROM_NOTIFICATION)) || SharedPrefsUtil.getBoolean(this, AyaAudioService.SERVICE_RUNNING, false)) {
+        if ((getIntent().getExtras() != null && getIntent().getExtras().getBoolean(AyaAudioService.FROM_NOTIFICATION)) || SharedPrefsUtil.getBoolean(this, AyaAudioService.SERVICE_RUNNING, false)) {
             int ayaId = SharedPrefsUtil.getInteger(this, AyaAudioService.AYA_ID_KEY, 1);
             Mus7fFragment mus7fFragment = Mus7fFragment.newNotifcationInstance(ayaId);
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -189,7 +188,6 @@ public class MainActivity extends BaseActivity
             super.onBackPressed();
         }
     }
-
 
 
     private void backToMushaf() {
@@ -347,7 +345,7 @@ public class MainActivity extends BaseActivity
         Mus7fFragment mus7fFragment = Mus7fFragment.newInstance(pageNumber, ayaId);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.container, mus7fFragment, "Mushaf");
-        if(addToStack) {
+        if (addToStack) {
             transaction.addToBackStack(null);
         }
         transaction.commit();

@@ -75,8 +75,7 @@
             android:src="@drawable/edit_gold_ic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/guideline_top"
-            android:visibility="gone"
-            />
+            android:visibility="gone" />
 
         <EditText
             android:id="@+id/et_search"

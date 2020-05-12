@@ -9,9 +9,9 @@ import androidx.lifecycle.MediatorLiveData;
 
 import java.util.List;
 
-import app.quranhub.mushaf.model.SearchModel;
 import app.quranhub.mushaf.interactor.SearchInteractor;
 import app.quranhub.mushaf.interactor.SearchInteractorImp;
+import app.quranhub.mushaf.model.SearchModel;
 
 public class SearchViewModel extends AndroidViewModel implements SearchInteractor.TopicListener {
 

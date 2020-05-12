@@ -12,12 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import app.quranhub.R;
 import app.quranhub.mushaf.data.entity.BookmarkType;
 import app.quranhub.mushaf.listener.ItemSelectionListener;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class BookmarkTypeAdapter extends RecyclerView.Adapter<BookmarkTypeAdapter.ViewHolder> {
 
@@ -26,6 +26,7 @@ public class BookmarkTypeAdapter extends RecyclerView.Adapter<BookmarkTypeAdapte
     private ItemSelectionListener<Integer> listener;
     private int selectedType;
     private int[] bookmarkColors;
+
     public BookmarkTypeAdapter(List<BookmarkType> bookmarkTypes, Context context, ItemSelectionListener<Integer> listener) {
         this.bookmarkTypes = bookmarkTypes;
         this.context = context;
@@ -33,7 +34,6 @@ public class BookmarkTypeAdapter extends RecyclerView.Adapter<BookmarkTypeAdapte
         selectedType = 0;
         bookmarkColors = context.getResources().getIntArray(R.array.bookmark_colors);
     }
-
 
 
     @NonNull
@@ -67,17 +67,16 @@ public class BookmarkTypeAdapter extends RecyclerView.Adapter<BookmarkTypeAdapte
             holder.typeIv.setColorFilter(null);
             holder.typeIv.setImageResource(R.drawable.bookmark_red);
             holder.typeTv.setText(context.getString(R.string.fasil_memorize));
-        }
-        else {  // CUSTOM BOOKMARK
+        } else {  // CUSTOM BOOKMARK
             holder.typeIv.setColorFilter(bookmarkColors[type.getColorIndex()]);
             holder.typeTv.setText(type.getBookmarkTypeName());
         }
 
-        if(position > 0) {
+        if (position > 0) {
             holder.seperator.setVisibility(View.INVISIBLE);
         }
 
-        if(position == selectedType) {
+        if (position == selectedType) {
             holder.checkIv.setVisibility(View.VISIBLE);
         } else {
             holder.checkIv.setVisibility(View.GONE);

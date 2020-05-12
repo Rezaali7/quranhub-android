@@ -4,12 +4,12 @@ import android.content.Context;
 
 import java.util.List;
 
-import app.quranhub.mushaf.model.SuraIndexModelMapper;
-import app.quranhub.mushaf.view.SuraGuz2IndexView;
 import app.quranhub.base.BasePresenterImp;
 import app.quranhub.base.BaseView;
 import app.quranhub.mushaf.interactor.SuraGuz2IndexInteractor;
 import app.quranhub.mushaf.interactor.SuraGuz2IndexInteractorImp;
+import app.quranhub.mushaf.model.SuraIndexModelMapper;
+import app.quranhub.mushaf.view.SuraGuz2IndexView;
 
 public class SuraGuz2IndexPresenterImp<T extends BaseView> extends BasePresenterImp<T> implements SuraGuz2IndexPresenter<T>, SuraGuz2IndexInteractor.GetIndexListener {
 

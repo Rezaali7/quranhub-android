@@ -33,32 +33,32 @@ import com.bumptech.glide.request.target.Target;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.quranhub.Constants;
+import app.quranhub.R;
+import app.quranhub.downloads_manager.dialogs.AudioDownloadAmountDialogFragment;
+import app.quranhub.downloads_manager.dialogs.QuranRecitersDialogFragment;
 import app.quranhub.mushaf.data.entity.Aya;
+import app.quranhub.mushaf.data.entity.AyaBookmark;
+import app.quranhub.mushaf.data.entity.BookmarkType;
 import app.quranhub.mushaf.data.entity.Note;
 import app.quranhub.mushaf.data.entity.Sheikh;
 import app.quranhub.mushaf.dialogs.AddBookmarkDialog;
 import app.quranhub.mushaf.dialogs.AddNoteDialog;
 import app.quranhub.mushaf.dialogs.AyaActionsDialog;
 import app.quranhub.mushaf.model.BookmarkModel;
-import app.quranhub.mushaf.utils.ImageUtil;
-import app.quranhub.mushaf.view.QuranPageView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import butterknife.Unbinder;
-import app.quranhub.Constants;
-import app.quranhub.R;
-import app.quranhub.downloads_manager.dialogs.AudioDownloadAmountDialogFragment;
-import app.quranhub.downloads_manager.dialogs.QuranRecitersDialogFragment;
-import app.quranhub.mushaf.data.entity.AyaBookmark;
-import app.quranhub.mushaf.data.entity.BookmarkType;
 import app.quranhub.mushaf.presenter.QuranPagePresenter;
 import app.quranhub.mushaf.presenter.QuranPagePresenterImp;
+import app.quranhub.mushaf.utils.ImageUtil;
+import app.quranhub.mushaf.view.QuranPageView;
 import app.quranhub.utils.FragmentUtil;
 import app.quranhub.utils.GlideApp;
 import app.quranhub.utils.IntentUtil;
 import app.quranhub.utils.PreferencesUtils;
 import app.quranhub.utils.ScreenUtil;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
 
 import static android.view.View.GONE;
 
@@ -175,7 +175,7 @@ public class QuranPageFragment extends Fragment
                 new ViewTreeObserver.OnGlobalLayoutListener() {
                     @Override
                     public void onGlobalLayout() {
-                        if(containerScrollView == null)
+                        if (containerScrollView == null)
                             return;
                         if (containerScrollView.getViewTreeObserver() != null)
                             containerScrollView.getViewTreeObserver().removeOnGlobalLayoutListener(this);

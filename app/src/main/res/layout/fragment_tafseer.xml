@@ -127,7 +127,6 @@
             app:layout_constraintTop_toBottomOf="@+id/hamburger_iv" />
 
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView

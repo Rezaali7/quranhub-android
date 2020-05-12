@@ -16,8 +16,7 @@
         android:layout_margin="@dimen/_6sdp"
         android:padding="@dimen/_2sdp"
         android:id="@+id/repeat_iv"
-        android:layout_weight="1"
-        />
+        android:layout_weight="1" />
 
     <View
         android:layout_width="2dp"
@@ -25,8 +24,7 @@
         android:background="@drawable/vertical_shadow"
         android:layout_weight="0.1"
         android:layout_marginStart="@dimen/_4sdp"
-        android:layout_marginEnd="@dimen/_4sdp"
-        />
+        android:layout_marginEnd="@dimen/_4sdp" />
 
     <ImageView
         android:layout_width="0dp"
@@ -44,8 +42,7 @@
         android:layout_margin="@dimen/_6sdp"
         android:padding="@dimen/_4sdp"
         android:id="@+id/record_iv"
-        android:layout_weight="1"
-        />
+        android:layout_weight="1" />
 
 
     <ImageView
@@ -55,8 +52,7 @@
         android:layout_margin="@dimen/_6sdp"
         android:padding="@dimen/_2sdp"
         android:id="@+id/prev_aya_iv"
-        android:layout_weight="1"
-        />
+        android:layout_weight="1" />
 
     <ImageView
         android:layout_width="0dp"
@@ -65,8 +61,7 @@
         android:layout_margin="@dimen/_6sdp"
 
         android:id="@+id/play_iv"
-        android:layout_weight="1"
-        />
+        android:layout_weight="1" />
 
     <ImageView
         android:layout_width="0dp"
@@ -75,8 +70,7 @@
         android:padding="@dimen/_2sdp"
         android:layout_margin="@dimen/_6sdp"
         android:id="@+id/next_aya_iv"
-        android:layout_weight="1"
-        />
+        android:layout_weight="1" />
 
     <ImageView
         android:layout_width="0dp"
@@ -87,8 +81,6 @@
         android:id="@+id/stop_iv"
         android:layout_gravity="center"
         android:layout_weight="1" />
-
-
 
 
 </LinearLayout>

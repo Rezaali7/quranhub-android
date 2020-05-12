@@ -21,11 +21,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.quranhub.R;
+import app.quranhub.utils.DialogUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import app.quranhub.R;
-import app.quranhub.utils.DialogUtil;
 
 /**
  * Display options as a list (single selection)
@@ -41,7 +41,7 @@ public class OptionsListDialogFragment extends DialogFragment implements Options
 
     private String dialogTitle;
     private List<String> options;
-    private int [] optionsThumbnailsDrawableIds;
+    private int[] optionsThumbnailsDrawableIds;
     private int selectedOptionIndex;
 
     @BindView(R.id.tv_title)
@@ -91,7 +91,7 @@ public class OptionsListDialogFragment extends DialogFragment implements Options
     }
 
     public static OptionsListDialogFragment getInstance(@NonNull String dialogTitle
-            , int[] optionsResIds, int [] optionsThumbnailsDrawableIds, int selectedOptionIndex
+            , int[] optionsResIds, int[] optionsThumbnailsDrawableIds, int selectedOptionIndex
             , @NonNull Fragment targetFragment, int requestCode) {
         List<String> options = new ArrayList<>();
         for (int stringResId : optionsResIds) {

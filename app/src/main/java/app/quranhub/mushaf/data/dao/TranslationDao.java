@@ -6,8 +6,8 @@ import androidx.room.Query;
 
 import java.util.List;
 
-import io.reactivex.Single;
 import app.quranhub.mushaf.data.entity.Translation;
+import io.reactivex.Single;
 
 @Dao
 public interface TranslationDao {

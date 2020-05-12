@@ -10,20 +10,20 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import app.quranhub.mushaf.data.entity.Sheikh;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 import app.quranhub.Constants;
 import app.quranhub.R;
 import app.quranhub.base.BaseActivity;
 import app.quranhub.downloads_manager.DownloadsManagerActivity;
 import app.quranhub.downloads_manager.dialogs.QuranRecitersDialogFragment;
+import app.quranhub.mushaf.data.entity.Sheikh;
 import app.quranhub.settings.custom.MushafSetting;
 import app.quranhub.settings.custom.MushafSettingSwitch;
 import app.quranhub.settings.dialogs.OptionsListDialogFragment;
 import app.quranhub.utils.LocaleUtil;
 import app.quranhub.utils.PreferencesUtils;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 
 public class SettingsFragment extends Fragment implements OptionsListDialogFragment.ItemSelectionListener

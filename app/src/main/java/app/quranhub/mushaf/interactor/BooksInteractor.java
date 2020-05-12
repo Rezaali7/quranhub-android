@@ -4,15 +4,16 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
+import app.quranhub.mushaf.data.entity.Book;
 import app.quranhub.mushaf.model.TafseerModel;
 import app.quranhub.mushaf.network.model.BookContent;
-import app.quranhub.mushaf.data.entity.Book;
 
 public interface BooksInteractor {
 
     void getAllTranslations();
 
     LiveData<List<Book>> getLocallyTranslations();
+
     LiveData<List<TafseerModel>> getSuraTafseers(int suraNumber);
 
 
@@ -23,7 +24,8 @@ public interface BooksInteractor {
 
     interface TranslationsListener {
         void onError();
-        void onGetAllTranslation(List<BookContent>  contents);
+
+        void onGetAllTranslation(List<BookContent> contents);
     }
 
 }

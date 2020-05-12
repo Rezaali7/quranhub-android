@@ -12,10 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.quranhub.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import app.quranhub.R;
 
 public class FilterAdapter extends RecyclerView.Adapter<FilterAdapter.ViewHolder> {
 
@@ -55,7 +55,6 @@ public class FilterAdapter extends RecyclerView.Adapter<FilterAdapter.ViewHolder
             holder.checkBoxImageView.setVisibility(View.INVISIBLE);
         }
     }
-
 
 
     @Override

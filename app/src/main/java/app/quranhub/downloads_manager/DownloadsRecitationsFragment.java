@@ -42,7 +42,7 @@ public class DownloadsRecitationsFragment extends BaseDownloadsFragment
         }
 
         // check if recitations are downloadable and/or deletable & the number of downloaded reciters each.
-        for (int i = 0; i<downloads.size(); i++) {
+        for (int i = 0; i < downloads.size(); i++) {
             DisplayableDownload displayableDownload = downloads.get(i);
 
             int numOfDownloadedReciters = UserDatabase.getInstance(requireContext())

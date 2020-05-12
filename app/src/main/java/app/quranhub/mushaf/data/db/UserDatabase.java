@@ -9,10 +9,6 @@ import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import app.quranhub.Constants;
-import app.quranhub.mushaf.data.entity.Note;
-import app.quranhub.mushaf.data.entity.Recitation;
-import app.quranhub.mushaf.data.entity.Sheikh;
-import app.quranhub.mushaf.data.entity.SheikhRecitation;
 import app.quranhub.mushaf.data.dao.BookDao;
 import app.quranhub.mushaf.data.dao.BookmarkDao;
 import app.quranhub.mushaf.data.dao.NoteDao;
@@ -25,7 +21,11 @@ import app.quranhub.mushaf.data.entity.AyaBookmark;
 import app.quranhub.mushaf.data.entity.AyaRecorder;
 import app.quranhub.mushaf.data.entity.Book;
 import app.quranhub.mushaf.data.entity.BookmarkType;
+import app.quranhub.mushaf.data.entity.Note;
 import app.quranhub.mushaf.data.entity.QuranAudio;
+import app.quranhub.mushaf.data.entity.Recitation;
+import app.quranhub.mushaf.data.entity.Sheikh;
+import app.quranhub.mushaf.data.entity.SheikhRecitation;
 import app.quranhub.mushaf.data.entity.TranslationBook;
 
 

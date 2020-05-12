@@ -17,8 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/player_play_white_ic"
         android:paddingStart="@dimen/_8sdp"
-        android:id="@+id/play_iv"
-        />
+        android:id="@+id/play_iv" />
 
     <SeekBar
         android:id="@+id/recorder_progress"
@@ -47,8 +46,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="@color/white_color"
         android:layout_marginStart="@dimen/_8sdp"
-        android:id="@+id/recorder_time_tv"
-        />
+        android:id="@+id/recorder_time_tv" />
 
     <View
         android:layout_width="2dp"
@@ -58,8 +56,7 @@
         app:layout_constraintStart_toEndOf="@id/recorder_time_tv"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/seperator"
-        />
+        android:id="@+id/seperator" />
 
     <ImageView
         android:layout_width="@dimen/_20sdp"
@@ -71,6 +68,5 @@
         android:layout_marginStart="@dimen/_8sdp"
         android:layout_marginEnd="@dimen/_8sdp"
         android:src="@drawable/ic_delete"
-        android:id="@+id/remove_record_iv"
-        />
+        android:id="@+id/remove_record_iv" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,19 +13,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import app.quranhub.R;
 import app.quranhub.mushaf.adapter.Guz2IndexAdapter;
 import app.quranhub.mushaf.listener.QuranNavigationCallbacks;
 import app.quranhub.mushaf.model.HizbQuarterDataModel;
+import app.quranhub.mushaf.viewmodel.Guz2IndexViewModel;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import app.quranhub.R;
-import app.quranhub.mushaf.viewmodel.Guz2IndexViewModel;
 
 /**
  * Fragment that displays a list containing Juz' index with its Hizb & Hizb Quarters.
@@ -70,8 +69,7 @@ public class Guz2IndexFragment extends Fragment implements Guz2IndexAdapter.Inde
 
         if (context instanceof QuranNavigationCallbacks) {
             quranNavigationCallbacks = (QuranNavigationCallbacks) context;
-        }
-        else {
+        } else {
             throw new RuntimeException(
                     "The containing Activity must implement QuranNavigationCallbacks interface");
         }

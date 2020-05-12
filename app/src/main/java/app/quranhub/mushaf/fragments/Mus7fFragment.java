@@ -38,9 +38,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import app.quranhub.Constants;
+import app.quranhub.R;
+import app.quranhub.audio_manager.AudioStateEvent;
+import app.quranhub.audio_manager.AyaAudioService;
+import app.quranhub.audio_manager.SharedRepeatModel;
+import app.quranhub.downloads_manager.dialogs.QuranRecitersDialogFragment;
+import app.quranhub.downloads_manager.network.QuranAudioDownloaderService;
+import app.quranhub.main.MainActivity;
 import app.quranhub.mushaf.adapter.QuranViewPagerAdapter;
 import app.quranhub.mushaf.data.entity.Aya;
 import app.quranhub.mushaf.data.entity.Sheikh;
+import app.quranhub.mushaf.data.entity.TranslationBook;
 import app.quranhub.mushaf.dialogs.AyaAudioPopup;
 import app.quranhub.mushaf.dialogs.AyaRecorderDialog;
 import app.quranhub.mushaf.dialogs.AyaRecorderPlayerDialog;
@@ -50,28 +59,19 @@ import app.quranhub.mushaf.events.QuranPageClickEvent;
 import app.quranhub.mushaf.model.QuranPageInfo;
 import app.quranhub.mushaf.model.RepeatModel;
 import app.quranhub.mushaf.model.SuraVersesNumber;
+import app.quranhub.mushaf.presenter.Mus7fPresenter;
+import app.quranhub.mushaf.presenter.Mus7fPresenterImp;
 import app.quranhub.mushaf.view.MushfView;
+import app.quranhub.utils.LocaleUtil;
+import app.quranhub.utils.PreferencesUtils;
+import app.quranhub.utils.ScreenUtil;
+import app.quranhub.utils.SharedPrefsUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import me.toptas.fancyshowcase.FancyShowCaseQueue;
 import me.toptas.fancyshowcase.FancyShowCaseView;
 import me.toptas.fancyshowcase.FocusShape;
-import app.quranhub.Constants;
-import app.quranhub.R;
-import app.quranhub.audio_manager.AudioStateEvent;
-import app.quranhub.audio_manager.AyaAudioService;
-import app.quranhub.audio_manager.SharedRepeatModel;
-import app.quranhub.downloads_manager.dialogs.QuranRecitersDialogFragment;
-import app.quranhub.downloads_manager.network.QuranAudioDownloaderService;
-import app.quranhub.main.MainActivity;
-import app.quranhub.mushaf.data.entity.TranslationBook;
-import app.quranhub.mushaf.presenter.Mus7fPresenter;
-import app.quranhub.mushaf.presenter.Mus7fPresenterImp;
-import app.quranhub.utils.LocaleUtil;
-import app.quranhub.utils.PreferencesUtils;
-import app.quranhub.utils.ScreenUtil;
-import app.quranhub.utils.SharedPrefsUtil;
 
 
 public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFragment.QuranFooterCallbacks
@@ -284,7 +284,7 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
             int selectedPage = getArguments().getInt(ARG_INIT_PAGE, 1);
             quranPageIndex = Constants.QURAN.NUM_OF_PAGES - selectedPage;
             initAyaId = getArguments().getInt(ARG_INIT_AYA, -1);
-            if(getArguments().getBoolean(ARG_FROM_NOTFICATION, false) && initAyaId != -1 && !withPrevState) {
+            if (getArguments().getBoolean(ARG_FROM_NOTFICATION, false) && initAyaId != -1 && !withPrevState) {
                 selectNotificationAya();
             }
             SharedPrefsUtil.saveInteger(getActivity(), "last_open_page", quranPageIndex);
@@ -295,7 +295,7 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
         presenter.getNotificationAya(initAyaId);
         openAyaAudioDialog();
         checkAyaRecorderState(initAyaId);
-        if(SharedPrefsUtil.getBoolean(getActivity(), AyaAudioService.AUDIO_PLAYING, false)) {
+        if (SharedPrefsUtil.getBoolean(getActivity(), AyaAudioService.AUDIO_PLAYING, false)) {
             ayaAudioPopup.setPlayState();
         }
     }
@@ -462,9 +462,9 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
         }
 
         // set current aya with draw shadown when open mushaf from audio notification
-        if(initAyaFromNotifcation) {
+        if (initAyaFromNotifcation) {
             initAyaFromNotifcation = false;
-            if(SharedPrefsUtil.getBoolean(getActivity(), AyaAudioService.AUDIO_PLAYING, false)) {
+            if (SharedPrefsUtil.getBoolean(getActivity(), AyaAudioService.AUDIO_PLAYING, false)) {
                 isAudioPlay = true;
             }
             quranPageFragment.setCurrentAyaFromNotification(notficationCurrentAya);
@@ -474,7 +474,7 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
 
     private void setCurrentQuranPageFragment() {
         if (quranPageFragment == null) {
-           quranPageFragment = (QuranPageFragment) Objects.requireNonNull(viewPager
+            quranPageFragment = (QuranPageFragment) Objects.requireNonNull(viewPager
                     .getAdapter())
                     .instantiateItem(viewPager, viewPager.getCurrentItem());
         }
@@ -594,7 +594,6 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     public void onQuranPageClick(QuranPageClickEvent event) {
         toggleQuranBars();
     }
-
 
 
     @Override
@@ -767,14 +766,12 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     }
 
 
-
-
     @Override
     public void checkPlayPauseState() {
         setCurrentQuranPageFragment();
         // if play audio with no selected aya => the audio play on first aya in page
 
-        if(isAudioPlay) {
+        if (isAudioPlay) {
             togglePauseState(true);
         } else {
             if (quranPageFragment.getCurrentAya() == null)
@@ -797,7 +794,7 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
 
     public void playNextAyaAudio() {
         if (quranPageFragment.getCurrentAya() != null) {
-            if(quranPageFragment.getCurrentAyaIndex() != quranPageFragment.getNumOfAyaInPage() - 1) {
+            if (quranPageFragment.getCurrentAyaIndex() != quranPageFragment.getNumOfAyaInPage() - 1) {
                 audioServiceIntent.setAction(AyaAudioService.ACTION_NEXT);
                 audioServiceIntent.putExtra(AyaAudioService.AYA_ID_KEY, quranPageFragment.getCurrentAyaId() + 1);
                 Objects.requireNonNull(getActivity()).startService(audioServiceIntent);
@@ -810,7 +807,7 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     public void playPrevAyaAudio() {
 
         if (quranPageFragment.getCurrentAya() != null) {
-            if(quranPageFragment.getCurrentAyaIndex() != 0) {
+            if (quranPageFragment.getCurrentAyaIndex() != 0) {
                 audioServiceIntent.setAction(AyaAudioService.ACTION_PREVIOUS);
                 audioServiceIntent.putExtra(AyaAudioService.AYA_ID_KEY, quranPageFragment.getCurrentAyaId() - 1);
                 Objects.requireNonNull(getActivity()).startService(audioServiceIntent);
@@ -943,12 +940,12 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     // start audio of selected aya after it downloaded its sura audios
     @Subscribe(threadMode = ThreadMode.MAIN_ORDERED)
     public void onDownloadAudioFinished(QuranAudioDownloaderService.DownloadFinishEvent event) {
-        if(!isAudioDialogOpen)
+        if (!isAudioDialogOpen)
             return;
         firstAyaInRepeatGroup = selectedAyaAudio.getSuraAya();
         fromSuraDownloaded = selectedAyaAudio.getSura();
         Log.d("ww9", "onDownloadAudioFinished: " + firstAyaInRepeatGroup + " , " + fromSuraDownloaded);
-        if(selectedAyaAudio != null && quranPageIndex != Constants.QURAN.NUM_OF_PAGES - selectedAyaAudio.getPage()) {
+        if (selectedAyaAudio != null && quranPageIndex != Constants.QURAN.NUM_OF_PAGES - selectedAyaAudio.getPage()) {
             initAudioInRepeatGroup = true;
             autoSwipPage(Constants.QURAN.NUM_OF_PAGES - selectedAyaAudio.getPage());
         } else {
@@ -1065,18 +1062,18 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
         setCurrentQuranPageFragment();
         isAudioPlay = true;
         ayaAudioPopup.setPlayState();
-        if(checkPlayAudio) {
+        if (checkPlayAudio) {
             if (quranPageFragment.isAyaAudioDownloaded())
                 resumeAyaAudio();
             else
-             playAudioService();
+                playAudioService();
         }
     }
 
     public void togglePauseState(boolean checkPauseAudio) {
         isAudioPlay = false;
         ayaAudioPopup.setPauseState();
-        if(checkPauseAudio)
+        if (checkPauseAudio)
             pauseAyaAudio();
     }
 
@@ -1108,15 +1105,15 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
         } else if (audioStateEvent.getAudioState() == AudioStateEvent.State.RESUME || audioStateEvent.getAudioState() == AudioStateEvent.State.PLAYING) {
             quranPageFragment.setAyaAudioDownloaded(true);
             togglePlayState(false);
-        } else if (audioStateEvent.getAudioState() == AudioStateEvent.State.PLAY_NEXT ) {
-            if(quranPageFragment.getCurrentAyaIndex() != quranPageFragment.getNumOfAyaInPage() - 1) {
+        } else if (audioStateEvent.getAudioState() == AudioStateEvent.State.PLAY_NEXT) {
+            if (quranPageFragment.getCurrentAyaIndex() != quranPageFragment.getNumOfAyaInPage() - 1) {
                 quranPageFragment.drawActionShadow(false);
                 checkAyaRecorderState(quranPageFragment.getCurrentAyaId());
             } else {
                 swipToNextQuranPage();
             }
         } else if (audioStateEvent.getAudioState() == AudioStateEvent.State.PLAY_PREV) {
-            if(quranPageFragment.getCurrentAyaIndex()  != 0) {
+            if (quranPageFragment.getCurrentAyaIndex() != 0) {
                 quranPageFragment.drawActionShadow(true);
                 checkAyaRecorderState(quranPageFragment.getCurrentAyaId());
             } else {

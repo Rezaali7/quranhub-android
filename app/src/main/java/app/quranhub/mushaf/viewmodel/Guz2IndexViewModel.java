@@ -10,9 +10,9 @@ import androidx.lifecycle.MutableLiveData;
 
 import java.util.List;
 
-import app.quranhub.mushaf.model.HizbQuarterDataModel;
 import app.quranhub.mushaf.interactor.Guz2IndexInteractor;
 import app.quranhub.mushaf.interactor.Guz2IndexInteractorImp;
+import app.quranhub.mushaf.model.HizbQuarterDataModel;
 
 public class Guz2IndexViewModel extends AndroidViewModel {
 

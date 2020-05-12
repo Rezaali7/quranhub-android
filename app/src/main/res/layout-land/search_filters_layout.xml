@@ -4,8 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/filter_layout"
-    >
+    android:id="@+id/filter_layout">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
@@ -14,8 +13,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="@id/sura_container"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        >
+        app:layout_constraintHorizontal_weight="1">
+
         <ImageView
             android:layout_width="@dimen/_10sdp"
             android:layout_height="@dimen/_10sdp"
@@ -23,8 +22,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginEnd="@dimen/_18sdp"
-            app:layout_constraintEnd_toEndOf="parent"
-            />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,8 +34,8 @@
             android:layout_marginStart="@dimen/_18sdp"
             app:layout_constraintBottom_toBottomOf="@id/sp0"
             android:id="@+id/chapter_tv"
-            android:textSize="@dimen/_12sdp"
-            />
+            android:textSize="@dimen/_12sdp" />
+
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
@@ -47,8 +45,7 @@
             android:layout_marginEnd="@dimen/_18sdp"
             android:layout_marginStart="@dimen/_18sdp"
             android:background="@color/accent"
-            android:id="@+id/sp0"
-            />
+            android:id="@+id/sp0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -58,8 +55,8 @@
         app:layout_constraintStart_toEndOf="@id/part_container"
         android:id="@+id/sura_container"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        >
+        app:layout_constraintHorizontal_weight="1">
+
         <ImageView
             android:layout_width="@dimen/_10sdp"
             android:layout_height="@dimen/_10sdp"
@@ -67,8 +64,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="@dimen/_18sdp"
-            />
+            android:layout_marginEnd="@dimen/_18sdp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -80,8 +76,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/sp1"
             android:layout_marginStart="@dimen/_18sdp"
             android:textSize="@dimen/_12sdp"
-            android:id="@+id/sura_tv"
-            />
+            android:id="@+id/sura_tv" />
+
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
@@ -91,11 +87,8 @@
             android:layout_marginEnd="@dimen/_18sdp"
             android:layout_marginStart="@dimen/_18sdp"
             android:background="@color/accent"
-            android:id="@+id/sp1"
-            />
+            android:id="@+id/sp1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -105,8 +98,8 @@
         app:layout_constraintEnd_toStartOf="@id/rob3_container"
         app:layout_constraintStart_toEndOf="@id/sura_container"
         android:id="@+id/hezb_container"
-        app:layout_constraintHorizontal_weight="1"
-        >
+        app:layout_constraintHorizontal_weight="1">
+
         <ImageView
             android:layout_width="@dimen/_10sdp"
             android:layout_height="@dimen/_10sdp"
@@ -114,8 +107,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginEnd="@dimen/_18sdp"
-            app:layout_constraintEnd_toEndOf="parent"
-            />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -127,8 +119,8 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="@dimen/_18sdp"
             android:id="@+id/hezb_tv"
-            android:textSize="@dimen/_12sdp"
-            />
+            android:textSize="@dimen/_12sdp" />
+
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
@@ -138,8 +130,7 @@
             android:layout_marginEnd="@dimen/_18sdp"
             android:layout_marginStart="@dimen/_18sdp"
             android:background="@color/accent"
-            android:id="@+id/sp4"
-            />
+            android:id="@+id/sp4" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -149,8 +140,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/hezb_container"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        >
+        app:layout_constraintHorizontal_weight="1">
+
         <ImageView
             android:layout_width="@dimen/_10sdp"
             android:layout_height="@dimen/_10sdp"
@@ -158,8 +149,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginEnd="@dimen/_18sdp"
-            app:layout_constraintEnd_toEndOf="parent"
-            />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -171,8 +161,8 @@
             android:layout_marginStart="@dimen/_18sdp"
             app:layout_constraintBottom_toBottomOf="@+id/sp2"
             android:id="@+id/rob3_tv"
-            android:textSize="@dimen/_12sdp"
-            />
+            android:textSize="@dimen/_12sdp" />
+
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"

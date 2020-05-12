@@ -29,7 +29,6 @@ import androidx.core.content.FileProvider;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,21 +38,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import app.quranhub.Constants;
+import app.quranhub.R;
+import app.quranhub.main.MainActivity;
 import app.quranhub.mushaf.adapter.BookAdapter;
+import app.quranhub.mushaf.data.entity.Book;
 import app.quranhub.mushaf.dialogs.OpenFileDialog;
 import app.quranhub.mushaf.network.BookDownloadManager;
 import app.quranhub.mushaf.network.model.BookContent;
 import app.quranhub.mushaf.utils.NetworkUtil;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import pub.devrel.easypermissions.EasyPermissions;
-import app.quranhub.Constants;
-import app.quranhub.R;
-import app.quranhub.main.MainActivity;
-import app.quranhub.mushaf.data.entity.Book;
 import app.quranhub.mushaf.viewmodel.BooksViewModel;
 import app.quranhub.utils.FragmentUtil;
 import app.quranhub.utils.interfaces.Searchable;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import pub.devrel.easypermissions.EasyPermissions;
 
 // todo add edit button to delete downloaded translation
 public class BookDataFragment extends Fragment implements Searchable, EasyPermissions.PermissionCallbacks

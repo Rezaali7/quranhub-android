@@ -8,10 +8,10 @@ import androidx.room.Query;
 
 import java.util.List;
 
-import app.quranhub.mushaf.model.BookmarkModel;
-import io.reactivex.Single;
 import app.quranhub.mushaf.data.entity.AyaBookmark;
 import app.quranhub.mushaf.data.entity.BookmarkType;
+import app.quranhub.mushaf.model.BookmarkModel;
+import io.reactivex.Single;
 
 @Dao
 public interface BookmarkDao {
@@ -31,7 +31,8 @@ public interface BookmarkDao {
     @Query("select * from AyaBookmark where bookmarkTypeId=:id")
     LiveData<List<AyaBookmark>> getTypeBookmarks(int id);
 
-    @Query("select AyaBookmark.bookmarkTypeId, BookmarkType.colorIndex from AyaBookmark join BookmarkType on AyaBookmark.bookmarkTypeId=BookmarkType.typeId where bookmarkId=:id")       // todo make query return bookmarktype and color index to set filter to icon by join statment
+    @Query("select AyaBookmark.bookmarkTypeId, BookmarkType.colorIndex from AyaBookmark join BookmarkType on AyaBookmark.bookmarkTypeId=BookmarkType.typeId where bookmarkId=:id")
+        // todo make query return bookmarktype and color index to set filter to icon by join statment
     Single<BookmarkModel> getBookmarkType(int id);
 
     @Query("delete from AyaBookmark where bookmarkId=:id")

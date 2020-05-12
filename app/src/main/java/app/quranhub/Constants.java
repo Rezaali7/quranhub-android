@@ -7,7 +7,6 @@ import java.util.List;
 public final class Constants {
 
 
-
     private Constants() { /* Prevent instantiation */ }
 
 
@@ -36,12 +35,12 @@ public final class Constants {
     }
 
     public interface DIRECTORY {
-        String ROOT_PUBLIC =  "QuranHub";
+        String ROOT_PUBLIC = "QuranHub";
         String LIBRARY_PUBLIC = ROOT_PUBLIC + File.separator + "Library";
 
-        String NOTE_VOICE_RECORDER ="Note_Recorder";
-        String AYA_VOICE_RECORDER ="Aya_Recorder";
-        String AUDIO ="Audio";
+        String NOTE_VOICE_RECORDER = "Note_Recorder";
+        String AYA_VOICE_RECORDER = "Aya_Recorder";
+        String AUDIO = "Audio";
         String QURAN_AUDIO = ".quran_audio";
     }
 

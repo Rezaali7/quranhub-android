@@ -14,11 +14,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.Arrays;
 import java.util.Objects;
 
+import app.quranhub.R;
 import app.quranhub.mushaf.adapter.FilterAdapter;
+import app.quranhub.mushaf.listener.ItemSelectionListener;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import app.quranhub.R;
-import app.quranhub.mushaf.listener.ItemSelectionListener;
 
 public class NotesFilterDialog extends DialogFragment implements FilterAdapter.OptionClickListener {
 

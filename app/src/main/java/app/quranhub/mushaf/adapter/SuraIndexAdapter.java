@@ -18,12 +18,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import app.quranhub.mushaf.model.SuraIndexModelMapper;
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import app.quranhub.R;
 import app.quranhub.databinding.SuraIndexRowBinding;
 import app.quranhub.mushaf.listener.ItemSelectionListener;
+import app.quranhub.mushaf.model.SuraIndexModelMapper;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class SuraIndexAdapter extends RecyclerView.Adapter<SuraIndexAdapter.ViewHolder> {
 
@@ -53,7 +53,7 @@ public class SuraIndexAdapter extends RecyclerView.Adapter<SuraIndexAdapter.View
         if (position >= suraIndexFiliterList.size())
             return;
         SuraIndexModelMapper suraIndexModel = suraIndexFiliterList.get(position);
-        if (TextUtilsCompat.getLayoutDirectionFromLocale(Locale.getDefault()) == ViewCompat.LAYOUT_DIRECTION_RTL)  {
+        if (TextUtilsCompat.getLayoutDirectionFromLocale(Locale.getDefault()) == ViewCompat.LAYOUT_DIRECTION_RTL) {
             holder.leftBorder.setImageResource(R.drawable.gold_ornament_surah_ic);
             holder.rightBorder.setImageResource(R.drawable.gold_ornament_surah_mirror_ic);
             holder.suraName.setTypeface(ResourcesCompat.getFont(context, R.font.secondary_font), Typeface.BOLD);

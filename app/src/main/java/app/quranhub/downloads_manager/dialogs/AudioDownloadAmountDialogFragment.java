@@ -22,17 +22,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import app.quranhub.mushaf.data.entity.SheikhRecitation;
-import app.quranhub.mushaf.utils.NetworkUtil;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import butterknife.Unbinder;
 import app.quranhub.Constants;
 import app.quranhub.R;
 import app.quranhub.downloads_manager.network.QuranAudioDownloaderService;
 import app.quranhub.mushaf.data.db.UserDatabase;
+import app.quranhub.mushaf.data.entity.SheikhRecitation;
+import app.quranhub.mushaf.utils.NetworkUtil;
 import app.quranhub.utils.DialogUtil;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
 
 import static app.quranhub.utils.DialogUtil.DIALOG_STD_WIDTH_SCREEN_RATIO_LANDSCAPE;
 import static app.quranhub.utils.DialogUtil.DIALOG_STD_WIDTH_SCREEN_RATIO_PORTRAIT;

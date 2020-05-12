@@ -50,8 +50,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="الجزء الاول"
-            />
+            tools:text="الجزء الاول" />
 
         <ImageView
             android:layout_width="@dimen/app_bar_icon_dimen"
@@ -60,8 +59,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:src="@drawable/bookmark_green_sidemenu_ic"
-            android:id="@+id/ic_bookmark"
-            />
+            android:id="@+id/ic_bookmark" />
 
         <ImageView
             android:id="@+id/iv_page_dir"

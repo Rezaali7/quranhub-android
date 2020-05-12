@@ -12,14 +12,14 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.quranhub.mushaf.data.entity.Sheikh;
-import app.quranhub.mushaf.data.entity.SheikhRecitation;
 import app.quranhub.R;
 import app.quranhub.downloads_manager.dialogs.DeleteConfirmationDialogFragment;
 import app.quranhub.downloads_manager.model.DisplayableDownload;
 import app.quranhub.downloads_manager.network.QuranAudioDownloaderService;
 import app.quranhub.downloads_manager.utils.QuranAudioDeleteUtils;
 import app.quranhub.mushaf.data.db.UserDatabase;
+import app.quranhub.mushaf.data.entity.Sheikh;
+import app.quranhub.mushaf.data.entity.SheikhRecitation;
 import app.quranhub.utils.PreferencesUtils;
 
 public class DownloadsSurasFragment extends BaseDownloadsFragment
@@ -37,7 +37,7 @@ public class DownloadsSurasFragment extends BaseDownloadsFragment
 
     public static DownloadsSurasFragment newInstance(@NonNull Context context, int recitationId
             , @NonNull String reciterId, @NonNull String reciterName) {
-        return newInstance(context, recitationId,reciterId, reciterName, false);
+        return newInstance(context, recitationId, reciterId, reciterName, false);
     }
 
     public static DownloadsSurasFragment newInstance(@NonNull Context context, int recitationId
@@ -69,11 +69,11 @@ public class DownloadsSurasFragment extends BaseDownloadsFragment
     protected List<DisplayableDownload> provideDisplayableDownloads() {
         List<DisplayableDownload> displayableDownloadList = new ArrayList<>();
 
-        String [] suras = getResources().getStringArray(R.array.sura_name);
+        String[] suras = getResources().getStringArray(R.array.sura_name);
 
-        for (int i = 0; i<suras.length; i++) {
+        for (int i = 0; i < suras.length; i++) {
             String suraName = suras[i];
-            DisplayableDownload displayableDownload  = new DisplayableDownload(suraName);
+            DisplayableDownload displayableDownload = new DisplayableDownload(suraName);
 
             int suraId = i + 1;
 
@@ -91,7 +91,8 @@ public class DownloadsSurasFragment extends BaseDownloadsFragment
     }
 
     @Override
-    public void onClickItem(DisplayableDownload displayableDownload, int position) { }
+    public void onClickItem(DisplayableDownload displayableDownload, int position) {
+    }
 
     @Override
     public void onDeleteItem(DisplayableDownload displayableDownload, int position) {

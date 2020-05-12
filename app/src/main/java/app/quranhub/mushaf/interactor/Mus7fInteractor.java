@@ -3,9 +3,9 @@ package app.quranhub.mushaf.interactor;
 import java.util.ArrayList;
 
 import app.quranhub.mushaf.data.entity.Aya;
+import app.quranhub.mushaf.data.entity.TranslationBook;
 import app.quranhub.mushaf.model.QuranPageInfo;
 import app.quranhub.mushaf.model.SuraVersesNumber;
-import app.quranhub.mushaf.data.entity.TranslationBook;
 
 public interface Mus7fInteractor {
 
@@ -28,6 +28,7 @@ public interface Mus7fInteractor {
     void getSuraNumofVerses();
 
     void getFromAyaPage(int fromAya);
+
     void getAya(int currentAyaId);
 
 

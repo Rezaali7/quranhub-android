@@ -19,12 +19,12 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.Objects;
 
+import app.quranhub.R;
 import app.quranhub.mushaf.adapter.NotesAdapter;
 import app.quranhub.mushaf.data.entity.Note;
 import app.quranhub.mushaf.dialogs.AddNoteDialog;
@@ -32,13 +32,12 @@ import app.quranhub.mushaf.dialogs.NotesFilterDialog;
 import app.quranhub.mushaf.listener.ItemSelectionListener;
 import app.quranhub.mushaf.listener.QuranNavigationCallbacks;
 import app.quranhub.mushaf.model.DisplayedNote;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import app.quranhub.R;
 import app.quranhub.mushaf.viewmodel.NotesViewModel;
 import app.quranhub.utils.ScreenUtil;
 import app.quranhub.utils.interfaces.ToolbarActionsListener;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 public class MyNotesFragment extends Fragment implements NotesAdapter.NoteCallback, AddNoteDialog.AddNoteListener, ItemSelectionListener<Integer> {

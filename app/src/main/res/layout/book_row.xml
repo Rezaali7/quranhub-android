@@ -22,7 +22,6 @@
         tools:text="اللغه العربيه" />
 
 
-
     <ImageView
         android:id="@+id/translation_iv"
         android:layout_width="wrap_content"
@@ -43,7 +42,7 @@
         android:padding="@dimen/_6sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/translation_tv"
-        app:layout_constraintTop_toTopOf="@id/translation_tv"/>
+        app:layout_constraintTop_toTopOf="@id/translation_tv" />
 
     <ImageView
         android:id="@+id/cancel_download"
@@ -55,7 +54,6 @@
         app:layout_constraintBottom_toBottomOf="@id/translation_tv"
         app:layout_constraintTop_toTopOf="@id/translation_tv"
         app:layout_constraintEnd_toEndOf="@+id/download_progress"
-        app:layout_constraintStart_toStartOf="@+id/download_progress"
-    />
+        app:layout_constraintStart_toStartOf="@+id/download_progress" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

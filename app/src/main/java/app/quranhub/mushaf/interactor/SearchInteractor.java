@@ -9,8 +9,11 @@ import app.quranhub.mushaf.model.SearchModel;
 public interface SearchInteractor {
 
     void searchAya(String inputQuery);
+
     void searchAyaInGuz(String inputQuery, int guzNumber);
+
     void searchAyaInSura(String inputQuery, int suraNumber);
+
     LiveData<List<Integer>> getSurasInChapter(int chapter);
 
     void searchWithSuraAndJuz(String inputSearch, int selectedSura, int selectedJuz);

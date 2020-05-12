@@ -25,19 +25,19 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Objects;
 
-import app.quranhub.mushaf.model.AyaIdInfo;
-import app.quranhub.mushaf.model.RepeatModel;
-import app.quranhub.mushaf.model.SuraVersesNumber;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.schedulers.Schedulers;
 import app.quranhub.Constants;
 import app.quranhub.R;
 import app.quranhub.base.BaseService;
 import app.quranhub.main.MainActivity;
 import app.quranhub.mushaf.data.db.UserDatabase;
+import app.quranhub.mushaf.model.AyaIdInfo;
+import app.quranhub.mushaf.model.RepeatModel;
+import app.quranhub.mushaf.model.SuraVersesNumber;
 import app.quranhub.utils.LocaleUtil;
 import app.quranhub.utils.PreferencesUtils;
 import app.quranhub.utils.SharedPrefsUtil;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 public class AyaAudioService extends BaseService implements MediaPlayer.OnPreparedListener, MediaPlayer.OnCompletionListener {
 
@@ -82,7 +82,7 @@ public class AyaAudioService extends BaseService implements MediaPlayer.OnPrepar
     private int currentAyaId;
     private ArrayList<SuraVersesNumber> suraVersesNumberArrayList;
     private ArrayList<AyaIdInfo> ayaIdInfoArrayList;
-    private String [] suras;
+    private String[] suras;
     private NotificationCompat.Builder notificationBuilder;
     private NotificationCompat.Builder pausedNotificationBuilder;
     private NotificationManager notificationManager;
@@ -210,23 +210,23 @@ public class AyaAudioService extends BaseService implements MediaPlayer.OnPrepar
     }
 
     private void setNotificationIcon() {
-            if (notificationIcon == null) {
-                try {
-                    Resources resources = getApplicationContext().getResources();
-                    Bitmap logo = BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher);
-                    int iconWidth = logo.getWidth();
-                    int iconHeight = logo.getHeight();
-                    ColorDrawable cd = new ColorDrawable();
-                    Bitmap bitmap = Bitmap.createBitmap(iconWidth * 2, iconHeight * 2, Bitmap.Config.ARGB_8888);
-                    Canvas canvas = new Canvas(bitmap);
-                    cd.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
-                    cd.draw(canvas);
-                    canvas.drawBitmap(logo, iconWidth / 2, iconHeight / 2, null);
-                    notificationIcon = bitmap;
-                } catch (OutOfMemoryError oomError) {
-                    Log.d(TAG, "Notification icon OutOfMemoryError");
-                }
+        if (notificationIcon == null) {
+            try {
+                Resources resources = getApplicationContext().getResources();
+                Bitmap logo = BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher);
+                int iconWidth = logo.getWidth();
+                int iconHeight = logo.getHeight();
+                ColorDrawable cd = new ColorDrawable();
+                Bitmap bitmap = Bitmap.createBitmap(iconWidth * 2, iconHeight * 2, Bitmap.Config.ARGB_8888);
+                Canvas canvas = new Canvas(bitmap);
+                cd.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+                cd.draw(canvas);
+                canvas.drawBitmap(logo, iconWidth / 2, iconHeight / 2, null);
+                notificationIcon = bitmap;
+            } catch (OutOfMemoryError oomError) {
+                Log.d(TAG, "Notification icon OutOfMemoryError");
             }
+        }
     }
 
     @Override
@@ -255,7 +255,7 @@ public class AyaAudioService extends BaseService implements MediaPlayer.OnPrepar
         if (!fromNotification) {
             currentAyaId = intent.getIntExtra(AYA_ID_KEY, currentAyaId);
         }
-        if(suraVersesNumberArrayList == null) {
+        if (suraVersesNumberArrayList == null) {
             suraVersesNumberArrayList = intent.getParcelableArrayListExtra(SURA_VERSES_KEY);
             suras = getResources().getStringArray(R.array.sura_name);
             setAyaIdInfo();
@@ -264,8 +264,8 @@ public class AyaAudioService extends BaseService implements MediaPlayer.OnPrepar
 
     private void setAyaIdInfo() {
         ayaIdInfoArrayList = new ArrayList<>();
-        for(SuraVersesNumber suraVersesNumber : suraVersesNumberArrayList) {
-            for(int i = 1 ; i <= suraVersesNumber.getAyas() ; i++) {
+        for (SuraVersesNumber suraVersesNumber : suraVersesNumberArrayList) {
+            for (int i = 1; i <= suraVersesNumber.getAyas(); i++) {
                 ayaIdInfoArrayList.add(new AyaIdInfo(i, suraVersesNumber.getId()));
             }
         }
@@ -460,7 +460,6 @@ public class AyaAudioService extends BaseService implements MediaPlayer.OnPrepar
                     EventBus.getDefault().post(new AudioStateEvent(AudioStateEvent.State.NOT_DOWNLOADED));
                 });
     }
-
 
 
     private void checkFileAudioExist(String audioPath) {

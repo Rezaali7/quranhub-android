@@ -19,13 +19,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import app.quranhub.R;
+import app.quranhub.mushaf.data.entity.TranslationBook;
 import app.quranhub.mushaf.model.DisplayableTranslation;
 import app.quranhub.mushaf.utils.NetworkUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import app.quranhub.R;
-import app.quranhub.mushaf.data.entity.TranslationBook;
 
 
 public class TranslationsAdapter extends RecyclerView.Adapter<TranslationsAdapter.ViewHolder>
@@ -87,8 +87,7 @@ public class TranslationsAdapter extends RecyclerView.Adapter<TranslationsAdapte
             holder.downloadLevelProgressBar.setVisibility(View.VISIBLE);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 holder.downloadLevelProgressBar.setProgress(t.getDownloadLevelPercentage(), true);
-            }
-            else {
+            } else {
                 holder.downloadLevelProgressBar.setProgress(t.getDownloadLevelPercentage());
             }
         } else {
@@ -102,7 +101,7 @@ public class TranslationsAdapter extends RecyclerView.Adapter<TranslationsAdapte
 
     @Override
     public int getItemCount() {
-        return filteredTranslations != null? filteredTranslations.size() : 0;
+        return filteredTranslations != null ? filteredTranslations.size() : 0;
     }
 
     public void setTranslations(@Nullable List<DisplayableTranslation> translations) {
@@ -179,8 +178,7 @@ public class TranslationsAdapter extends RecyclerView.Adapter<TranslationsAdapte
             DisplayableTranslation t = filteredTranslations.get(position);
             if (t.getDownloadStatus() == NetworkUtil.STATUS_NOT_DOWNLOADED) {
                 listener.onDownloadTranslationClick(t.getTranslationBook(), position);
-            }
-            else if (t.getDownloadStatus() == NetworkUtil.STATUS_DOWNLOADING) {
+            } else if (t.getDownloadStatus() == NetworkUtil.STATUS_DOWNLOADING) {
                 listener.onCancelDownloadTranslationClick(t.getTranslationBook(), position);
             }
         }
@@ -196,7 +194,9 @@ public class TranslationsAdapter extends RecyclerView.Adapter<TranslationsAdapte
      */
     public interface ItemClickListener {
         void onTranslationClick(TranslationBook translationBook, int clickedItemIndex);
+
         void onDownloadTranslationClick(TranslationBook translationBook, int clickedItemIndex);
+
         void onCancelDownloadTranslationClick(TranslationBook translationBook, int clickedItemIndex);
     }
 

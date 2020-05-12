@@ -10,9 +10,9 @@ import androidx.lifecycle.MediatorLiveData;
 import java.util.List;
 
 import app.quranhub.mushaf.data.entity.Note;
-import app.quranhub.mushaf.model.DisplayedNote;
 import app.quranhub.mushaf.interactor.NotesInteractor;
 import app.quranhub.mushaf.interactor.NotesInteractorImp;
+import app.quranhub.mushaf.model.DisplayedNote;
 
 public class NotesViewModel extends AndroidViewModel {
 

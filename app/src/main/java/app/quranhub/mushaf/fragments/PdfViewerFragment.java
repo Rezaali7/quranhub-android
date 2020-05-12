@@ -18,10 +18,10 @@ import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
 
 import java.io.File;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import app.quranhub.Constants;
 import app.quranhub.R;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 public class PdfViewerFragment extends Fragment {

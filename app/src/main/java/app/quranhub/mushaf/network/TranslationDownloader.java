@@ -12,10 +12,10 @@ import com.downloader.PRDownloader;
 
 import java.io.File;
 
-import app.quranhub.mushaf.utils.NetworkUtil;
 import app.quranhub.Constants;
 import app.quranhub.mushaf.data.db.UserDatabase;
 import app.quranhub.mushaf.data.entity.TranslationBook;
+import app.quranhub.mushaf.utils.NetworkUtil;
 
 public class TranslationDownloader {
 
@@ -85,20 +85,17 @@ public class TranslationDownloader {
                             " -> progress = " + progress.currentBytes + "/" + progress.totalBytes);
 
                     // progress on four increments to optimize performance
-                    double progressRatio = (double) progress.currentBytes/progress.totalBytes;
+                    double progressRatio = (double) progress.currentBytes / progress.totalBytes;
                     if (progressRatio > 0.9d) {
                         Log.d(TAG, "progress : 100%");
                         updateProgressPercentage(100);
-                    }
-                    else if (progressRatio > 0.75d && progressRatio < 0.80d) {
+                    } else if (progressRatio > 0.75d && progressRatio < 0.80d) {
                         Log.d(TAG, "progress : 75%");
                         updateProgressPercentage(75);
-                    }
-                    else if (progressRatio > 0.50d && progressRatio < 0.55d) {
+                    } else if (progressRatio > 0.50d && progressRatio < 0.55d) {
                         Log.d(TAG, "progress : 50%");
                         updateProgressPercentage(50);
-                    }
-                    else if(progressRatio > 0.25d && progressRatio < 0.30d) {
+                    } else if (progressRatio > 0.25d && progressRatio < 0.30d) {
                         Log.d(TAG, "progress : 25%");
                         updateProgressPercentage(25);
                     }

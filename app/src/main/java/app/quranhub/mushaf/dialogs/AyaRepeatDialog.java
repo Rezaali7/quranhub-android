@@ -21,14 +21,14 @@ import androidx.fragment.app.DialogFragment;
 import java.util.ArrayList;
 import java.util.Objects;
 
+import app.quranhub.R;
 import app.quranhub.mushaf.data.entity.Aya;
 import app.quranhub.mushaf.model.RepeatModel;
 import app.quranhub.mushaf.model.SuraVersesNumber;
+import app.quranhub.utils.DialogUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import app.quranhub.R;
-import app.quranhub.utils.DialogUtil;
 
 public class AyaRepeatDialog extends DialogFragment {
 
@@ -147,7 +147,7 @@ public class AyaRepeatDialog extends DialogFragment {
         fromAyaSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(parent != null && parent.getChildAt(0) != null)
+                if (parent != null && parent.getChildAt(0) != null)
                     ((TextView) parent.getChildAt(0)).setTextColor(Objects.requireNonNull(getActivity()).getResources().getColor(R.color.white_color));
                 maxFromAyaNumber = suraVersesNumberArrayList.get(position).getAyas();
                 if (fromUser) {
@@ -165,7 +165,7 @@ public class AyaRepeatDialog extends DialogFragment {
         toAyaSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(parent != null && parent.getChildAt(0) != null)
+                if (parent != null && parent.getChildAt(0) != null)
                     ((TextView) parent.getChildAt(0)).setTextColor(Objects.requireNonNull(getActivity()).getResources().getColor(R.color.white_color));
                 maxToAyaNumber = suraVersesNumberArrayList.get(position).getAyas();
                 if (fromUser) {
@@ -270,16 +270,16 @@ public class AyaRepeatDialog extends DialogFragment {
 
     private int getFromAyaId(int fromAya, int fromSura) {
         int fromAyaId = fromAya;
-        for(int i = 1 ; i < fromSura ; i++) {
-            fromAyaId += suraVersesNumberArrayList.get(i-1).getAyas();
+        for (int i = 1; i < fromSura; i++) {
+            fromAyaId += suraVersesNumberArrayList.get(i - 1).getAyas();
         }
         return fromAyaId;
     }
 
     private int getToAyaId(int toAya, int toSura) {
         int toAyaId = toAya;
-        for(int i = 1 ; i < toSura ; i++) {
-            toAyaId += suraVersesNumberArrayList.get(i-1).getAyas();
+        for (int i = 1; i < toSura; i++) {
+            toAyaId += suraVersesNumberArrayList.get(i - 1).getAyas();
         }
         return toAyaId;
     }

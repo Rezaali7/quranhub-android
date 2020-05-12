@@ -37,7 +37,6 @@
         android:id="@+id/arrow_iv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/topic_tv"
-        app:layout_constraintBottom_toBottomOf="@id/topic_tv"
-        />
+        app:layout_constraintBottom_toBottomOf="@id/topic_tv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

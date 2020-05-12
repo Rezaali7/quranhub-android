@@ -18,11 +18,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.quranhub.R;
 import app.quranhub.mushaf.model.HizbQuarterDataModel;
+import app.quranhub.utils.LocaleUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import app.quranhub.R;
-import app.quranhub.utils.LocaleUtil;
 
 public class Guz2IndexAdapter extends RecyclerView.Adapter<Guz2IndexAdapter.ViewHolder> implements Filterable {
 
@@ -77,11 +77,10 @@ public class Guz2IndexAdapter extends RecyclerView.Adapter<Guz2IndexAdapter.View
         if (model.getQuarter() == 1) {
             holder.headerLayout.setVisibility(View.VISIBLE);
             holder.headerGuz2TextView.setText(
-                    context.getResources().getStringArray(R.array.agza2_name)[model.getJuz()-1]);
+                    context.getResources().getStringArray(R.array.agza2_name)[model.getJuz() - 1]);
             holder.headerHizbTextView.setText(
-                    context.getResources().getStringArray(R.array.hezb_name)[model.getHizb()-1]);
-        }
-        else {
+                    context.getResources().getStringArray(R.array.hezb_name)[model.getHizb() - 1]);
+        } else {
             holder.headerLayout.setVisibility(View.GONE);
         }
 
@@ -103,7 +102,7 @@ public class Guz2IndexAdapter extends RecyclerView.Adapter<Guz2IndexAdapter.View
         holder.ayaContentTextView.setText(model.getAyaText());
         holder.rub3NumTextView.setText(LocaleUtil.formatNumber(model.getQuarter()));
         holder.suraNameTextView.setText(
-                context.getResources().getStringArray(R.array.sura_name)[model.getSuraNumber()-1]);
+                context.getResources().getStringArray(R.array.sura_name)[model.getSuraNumber() - 1]);
         holder.ayaNumTextView.setText(LocaleUtil.formatNumber(model.getAyaNumber()));
         holder.startPageNumTextView.setText(LocaleUtil.formatNumber(model.getStartPage()));
         holder.endPageNumTextView.setText(LocaleUtil.formatNumber(model.getEndPage()));

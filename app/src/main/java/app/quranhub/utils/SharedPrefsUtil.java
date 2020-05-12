@@ -77,7 +77,7 @@ public final class SharedPrefsUtil {
     public static String getString(@NonNull Context context, @NonNull String key, String defValue) {
         if (context != null) {
             return getSharedPreference(context).getString(key, defValue);
-        } else{
+        } else {
             Log.e(TAG, "Couldn't get string; Passed context is null. Returning default value.");
             return defValue;
         }

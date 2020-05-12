@@ -104,7 +104,7 @@
     <string name="finish">بند کریں</string>
     <string name="suras">سورتوں</string>
     <string name="chapters">پاروں</string>
-    <string name="all_hezb" >تمام حزب</string>
+    <string name="all_hezb">تمام حزب</string>
     <string name="all_quarters">تمام چوتھائی</string>
     <string name="about_app_menu">ایپ کے متعلق</string>
     <string name="technical_support_menu">ٹیکنیکل سپورٹ</string>
@@ -297,19 +297,19 @@
     </string-array>
 
     <string-array name="subject_category_name">
-    <item>اسلام کے احکامات</item>
-    <item>اسلام سے پہلے کی قومیں اور کفار</item>
-    <item>انسان</item>
-    <item>ایمان اور ایمان والے</item>
-    <item>غیب اور برزخ</item>
-    <item>قرآن</item>
-    <item>قصے اور تاریخ</item>
-    <item>قرآن میں اللہ</item>
-    <item>کائنات اور اللہ کی مخلوقات</item>
-    <item>جہاد، معرکے اور جنگیں</item>
-    <item>عبادات</item>
-    <item>غیر مصنف</item>
-    <item>مفاسد اور بڑے گناہ</item>
+        <item>اسلام کے احکامات</item>
+        <item>اسلام سے پہلے کی قومیں اور کفار</item>
+        <item>انسان</item>
+        <item>ایمان اور ایمان والے</item>
+        <item>غیب اور برزخ</item>
+        <item>قرآن</item>
+        <item>قصے اور تاریخ</item>
+        <item>قرآن میں اللہ</item>
+        <item>کائنات اور اللہ کی مخلوقات</item>
+        <item>جہاد، معرکے اور جنگیں</item>
+        <item>عبادات</item>
+        <item>غیر مصنف</item>
+        <item>مفاسد اور بڑے گناہ</item>
     </string-array>
 
     <string-array name="subject_name">

@@ -21,13 +21,13 @@ import androidx.fragment.app.DialogFragment;
 import java.io.File;
 import java.util.Objects;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import app.quranhub.Constants;
 import app.quranhub.R;
 import app.quranhub.utils.PreferencesUtils;
 import app.quranhub.utils.RecorderMediaUtil;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 public class AyaRecorderPlayerDialog extends DialogFragment implements RecorderMediaUtil.MediaPlayerCallback {
@@ -79,7 +79,7 @@ public class AyaRecorderPlayerDialog extends DialogFragment implements RecorderM
     }
 
     private void getPrevState(Bundle savedInstanceState) {
-        if(savedInstanceState != null) {
+        if (savedInstanceState != null) {
             recorderMediaUtil.seekTo(savedInstanceState.getInt("player_position"));
             isPlaying = savedInstanceState.getBoolean("is_playing");
             restorePlayingState();
@@ -87,7 +87,7 @@ public class AyaRecorderPlayerDialog extends DialogFragment implements RecorderM
     }
 
     private void restorePlayingState() {
-        if(isPlaying) {
+        if (isPlaying) {
             playIv.setImageResource(R.drawable.ic_pause);
             recorderMediaUtil.play();
         }
@@ -139,7 +139,7 @@ public class AyaRecorderPlayerDialog extends DialogFragment implements RecorderM
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                if(fromUser) {
+                if (fromUser) {
                     userSelectedPosition = progress;
                 }
             }
@@ -153,7 +153,7 @@ public class AyaRecorderPlayerDialog extends DialogFragment implements RecorderM
     }
 
     private void initSoundMedia() {
-        if(outputRecorderPath != null) {
+        if (outputRecorderPath != null) {
             recorderMediaUtil = new RecorderMediaUtil();
             recorderMediaUtil.setMediaPlayerCallback(this);
             recorderMediaUtil.setAudioPath(outputRecorderPath);

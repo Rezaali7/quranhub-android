@@ -13,24 +13,23 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import app.quranhub.R;
 import app.quranhub.mushaf.adapter.BookmarksAdapter;
+import app.quranhub.mushaf.data.entity.BookmarkType;
 import app.quranhub.mushaf.dialogs.BookmarkEditDialog;
 import app.quranhub.mushaf.listener.BookmarksListListener;
 import app.quranhub.mushaf.listener.QuranNavigationCallbacks;
 import app.quranhub.mushaf.model.DisplayableBookmark;
+import app.quranhub.mushaf.viewmodel.BookmarksListViewModel;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import app.quranhub.R;
-import app.quranhub.mushaf.data.entity.BookmarkType;
-import app.quranhub.mushaf.viewmodel.BookmarksListViewModel;
 
 /**
  * A fragment representing a list of user saved bookmarked Quran ayas.
@@ -164,7 +163,7 @@ public class BookmarksListFragment extends Fragment
 
 
     public void showFilterDialog() {
-        if(bookmarkTypes != null) {
+        if (bookmarkTypes != null) {
             BookmarkEditDialog dialog = BookmarkEditDialog.getInstance(bookmarkTypes, selectedFilterType, false);
             dialog.show(getChildFragmentManager(), "BookmarkEditDialog");
         }
@@ -182,7 +181,7 @@ public class BookmarksListFragment extends Fragment
 
     @Override
     public void updateBookmarkType(@NonNull int bookmarkId) {
-        if(bookmarkTypes != null) {
+        if (bookmarkTypes != null) {
             editedBookmarkId = bookmarkId;
             BookmarkEditDialog dialog = BookmarkEditDialog.getInstance(bookmarkTypes, bookmarkId, true);
             dialog.show(getChildFragmentManager(), "BookmarkEditDialog");
@@ -191,7 +190,7 @@ public class BookmarksListFragment extends Fragment
 
     @Override
     public void onBookmarkFilter(int bookmarkType, int colorIndex) {
-        if(editedBookmarkId == -1) {
+        if (editedBookmarkId == -1) {
             selectedFilterType = bookmarkType;
             adapter.filterBookmarks(bookmarkType);
         } else {

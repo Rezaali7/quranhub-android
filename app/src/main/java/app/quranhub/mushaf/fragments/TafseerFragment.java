@@ -19,7 +19,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,20 +26,20 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import app.quranhub.Constants;
+import app.quranhub.R;
 import app.quranhub.mushaf.adapter.TafseerAdapter;
+import app.quranhub.mushaf.data.entity.TranslationBook;
 import app.quranhub.mushaf.dialogs.OptionDialog;
 import app.quranhub.mushaf.dialogs.TranslationsDialogFragment;
 import app.quranhub.mushaf.model.TafseerModel;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import app.quranhub.Constants;
-import app.quranhub.R;
-import app.quranhub.mushaf.data.entity.TranslationBook;
 import app.quranhub.mushaf.viewmodel.TafseerViewModel;
 import app.quranhub.settings.dialogs.OptionsListDialogFragment;
 import app.quranhub.utils.PreferencesUtils;
 import app.quranhub.utils.interfaces.ToolbarActionsListener;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 public class TafseerFragment extends Fragment

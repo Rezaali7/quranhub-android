@@ -21,11 +21,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import app.quranhub.R;
 import app.quranhub.mushaf.adapter.FilterAdapter;
+import app.quranhub.utils.DialogUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import app.quranhub.R;
-import app.quranhub.utils.DialogUtil;
 
 public class OptionDialog extends DialogFragment implements FilterAdapter.OptionClickListener {
 
@@ -130,7 +130,7 @@ public class OptionDialog extends DialogFragment implements FilterAdapter.Option
         if (getArguments() != null) {
             suraName = getArguments().getString(SURA_NAME_ARGS);
             options = getArguments().getStringArrayList(ALL_ITEMS_ARGS);
-            requestCode = getArguments().getInt(CODE_ARGS,1);
+            requestCode = getArguments().getInt(CODE_ARGS, 1);
             headerTv.setText(getArguments().getString(HEADER_ARGS));
         }
     }

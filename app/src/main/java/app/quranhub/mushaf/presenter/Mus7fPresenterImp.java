@@ -6,16 +6,16 @@ import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
 
-import app.quranhub.mushaf.data.entity.Aya;
-import app.quranhub.mushaf.model.QuranPageInfo;
-import app.quranhub.mushaf.model.SuraVersesNumber;
-import app.quranhub.mushaf.view.MushfView;
 import app.quranhub.Constants;
 import app.quranhub.R;
 import app.quranhub.base.BasePresenterImp;
+import app.quranhub.mushaf.data.entity.Aya;
 import app.quranhub.mushaf.data.entity.TranslationBook;
 import app.quranhub.mushaf.interactor.Mus7fInteractor;
 import app.quranhub.mushaf.interactor.Mus7fInteractorImp;
+import app.quranhub.mushaf.model.QuranPageInfo;
+import app.quranhub.mushaf.model.SuraVersesNumber;
+import app.quranhub.mushaf.view.MushfView;
 import app.quranhub.utils.PreferencesUtils;
 
 public class Mus7fPresenterImp extends BasePresenterImp<MushfView>
@@ -57,7 +57,6 @@ public class Mus7fPresenterImp extends BasePresenterImp<MushfView>
     }
 
 
-
     @Override
     public void getAyaTafseer(int ayaId) {
         interactor.getAyaTafseer(ayaId);
@@ -77,14 +76,14 @@ public class Mus7fPresenterImp extends BasePresenterImp<MushfView>
 
     @Override
     public void onGetAyaTafseer(String tafseer) {
-        if(isViewAttached()) {
+        if (isViewAttached()) {
             baseView.onGetAyaTafseer(tafseer);
         }
     }
 
     @Override
     public void onGetTafsserBook(TranslationBook book) {
-        if(isViewAttached()) {
+        if (isViewAttached()) {
             interactor.initTranslationDB(book.getDatabaseName());
             baseView.onGetTafseerBook(book);
         }
@@ -98,8 +97,8 @@ public class Mus7fPresenterImp extends BasePresenterImp<MushfView>
 
     @Override
     public void onGetSuraPage(ArrayList<ArrayList<Integer>> suras) {
-        if(isViewAttached()) {
-           baseView.onGetPageSuras(suras);
+        if (isViewAttached()) {
+            baseView.onGetPageSuras(suras);
         }
     }
 
@@ -117,35 +116,35 @@ public class Mus7fPresenterImp extends BasePresenterImp<MushfView>
 
     @Override
     public void saveRecorderPath(int ayaId, String recorderPath) {
-        if(isViewAttached()) {
+        if (isViewAttached()) {
             interactor.saveRecorderPath(ayaId, recorderPath);
         }
     }
 
     @Override
     public void deleteAyaVoiceRecorder(int ayaId) {
-        if(isViewAttached()) {
+        if (isViewAttached()) {
             interactor.deleteAyaVoiceRecorder(ayaId);
         }
     }
 
     @Override
     public void getSuraNumofVerses() {
-        if(isViewAttached()) {
+        if (isViewAttached()) {
             interactor.getSuraNumofVerses();
         }
     }
 
     @Override
     public void getFromAyaPage(int fromAya) {
-        if(isViewAttached()) {
+        if (isViewAttached()) {
             interactor.getFromAyaPage(fromAya);
         }
     }
 
     @Override
     public void getNotificationAya(int ayaId) {
-        if(isViewAttached()) {
+        if (isViewAttached()) {
             interactor.getAya(ayaId);
         }
     }
@@ -157,28 +156,28 @@ public class Mus7fPresenterImp extends BasePresenterImp<MushfView>
 
     @Override
     public void onAyaHasRecorder(String recorderPath) {
-        if(isViewAttached()) {
+        if (isViewAttached()) {
             baseView.onGetAyaRecorder(recorderPath);
         }
     }
 
     @Override
     public void onGetSuraVersesNumber(ArrayList<SuraVersesNumber> suraVersesNumbers) {
-        if(isViewAttached()) {
+        if (isViewAttached()) {
             baseView.onGetSuraVersesNumber(suraVersesNumbers);
         }
     }
 
     @Override
     public void onGetAyaPage(int page) {
-        if(isViewAttached()) {
+        if (isViewAttached()) {
             baseView.onGetAyaPage(page);
         }
     }
 
     @Override
     public void onGetAya(Aya aya) {
-        if(isViewAttached()) {
+        if (isViewAttached()) {
             baseView.onGetCurrentAyaFromNotification(aya);
         }
     }

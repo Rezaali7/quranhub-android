@@ -10,13 +10,12 @@ public class AyaAudioUtil {
     private AudioStateCallback callback;
 
 
-
     public AyaAudioUtil(AudioStateCallback callback) {
         this.callback = callback;
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setOnCompletionListener(mp -> {
             mediaPlayer.reset();
-            if(callback != null) {
+            if (callback != null) {
                 callback.onStateChanged(AudioStateCallback.State.COMPLETED);
             }
         });
@@ -45,8 +44,8 @@ public class AyaAudioUtil {
         return false;
     }
 
-    public void stopAudio(){
-        if(mediaPlayer != null && mediaPlayer.isPlaying()) {
+    public void stopAudio() {
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
             //mediaPlayer.stop();
             mediaPlayer.reset();
         }
@@ -72,6 +71,7 @@ public class AyaAudioUtil {
             int PAUSED = 1;
             int COMPLETED = 3;
         }
+
         void onStateChanged(int state);
     }
 }

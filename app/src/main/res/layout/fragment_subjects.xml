@@ -24,8 +24,7 @@
             android:background="?selectableItemBackgroundBorderless"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="@dimen/_8sdp"
-            />
+            android:layout_marginTop="@dimen/_8sdp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,8 +35,7 @@
             android:layout_marginStart="@dimen/_8sdp"
             android:text="@string/topics_menu"
             android:textColor="@color/white_color"
-            android:textSize="@dimen/_14sdp"
-            />
+            android:textSize="@dimen/_14sdp" />
 
         <EditText
             android:id="@+id/et_search"
@@ -58,8 +56,7 @@
             app:layout_constraintTop_toBottomOf="@+id/hamburger_iv"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="@dimen/_12sdp"
-            android:textSize="@dimen/text_size_14"
-             />
+            android:textSize="@dimen/text_size_14" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -72,8 +69,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/topics_rv"
-        android:background="@color/light_gray"
-        />
+        android:background="@color/light_gray" />
 
     <ProgressBar
         android:layout_width="wrap_content"
@@ -83,7 +79,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/progrees_bar"
-        android:visibility="visible"
-        />
+        android:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,10 +5,10 @@ import androidx.annotation.Nullable;
 import java.util.List;
 
 import app.quranhub.mushaf.data.entity.Aya;
-import app.quranhub.mushaf.data.entity.Note;
-import app.quranhub.mushaf.model.BookmarkModel;
 import app.quranhub.mushaf.data.entity.AyaBookmark;
 import app.quranhub.mushaf.data.entity.BookmarkType;
+import app.quranhub.mushaf.data.entity.Note;
+import app.quranhub.mushaf.model.BookmarkModel;
 
 public interface QuranPageInteractor {
 
@@ -29,7 +29,6 @@ public interface QuranPageInteractor {
     void getBookmarkTypes();
 
     void insertCustomBookmark(Aya currentAya, BookmarkType type);
-
 
 
     interface ResultListener {

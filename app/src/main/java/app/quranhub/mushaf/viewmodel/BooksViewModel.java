@@ -9,10 +9,10 @@ import androidx.lifecycle.MediatorLiveData;
 
 import java.util.List;
 
-import app.quranhub.mushaf.network.model.BookContent;
 import app.quranhub.mushaf.data.entity.Book;
 import app.quranhub.mushaf.interactor.BooksInteractor;
 import app.quranhub.mushaf.interactor.BooksInteractorImp;
+import app.quranhub.mushaf.network.model.BookContent;
 
 public class BooksViewModel extends AndroidViewModel implements BooksInteractor.TranslationsListener {
 

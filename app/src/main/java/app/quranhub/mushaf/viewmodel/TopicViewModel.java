@@ -8,9 +8,9 @@ import androidx.lifecycle.MediatorLiveData;
 
 import java.util.List;
 
-import app.quranhub.mushaf.model.SearchModel;
 import app.quranhub.mushaf.interactor.TopicInteractor;
 import app.quranhub.mushaf.interactor.TopicInteractorImp;
+import app.quranhub.mushaf.model.SearchModel;
 
 public class TopicViewModel extends AndroidViewModel implements TopicInteractor.TopicListener {
 
@@ -27,7 +27,7 @@ public class TopicViewModel extends AndroidViewModel implements TopicInteractor.
         return ayahs;
     }
 
-    public void getAyas(int categoryId){
+    public void getAyas(int categoryId) {
         interactor.getAyas(categoryId);
     }
 

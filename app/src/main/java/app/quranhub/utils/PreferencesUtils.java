@@ -11,7 +11,6 @@ import app.quranhub.Constants;
 public final class PreferencesUtils {
 
 
-
     private PreferencesUtils() { /* prevent instantiation */}
 
     private static final String PREF_NIGHT_MODE_SETTING = "PREF_NIGHT_MODE_SETTING";
@@ -73,6 +72,7 @@ public final class PreferencesUtils {
 
     /**
      * Changing the recitation will also reset the current reciter sheikh setting.
+     *
      * @param context
      * @param recitationId
      * @return Whether the recitation setting has changed (and the reciter was reset) or not.

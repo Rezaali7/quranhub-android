@@ -11,9 +11,9 @@ import androidx.fragment.app.DialogFragment;
 
 import java.util.Objects;
 
+import app.quranhub.R;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import app.quranhub.R;
 
 
 public class OpenFileDialog extends DialogFragment {

@@ -215,6 +215,7 @@ public abstract class PRDownloaderService extends Service implements DownloadCal
 
     /**
      * This method is called from a background thread.
+     *
      * @param downloadRequestInfo
      */
     private void downloadFile(@Nullable DownloadRequestInfo downloadRequestInfo) {

@@ -8,8 +8,8 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.quranhub.mushaf.utils.NetworkUtil;
 import app.quranhub.mushaf.data.entity.TranslationBook;
+import app.quranhub.mushaf.utils.NetworkUtil;
 
 public class TranslationsResponse {
 
@@ -39,7 +39,7 @@ public class TranslationsResponse {
         List<TranslationBook> translationBooks = null;
         if (translations != null) {
             translationBooks = new ArrayList<>();
-            for (TranslationData t: translations) {
+            for (TranslationData t : translations) {
                 if (languageCode == null || t.getLanguage().toLowerCase().equals(languageCode.toLowerCase())) {
                     TranslationBook book = new TranslationBook(t.getId(), t.getName(), t.getAuthor()
                             , t.getLanguage(), t.getPath(), t.getPath().replace('/', '_')
@@ -58,7 +58,6 @@ public class TranslationsResponse {
                 "translations=" + translations +
                 '}';
     }
-
 
 
     public static class TranslationData {

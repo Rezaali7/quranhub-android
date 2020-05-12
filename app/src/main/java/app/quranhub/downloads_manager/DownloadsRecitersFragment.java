@@ -13,11 +13,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.quranhub.mushaf.data.entity.Sheikh;
-import app.quranhub.mushaf.data.entity.SheikhRecitation;
-import app.quranhub.mushaf.network.ApiClient;
-import retrofit2.Call;
-import retrofit2.Response;
 import app.quranhub.R;
 import app.quranhub.downloads_manager.dialogs.DeleteConfirmationDialogFragment;
 import app.quranhub.downloads_manager.model.DisplayableDownload;
@@ -25,6 +20,11 @@ import app.quranhub.downloads_manager.network.api.RecitersApi;
 import app.quranhub.downloads_manager.network.model.RecitersResponse;
 import app.quranhub.downloads_manager.utils.QuranAudioDeleteUtils;
 import app.quranhub.mushaf.data.db.UserDatabase;
+import app.quranhub.mushaf.data.entity.Sheikh;
+import app.quranhub.mushaf.data.entity.SheikhRecitation;
+import app.quranhub.mushaf.network.ApiClient;
+import retrofit2.Call;
+import retrofit2.Response;
 
 public class DownloadsRecitersFragment extends BaseDownloadsFragment
         implements DeleteConfirmationDialogFragment.DeleteConfirmationCallbacks {
@@ -105,8 +105,8 @@ public class DownloadsRecitersFragment extends BaseDownloadsFragment
     }
 
     private List<Sheikh> retrieveLocalReciters() {
-         return UserDatabase.getInstance(requireContext())
-                 .getSheikhDao().getAllForRecitation(recitationId);
+        return UserDatabase.getInstance(requireContext())
+                .getSheikhDao().getAllForRecitation(recitationId);
     }
 
     @Override

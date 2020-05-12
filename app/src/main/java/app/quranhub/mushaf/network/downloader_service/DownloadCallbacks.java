@@ -9,8 +9,8 @@ import com.downloader.Progress;
  * <p>
  * Do not call any of these methods directly.
  *
- * @see PRDownloaderService
  * @author Abdallah Abdelazim <a href="mailto:abdallah.abdelazim@hotmail.com">abdallah.abdelazim@hotmail.com</a>
+ * @see PRDownloaderService
  */
 interface DownloadCallbacks {
 
@@ -24,39 +24,45 @@ interface DownloadCallbacks {
 
     /**
      * Called when a download request is being started or resumed.
+     *
      * @param downloadRequestInfo The {@code DownloadRequestInfo} for which this callback was called.
      */
     void onDownloadStartOrResume(DownloadRequestInfo downloadRequestInfo);
 
     /**
      * Called when a download request is being paused.
+     *
      * @param downloadRequestInfo The {@code DownloadRequestInfo} for which this callback was called.
      */
     void onDownloadPause(DownloadRequestInfo downloadRequestInfo);
 
     /**
      * Called when a download request is being cancelled.
+     *
      * @param downloadRequestInfo The {@code DownloadRequestInfo} for which this callback was called.
      */
     void onDownloadCancel(DownloadRequestInfo downloadRequestInfo);
 
     /**
      * Called as a download request progress is updating.
+     *
      * @param downloadRequestInfo The {@code DownloadRequestInfo} for which this callback was called.
-     * @param progress Information about the progress.
+     * @param progress            Information about the progress.
      */
     void onDownloadProgress(DownloadRequestInfo downloadRequestInfo, Progress progress);
 
     /**
      * Called when a download request has finished downloading successfully.
+     *
      * @param downloadRequestInfo The {@code DownloadRequestInfo} for which this callback was called.
      */
     void onDownloadComplete(DownloadRequestInfo downloadRequestInfo);
 
     /**
      * Called when a download request fails downloading.
+     *
      * @param downloadRequestInfo The {@code DownloadRequestInfo} for which this callback was called.
-     * @param error Information about the error.
+     * @param error               Information about the error.
      */
     void onDownloadError(DownloadRequestInfo downloadRequestInfo, Error error);
 

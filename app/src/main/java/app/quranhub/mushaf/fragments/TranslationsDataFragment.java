@@ -22,12 +22,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.quranhub.R;
 import app.quranhub.mushaf.adapter.TranslationsAdapter;
+import app.quranhub.mushaf.data.db.UserDatabase;
+import app.quranhub.mushaf.data.entity.TranslationBook;
 import app.quranhub.mushaf.model.DisplayableTranslation;
 import app.quranhub.mushaf.network.ApiClient;
 import app.quranhub.mushaf.network.TranslationDownloader;
 import app.quranhub.mushaf.network.api.TranslationsApi;
 import app.quranhub.mushaf.network.model.TranslationsResponse;
+import app.quranhub.utils.FragmentUtil;
+import app.quranhub.utils.PreferencesUtils;
+import app.quranhub.utils.interfaces.Searchable;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -35,12 +41,6 @@ import pub.devrel.easypermissions.EasyPermissions;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import app.quranhub.R;
-import app.quranhub.mushaf.data.db.UserDatabase;
-import app.quranhub.mushaf.data.entity.TranslationBook;
-import app.quranhub.utils.FragmentUtil;
-import app.quranhub.utils.PreferencesUtils;
-import app.quranhub.utils.interfaces.Searchable;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -266,7 +266,7 @@ public class TranslationsDataFragment extends Fragment implements Searchable, Tr
     @Override
     public void onPermissionsGranted(int requestCode, @NonNull List<String> perms) {
         //Download the file once permission is granted
-        translationDownloaders.get(translationDownloaders.size()-1).download();
+        translationDownloaders.get(translationDownloaders.size() - 1).download();
     }
 
     @Override
@@ -316,13 +316,16 @@ public class TranslationsDataFragment extends Fragment implements Searchable, Tr
     }
 
     @Override
-    public void onDownloadStarted() { }
+    public void onDownloadStarted() {
+    }
 
     @Override
-    public void onDownloadFinished() { }
+    public void onDownloadFinished() {
+    }
 
     @Override
-    public void onDownloadCancelled() { }
+    public void onDownloadCancelled() {
+    }
 
     @Override
     public void onDownloadFailed() {

@@ -13,12 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import app.quranhub.R;
 import app.quranhub.mushaf.adapter.SuraIndexAdapter;
 import app.quranhub.mushaf.listener.ItemSelectionListener;
 import app.quranhub.mushaf.model.SuraIndexModelMapper;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import app.quranhub.R;
 
 
 public class SuraIndexFragment extends Fragment implements ItemSelectionListener<Integer> {

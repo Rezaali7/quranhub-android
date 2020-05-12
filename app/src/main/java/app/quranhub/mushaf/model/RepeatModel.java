@@ -3,7 +3,7 @@ package app.quranhub.mushaf.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class RepeatModel  implements Parcelable{
+public class RepeatModel implements Parcelable {
 
     private int fromSura;
     private int fromAya;

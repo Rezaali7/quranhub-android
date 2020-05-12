@@ -22,7 +22,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -31,19 +30,19 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
+import app.quranhub.R;
 import app.quranhub.mushaf.adapter.SearchAdapter;
 import app.quranhub.mushaf.dialogs.OptionDialog;
 import app.quranhub.mushaf.listener.ItemSelectionListener;
 import app.quranhub.mushaf.listener.QuranNavigationCallbacks;
 import app.quranhub.mushaf.model.SearchModel;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import app.quranhub.R;
 import app.quranhub.mushaf.viewmodel.SearchViewModel;
 import app.quranhub.settings.dialogs.OptionsListDialogFragment;
 import app.quranhub.utils.ScreenUtil;
 import app.quranhub.utils.interfaces.ToolbarActionsListener;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 public class SearchFragment extends Fragment implements ItemSelectionListener<SearchModel>, OptionDialog.ItemClickListener, OptionsListDialogFragment.ItemSelectionListener {
@@ -129,19 +128,19 @@ public class SearchFragment extends Fragment implements ItemSelectionListener<Se
     }
 
     private void setViewsFromBackStack() {
-        if(isFilterOptionsShow) {
+        if (isFilterOptionsShow) {
             filterContainer.setVisibility(View.VISIBLE);
         }
-        if(selectedSura != 0) {
+        if (selectedSura != 0) {
             suraTv.setText(getActivity().getResources().getStringArray(R.array.sura_name)[selectedSura - 1]);
         }
-        if(selectedJuz != 0) {
+        if (selectedJuz != 0) {
             chapterTv.setText(refactorOptionText(getActivity().getResources().getStringArray(R.array.agza2_name)[selectedJuz - 1]));
         }
-        if(selectedHezb != 0) {
+        if (selectedHezb != 0) {
             hezbTv.setText(hezbOptions.get(selectedHezb));
         }
-        if(selectedQuarter != 0) {
+        if (selectedQuarter != 0) {
             quarterTv.setText(quarterOptions.get(selectedQuarter));
         }
     }
@@ -192,8 +191,7 @@ public class SearchFragment extends Fragment implements ItemSelectionListener<Se
                 // show or hide clear button in search field
                 if (TextUtils.isEmpty(s)) {
                     clearSearchImageButton.setVisibility(View.INVISIBLE);
-                }
-                else {
+                } else {
                     clearSearchImageButton.setVisibility(View.VISIBLE);
                 }
             }

@@ -12,9 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import app.quranhub.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import app.quranhub.R;
 
 // TODO remove this & use the one in first_wizard package, refactor if necessary
 public class OptionsListAdapter extends RecyclerView.Adapter<OptionsListAdapter.ViewHolder> {
@@ -24,7 +24,7 @@ public class OptionsListAdapter extends RecyclerView.Adapter<OptionsListAdapter.
     @NonNull
     private List<String> optionsList;
     @Nullable
-    private int [] optionsThumbnailsDrawableIds;
+    private int[] optionsThumbnailsDrawableIds;
     private int selectedOptionIndex;
     @NonNull
     private ItemClickListener itemClickListener;
@@ -36,7 +36,7 @@ public class OptionsListAdapter extends RecyclerView.Adapter<OptionsListAdapter.
         this.itemClickListener = listener;
     }
 
-    public OptionsListAdapter(@NonNull List<String> optionsList, @Nullable int [] optionsThumbnailsDrawableIds
+    public OptionsListAdapter(@NonNull List<String> optionsList, @Nullable int[] optionsThumbnailsDrawableIds
             , int selectedOptionIndex, @NonNull ItemClickListener listener) {
         this.optionsList = optionsList;
         this.optionsThumbnailsDrawableIds = optionsThumbnailsDrawableIds;
@@ -54,7 +54,7 @@ public class OptionsListAdapter extends RecyclerView.Adapter<OptionsListAdapter.
         notifyDataSetChanged();
     }
 
-    public void setOptions(@NonNull List<String> optionsList, @Nullable int [] optionsThumbnailsDrawableIds) {
+    public void setOptions(@NonNull List<String> optionsList, @Nullable int[] optionsThumbnailsDrawableIds) {
         this.optionsList = optionsList;
         this.optionsThumbnailsDrawableIds = optionsThumbnailsDrawableIds;
         notifyDataSetChanged();

@@ -1,11 +1,11 @@
 package app.quranhub.mushaf.presenter;
 
-import app.quranhub.mushaf.data.entity.Aya;
-import app.quranhub.mushaf.data.entity.Note;
 import app.quranhub.base.BasePresenter;
 import app.quranhub.base.BaseView;
+import app.quranhub.mushaf.data.entity.Aya;
 import app.quranhub.mushaf.data.entity.AyaBookmark;
 import app.quranhub.mushaf.data.entity.BookmarkType;
+import app.quranhub.mushaf.data.entity.Note;
 
 public interface QuranPagePresenter<T extends BaseView> extends BasePresenter<T> {
 

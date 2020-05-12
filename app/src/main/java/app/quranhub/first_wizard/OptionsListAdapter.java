@@ -16,9 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.quranhub.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import app.quranhub.R;
 
 public class OptionsListAdapter extends RecyclerView.Adapter<OptionsListAdapter.ViewHolder> implements Filterable {
 
@@ -51,7 +51,7 @@ public class OptionsListAdapter extends RecyclerView.Adapter<OptionsListAdapter.
         this.itemClickListener = listener;
     }
 
-    public OptionsListAdapter(@NonNull List<String> optionsList, @Nullable int [] optionsThumbnailsDrawableIds
+    public OptionsListAdapter(@NonNull List<String> optionsList, @Nullable int[] optionsThumbnailsDrawableIds
             , int selectedOptionIndex, @NonNull ItemClickListener listener) {
         this.optionsList = optionsList;
         this.filteredOptionsList = optionsList;
@@ -73,7 +73,7 @@ public class OptionsListAdapter extends RecyclerView.Adapter<OptionsListAdapter.
     }
 
     public void setOptions(@NonNull List<String> optionsList
-            , @Nullable int [] optionsThumbnailsDrawableIds) {
+            , @Nullable int[] optionsThumbnailsDrawableIds) {
         this.optionsList = optionsList;
         this.filteredOptionsList = optionsList;
         this.optionsThumbnailsDrawableIds = optionsThumbnailsDrawableIds;
@@ -137,7 +137,7 @@ public class OptionsListAdapter extends RecyclerView.Adapter<OptionsListAdapter.
                     filterOptionsResult = optionsList;
                     if (optionsThumbnailsDrawableIds != null) {
                         filterThumbnailsResult = new ArrayList<>();
-                        for (int d: optionsThumbnailsDrawableIds) {
+                        for (int d : optionsThumbnailsDrawableIds) {
                             filterThumbnailsResult.add(d);
                         }
                     }
@@ -145,7 +145,7 @@ public class OptionsListAdapter extends RecyclerView.Adapter<OptionsListAdapter.
                     if (optionsThumbnailsDrawableIds != null) {
                         filterThumbnailsResult = new ArrayList<>();
                     }
-                    for (int i = 0; i<optionsList.size(); i++) {
+                    for (int i = 0; i < optionsList.size(); i++) {
                         String opt = optionsList.get(i);
                         if (opt.toLowerCase().contains(constraint.toString().toLowerCase())) {
                             filterOptionsResult.add(opt);
@@ -171,8 +171,7 @@ public class OptionsListAdapter extends RecyclerView.Adapter<OptionsListAdapter.
                     for (int i = 0; i < filterResult.second.size(); i++) {
                         filteredOptionsThumbnailsDrawableIds[i] = filterResult.second.get(i);
                     }
-                }
-                else {
+                } else {
                     filteredOptionsThumbnailsDrawableIds = null;
                 }
                 notifyDataSetChanged();

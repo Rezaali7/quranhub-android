@@ -6,10 +6,6 @@ import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
 
-import app.quranhub.mushaf.data.entity.Aya;
-import app.quranhub.mushaf.data.entity.AyaQuranSubject;
-import app.quranhub.mushaf.data.entity.HizbQuarter;
-import app.quranhub.mushaf.data.entity.Juz;
 import app.quranhub.mushaf.data.dao.AyaDao;
 import app.quranhub.mushaf.data.dao.AyaQuranSubjectDao;
 import app.quranhub.mushaf.data.dao.HizbQuarterDao;
@@ -17,6 +13,10 @@ import app.quranhub.mushaf.data.dao.JuzDao;
 import app.quranhub.mushaf.data.dao.QuranSubjectCategoryDao;
 import app.quranhub.mushaf.data.dao.QuranSubjectDao;
 import app.quranhub.mushaf.data.dao.SuraDao;
+import app.quranhub.mushaf.data.entity.Aya;
+import app.quranhub.mushaf.data.entity.AyaQuranSubject;
+import app.quranhub.mushaf.data.entity.HizbQuarter;
+import app.quranhub.mushaf.data.entity.Juz;
 import app.quranhub.mushaf.data.entity.QuranSubject;
 import app.quranhub.mushaf.data.entity.QuranSubjectCategory;
 import app.quranhub.mushaf.data.entity.Sura;
@@ -28,7 +28,7 @@ public abstract class MushafDatabase extends RoomDatabase {
 
     public static final String DATABASE_NAME = "mushaf_metadata.db";
     public static final int ASSET_DB_VERSION = 1;
-    
+
     private static volatile MushafDatabase instance;
 
     public static MushafDatabase getInstance(@NonNull Context context) {

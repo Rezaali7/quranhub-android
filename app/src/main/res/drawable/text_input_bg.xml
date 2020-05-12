@@ -3,9 +3,9 @@
 
     <gradient
         android:startColor="@color/white_color"
-        android:endColor="@color/white_color"/>
+        android:endColor="@color/white_color" />
 
     <stroke
         android:color="@color/dark_gray"
-        android:width="@dimen/_1sdp"/>
+        android:width="@dimen/_1sdp" />
 </shape>

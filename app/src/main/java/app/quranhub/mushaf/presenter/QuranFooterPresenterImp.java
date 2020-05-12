@@ -1,7 +1,7 @@
 package app.quranhub.mushaf.presenter;
 
-import app.quranhub.mushaf.view.QuranFooterView;
 import app.quranhub.base.BasePresenterImp;
+import app.quranhub.mushaf.view.QuranFooterView;
 
 public class QuranFooterPresenterImp extends BasePresenterImp<QuranFooterView>
         implements QuranFooterPresenter {

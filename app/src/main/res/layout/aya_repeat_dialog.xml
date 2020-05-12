@@ -39,8 +39,7 @@
             android:textSize="@dimen/text_size_14"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/from_sp_container"
-            app:layout_constraintTop_toTopOf="@id/from_sp_container"
-            />
+            app:layout_constraintTop_toTopOf="@id/from_sp_container" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/from_sp_container"
@@ -94,8 +93,7 @@
             app:layout_constraintTop_toBottomOf="@id/tv_title"
             app:layout_constraintEnd_toEndOf="parent"
             android:inputType="number"
-            android:layout_marginTop="@dimen/_8sdp"
-            />
+            android:layout_marginTop="@dimen/_8sdp" />
 
         <TextView
             android:id="@+id/to_tv"
@@ -106,8 +104,7 @@
             android:textSize="@dimen/text_size_14"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/to_sp_container"
-            app:layout_constraintTop_toTopOf="@+id/to_sp_container"
-            />
+            app:layout_constraintTop_toTopOf="@+id/to_sp_container" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/to_sp_container"
@@ -218,8 +215,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/aya_group_number_et"
             android:inputType="number"
-            android:layout_marginTop="@dimen/_16sdp"
-            />
+            android:layout_marginTop="@dimen/_16sdp" />
 
         <TextView
             android:id="@+id/teacher_tv"

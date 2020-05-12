@@ -17,11 +17,11 @@ import androidx.lifecycle.ViewModelProviders;
 
 import java.util.Objects;
 
+import app.quranhub.R;
+import app.quranhub.mushaf.viewmodel.VoiceRecorderViewModel;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import app.quranhub.R;
-import app.quranhub.mushaf.viewmodel.VoiceRecorderViewModel;
 
 public class AyaRecorderDialog extends DialogFragment {
 

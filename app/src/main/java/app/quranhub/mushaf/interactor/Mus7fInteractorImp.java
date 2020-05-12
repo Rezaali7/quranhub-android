@@ -8,18 +8,18 @@ import android.util.Log;
 import java.io.File;
 import java.util.ArrayList;
 
-import app.quranhub.mushaf.model.SuraVersesNumber;
-import io.reactivex.Completable;
-import io.reactivex.CompletableObserver;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
 import app.quranhub.Constants;
 import app.quranhub.mushaf.data.db.MushafDatabase;
 import app.quranhub.mushaf.data.db.TranslationDatabase;
 import app.quranhub.mushaf.data.db.UserDatabase;
 import app.quranhub.mushaf.data.entity.AyaRecorder;
+import app.quranhub.mushaf.model.SuraVersesNumber;
 import app.quranhub.utils.PreferencesUtils;
+import io.reactivex.Completable;
+import io.reactivex.CompletableObserver;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 
 
 public class Mus7fInteractorImp implements Mus7fInteractor {
@@ -237,7 +237,7 @@ public class Mus7fInteractorImp implements Mus7fInteractor {
         File file = new File(context.getExternalFilesDir(Environment.DIRECTORY_MUSIC), Constants.DIRECTORY.AYA_VOICE_RECORDER
                 + File.separator + recitation + File.separator
                 + ayaId + ".3gp");
-        if(file.exists()) {
+        if (file.exists()) {
             file.delete();
         }
     }

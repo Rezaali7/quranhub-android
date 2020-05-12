@@ -8,9 +8,9 @@ import androidx.lifecycle.MediatorLiveData;
 
 import java.util.List;
 
-import app.quranhub.mushaf.model.TopicModel;
 import app.quranhub.mushaf.interactor.SubjectInteractor;
 import app.quranhub.mushaf.interactor.SubjectInteractorImp;
+import app.quranhub.mushaf.model.TopicModel;
 
 public class SubjectsViewModel extends AndroidViewModel implements SubjectInteractor.SubjectListener {
 
@@ -24,7 +24,7 @@ public class SubjectsViewModel extends AndroidViewModel implements SubjectIntera
         interactor = new SubjectInteractorImp(application, this);
     }
 
-    public void getSubjects(List<String> subjects, List<String> subjectsCategory){
+    public void getSubjects(List<String> subjects, List<String> subjectsCategory) {
         interactor.getSubjects(subjects, subjectsCategory);
     }
 

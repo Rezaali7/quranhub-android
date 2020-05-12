@@ -32,14 +32,14 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 
+import app.quranhub.Constants;
+import app.quranhub.R;
 import app.quranhub.mushaf.data.entity.Note;
+import app.quranhub.utils.DialogUtil;
+import app.quranhub.utils.RecorderMediaUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import app.quranhub.Constants;
-import app.quranhub.R;
-import app.quranhub.utils.DialogUtil;
-import app.quranhub.utils.RecorderMediaUtil;
 
 public class AddNoteDialog extends DialogFragment implements RecorderMediaUtil.MediaPlayerCallback {
 
@@ -117,8 +117,6 @@ public class AddNoteDialog extends DialogFragment implements RecorderMediaUtil.M
     }
 
 
-
-
     @Override
     public void onResume() {
         super.onResume();
@@ -142,7 +140,7 @@ public class AddNoteDialog extends DialogFragment implements RecorderMediaUtil.M
             ayaId = getArguments().getInt("aya_id");
             note = getArguments().getParcelable("selected_aya");
             createRecordingFile();
-            if(note != null) {
+            if (note != null) {
                 isEditable = true;
                 setEditView();
                 saveButton.setText(getString(R.string.save));
@@ -152,16 +150,16 @@ public class AddNoteDialog extends DialogFragment implements RecorderMediaUtil.M
 
     private void setEditView() {
         dialogHeaderTv.setText(getString(R.string.edit_note));
-        ((RadioButton)noteRadioGroup.getChildAt(note.getNoteType())).setChecked(true);
-        if(note.getNoteText() != null) {
+        ((RadioButton) noteRadioGroup.getChildAt(note.getNoteType())).setChecked(true);
+        if (note.getNoteText() != null) {
             addNoteEt.setText(note.getNoteText());
         }
-        if(!note.getNoteRecorderPath().isEmpty()) {
+        if (!note.getNoteRecorderPath().isEmpty()) {
             setAudioViewsVisible();
             isRecorderAttatched = true;
             initSoundMedia();
         }
-        
+
     }
 
     private void setAudioViewsVisible() {
@@ -175,7 +173,7 @@ public class AddNoteDialog extends DialogFragment implements RecorderMediaUtil.M
 
         File file = new File(getActivity().getExternalFilesDir(Environment.DIRECTORY_MUSIC), Constants.DIRECTORY.NOTE_VOICE_RECORDER);
 
-        if(!file.exists()) {
+        if (!file.exists()) {
             file.mkdir();
         }
         outputRecorderPath = file.getPath() + File.separator + ayaId + ".3gp";
@@ -185,8 +183,8 @@ public class AddNoteDialog extends DialogFragment implements RecorderMediaUtil.M
 
     @OnClick(R.id.save_btn)
     public void onAddNote() {
-        if(TextUtils.isEmpty(addNoteEt.getText()) && !isRecorderAttatched && !isRecord) {
-            Toast.makeText(getActivity(),getString(R.string.note_empty), Toast.LENGTH_LONG).show();
+        if (TextUtils.isEmpty(addNoteEt.getText()) && !isRecorderAttatched && !isRecord) {
+            Toast.makeText(getActivity(), getString(R.string.note_empty), Toast.LENGTH_LONG).show();
         } else {
             String path = "";
             if (isRecorderAttatched || isRecord) {
@@ -237,13 +235,13 @@ public class AddNoteDialog extends DialogFragment implements RecorderMediaUtil.M
     }
 
     private void stopRecorderMedia() {
-        if(audioRecorder != null) {
-            if(isRecord) {
+        if (audioRecorder != null) {
+            if (isRecord) {
                 audioRecorder.stop();
             }
             audioRecorder.release();
         }
-        if(recorderMediaUtil != null) {
+        if (recorderMediaUtil != null) {
             recorderMediaUtil.release();
         }
     }
@@ -258,7 +256,7 @@ public class AddNoteDialog extends DialogFragment implements RecorderMediaUtil.M
             playIv.setImageResource(R.drawable.ic_pause);
             recorderMediaUtil.play();
             recorderMediaUtil.startUpdatingAudioTime();
-            if(firstPlay) {
+            if (firstPlay) {
                 firstPlay = false;
                 voiceTiemrTv.setText("0:00");
             }
@@ -278,8 +276,8 @@ public class AddNoteDialog extends DialogFragment implements RecorderMediaUtil.M
         isRecorderAttatched = false;
     }
 
-    public void deleteRecorderFile(){
-        if(outputFile.exists()) {
+    public void deleteRecorderFile() {
+        if (outputFile.exists()) {
             outputFile.delete();
         }
     }
@@ -294,7 +292,7 @@ public class AddNoteDialog extends DialogFragment implements RecorderMediaUtil.M
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                if(fromUser) {
+                if (fromUser) {
                     userSelectedPosition = progress;
                 }
             }
@@ -373,7 +371,7 @@ public class AddNoteDialog extends DialogFragment implements RecorderMediaUtil.M
 
     @Override
     public void onPositionChanged(int position) {
-        if(!userIsSeeking) {
+        if (!userIsSeeking) {
             if (Build.VERSION.SDK_INT >= 24) {
                 progressRecorder.setProgress(position, true);
             } else {
@@ -384,7 +382,7 @@ public class AddNoteDialog extends DialogFragment implements RecorderMediaUtil.M
 
     @Override
     public void onStateChanged(int state) {
-        if(state == State.COMPLETED) {
+        if (state == State.COMPLETED) {
             progressRecorder.setProgress(0);
             isPlaying = false;
             firstPlay = true;
@@ -399,6 +397,7 @@ public class AddNoteDialog extends DialogFragment implements RecorderMediaUtil.M
 
     public interface AddNoteListener {
         void onAddNote(Note note, boolean isEditable);
+
         void onDismissDialog();
     }
 }

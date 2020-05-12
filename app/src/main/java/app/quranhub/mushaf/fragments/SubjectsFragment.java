@@ -20,17 +20,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import app.quranhub.R;
+import app.quranhub.main.MainActivity;
 import app.quranhub.mushaf.adapter.SubjectsAdapter;
 import app.quranhub.mushaf.listener.ItemSelectionListener;
 import app.quranhub.mushaf.model.TopicCategory;
 import app.quranhub.mushaf.model.TopicModel;
+import app.quranhub.mushaf.viewmodel.SubjectsViewModel;
+import app.quranhub.utils.interfaces.ToolbarActionsListener;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import app.quranhub.R;
-import app.quranhub.main.MainActivity;
-import app.quranhub.mushaf.viewmodel.SubjectsViewModel;
-import app.quranhub.utils.interfaces.ToolbarActionsListener;
 
 public class SubjectsFragment extends Fragment implements ItemSelectionListener<TopicCategory> {
 

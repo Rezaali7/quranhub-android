@@ -14,8 +14,7 @@
         android:text="@string/recordering"
         android:layout_marginStart="@dimen/_8sdp"
         android:textSize="@dimen/text_size_14"
-        android:textColor="@color/white_color"
-        />
+        android:textColor="@color/white_color" />
 
 
     <Chronometer
@@ -24,39 +23,35 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_8sdp"
         android:textSize="@dimen/text_size_14"
-        android:textColor="@color/white_color"
-   />
+        android:textColor="@color/white_color" />
 
 
     <View
         android:layout_width="2dp"
         android:layout_height="match_parent"
         android:background="@drawable/vertical_shadow"
-        android:layout_marginStart="@dimen/_28sdp"
-        />
+        android:layout_marginStart="@dimen/_28sdp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:id="@+id/stop_recording_view"
-        android:gravity="center_vertical"
-        >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/stop_recording"
-        android:layout_marginStart="@dimen/_8sdp"
-        android:textSize="@dimen/text_size_14"
-        android:textColor="@color/white_color"
-        />
+        android:gravity="center_vertical">
 
-    <ImageView
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_15sdp"
-        android:src="@drawable/recording"
-        android:layout_marginStart="@dimen/_4sdp"
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stop_recording"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/white_color" />
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/recording"
+            android:layout_marginStart="@dimen/_4sdp" />
 
     </LinearLayout>
 </LinearLayout>

@@ -7,8 +7,8 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import app.quranhub.mushaf.model.HizbQuarterDataModel;
 import app.quranhub.mushaf.data.db.MushafDatabase;
+import app.quranhub.mushaf.model.HizbQuarterDataModel;
 
 public class Guz2IndexInteractorImp implements Guz2IndexInteractor {
 

@@ -9,11 +9,11 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 
-import app.quranhub.mushaf.data.entity.Sheikh;
 import app.quranhub.R;
 import app.quranhub.base.BaseActivity;
 import app.quranhub.downloads_manager.dialogs.AudioDownloadAmountDialogFragment;
 import app.quranhub.downloads_manager.dialogs.QuranRecitersDialogFragment;
+import app.quranhub.mushaf.data.entity.Sheikh;
 
 public class DownloadsManagerActivity extends BaseActivity implements
         BaseDownloadsFragment.DownloadsManagerNavigationCallbacks,
@@ -124,8 +124,8 @@ public class DownloadsManagerActivity extends BaseActivity implements
 
     @Override
     public void gotoDownloadsSuras(int recitationId, @NonNull String reciterId, @NonNull String reciterName) {
-       DownloadsSurasFragment downloadsSurasFragment = DownloadsSurasFragment
-               .newInstance(this, recitationId, reciterId, reciterName);
+        DownloadsSurasFragment downloadsSurasFragment = DownloadsSurasFragment
+                .newInstance(this, recitationId, reciterId, reciterName);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 downloadsSurasFragment).addToBackStack(null).commit();
     }
@@ -153,5 +153,6 @@ public class DownloadsManagerActivity extends BaseActivity implements
     }
 
     @Override
-    public void onClickDownload() { }
+    public void onClickDownload() {
+    }
 }

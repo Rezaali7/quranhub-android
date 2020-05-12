@@ -10,12 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 import app.quranhub.R;
 import app.quranhub.main.MainActivity;
 import app.quranhub.mushaf.data.entity.TranslationBook;
 import app.quranhub.utils.PreferencesUtils;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 
 // TODO completely refactor LibraryFragment
@@ -53,7 +53,7 @@ public class LibraryFragment extends Fragment implements TranslationsDataFragmen
         }
     }
 
-    public void search(String input){
+    public void search(String input) {
         TranslationsDataFragment translationsDataFragment = (TranslationsDataFragment) getChildFragmentManager()
                 .findFragmentByTag("TransDataFragment");
         if (translationsDataFragment != null) {

@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/item_view"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
-
+    android:layout_height="wrap_content">
 
 
     <TextView
@@ -49,7 +47,6 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_aya_num_text"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="1" />
-
 
 
     <androidx.constraintlayout.widget.Guideline

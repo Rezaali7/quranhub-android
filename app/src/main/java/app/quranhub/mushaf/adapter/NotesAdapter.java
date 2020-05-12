@@ -13,18 +13,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.quranhub.R;
 import app.quranhub.mushaf.data.entity.Note;
 import app.quranhub.mushaf.model.DisplayedNote;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import app.quranhub.R;
 
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> {
 
     private List<DisplayedNote> noteList;
     private List<DisplayedNote> filteredNoteList;
-    private String [] noteTypes, suraText;
+    private String[] noteTypes, suraText;
     private Context context;
     private NoteCallback listener;
     private boolean isEditable;
@@ -86,7 +86,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
         holder.suraTv.setText(suraText[note.getSura() - 1]);
         //holder.ayaTv.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         //holder.detailsIv.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
-        if(isEditable) {
+        if (isEditable) {
             holder.deleteIv.setVisibility(View.VISIBLE);
             holder.detailsIv.setVisibility(View.INVISIBLE);
         } else {
@@ -101,8 +101,8 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
     }
 
     public void updateNoteType(Note note) {
-        for(DisplayedNote displayedNote : filteredNoteList) {
-            if(displayedNote.getAyaId() == note.getAyaId()) {
+        for (DisplayedNote displayedNote : filteredNoteList) {
+            if (displayedNote.getAyaId() == note.getAyaId()) {
                 displayedNote.setNoteType(note.getNoteType());
                 displayedNote.setNoteRecorderPath(note.getNoteRecorderPath());
                 displayedNote.setNoteText(note.getNoteText());
@@ -119,8 +119,8 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
 
     public void setFilteredNotes(int noteType) {
         List<DisplayedNote> filteredList = new ArrayList<>();
-        for(DisplayedNote displayedNote : noteList) {
-            if(displayedNote.getNoteType() == noteType) {
+        for (DisplayedNote displayedNote : noteList) {
+            if (displayedNote.getNoteType() == noteType) {
                 filteredList.add(displayedNote);
             }
         }
@@ -159,8 +159,8 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
             DisplayedNote removedNote = filteredNoteList.get(getAdapterPosition());
             filteredNoteList.remove(getAdapterPosition());
             notifyItemRemoved(getAdapterPosition());
-            for(DisplayedNote note : noteList) {
-                if(note.getAyaId() == removedNote.getAyaId()) {
+            for (DisplayedNote note : noteList) {
+                if (note.getAyaId() == removedNote.getAyaId()) {
                     noteList.remove(note);
                     break;
                 }
@@ -168,7 +168,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
         }
 
         @OnClick(R.id.aya_tv)
-        public void onNavigateToAya(){
+        public void onNavigateToAya() {
             listener.onNavigateToAya(filteredNoteList.get(getAdapterPosition()).getAyaId(), filteredNoteList.get(getAdapterPosition()).getPage());
         }
 
@@ -176,7 +176,9 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
 
     public interface NoteCallback {
         void onNavigateToAya(int ayaId, int pageNum);
+
         void onGetNoteDetails(DisplayedNote note);
+
         void onDeleteNote(int ayaId);
     }
 }

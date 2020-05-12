@@ -17,15 +17,15 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.TooltipCompat;
 import androidx.fragment.app.Fragment;
 
+import app.quranhub.R;
+import app.quranhub.mushaf.presenter.QuranFooterPresenter;
+import app.quranhub.mushaf.presenter.QuranFooterPresenterImp;
 import app.quranhub.mushaf.view.QuranFooterView;
+import app.quranhub.utils.PreferencesUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
-import app.quranhub.R;
-import app.quranhub.mushaf.presenter.QuranFooterPresenter;
-import app.quranhub.mushaf.presenter.QuranFooterPresenterImp;
-import app.quranhub.utils.PreferencesUtils;
 
 
 public class QuranFooterFragment extends Fragment implements QuranFooterView {

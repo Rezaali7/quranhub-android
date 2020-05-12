@@ -8,16 +8,16 @@ import org.greenrobot.eventbus.EventBus;
 
 import java.util.List;
 
-import app.quranhub.mushaf.data.entity.Aya;
-import app.quranhub.mushaf.data.entity.Note;
-import app.quranhub.mushaf.events.QuranPageClickEvent;
-import app.quranhub.mushaf.model.BookmarkModel;
-import app.quranhub.mushaf.view.QuranPageView;
 import app.quranhub.base.BasePresenterImp;
+import app.quranhub.mushaf.data.entity.Aya;
 import app.quranhub.mushaf.data.entity.AyaBookmark;
 import app.quranhub.mushaf.data.entity.BookmarkType;
+import app.quranhub.mushaf.data.entity.Note;
+import app.quranhub.mushaf.events.QuranPageClickEvent;
 import app.quranhub.mushaf.interactor.QuranPageInteractor;
 import app.quranhub.mushaf.interactor.QuranPageInteractorImp;
+import app.quranhub.mushaf.model.BookmarkModel;
+import app.quranhub.mushaf.view.QuranPageView;
 
 public class QuranPagePresenterImp extends BasePresenterImp<QuranPageView> implements QuranPagePresenter<QuranPageView>, QuranPageInteractor.ResultListener {
 
@@ -65,7 +65,7 @@ public class QuranPagePresenterImp extends BasePresenterImp<QuranPageView> imple
 
     @Override
     public void checkAyaHasNote(int ayaId) {
-        if(isViewAttached()) {
+        if (isViewAttached()) {
             interactor.checkAyaNote(ayaId);
         }
     }
@@ -73,19 +73,17 @@ public class QuranPagePresenterImp extends BasePresenterImp<QuranPageView> imple
 
     @Override
     public void getBookmarkTypes() {
-        if(isViewAttached()) {
+        if (isViewAttached()) {
             interactor.getBookmarkTypes();
         }
     }
 
     @Override
     public void insertCustomBookmark(Aya currentAya, BookmarkType type) {
-        if(isViewAttached()) {
+        if (isViewAttached()) {
             interactor.insertCustomBookmark(currentAya, type);
         }
     }
-
-
 
 
     @Override
@@ -149,7 +147,7 @@ public class QuranPagePresenterImp extends BasePresenterImp<QuranPageView> imple
 
     @Override
     public void onGetBookmarkTypes(List<BookmarkType> bookmarkTypes) {
-        if(isViewAttached()) {
+        if (isViewAttached()) {
             baseView.onGetAyaBookmarkTypes(bookmarkTypes);
         }
     }

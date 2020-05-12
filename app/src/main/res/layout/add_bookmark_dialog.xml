@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/corner_white_dialog"
-    android:fitsSystemWindows="true"
-    >
+    android:fitsSystemWindows="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -45,8 +44,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="@dimen/_12sdp"
             android:layout_marginEnd="@dimen/_12sdp"
-            android:id="@+id/bookmark_types_rv"
-            />
+            android:id="@+id/bookmark_types_rv" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
@@ -55,31 +53,30 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/bookmark_types_rv"
             android:layout_marginTop="@dimen/_8sdp"
-            android:id="@+id/add_custom_group"
-            >
-        <ImageView
-            android:id="@+id/add_type_iv"
-            android:layout_width="@dimen/_34sdp"
-            android:layout_height="@dimen/_24sdp"
-            android:paddingStart="@dimen/_12sdp"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_add_bookmark"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@+id/add_type_iv"
-            app:layout_constraintBottom_toBottomOf="@+id/add_type_iv"
-            app:layout_constraintTop_toTopOf="@id/add_type_iv"
-            android:layout_marginStart="@dimen/_12sdp"
-            android:textSize="@dimen/text_size_14"
-            android:textStyle="bold"
-            android:text="@string/add_custom_bookmark"
-            android:textColor="@color/primary"
-            android:id="@+id/custom_tv"
-            />
+            android:id="@+id/add_custom_group">
+
+            <ImageView
+                android:id="@+id/add_type_iv"
+                android:layout_width="@dimen/_34sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_add_bookmark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/add_type_iv"
+                app:layout_constraintBottom_toBottomOf="@+id/add_type_iv"
+                app:layout_constraintTop_toTopOf="@id/add_type_iv"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold"
+                android:text="@string/add_custom_bookmark"
+                android:textColor="@color/primary"
+                android:id="@+id/custom_tv" />
 
             <ImageView
                 android:id="@+id/add_custom_check_iv"
@@ -90,13 +87,10 @@
                 app:layout_constraintBottom_toBottomOf="@+id/add_type_iv"
                 app:layout_constraintTop_toTopOf="@id/add_type_iv"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:visibility="gone"
-                />
+                android:visibility="gone" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        
-        
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -107,8 +101,7 @@
             android:layout_marginEnd="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_4sdp"
             android:hint="@string/enter_bookmark_type"
-            android:id="@+id/bookmark_title_et"
-            />
+            android:id="@+id/bookmark_title_et" />
 
         <com.thebluealliance.spectrum.SpectrumPalette
             android:id="@+id/palette"
@@ -121,17 +114,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="@dimen/_12sdp"
             android:layout_marginEnd="@dimen/_12sdp"
-            android:layout_marginTop="@dimen/_12sdp"
-            />
+            android:layout_marginTop="@dimen/_12sdp" />
 
         <androidx.constraintlayout.widget.Group
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/custom_bookmark_group"
             app:constraint_referenced_ids="bookmark_title_et, palette"
-            android:visibility="gone"
-            />
-
+            android:visibility="gone" />
 
 
         <Button
@@ -148,8 +138,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_show"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/palette"
-            />
+            app:layout_constraintTop_toBottomOf="@id/palette" />
 
         <Button
             android:id="@+id/btn_show"
@@ -166,8 +155,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btn_back"
-            app:layout_constraintTop_toBottomOf="@id/palette"
-           />
+            app:layout_constraintTop_toBottomOf="@id/palette" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

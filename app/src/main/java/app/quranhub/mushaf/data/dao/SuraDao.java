@@ -5,11 +5,11 @@ import androidx.room.Query;
 
 import java.util.List;
 
+import app.quranhub.mushaf.data.entity.Sura;
 import app.quranhub.mushaf.model.QuranPageInfo;
 import app.quranhub.mushaf.model.SuraIndexModel;
 import app.quranhub.mushaf.model.SuraVersesNumber;
 import io.reactivex.Single;
-import app.quranhub.mushaf.data.entity.Sura;
 
 @Dao
 public interface SuraDao {

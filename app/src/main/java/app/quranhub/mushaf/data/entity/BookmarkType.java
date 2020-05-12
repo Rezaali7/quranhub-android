@@ -18,7 +18,6 @@ public class BookmarkType implements Parcelable {
     private int colorIndex;
 
 
-
     public int getColorIndex() {
         return colorIndex;
     }

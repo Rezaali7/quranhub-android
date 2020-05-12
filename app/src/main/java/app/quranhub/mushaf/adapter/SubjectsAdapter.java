@@ -14,12 +14,12 @@ import com.thoughtbot.expandablerecyclerview.viewholders.GroupViewHolder;
 
 import java.util.List;
 
+import app.quranhub.R;
+import app.quranhub.mushaf.listener.ItemSelectionListener;
 import app.quranhub.mushaf.model.TopicCategory;
 import app.quranhub.mushaf.model.TopicModel;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import app.quranhub.R;
-import app.quranhub.mushaf.listener.ItemSelectionListener;
 
 public class SubjectsAdapter extends ExpandableRecyclerViewAdapter<SubjectsAdapter.TopicViewHolder, SubjectsAdapter.CategoryViewHolder> {
 

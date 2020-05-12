@@ -38,7 +38,7 @@
             android:text="@string/search"
             android:textColor="@color/white_color"
             android:textSize="@dimen/text_size_16"
-            android:textAppearance="@style/ActionBarTitleTextAppearance"/>
+            android:textAppearance="@style/ActionBarTitleTextAppearance" />
 
         <ImageButton
             android:id="@+id/more_iv"

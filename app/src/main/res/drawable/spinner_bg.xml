@@ -2,13 +2,19 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="@color/colorPrimary"/>
+            <solid android:color="@color/colorPrimary" />
             <corners android:radius="1dp" />
         </shape>
     </item>
-    <item android:gravity="center_vertical|right" android:right="8dp">
+    <item
+        android:gravity="center_vertical|right"
+        android:right="8dp">
         <layer-list>
-            <item android:width="12dp" android:height="12dp" android:gravity="center" android:bottom="10dp">
+            <item
+                android:width="12dp"
+                android:height="12dp"
+                android:gravity="center"
+                android:bottom="10dp">
                 <rotate
                     android:fromDegrees="45"
                     android:toDegrees="45">
@@ -17,9 +23,13 @@
                     </shape>
                 </rotate>
             </item>
-            <item android:width="30dp" android:height="10dp" android:bottom="21dp" android:gravity="center">
+            <item
+                android:width="30dp"
+                android:height="10dp"
+                android:bottom="21dp"
+                android:gravity="center">
                 <shape android:shape="rectangle">
-                    <solid android:color="@color/colorPrimary"/>
+                    <solid android:color="@color/colorPrimary" />
                 </shape>
             </item>
         </layer-list>

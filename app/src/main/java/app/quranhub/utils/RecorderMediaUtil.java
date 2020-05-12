@@ -24,7 +24,7 @@ public class RecorderMediaUtil {
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setOnCompletionListener(mp -> {
             stopUpdatingCallbackWithPosition();
-            if(mediaPlayerCallback != null) {
+            if (mediaPlayerCallback != null) {
                 mediaPlayerCallback.onStateChanged(MediaPlayerCallback.State.COMPLETED);
             }
         });
@@ -46,7 +46,7 @@ public class RecorderMediaUtil {
 
     private void initProgressCallback() {
         int duration = mediaPlayer.getDuration();
-        if(mediaPlayerCallback != null) {
+        if (mediaPlayerCallback != null) {
             mediaPlayerCallback.onGetMaxDuration(duration);
             mediaPlayerCallback.onPositionChanged(0);
 
@@ -54,7 +54,7 @@ public class RecorderMediaUtil {
     }
 
     private void stopUpdatingCallbackWithPosition() {
-        if(progressExecutor != null) {
+        if (progressExecutor != null) {
             progressExecutor.shutdown();
             progressExecutor = null;
             seekbarPositionUpdateTask = null;
@@ -66,7 +66,7 @@ public class RecorderMediaUtil {
     }
 
     private void stopAudioUpdatedTime() {
-        if(audioUpdatedTimeTask != null) {
+        if (audioUpdatedTimeTask != null) {
             audioUpdatedTimeTask.removeCallbacks(audioTimeRunnable);
         }
     }
@@ -111,12 +111,12 @@ public class RecorderMediaUtil {
      */
     private void startUpdatingCallbackWithPosition() {
 
-        if(progressExecutor == null) {
+        if (progressExecutor == null) {
             progressExecutor = Executors.newSingleThreadScheduledExecutor();
         }
-        if(seekbarPositionUpdateTask == null) {
+        if (seekbarPositionUpdateTask == null) {
             seekbarPositionUpdateTask = () -> {
-                if(mediaPlayer != null && mediaPlayerCallback != null && mediaPlayer.isPlaying()) {
+                if (mediaPlayer != null && mediaPlayerCallback != null && mediaPlayer.isPlaying()) {
                     int currentPosition = mediaPlayer.getCurrentPosition();
                     mediaPlayerCallback.onPositionChanged(currentPosition);
                 }
@@ -129,7 +129,7 @@ public class RecorderMediaUtil {
 
 
     public void startUpdatingAudioTime() {
-        if(audioUpdatedTimeTask == null) {
+        if (audioUpdatedTimeTask == null) {
             audioUpdatedTimeTask = new Handler();
             audioTimeRunnable = () -> milliSecondsToTimer(mediaPlayer.getCurrentPosition());
         }
@@ -147,9 +147,9 @@ public class RecorderMediaUtil {
             secondsString = "" + seconds;
         }
 
-        timerString +=  minutes + ":" + secondsString;
+        timerString += minutes + ":" + secondsString;
 
-        if(mediaPlayerCallback != null) {
+        if (mediaPlayerCallback != null) {
             mediaPlayerCallback.onUpdatedTime(timerString);
         }
         audioUpdatedTimeTask.postDelayed(audioTimeRunnable, 1000);
@@ -163,7 +163,9 @@ public class RecorderMediaUtil {
     public interface MediaPlayerCallback extends AyaAudioUtil.AudioStateCallback {
 
         void onGetMaxDuration(int duration);
+
         void onPositionChanged(int position);
+
         void onUpdatedTime(String time);
 
     }

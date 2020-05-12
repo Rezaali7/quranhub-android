@@ -16,24 +16,23 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.Objects;
 
+import app.quranhub.R;
 import app.quranhub.mushaf.adapter.SearchAdapter;
 import app.quranhub.mushaf.listener.ItemSelectionListener;
 import app.quranhub.mushaf.listener.QuranNavigationCallbacks;
 import app.quranhub.mushaf.model.SearchModel;
 import app.quranhub.mushaf.model.TopicCategory;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import app.quranhub.R;
 import app.quranhub.mushaf.viewmodel.TopicViewModel;
 import app.quranhub.utils.ScreenUtil;
 import app.quranhub.utils.interfaces.ToolbarActionsListener;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class TopicAyaFragment extends Fragment implements ItemSelectionListener<SearchModel> {
 
@@ -54,7 +53,7 @@ public class TopicAyaFragment extends Fragment implements ItemSelectionListener<
     private TopicCategory category;
     private static final String CATEGORY_ARGS = "CATEGORY_ARGS";
 
-    public static TopicAyaFragment getInstance(TopicCategory category){
+    public static TopicAyaFragment getInstance(TopicCategory category) {
         Bundle bundle = new Bundle();
         bundle.putParcelable(CATEGORY_ARGS, category);
         TopicAyaFragment fragment = new TopicAyaFragment();
@@ -73,6 +72,7 @@ public class TopicAyaFragment extends Fragment implements ItemSelectionListener<
             quranNavigationCallbacks = (QuranNavigationCallbacks) context;
         }
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -87,7 +87,7 @@ public class TopicAyaFragment extends Fragment implements ItemSelectionListener<
     }
 
     private void getPrevState(Bundle savedInstanceState) {
-        if(savedInstanceState != null) {
+        if (savedInstanceState != null) {
             inputSearch = savedInstanceState.getString("input_search");
         }
     }

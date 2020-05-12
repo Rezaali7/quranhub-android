@@ -18,18 +18,18 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import app.quranhub.R;
 import app.quranhub.mushaf.listener.BookmarksListListener;
 import app.quranhub.mushaf.listener.QuranNavigationCallbacks;
+import app.quranhub.mushaf.presenter.BookmarksPresenter;
+import app.quranhub.mushaf.presenter.BookmarksPresenterImp;
 import app.quranhub.mushaf.view.BookmarksView;
+import app.quranhub.utils.ScreenUtil;
+import app.quranhub.utils.interfaces.ToolbarActionsListener;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
-import app.quranhub.R;
-import app.quranhub.mushaf.presenter.BookmarksPresenter;
-import app.quranhub.mushaf.presenter.BookmarksPresenterImp;
-import app.quranhub.utils.ScreenUtil;
-import app.quranhub.utils.interfaces.ToolbarActionsListener;
 
 
 public class BookmarksFragment extends Fragment

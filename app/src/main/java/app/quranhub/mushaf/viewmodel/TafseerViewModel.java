@@ -9,12 +9,12 @@ import androidx.lifecycle.MediatorLiveData;
 
 import java.util.List;
 
-import app.quranhub.mushaf.model.TafseerModel;
 import app.quranhub.mushaf.data.entity.Translation;
 import app.quranhub.mushaf.interactor.TafseerInteractor;
 import app.quranhub.mushaf.interactor.TafseerInteractorImp;
+import app.quranhub.mushaf.model.TafseerModel;
 
-public class TafseerViewModel extends AndroidViewModel  {
+public class TafseerViewModel extends AndroidViewModel {
 
     private TafseerInteractor interactor;
     private MediatorLiveData<List<TafseerModel>> tafseers;
@@ -32,7 +32,7 @@ public class TafseerViewModel extends AndroidViewModel  {
         ayahs = new MediatorLiveData<>();
     }
 
-    public void getSuraTafseers(int suraNumber){
+    public void getSuraTafseers(int suraNumber) {
         tafseerLiveData = interactor.getSuraTafseers(suraNumber);
         tafseers.addSource(tafseerLiveData, tafseerModels -> {
             tafseers.setValue(tafseerModels);

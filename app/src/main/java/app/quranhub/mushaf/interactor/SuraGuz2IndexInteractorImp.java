@@ -6,12 +6,12 @@ import android.content.Context;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.quranhub.R;
+import app.quranhub.mushaf.data.db.MushafDatabase;
 import app.quranhub.mushaf.model.SuraIndexModel;
 import app.quranhub.mushaf.model.SuraIndexModelMapper;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
-import app.quranhub.R;
-import app.quranhub.mushaf.data.db.MushafDatabase;
 
 
 public class SuraGuz2IndexInteractorImp implements SuraGuz2IndexInteractor {

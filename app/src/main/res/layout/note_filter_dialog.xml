@@ -5,8 +5,7 @@
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/corner_white_dialog"
-    >
+    android:background="@drawable/corner_white_dialog">
 
 
     <TextView
@@ -34,37 +33,36 @@
         app:layout_constraintTop_toBottomOf="@+id/header_tv"
         app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/note_filter_rv"
-        tools:listitem="@layout/item_option"
-        />
+        tools:listitem="@layout/item_option" />
 
 
-   <!-- <Button
-        android:id="@+id/btn_back"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_16"
-        android:layout_marginTop="@dimen/_8sdp"
-        android:background="@drawable/corner_primary_dialog"
-        android:fontFamily="@font/custom_bold_font"
-        android:text="@string/back"
-        android:textColor="@color/light_gray"
-        app:layout_constraintEnd_toStartOf="@+id/btn_show"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/note_filter_rv" />
+    <!-- <Button
+         android:id="@+id/btn_back"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="@dimen/margin_16"
+         android:layout_marginTop="@dimen/_8sdp"
+         android:background="@drawable/corner_primary_dialog"
+         android:fontFamily="@font/custom_bold_font"
+         android:text="@string/back"
+         android:textColor="@color/light_gray"
+         app:layout_constraintEnd_toStartOf="@+id/btn_show"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/note_filter_rv" />
 
-    <Button
-        android:id="@+id/btn_show"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_16"
-        android:layout_marginTop="@dimen/_8sdp"
-        android:layout_marginEnd="@dimen/margin_16"
-        android:background="@drawable/corner_primary_dialog"
-        android:fontFamily="@font/custom_bold_font"
-        android:text="@string/show"
-        android:textColor="@color/light_gray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_back"
-        app:layout_constraintTop_toBottomOf="@id/note_filter_rv" /> -->
+     <Button
+         android:id="@+id/btn_show"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="@dimen/margin_16"
+         android:layout_marginTop="@dimen/_8sdp"
+         android:layout_marginEnd="@dimen/margin_16"
+         android:background="@drawable/corner_primary_dialog"
+         android:fontFamily="@font/custom_bold_font"
+         android:text="@string/show"
+         android:textColor="@color/light_gray"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toEndOf="@+id/btn_back"
+         app:layout_constraintTop_toBottomOf="@id/note_filter_rv" /> -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

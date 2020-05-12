@@ -8,9 +8,9 @@ import androidx.annotation.NonNull;
 import java.io.File;
 import java.util.List;
 
-import app.quranhub.mushaf.data.entity.Sheikh;
 import app.quranhub.mushaf.data.db.UserDatabase;
 import app.quranhub.mushaf.data.entity.QuranAudio;
+import app.quranhub.mushaf.data.entity.Sheikh;
 import app.quranhub.utils.PreferencesUtils;
 
 public final class QuranAudioDeleteUtils {
@@ -103,7 +103,7 @@ public final class QuranAudioDeleteUtils {
                 // 1. delete from file system the reciter folder for this recitation with all of its contents
                 List<QuranAudio> quranAudios = userDatabase.getQuranAudioDao()
                         .getForSura(recitationId, reciterId, suraId);
-                for(QuranAudio q : quranAudios) {
+                for (QuranAudio q : quranAudios) {
                     String audioFilePath = context.getExternalFilesDir(null).getPath() + q.getFilePath();
                     File audioFile = new File(audioFilePath);
                     if (audioFile.exists()) {

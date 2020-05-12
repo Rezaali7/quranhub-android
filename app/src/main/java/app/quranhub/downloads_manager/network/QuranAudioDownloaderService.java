@@ -20,17 +20,17 @@ import org.greenrobot.eventbus.EventBus;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.quranhub.downloads_manager.utils.QuranAudioDownloadUtils;
-import app.quranhub.downloads_manager.utils.QuranAudioFileUtils;
-import app.quranhub.mushaf.data.entity.Aya;
-import app.quranhub.mushaf.network.downloader_service.DownloadRequestInfo;
-import app.quranhub.mushaf.network.downloader_service.PRDownloaderService;
 import app.quranhub.Constants;
 import app.quranhub.R;
+import app.quranhub.downloads_manager.utils.QuranAudioDownloadUtils;
+import app.quranhub.downloads_manager.utils.QuranAudioFileUtils;
 import app.quranhub.mushaf.data.dao.AyaDao;
 import app.quranhub.mushaf.data.db.MushafDatabase;
 import app.quranhub.mushaf.data.db.UserDatabase;
+import app.quranhub.mushaf.data.entity.Aya;
 import app.quranhub.mushaf.data.entity.QuranAudio;
+import app.quranhub.mushaf.network.downloader_service.DownloadRequestInfo;
+import app.quranhub.mushaf.network.downloader_service.PRDownloaderService;
 import app.quranhub.utils.LocaleUtil;
 
 /**
