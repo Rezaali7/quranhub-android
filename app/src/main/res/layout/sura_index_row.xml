@@ -92,7 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_8sdp"
-            android:background="@color/light_gray"
+            android:background="@color/light_grey"
             android:paddingTop="@dimen/_4sdp"
             android:paddingBottom="@dimen/_4sdp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -173,7 +173,7 @@
             android:layout_height="0.4dp"
             android:layout_marginRight="@dimen/margin_12"
             android:layout_marginLeft="@dimen/margin_12"
-            android:background="@color/dark_gray"
+            android:background="@color/dark_grey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/child_view" />

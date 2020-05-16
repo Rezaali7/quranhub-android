@@ -60,7 +60,7 @@
         android:id="@+id/item_footer_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/light_gray"
+        android:background="@color/light_grey"
         android:paddingTop="@dimen/margin_2"
         android:paddingBottom="@dimen/margin_2"
         app:layout_constraintEnd_toEndOf="parent"

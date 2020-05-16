@@ -18,7 +18,7 @@
                 <item>
                     <shape
                         android:shape="rectangle"
-                        android:tint="@color/green_color">
+                        android:tint="@color/colorAccent">
                         <corners android:radius="8dp" />
                         <size android:height="@dimen/_10sdp" />
 

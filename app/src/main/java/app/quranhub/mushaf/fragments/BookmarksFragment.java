@@ -204,7 +204,7 @@ public class BookmarksFragment extends Fragment
             editButton.setImageResource(R.drawable.edit_gold_ic);
             editButton.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
         } else {
-            editButton.setColorFilter(ContextCompat.getColor(getActivity(), R.color.dark_gray));
+            editButton.setColorFilter(ContextCompat.getColor(getActivity(), R.color.dark_grey));
         }
 
     }

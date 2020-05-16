@@ -29,6 +29,6 @@
         android:layout_marginStart="@dimen/_34sdp"
         android:layout_marginEnd="@dimen/_34sdp"
         android:layout_marginTop="@dimen/_8sdp"
-        android:background="@color/dark_gray"
+        android:background="@color/dark_grey"
         android:id="@+id/seperator" />
 </androidx.constraintlayout.widget.ConstraintLayout>

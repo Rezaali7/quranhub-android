@@ -5,7 +5,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/light_gray"
+        android:background="@color/light_grey"
         android:paddingStart="@dimen/_12sdp"
         android:paddingTop="@dimen/_6sdp"
         android:paddingEnd="@dimen/_12sdp"

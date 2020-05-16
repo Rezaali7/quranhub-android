@@ -10,7 +10,7 @@
         android:id="@+id/toolbar_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/header_1"
+        android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -28,7 +28,7 @@
             android:layout_height="@dimen/app_bar_icon_dimen"
             android:layout_marginStart="@dimen/margin_16"
             android:background="?selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_drawer"
+            android:src="@drawable/ic_menu_white_24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/guideline_top" />
 
@@ -81,17 +81,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_16"
-            android:layout_marginTop="@dimen/margin_8"
             android:layout_marginEnd="@dimen/margin_16"
             android:layout_marginBottom="@dimen/margin_8"
             android:background="@drawable/search_bar"
-            android:drawableStart="@drawable/search_bar_white_small_ic"
-            android:drawablePadding="8dp"
-            android:ems="10"
+            android:drawableStart="@drawable/advanced_search_gray_ic"
+            android:drawablePadding="16dp"
             android:hint="@string/search"
             android:inputType="textNoSuggestions"
-            android:textColor="@android:color/white"
             android:textColorHint="@color/hint_grey"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

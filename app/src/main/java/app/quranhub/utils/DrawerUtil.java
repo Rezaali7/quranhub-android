@@ -68,67 +68,67 @@ public final class DrawerUtil {
                                 .withName(activity.getString(R.string.mushaf))
                                 .withTypeface(Typeface.createFromAsset(activity.getAssets(), "fonts/droid_arabic_kufi.ttf"))
                                 .withIcon(R.drawable.read_quran_sidemenu_green).withIdentifier(IDENTIFIER_MUSHAF)
-                                .withTextColorRes(R.color.slidemenu_selector_text_color)
+                                .withTextColorRes(R.color.drawer_text_color)
                                 .withSelectedIcon(R.drawable.read_quran_sidemenu_orange)
-                                .withSelectedTextColorRes(R.color.slidemenu_selector_tint),
+                                .withSelectedTextColorRes(R.color.drawer_selected_tint),
                         new PrimaryDrawerItem()
                                 .withName(activity.getString(R.string.fehris_menu))
                                 .withTypeface(Typeface.createFromAsset(activity.getAssets(), "fonts/droid_arabic_kufi.ttf"))
                                 .withIcon(R.drawable.index_green_sidemenu_ic)
                                 .withIdentifier(IDENTIFIER_INDEX)
-                                .withTextColorRes(R.color.slidemenu_selector_text_color)
+                                .withTextColorRes(R.color.drawer_text_color)
                                 .withSelectedIcon(R.drawable.index_gold_sidemenu_ic)
-                                .withSelectedTextColorRes(R.color.slidemenu_selector_tint),
+                                .withSelectedTextColorRes(R.color.drawer_selected_tint),
                         new PrimaryDrawerItem()
                                 .withName(activity.getString(R.string.topics_menu))
                                 .withTypeface(Typeface.createFromAsset(activity.getAssets(), "fonts/droid_arabic_kufi.ttf"))
                                 .withIcon(R.drawable.topics_green_sidemenu_ic)
                                 .withIdentifier(IDENTIFIER_TOPICS)
-                                .withTextColorRes(R.color.slidemenu_selector_text_color)
+                                .withTextColorRes(R.color.drawer_text_color)
                                 .withSelectedIcon(R.drawable.topics_gold_sidemenu_ic)
-                                .withSelectedTextColorRes(R.color.slidemenu_selector_tint),
+                                .withSelectedTextColorRes(R.color.drawer_selected_tint),
                         new PrimaryDrawerItem()
                                 .withName(activity.getString(R.string.library_menu))
                                 .withTypeface(Typeface.createFromAsset(activity.getAssets(), "fonts/droid_arabic_kufi.ttf"))
                                 .withIcon(R.drawable.library_green_sidemenu_ic)
                                 .withIdentifier(IDENTIFIER_LIBRARY)
-                                .withTextColorRes(R.color.slidemenu_selector_text_color)
+                                .withTextColorRes(R.color.drawer_text_color)
                                 .withSelectedIcon(R.drawable.library_gold_sidemenu_ic)
-                                .withSelectedTextColorRes(R.color.slidemenu_selector_tint),
+                                .withSelectedTextColorRes(R.color.drawer_selected_tint),
                         new PrimaryDrawerItem()
                                 .withName(activity.getString(R.string.fwasil_menu))
                                 .withTypeface(Typeface.createFromAsset(activity.getAssets(), "fonts/droid_arabic_kufi.ttf"))
                                 .withIcon(R.drawable.bookmark_green_sidemenu_ic)
                                 .withIdentifier(IDENTIFIER_BOOKMARKS)
-                                .withTextColorRes(R.color.slidemenu_selector_text_color)
+                                .withTextColorRes(R.color.drawer_text_color)
                                 .withSelectedIcon(R.drawable.bookmark_gold_sidemenu_ic)
-                                .withSelectedTextColorRes(R.color.slidemenu_selector_tint),
+                                .withSelectedTextColorRes(R.color.drawer_selected_tint),
                         new PrimaryDrawerItem()
                                 .withName(activity.getString(R.string.notes_menu))
                                 .withTypeface(Typeface.createFromAsset(activity.getAssets(), "fonts/droid_arabic_kufi.ttf"))
                                 .withIcon(R.drawable.notes_green_sidemenu_ic)
                                 .withIdentifier(IDENTIFIER_MY_NOTES)
-                                .withTextColorRes(R.color.slidemenu_selector_text_color)
+                                .withTextColorRes(R.color.drawer_text_color)
                                 .withSelectedIcon(R.drawable.notes_gold_sidemenu_ic)
-                                .withSelectedTextColorRes(R.color.slidemenu_selector_tint),
+                                .withSelectedTextColorRes(R.color.drawer_selected_tint),
                         new DividerDrawerItem(),
                         new PrimaryDrawerItem()
                                 .withName(activity.getString(R.string.settings_menu))
                                 .withTypeface(Typeface.createFromAsset(activity.getAssets(), "fonts/droid_arabic_kufi.ttf"))
                                 .withIcon(R.drawable.settings_green_sidemenu_ic)
                                 .withIdentifier(IDENTIFIER_SETTINGS)
-                                .withTextColorRes(R.color.slidemenu_selector_text_color)
+                                .withTextColorRes(R.color.drawer_text_color)
                                 .withSelectedIcon(R.drawable.settings_gold_sidemenu_ic)
-                                .withSelectedTextColorRes(R.color.slidemenu_selector_tint)
+                                .withSelectedTextColorRes(R.color.drawer_selected_tint)
                                 .withSelectable(false),
                         new PrimaryDrawerItem()
                                 .withName(activity.getString(R.string.downloads_menu))
                                 .withTypeface(Typeface.createFromAsset(activity.getAssets(), "fonts/droid_arabic_kufi.ttf"))
                                 .withIcon(R.drawable.downloads_green_sidemenu_ic)
                                 .withIdentifier(IDENTIFIER_DOWNLOAD_MANAGER)
-                                .withTextColorRes(R.color.slidemenu_selector_text_color)
+                                .withTextColorRes(R.color.drawer_text_color)
                                 .withSelectedIcon(R.drawable.downloads_gold_sidemenu_ic)
-                                .withSelectedTextColorRes(R.color.slidemenu_selector_tint)
+                                .withSelectedTextColorRes(R.color.drawer_selected_tint)
                                 .withSelectable(false)
                 )
                 .withOnDrawerItemClickListener((view, position, drawerItem) -> {

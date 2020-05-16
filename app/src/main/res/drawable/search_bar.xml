@@ -10,9 +10,6 @@
         android:right="16dp"
         android:left="16dp" />
 
-    <gradient
-        android:centerColor="#296B51"
-        android:startColor="#364B45"
-        android:endColor="#364B45" />
+    <solid android:color="@color/search_bar_bg_color" />
 
 </shape>

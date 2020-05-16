@@ -75,7 +75,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/dark_gray"
+        android:background="@color/dark_grey"
         app:layout_constraintTop_toBottomOf="@id/tafseer_tv"
         android:layout_marginTop="@dimen/_12sdp" />
 

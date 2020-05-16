@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+
+    <item android:id="@+id/background"
+        android:drawable="@color/colorPrimary" />
+
+    <item android:id="@+id/app_logo">
+        <bitmap
+            android:src="@drawable/quranhub_logo"
+            android:gravity="center" />
+    </item>
+
+</layer-list>
