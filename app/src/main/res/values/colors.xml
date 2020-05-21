@@ -3,9 +3,9 @@
     <color name="colorPrimary">#283e4a</color>
     <color name="colorPrimaryDark">#001822</color>
     <color name="colorPrimaryLight">#526976</color>
-    <color name="colorAccent">#0077b5</color>
-    <color name="colorAccentLight">#56a6e7</color>
-    <color name="colorAccentDark">#004c85</color>
+    <color name="colorAccent">#328cae</color>
+    <color name="colorAccentLight">#6abce0</color>
+    <color name="colorAccentDark">#005f7f</color>
     <color name="colorControlHighlight">#33BDBDBD</color>
 
     <color name="white_color">@android:color/white</color>
