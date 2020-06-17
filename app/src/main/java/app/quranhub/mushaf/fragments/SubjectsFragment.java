@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -102,9 +102,9 @@ public class SubjectsFragment extends Fragment implements ItemSelectionListener<
     }
 
     private void bindViewModel() {
-        List<String> subjects = Arrays.asList(getActivity().getResources().getStringArray(R.array.subject_name));
-        List<String> subjectsCategory = Arrays.asList(getActivity().getResources().getStringArray(R.array.subject_category_name));
-        viewModel = ViewModelProviders.of(this).get(SubjectsViewModel.class);
+        List<String> subjects = Arrays.asList(requireActivity().getResources().getStringArray(R.array.subject_name));
+        List<String> subjectsCategory = Arrays.asList(requireActivity().getResources().getStringArray(R.array.subject_category_name));
+        viewModel = new ViewModelProvider(this).get(SubjectsViewModel.class);
         viewModel.getSubjects(subjects, subjectsCategory);
         viewModel.getSubjectsLiveData().observe(getViewLifecycleOwner(), topicModels -> {
             progressBar.setVisibility(View.GONE);

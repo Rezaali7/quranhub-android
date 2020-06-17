@@ -13,7 +13,7 @@ import android.widget.Chronometer;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 
 import java.util.Objects;
 
@@ -77,7 +77,7 @@ public class AyaRecorderDialog extends DialogFragment {
     }
 
     private void initReorder(boolean startRecord) {
-        voiceRecorderViewModel = ViewModelProviders.of(this).get(VoiceRecorderViewModel.class);
+        voiceRecorderViewModel = new ViewModelProvider(this).get(VoiceRecorderViewModel.class);
         if (startRecord) {
             voiceRecorderViewModel.setAyaRecorderPath(ayaId, getActivity());
             voiceRecorderViewModel.startRecord();
