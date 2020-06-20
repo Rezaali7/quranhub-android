@@ -213,7 +213,7 @@ public class AyaAudioService extends BaseService implements MediaPlayer.OnPrepar
         if (notificationIcon == null) {
             try {
                 Resources resources = getApplicationContext().getResources();
-                Bitmap logo = BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher);
+                Bitmap logo = BitmapFactory.decodeResource(resources, R.drawable.quranhub_logo);
                 int iconWidth = logo.getWidth();
                 int iconHeight = logo.getHeight();
                 ColorDrawable cd = new ColorDrawable();
