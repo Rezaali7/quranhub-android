@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_gravity="center"
     android:background="@drawable/corner_white_dialog"
-    android:fitsSystemWindows="true"
-    android:layout_gravity="center">
+    android:fitsSystemWindows="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -33,16 +33,16 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/all_bookmark"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/all_bookmark"
-            app:layout_constraintTop_toBottomOf="@id/tv_title"
-            android:textSize="@dimen/text_size_16"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:paddingStart="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_8sdp"
-            android:id="@+id/all_bookmark" />
+            android:paddingStart="@dimen/_12sdp"
+            android:text="@string/all_bookmark"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
 
         <ImageView
@@ -58,15 +58,15 @@
             app:srcCompat="@drawable/check_gold_ic" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bookmark_types_rv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:maxHeight="@dimen/_240sdp"
-            app:layout_constraintTop_toBottomOf="@id/all_bookmark"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="@dimen/_12sdp"
             android:layout_marginEnd="@dimen/_12sdp"
-            android:id="@+id/bookmark_types_rv"
+            android:maxHeight="@dimen/_240sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/all_bookmark"
 
             />
 
@@ -81,10 +81,10 @@
             android:fontFamily="@font/custom_bold_font"
             android:text="@string/back"
             android:textColor="@color/light_grey"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_show"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/bookmark_types_rv"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
         <Button

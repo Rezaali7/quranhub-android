@@ -5,13 +5,13 @@
     <corners android:radius="10dp" />
 
     <padding
-        android:top="8dp"
         android:bottom="8dp"
+        android:left="16dp"
         android:right="16dp"
-        android:left="16dp" />
+        android:top="8dp" />
 
     <gradient
-        android:startColor="#E0E0E0"
-        android:endColor="#E0E0E0" />
+        android:endColor="#E0E0E0"
+        android:startColor="#E0E0E0" />
 
 </shape>

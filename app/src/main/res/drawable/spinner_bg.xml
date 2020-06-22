@@ -13,8 +13,8 @@
             <item
                 android:width="12dp"
                 android:height="12dp"
-                android:gravity="center"
-                android:bottom="10dp">
+                android:bottom="10dp"
+                android:gravity="center">
                 <rotate
                     android:fromDegrees="45"
                     android:toDegrees="45">

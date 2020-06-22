@@ -1,86 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/corner_primary_dialog"
     android:layout_gravity="center_horizontal"
     android:layout_weight="7.1"
+    android:background="@drawable/corner_primary_dialog"
+    android:orientation="horizontal"
     android:paddingStart="@dimen/_4sdp"
     android:paddingEnd="@dimen/_4sdp">
 
     <ImageView
+        android:id="@+id/repeat_iv"
         android:layout_width="0dp"
         android:layout_height="@dimen/_25sdp"
-        android:src="@drawable/player_loop_white_ic"
         android:layout_margin="@dimen/_6sdp"
+        android:layout_weight="1"
         android:padding="@dimen/_2sdp"
-        android:id="@+id/repeat_iv"
-        android:layout_weight="1" />
+        android:src="@drawable/player_loop_white_ic" />
 
     <View
         android:layout_width="2dp"
         android:layout_height="@dimen/_37sdp"
-        android:background="@drawable/vertical_shadow"
-        android:layout_weight="0.1"
         android:layout_marginStart="@dimen/_4sdp"
-        android:layout_marginEnd="@dimen/_4sdp" />
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_weight="0.1"
+        android:background="@drawable/vertical_shadow" />
 
     <ImageView
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_25sdp"
-        android:src="@drawable/ic_reciter"
-        android:layout_margin="@dimen/_6sdp"
-        android:padding="@dimen/_2sdp"
         android:id="@+id/reciter_iv"
-        android:layout_weight="1" />
-
-    <ImageView
         android:layout_width="0dp"
         android:layout_height="@dimen/_25sdp"
-        android:src="@drawable/player_record_white_ic"
         android:layout_margin="@dimen/_6sdp"
-        android:padding="@dimen/_4sdp"
+        android:layout_weight="1"
+        android:padding="@dimen/_2sdp"
+        android:src="@drawable/ic_reciter" />
+
+    <ImageView
         android:id="@+id/record_iv"
-        android:layout_weight="1" />
-
-
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_27sdp"
-        android:src="@drawable/player_fast_rewind_white_ic"
-        android:layout_margin="@dimen/_6sdp"
-        android:padding="@dimen/_2sdp"
-        android:id="@+id/prev_aya_iv"
-        android:layout_weight="1" />
-
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_27sdp"
-        android:src="@drawable/player_play_white_ic"
-        android:layout_margin="@dimen/_6sdp"
-
-        android:id="@+id/play_iv"
-        android:layout_weight="1" />
-
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_27sdp"
-        android:src="@drawable/player_fast_forward_white_ic"
-        android:padding="@dimen/_2sdp"
-        android:layout_margin="@dimen/_6sdp"
-        android:id="@+id/next_aya_iv"
-        android:layout_weight="1" />
-
-    <ImageView
         android:layout_width="0dp"
         android:layout_height="@dimen/_25sdp"
-        android:src="@drawable/ic_new_close"
         android:layout_margin="@dimen/_6sdp"
+        android:layout_weight="1"
         android:padding="@dimen/_4sdp"
+        android:src="@drawable/player_record_white_ic" />
+
+
+    <ImageView
+        android:id="@+id/prev_aya_iv"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_27sdp"
+        android:layout_margin="@dimen/_6sdp"
+        android:layout_weight="1"
+        android:padding="@dimen/_2sdp"
+        android:src="@drawable/player_fast_rewind_white_ic" />
+
+    <ImageView
+        android:id="@+id/play_iv"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_27sdp"
+        android:layout_margin="@dimen/_6sdp"
+
+        android:layout_weight="1"
+        android:src="@drawable/player_play_white_ic" />
+
+    <ImageView
+        android:id="@+id/next_aya_iv"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_27sdp"
+        android:layout_margin="@dimen/_6sdp"
+        android:layout_weight="1"
+        android:padding="@dimen/_2sdp"
+        android:src="@drawable/player_fast_forward_white_ic" />
+
+    <ImageView
         android:id="@+id/stop_iv"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_25sdp"
         android:layout_gravity="center"
-        android:layout_weight="1" />
+        android:layout_margin="@dimen/_6sdp"
+        android:layout_weight="1"
+        android:padding="@dimen/_4sdp"
+        android:src="@drawable/ic_new_close" />
 
 
 </LinearLayout>

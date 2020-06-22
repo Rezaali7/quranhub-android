@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/corner_primary_dialog"
     android:layout_gravity="center_horizontal"
+    android:background="@drawable/corner_primary_dialog"
     android:gravity="center_vertical"
+    android:orientation="horizontal"
     android:padding="@dimen/_6sdp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/recordering"
         android:layout_marginStart="@dimen/_8sdp"
-        android:textSize="@dimen/text_size_14"
-        android:textColor="@color/white_color" />
+        android:text="@string/recordering"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_size_14" />
 
 
     <Chronometer
@@ -22,36 +22,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_8sdp"
-        android:textSize="@dimen/text_size_14"
-        android:textColor="@color/white_color" />
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_size_14" />
 
 
     <View
         android:layout_width="2dp"
         android:layout_height="match_parent"
-        android:background="@drawable/vertical_shadow"
-        android:layout_marginStart="@dimen/_28sdp" />
+        android:layout_marginStart="@dimen/_28sdp"
+        android:background="@drawable/vertical_shadow" />
 
     <LinearLayout
+        android:id="@+id/stop_recording_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:id="@+id/stop_recording_view"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/stop_recording"
             android:layout_marginStart="@dimen/_8sdp"
-            android:textSize="@dimen/text_size_14"
-            android:textColor="@color/white_color" />
+            android:text="@string/stop_recording"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/text_size_14" />
 
         <ImageView
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_15sdp"
-            android:src="@drawable/recording"
-            android:layout_marginStart="@dimen/_4sdp" />
+            android:layout_marginStart="@dimen/_4sdp"
+            android:src="@drawable/recording" />
 
     </LinearLayout>
 </LinearLayout>

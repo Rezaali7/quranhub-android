@@ -4,7 +4,7 @@
 
     <solid android:color="@color/colorControlHighlight" />
     <size
-        android:height="32dp"
-        android:width="32dp" />
+        android:width="32dp"
+        android:height="32dp" />
 
 </shape>

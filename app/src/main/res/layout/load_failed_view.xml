@@ -2,10 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/load_failed_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/load_failed_container"
+    android:orientation="vertical"
     android:visibility="gone"
     tools:visibility="visible">
 
@@ -27,10 +27,10 @@
         android:layout_gravity="center_horizontal"
         android:fontFamily="@font/custom_bold_font"
         android:text="@string/no_internet"
-        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
         android:textSize="@dimen/text_size_16"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/failed_img"
-        android:textColor="@color/colorAccent" />
+        app:layout_constraintTop_toBottomOf="@+id/failed_img" />
 </androidx.constraintlayout.widget.ConstraintLayout>

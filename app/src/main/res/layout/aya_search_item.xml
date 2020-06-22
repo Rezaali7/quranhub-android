@@ -139,13 +139,13 @@
             android:layout_marginStart="@dimen/margin_8"
             android:layout_marginEnd="@dimen/margin_8"
             android:gravity="center"
+            android:layoutDirection="ltr"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/tv_page_text"
             app:layout_constraintHorizontal_bias="0.4"
             app:layout_constraintStart_toEndOf="@+id/tv_rub3_num"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layoutDirection="ltr">
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/left_sura_border"

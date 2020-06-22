@@ -5,10 +5,10 @@
     <corners android:radius="10dp" />
 
     <padding
-        android:top="8dp"
         android:bottom="8dp"
+        android:left="16dp"
         android:right="16dp"
-        android:left="16dp" />
+        android:top="8dp" />
 
     <solid android:color="@color/search_bar_bg_color" />
 

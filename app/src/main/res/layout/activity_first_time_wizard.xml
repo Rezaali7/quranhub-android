@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:focusableInTouchMode="true"
     android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
     tools:context="app.quranhub.first_wizard.FirstTimeWizardActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/custom_toolbar_height"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        android:background="@drawable/header_1">
+        android:background="@drawable/header_1"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -48,8 +48,8 @@
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_12sdp"
             android:layout_marginStart="@dimen/_28sdp"
+            android:layout_marginTop="@dimen/_12sdp"
             android:layout_marginEnd="@dimen/_28sdp"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -147,8 +147,8 @@
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginEnd="@dimen/_8sdp"
                 android:layout_marginBottom="@dimen/_8sdp"
-                android:text="@string/back"
                 android:background="@drawable/button"
+                android:text="@string/back"
                 android:textColor="@color/white_color"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/btn_next"
@@ -163,8 +163,8 @@
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_marginBottom="@dimen/_8sdp"
-                android:text="@string/next"
                 android:background="@drawable/button"
+                android:text="@string/next"
                 android:textColor="@color/white_color"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

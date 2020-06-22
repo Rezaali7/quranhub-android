@@ -19,10 +19,10 @@
         android:paddingTop="@dimen/_8sdp"
         android:paddingEnd="@dimen/_16sdp"
         android:paddingBottom="@dimen/_8sdp"
+        android:text="@string/title_dialog_quran_reciter"
         android:textColor="@color/white_color"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:text="@string/title_dialog_quran_reciter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

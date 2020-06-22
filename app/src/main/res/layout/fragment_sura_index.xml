@@ -7,9 +7,9 @@
     tools:context="app.quranhub.mushaf.fragments.SuraIndexFragment">
 
     <com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView
+        android:id="@+id/sura_index_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/sura_index_rv"
         app:fastScrollAutoHide="true"
         app:fastScrollAutoHideDelay="1000"
         app:fastScrollThumbColor="@color/colorAccent"

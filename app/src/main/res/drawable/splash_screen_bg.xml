@@ -8,8 +8,8 @@
 
     <item android:id="@+id/app_logo">
         <bitmap
-            android:src="@drawable/quranhub_logo"
-            android:gravity="center" />
+            android:gravity="center"
+            android:src="@drawable/quranhub_logo" />
     </item>
 
 </layer-list>

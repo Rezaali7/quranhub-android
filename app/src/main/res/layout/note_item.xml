@@ -12,42 +12,42 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_8"
-        android:paddingBottom="@dimen/margin_8"
         android:layout_marginEnd="@dimen/margin_8"
-        android:paddingTop="@dimen/margin_8"
         android:ellipsize="end"
+        android:layoutDirection="ltr"
         android:maxLines="1"
+        android:paddingTop="@dimen/margin_8"
+        android:paddingBottom="@dimen/margin_8"
         android:singleLine="true"
         android:textSize="@dimen/text_size_14"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintStart_toEndOf="@+id/details_iv"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/details_iv"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text=" بسم الله الرحمن الرحيم"
-        android:layoutDirection="ltr" />
+        tools:text=" بسم الله الرحمن الرحيم" />
 
     <ImageView
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/details_iv"
-        android:src="@drawable/arrow_backward_gray_ic"
-        android:layoutDirection="ltr"
-        android:layout_marginStart="@dimen/margin_8" />
-
-    <ImageView
         android:layout_width="@dimen/_20sdp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="@dimen/margin_8"
-        android:id="@+id/delete_iv"
-        android:src="@drawable/ic_delete"
         android:layoutDirection="ltr"
-        android:visibility="gone" />
+        android:src="@drawable/arrow_backward_gray_ic"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/delete_iv"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layoutDirection="ltr"
+        android:src="@drawable/ic_delete"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -69,14 +69,14 @@
         app:layout_constraintTop_toBottomOf="@id/guideline">
 
         <TextView
+            android:id="@+id/aya_num_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/margin_8"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:id="@+id/aya_num_tv"
-            tools:text="ايه ١"
-            android:layout_marginStart="@dimen/margin_8" />
+            tools:text="ايه ١" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -84,12 +84,12 @@
             android:layout_marginStart="@dimen/margin_8"
             android:layout_marginEnd="@dimen/margin_8"
             android:gravity="center"
+            android:layoutDirection="ltr"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/note_type_tv"
             app:layout_constraintStart_toEndOf="@+id/aya_num_tv"
-            android:layoutDirection="ltr">
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/left_sura_border"
@@ -122,8 +122,8 @@
             android:text="@string/momerize_mistake"
             android:textAppearance="@style/standardListItemTextAppearance"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

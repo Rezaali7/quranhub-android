@@ -2,10 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/corner_white_dialog">
+    android:background="@drawable/corner_white_dialog"
+    android:orientation="vertical">
 
 
     <TextView
@@ -13,8 +13,8 @@
         android:layout_width="@dimen/filter_dialog_width"
         android:layout_height="wrap_content"
         android:background="@drawable/top_corner_bg"
-        android:fontFamily="@font/custom_bold_font"
         android:ellipsize="end"
+        android:fontFamily="@font/custom_bold_font"
         android:paddingStart="@dimen/_16sdp"
         android:paddingTop="@dimen/_8sdp"
         android:paddingEnd="@dimen/_16sdp"
@@ -28,11 +28,11 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/note_filter_rv"
         android:layout_width="@dimen/filter_dialog_width"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/header_tv"
         app:layout_constraintStart_toStartOf="parent"
-        android:id="@+id/note_filter_rv"
+        app:layout_constraintTop_toBottomOf="@+id/header_tv"
         tools:listitem="@layout/item_option" />
 
 

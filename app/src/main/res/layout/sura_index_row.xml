@@ -11,12 +11,12 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
-        android:orientation="vertical"
         android:id="@+id/parent_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_6sdp"
-        android:layout_marginBottom="@dimen/margin_4">
+        android:layout_marginBottom="@dimen/margin_4"
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/sura_number_bg"
@@ -25,67 +25,67 @@
             android:layout_marginStart="@dimen/margin_8"
             android:scaleType="fitXY"
             android:src="@drawable/gold_ornament_index_ic"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@+id/left_sura_border"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/left_sura_border" />
 
         <TextView
+            android:id="@+id/sura_number_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/sura_number_tv"
+            android:text="@{``+suraIndex.id}"
+            android:textColor="@color/colorPrimary"
             android:textSize="@dimen/text_size_12"
             app:layout_constraintBottom_toBottomOf="@+id/sura_number_bg"
             app:layout_constraintEnd_toEndOf="@+id/sura_number_bg"
             app:layout_constraintStart_toStartOf="@+id/sura_number_bg"
             app:layout_constraintTop_toTopOf="@+id/sura_number_bg"
-            android:textColor="@color/colorPrimary"
-            android:text="@{``+suraIndex.id}"
             tools:text="١٦" />
 
         <TextView
             android:id="@+id/sura_name_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@{suraIndex.name}"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/text_size_16"
-            android:text="@{suraIndex.name}"
             app:layout_constraintBottom_toTopOf="@+id/child_view"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="سوره الفاتحه" />
 
         <ImageView
+            android:id="@+id/left_sura_border"
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_24sdp"
             android:src="@drawable/gold_ornament_surah_mirror_ic"
-            app:layout_constraintEnd_toStartOf="@+id/sura_name_tv"
             app:layout_constraintBottom_toTopOf="@+id/child_view"
-            app:layout_constraintTop_toTopOf="parent"
-            android:id="@+id/left_sura_border" />
+            app:layout_constraintEnd_toStartOf="@+id/sura_name_tv"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:id="@+id/right_sura_border"
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_24sdp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/sura_name_tv"
             android:src="@drawable/gold_ornament_surah_ic"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/child_view"
-            app:layout_constraintTop_toTopOf="parent"
-            android:id="@+id/right_sura_border" />
+            app:layout_constraintStart_toEndOf="@+id/sura_name_tv"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_12"
+            android:text="@{@string/page_num(suraIndex.page)}"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/text_size_14"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/child_view"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginEnd="@dimen/margin_12"
-            tools:text="صفحه   ٣٠٠"
-            android:text="@{@string/page_num(suraIndex.page)}" />
+            tools:text="صفحه   ٣٠٠" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/child_view"
@@ -100,79 +100,79 @@
             app:layout_constraintTop_toBottomOf="@+id/sura_number_bg">
 
             <TextView
+                android:id="@+id/sura_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_8"
+                android:text="@{suraIndex.sura_type}"
                 android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_14"
                 app:layout_constraintBottom_toBottomOf="@+id/sura_numof_aya"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/sura_numof_aya"
-                tools:text="مكيه"
-                android:id="@+id/sura_type"
-                android:textSize="@dimen/text_size_14"
-                android:text="@{suraIndex.sura_type}" />
+                tools:text="مكيه" />
 
             <TextView
+                android:id="@+id/sura_numof_aya"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_12"
+                android:text="@{@string/aya_num(suraIndex.num_of_aya)}"
                 android:textColor="@color/colorPrimary"
-                tools:text="عدد الايات ١١١"
-                android:id="@+id/sura_numof_aya"
                 android:textSize="@dimen/text_size_14"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/sura_type"
                 app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginStart="@dimen/margin_12"
-                android:text="@{@string/aya_num(suraIndex.num_of_aya)}" />
+                tools:text="عدد الايات ١١١" />
 
             <TextView
+                android:id="@+id/sura_rob3_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_12"
+                android:text="@{@string/aya_rob3(suraIndex.sura_rob3)}"
                 android:textColor="@color/colorPrimary"
-                tools:text="ربع ٤"
-                android:id="@+id/sura_rob3_num"
                 android:textSize="@dimen/text_size_14"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginEnd="@dimen/margin_12"
-                android:text="@{@string/aya_rob3(suraIndex.sura_rob3)}"
-                android:visibility="gone" />
+                tools:text="ربع ٤" />
 
             <TextView
+                android:id="@+id/sura_hezb_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_12"
+                android:text="@{@string/aya_hezb(suraIndex.sura_hezb)}"
                 android:textColor="@color/colorPrimary"
-                tools:text="حزب ١"
-                android:id="@+id/sura_hezb_num"
                 android:textSize="@dimen/text_size_14"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/sura_rob3_num"
                 app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginEnd="@dimen/margin_12"
-                android:text="@{@string/aya_hezb(suraIndex.sura_hezb)}"
-                android:visibility="gone" />
+                tools:text="حزب ١" />
 
             <TextView
+                android:id="@+id/sura_gz2_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_12"
+                android:text="@{@string/aya_goz2(suraIndex.guz)}"
                 android:textColor="@color/colorPrimary"
-                tools:text="جزء ٣٠"
-                android:id="@+id/sura_gz2_num"
                 android:textSize="@dimen/text_size_14"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/sura_hezb_num"
                 app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginEnd="@dimen/margin_12"
-                android:text="@{@string/aya_goz2(suraIndex.guz)}" />
+                tools:text="جزء ٣٠" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.4dp"
-            android:layout_marginRight="@dimen/margin_12"
             android:layout_marginLeft="@dimen/margin_12"
+            android:layout_marginRight="@dimen/margin_12"
             android:background="@color/dark_grey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

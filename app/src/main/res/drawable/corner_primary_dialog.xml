@@ -4,7 +4,7 @@
 
     <corners android:radius="10dp" />
     <gradient
-        android:startColor="@color/dialog_color"
-        android:endColor="@color/dialog_color" />
+        android:endColor="@color/dialog_color"
+        android:startColor="@color/dialog_color" />
 
 </shape>

@@ -1,183 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    android:id="@+id/filter_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/filter_layout">
+    android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/part_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/part_container"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="@id/sura_container"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_weight="1">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="@dimen/_10sdp"
             android:layout_height="@dimen/_10sdp"
-            android:src="@drawable/dropdown_arrow_gold_small_ic"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginEnd="@dimen/_18sdp"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:src="@drawable/dropdown_arrow_gold_small_ic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/chapter_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
             android:text="@string/chapter"
             android:textColor="@color/white_color"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="@dimen/_18sdp"
+            android:textSize="@dimen/_12sdp"
             app:layout_constraintBottom_toBottomOf="@id/sp0"
-            android:id="@+id/chapter_tv"
-            android:textSize="@dimen/_12sdp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <View
+            android:id="@+id/sp0"
             android:layout_width="0dp"
             android:layout_height="1dp"
-            app:layout_constraintTop_toBottomOf="@+id/chapter_tv"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:background="@color/accent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginEnd="@dimen/_18sdp"
-            android:layout_marginStart="@dimen/_18sdp"
-            android:background="@color/accent"
-            android:id="@+id/sp0" />
+            app:layout_constraintTop_toBottomOf="@+id/chapter_tv" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sura_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@id/part_container"
-        android:id="@+id/sura_container"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_weight="1">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="@dimen/_10sdp"
             android:layout_height="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
             android:src="@drawable/dropdown_arrow_gold_small_ic"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="@dimen/_18sdp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/sura_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
             android:text="@string/sura"
             android:textColor="@color/white_color"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="@+id/sp1"
-            android:layout_marginStart="@dimen/_18sdp"
             android:textSize="@dimen/_12sdp"
-            android:id="@+id/sura_tv" />
+            app:layout_constraintBottom_toBottomOf="@+id/sp1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <View
+            android:id="@+id/sp1"
             android:layout_width="0dp"
             android:layout_height="1dp"
-            app:layout_constraintTop_toBottomOf="@+id/sura_tv"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:background="@color/accent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginEnd="@dimen/_18sdp"
-            android:layout_marginStart="@dimen/_18sdp"
-            android:background="@color/accent"
-            android:id="@+id/sp1" />
+            app:layout_constraintTop_toBottomOf="@+id/sura_tv" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rob3_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/rob3_container"
-        app:layout_constraintTop_toBottomOf="@+id/part_container"
-        app:layout_constraintStart_toEndOf="@id/hezb_container"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/_16sdp"
-        app:layout_constraintHorizontal_weight="1">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/hezb_container"
+        app:layout_constraintTop_toBottomOf="@+id/part_container">
 
         <ImageView
             android:layout_width="@dimen/_10sdp"
             android:layout_height="@dimen/_10sdp"
-            android:src="@drawable/dropdown_arrow_gold_small_ic"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginEnd="@dimen/_18sdp"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:src="@drawable/dropdown_arrow_gold_small_ic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/rob3_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
             android:text="@string/rub3"
             android:textColor="@color/white_color"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="@dimen/_18sdp"
+            android:textSize="@dimen/_12sdp"
             app:layout_constraintBottom_toBottomOf="@+id/sp2"
-            android:id="@+id/rob3_tv"
-            android:textSize="@dimen/_12sdp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <View
+            android:id="@+id/sp2"
             android:layout_width="0dp"
             android:layout_height="1dp"
-            app:layout_constraintTop_toBottomOf="@+id/rob3_tv"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:background="@color/accent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginEnd="@dimen/_18sdp"
-            android:layout_marginStart="@dimen/_18sdp"
-            android:background="@color/accent"
-            android:id="@+id/sp2"
+            app:layout_constraintTop_toBottomOf="@+id/rob3_tv"
 
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hezb_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@id/rob3_container"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="@dimen/_16sdp"
-        android:id="@+id/hezb_container"
-        app:layout_constraintTop_toBottomOf="@+id/sura_container"
-        app:layout_constraintHorizontal_weight="1">
+        app:layout_constraintEnd_toStartOf="@id/rob3_container"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sura_container">
 
         <ImageView
             android:layout_width="@dimen/_10sdp"
             android:layout_height="@dimen/_10sdp"
-            android:src="@drawable/dropdown_arrow_gold_small_ic"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginEnd="@dimen/_18sdp"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:src="@drawable/dropdown_arrow_gold_small_ic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/hezb_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
             android:text="@string/hizb"
             android:textColor="@color/white_color"
-            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/_12sdp"
             app:layout_constraintBottom_toBottomOf="@id/sp4"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="@dimen/_18sdp"
-            android:id="@+id/hezb_tv"
-            android:textSize="@dimen/_12sdp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <View
+            android:id="@+id/sp4"
             android:layout_width="0dp"
             android:layout_height="1dp"
-            app:layout_constraintTop_toBottomOf="@+id/hezb_tv"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:background="@color/accent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginEnd="@dimen/_18sdp"
-            android:layout_marginStart="@dimen/_18sdp"
-            android:background="@color/accent"
-            android:id="@+id/sp4" />
+            app:layout_constraintTop_toBottomOf="@+id/hezb_tv" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/_12sdp"
     android:background="@color/white_color"
-    android:layout_height="wrap_content">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/topic_tv"
@@ -28,15 +28,15 @@
         tools:text="Topic Name" />
 
     <ImageView
+        android:id="@+id/arrow_iv"
         android:layout_width="@dimen/_25sdp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_12sdp"
-        android:src="@drawable/ic_down_arrow"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:id="@+id/arrow_iv"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:src="@drawable/ic_down_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/topic_tv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/topic_tv"
-        app:layout_constraintBottom_toBottomOf="@id/topic_tv" />
+        app:layout_constraintTop_toTopOf="@id/topic_tv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

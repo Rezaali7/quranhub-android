@@ -13,8 +13,8 @@
         <scale android:scaleWidth="100%">
             <selector>
                 <item
-                    android:state_enabled="false"
-                    android:drawable="@android:color/transparent" />
+                    android:drawable="@android:color/transparent"
+                    android:state_enabled="false" />
                 <item>
                     <shape
                         android:shape="rectangle"

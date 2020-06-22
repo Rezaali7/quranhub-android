@@ -10,45 +10,45 @@
         android:id="@+id/toolbar_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
         android:background="@drawable/header_1"
+        android:paddingStart="@dimen/app_bar_padding"
+        android:paddingEnd="@dimen/app_bar_padding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:animateLayoutChanges="true"
-        android:paddingEnd="@dimen/app_bar_padding"
-        android:paddingStart="@dimen/app_bar_padding">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
             android:id="@+id/hamburger_iv"
             android:layout_width="@dimen/app_bar_icon_dimen"
             android:layout_height="@dimen/app_bar_icon_dimen"
-            android:src="@drawable/ic_drawer"
+            android:layout_marginTop="@dimen/_8sdp"
             android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_drawer"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="@dimen/_8sdp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@id/hamburger_iv"
-            app:layout_constraintTop_toTopOf="@id/hamburger_iv"
-            app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
             android:layout_marginStart="@dimen/_8sdp"
             android:text="@string/search"
+            android:textAppearance="@style/ActionBarTitleTextAppearance"
             android:textColor="@color/white_color"
             android:textSize="@dimen/text_size_16"
-            android:textAppearance="@style/ActionBarTitleTextAppearance" />
+            app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
+            app:layout_constraintStart_toEndOf="@id/hamburger_iv"
+            app:layout_constraintTop_toTopOf="@id/hamburger_iv" />
 
         <ImageButton
             android:id="@+id/more_iv"
             android:layout_width="@dimen/app_bar_icon_dimen"
             android:layout_height="@dimen/app_bar_icon_dimen"
-            app:layout_constraintTop_toTopOf="@id/search_box"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/filter_more_gold_ic"
             app:layout_constraintBottom_toBottomOf="@id/search_box"
             app:layout_constraintStart_toStartOf="@id/hamburger_iv"
-            android:src="@drawable/filter_more_gold_ic"
-            android:background="?selectableItemBackgroundBorderless" />
+            app:layout_constraintTop_toTopOf="@id/search_box" />
 
         <!-- TODO refactor the search box into custom view & use it elsewhere -->
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -107,48 +107,48 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <include
+            android:id="@+id/filter_container"
+            layout="@layout/search_filters_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/search_box"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="@dimen/_12sdp"
-            layout="@layout/search_filters_layout"
-            android:id="@+id/filter_container"
-            android:visibility="gone" />
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_box" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_rv"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_layout"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:id="@+id/search_rv" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_layout" />
 
     <ProgressBar
+        android:id="@+id/progrees_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_layout"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:id="@+id/progrees_bar"
-        android:visibility="gone" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_layout" />
 
     <TextView
+        android:id="@+id/noresult_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_layout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/no_search_result"
         android:textSize="@dimen/text_size_16"
-        android:id="@+id/noresult_tv"
-        android:text="@string/no_search_result" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
