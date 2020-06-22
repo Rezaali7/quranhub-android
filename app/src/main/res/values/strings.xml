@@ -5,26 +5,16 @@
     <string name="fehris_menu">Sura and Juz\' Index</string>
     <string name="topics_menu">Topics</string>
     <string name="library_menu">Library</string>
-    <string name="live_menu">Live</string>
-    <string name="plan_menu">The Plan</string>
     <string name="fwasil_menu">Bookmarks</string>
-    <string name="favorite_menu">Favorites</string>
     <string name="notes_menu">My Notes</string>
-    <string name="tagweed_menu">Tajweed</string>
-    <string name="tanbehat_menu">Errors Alerts</string>
-    <string name="statistcs_menu">Statistics</string>
     <string name="settings_menu">Settings</string>
     <string name="downloads_menu">Downloads Manager</string>
-    <string name="myaccount_menu">My Account</string>
-    <string name="about_app_menu">About the Application</string>
-    <string name="technical_support_menu">Technical Support</string>
     <string name="notes_dialog">Notes</string>
     <string name="tafseer_dialog">Explain</string>
     <string name="listen_dialog">Listen</string>
     <string name="add_fav">Add</string>
     <string name="fasil_dialog">Bookmark</string>
     <string name="share_dialog">Share</string>
-    <string name="load_image_failed">Error loading the image!</string>
     <string name="page_info_failed">Error getting the page info of the Quran!</string>
     <string name="select_aya_fail">Faliure in choosing the verse</string>
     <string name="sura">Sura</string>
@@ -66,7 +56,6 @@
     <string name="tooltip_quran_night_mode">Toggle night mode</string>
     <string name="tooltip_quran_search">Search Quran</string>
 
-    <string name="trajim_menu">Translation</string>
     <string name="sura_makya">Makki</string>
     <string name="sura_madnya">Madani</string>
     <string name="storage_perm">This app needs access to your storage to open file.</string>
@@ -424,8 +413,6 @@
 
     <string name="accept_perm">Please accept the permission.</string>
     <string name="file_not_exist">The file is not exist</string>
-    <string name="download_page_failed">Failed to get your downloads</string>
-    <string name="no_downloads">No downloads exist to edited.</string>
     <string name="title_activity_settings">Settings</string>
     <string name="settings_category_language">Language</string>
     <string name="settings_category_recitation">Recitation settings</string>
@@ -441,7 +428,6 @@
     <string name="setting_audio_download_manager">Audio download manager</string>
     <string name="setting_help">Help</string>
     <string name="setting_about_app_version">About app version</string>
-    <string name="setting_contact_us">Contact us</string>
     <string name="setting_share_app">Share the app</string>
     <string name="data_failed">Failed to get data!</string>
     <string name="open_file">Open file in</string>
@@ -470,7 +456,6 @@
     <string name="first_wizard_hint_app_langauge">You can change the app language later from the settings.</string>
     <string name="first_wizard_hint_translation_languages">You can change the translations language later from the settings.</string>
     <string name="tafseer_text">Translation</string>
-    <string name="trajim_book_name">Choose book name</string>
     <string name="more">More</string>
     <string name="collapse">Collapse</string>
     <string name="translation_text">Translation</string>
@@ -505,10 +490,8 @@
     <string name="add_voice">Add voice recorder</string>
     <string name="note_details">You can later browse your notes from my notes list</string>
     <string name="voice_recorded">Voice is recorded…</string>
-    <string name="recorder_added">The voice recorder was saved</string>
     <string name="voice_listen">Listen</string>
     <string name="note_added">The note was added successfully</string>
-    <string name="go_aya">Go to aya</string>
     <string name="note_empty">Please enter note text or note recorder</string>
     <string name="edit">Edit</string>
     <string name="save">Save</string>
@@ -575,7 +558,6 @@
     <string name="title_dialog_audio_download_amount">Quran audio download</string>
     <string name="download_amount_option_all_suras">Download all suras</string>
     <string name="download_amount_option_one_sura">Download only one sura</string>
-    <string name="toast_download_quran_audio_finished">Download Quran audio finished!</string>
     <string name="downloaded_reciters_num">%d reciters</string>
     <string name="downloaded_amount_suras">%d suras</string>
     <string name="prev">Previous</string>
@@ -590,7 +572,5 @@
     <string name="confirm_delete_description_reciters">This will delete audio files for this reciter</string>
     <string name="confirm_delete_description_suras">This will delete audio files for this Quran sura</string>
     <string name="delete">Delete</string>
-    <string name="no_translations_found">No translations found</string>
-    <string name="audio_not_downloaded">Aya audio not downloaded! Open the app to download audios.</string>
 
 </resources>

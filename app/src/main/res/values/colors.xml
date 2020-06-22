@@ -22,7 +22,6 @@
     <color name="red_color">#dd1452</color>
     <color name="dark_grey">#DAA5A5A5</color>
     <color name="text_color">#464545</color>
-    <color name="dark_opt_grey">#7ABBBBBB</color>
     <color name="search_bar_bg_color">#E1E9EE</color>
 
     <array name="bookmark_colors">

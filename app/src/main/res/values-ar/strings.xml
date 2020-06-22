@@ -8,19 +8,10 @@
     <string name="fehris_menu">فهرس السور و الأجزاء</string>
     <string name="topics_menu">الموضوعات</string>
     <string name="library_menu">المكتبة</string>
-    <string name="live_menu">مباشر</string>
-    <string name="plan_menu">الخطة</string>
     <string name="fwasil_menu">الفواصل</string>
-    <string name="favorite_menu">المفضلة</string>
     <string name="notes_menu">ملاحظاتي</string>
-    <string name="tagweed_menu">التجويد</string>
-    <string name="tanbehat_menu">تنبيهات الأخطاء</string>
-    <string name="statistcs_menu">الإحصائيات</string>
     <string name="settings_menu">الإعدادات</string>
     <string name="downloads_menu">إدارة التنزيلات</string>
-    <string name="myaccount_menu">حسابي</string>
-    <string name="about_app_menu">عن التطبيق</string>
-    <string name="technical_support_menu">الدعم الفني</string>
     <string name="notes_dialog">ملاحظات</string>
     <string name="tafseer_dialog">تفسير</string>
     <string name="listen_dialog">استماع</string>
@@ -28,7 +19,6 @@
     <string name="sura">سُورة</string>
     <string name="fasil_dialog">فاصل</string>
     <string name="share_dialog">مشاركة</string>c
-    <string name="load_image_failed">حدث خطأ فى تحميل الصورة!</string>
     <string name="page_info_failed">حدث خطأ فى الحصول على بيانات صفحة القرآن!</string>
     <string name="select_aya_fail">حدث فشل فى اختيار الآية!</string>
     <string name="fasil_note">فاصل ملاحظة</string>
@@ -63,7 +53,6 @@
     <string name="msg_no_bookmarks">لا يوجد فواصل متاحة!</string>
     <string name="no_internet">تحقق من الاتصال بالإنترنت!</string>
     <string name="mushaf">المصحف</string>
-    <string name="trajim_menu">التراجم</string>
     <string name="sura_makya">مكيّة</string>
     <string name="sura_madnya">مدنيّة</string>
     <string name="tooltip_quran_night_mode">تشغيل\\إيقاف الوضع الليلي</string>
@@ -71,9 +60,7 @@
     <string name="accept_perm">من فضلك قم بالموافقه على الإذن</string>
     <string name="storage_perm">يحتاج هذا التطبيق إلى الوصول إلى التخزين الخاص بك لفتح الملف.</string>
     <string name="file_not_exist">لم يتم الحصول على الملف</string>
-    <string name="download_page_failed">فشل في الحصول على التحميلات الخاصه لك</string>
     <string name="download_file">جارى تحميله...</string>
-    <string name="no_downloads">لا يوجد تحميلات ليتم التعديل عليها</string>
     <string name="prev">السابق</string>
     <string name="pause">وقف</string>
 
@@ -446,7 +433,6 @@
     <string name="setting_audio_download_manager">إدارة تنزيلات الأصوات</string>
     <string name="setting_help">المساعدة</string>
     <string name="setting_about_app_version">عن نسخة التطبيق</string>
-    <string name="setting_contact_us">تواصل معنا</string>
     <string name="setting_share_app">شارك التطبيق</string>
     <string name="data_failed">فشل فى جلب البيانات</string>
     <string name="open_file">فتح الملف في</string>
@@ -467,7 +453,6 @@
     <string name="first_wizard_hint_recitations">يمكنك تغيير الرواية فيما بعد من الإعدادات.</string>
     <string name="no_space">لا توجد مساحة كافيه لتنزيل هذا الملف</string>
     <string name="tafseer_text">التفسير</string>
-    <string name="trajim_book_name">اختر كتاب التفسير</string>
     <string name="more">المزيد</string>
     <string name="collapse">أقل</string>
     <string name="translation_text">التفسير</string>
@@ -501,10 +486,8 @@
     <string name="add_voice">اضف تسجيل صوتى</string>
     <string name="note_details">يمكنك تصفح ملاحظاتك فيما بعد  من قائمة ملاحظاتي</string>
     <string name="voice_recorded">يتم التسجيل الصوتى…</string>
-    <string name="recorder_added">تم حفظ التسجيل الصوتى</string>
     <string name="voice_listen">استماع</string>
     <string name="note_added">تم اضافه الملاحظه بنجاح</string>
-    <string name="go_aya">الذهاب للأيه</string>
     <string name="note_empty">الرجاء إدخال نص الملاحظة أو تسجيل الملاحظة</string>
     <string name="edit">تعديل</string>
     <string name="save">حفظ</string>
@@ -571,7 +554,6 @@
     <string name="title_dialog_audio_download_amount">تنزيل صوتيات القرآن</string>
     <string name="download_amount_option_all_suras">تنزيل كل السور</string>
     <string name="download_amount_option_one_sura">تنزيل سورة فقط</string>
-    <string name="toast_download_quran_audio_finished">تم الانتهاء من تنزيل الملفات الصوتية للقرآن!</string>
     <string name="downloaded_reciters_num">%d قارئ</string>
     <string name="downloaded_amount_suras">%d سور</string>
     <string name="audio_playing">تشغيل الصوتيات</string>
@@ -584,7 +566,5 @@
     <string name="confirm_delete_description_reciters">سيتم حذف ملفات الصوتيات الخاصة بهذا القارئ</string>
     <string name="confirm_delete_description_suras">سيتم حذف ملفات الصوتيات الخاصة بهذه السورة</string>
     <string name="delete">حذف</string>
-    <string name="no_translations_found">لا يوجد كتب تفسير</string>
-    <string name="audio_not_downloaded">لم يتم تحميل صوتيات هذه السورة! قم بفتح التطبيق لتحميلها.</string>
 
 </resources>

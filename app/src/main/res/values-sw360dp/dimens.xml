@@ -27,20 +27,14 @@
     <dimen name="text_size_20">20sp</dimen>
 
     <dimen name="icon_dialog_size">16dp</dimen>
-    <dimen name="dialog_margin">6dp</dimen>
 
-    <dimen name="mushaf_footer_icon_dimen">48dp</dimen>
     <dimen name="custom_toolbar_height">112dp</dimen>
     <dimen name="page_num_border_size">45dp</dimen>
 
     <dimen name="tab_bar_width">240dp</dimen>
     <dimen name="tab_bar_height">28dp</dimen>
-    <dimen name="text_margin">16dp</dimen>
     <dimen name="bookmark_item_body_height">64dp</dimen>
     <dimen name="filter_dialog_width">320dp</dimen>
     <dimen name="failed_img_dimens">180dp</dimen>
-    <dimen name="logo_splash_dimens">220dp</dimen>
-    <dimen name="imgea1_splash_dimens">60dp</dimen>
-    <dimen name="imgea2_splash_dimens">45dp</dimen>
 
 </resources>

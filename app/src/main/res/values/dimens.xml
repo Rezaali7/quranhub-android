@@ -21,7 +21,6 @@
     <dimen name="margin_24">20dp</dimen>
     <dimen name="margin_32">26dp</dimen>
     <dimen name="margin_64">48dp</dimen>
-    <dimen name="dialog_margin">4dp</dimen>
 
     <dimen name="text_size_8">8sp</dimen>
     <dimen name="text_size_10">8sp</dimen>
@@ -33,23 +32,16 @@
 
     <dimen name="icon_dialog_size">14dp</dimen>
 
-    <dimen name="mushaf_footer_icon_dimen">48dp</dimen>
     <dimen name="custom_toolbar_height">100dp</dimen>
     <dimen name="page_num_border_size">40dp</dimen>
 
-    <dimen name="text_margin">16dp</dimen>
     <dimen name="bookmark_item_body_height">64dp</dimen>
     <dimen name="filter_dialog_width">290dp</dimen>
     <dimen name="failed_img_dimens">180dp</dimen>
-    <dimen name="logo_splash_dimens">220dp</dimen>
-    <dimen name="imgea1_splash_dimens">60dp</dimen>
-    <dimen name="imgea2_splash_dimens">45dp</dimen>
 
     <!-- Action Bar Dimensions (DO NOT PROVIDE ALTERNATIVE RESOURCES) -->
     <dimen name="app_bar_icon_dimen">@dimen/_20sdp</dimen>
     <dimen name="app_bar_padding">16dp</dimen>
-    <dimen name="app_bar_title_side_margin">32dp</dimen>
-    <dimen name="app_bar_icon_margin_between">24dp</dimen>
     <!---->
 
 
