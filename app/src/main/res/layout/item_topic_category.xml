@@ -25,7 +25,7 @@
         app:layout_constraintEnd_toStartOf="@+id/arrow_iv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Topic Name" />
+        tools:text="Topic category name" />
 
     <ImageView
         android:id="@+id/arrow_iv"

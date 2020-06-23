@@ -19,7 +19,7 @@
         android:layout_width="@dimen/sidemenu_logo_width"
         android:layout_height="@dimen/sidemenu_logo_height"
         android:scaleType="centerInside"
-        android:src="@drawable/logo_sidemenu"
+        android:src="@drawable/quranhub_logo_144dp"
         app:layout_constraintBottom_toBottomOf="@+id/header_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

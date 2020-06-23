@@ -103,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_2"
                 android:layout_marginEnd="@dimen/margin_2"
-                android:textAppearance="@style/standardListItemTextAppearance"
+                android:textAppearance="@style/StandardListItemTextAppearance"
                 android:textStyle="bold"
                 tools:text="سورة الفاتحة" />
 
@@ -120,7 +120,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin_12"
             android:text="@string/momerize_mistake"
-            android:textAppearance="@style/standardListItemTextAppearance"
+            android:textAppearance="@style/StandardListItemTextAppearance"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

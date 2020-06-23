@@ -271,12 +271,12 @@ public class FirstTimeWizardActivity extends BaseActivity implements OptionsList
             firstPageProgressImageView.setImageResource(R.drawable.check_gold_ic);
             firstPageProgressImageView.setBackgroundResource(R.drawable.progress_circle_checked);
 
-            firstToSecondSeparatorProgressView.setBackgroundResource(R.color.colorControlHighlight);
+            firstToSecondSeparatorProgressView.setBackgroundResource(R.color.color_control_highlight);
 
             secondPageProgressImageView.setImageDrawable(null);
             secondPageProgressImageView.setBackgroundResource(R.drawable.progress_circle_unchecked);
 
-            secondToThirdSeparatorProgressView.setBackgroundResource(R.color.colorControlHighlight);
+            secondToThirdSeparatorProgressView.setBackgroundResource(R.color.color_control_highlight);
 
             thirdPageProgressImageView.setImageDrawable(null);
             thirdPageProgressImageView.setBackgroundResource(R.drawable.progress_circle_unchecked);
@@ -285,12 +285,12 @@ public class FirstTimeWizardActivity extends BaseActivity implements OptionsList
             firstPageProgressImageView.setImageResource(R.drawable.check_gold_ic);
             firstPageProgressImageView.setBackgroundResource(R.drawable.progress_circle_checked);
 
-            firstToSecondSeparatorProgressView.setBackgroundResource(R.color.colorPrimary);
+            firstToSecondSeparatorProgressView.setBackgroundResource(R.color.color_primary);
 
             secondPageProgressImageView.setImageResource(R.drawable.check_gold_ic);
             secondPageProgressImageView.setBackgroundResource(R.drawable.progress_circle_checked);
 
-            secondToThirdSeparatorProgressView.setBackgroundResource(R.color.colorControlHighlight);
+            secondToThirdSeparatorProgressView.setBackgroundResource(R.color.color_control_highlight);
 
             thirdPageProgressImageView.setImageDrawable(null);
             thirdPageProgressImageView.setBackgroundResource(R.drawable.progress_circle_unchecked);
@@ -299,12 +299,12 @@ public class FirstTimeWizardActivity extends BaseActivity implements OptionsList
             firstPageProgressImageView.setImageResource(R.drawable.check_gold_ic);
             firstPageProgressImageView.setBackgroundResource(R.drawable.progress_circle_checked);
 
-            firstToSecondSeparatorProgressView.setBackgroundResource(R.color.colorPrimary);
+            firstToSecondSeparatorProgressView.setBackgroundResource(R.color.color_primary);
 
             secondPageProgressImageView.setImageResource(R.drawable.check_gold_ic);
             secondPageProgressImageView.setBackgroundResource(R.drawable.progress_circle_checked);
 
-            secondToThirdSeparatorProgressView.setBackgroundResource(R.color.colorPrimary);
+            secondToThirdSeparatorProgressView.setBackgroundResource(R.color.color_primary);
 
             thirdPageProgressImageView.setImageResource(R.drawable.check_gold_ic);
             thirdPageProgressImageView.setBackgroundResource(R.drawable.progress_circle_checked);

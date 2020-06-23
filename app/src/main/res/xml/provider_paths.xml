@@ -8,7 +8,6 @@
 
 
     <!-- give permission to other apps to open this app files in all external storage -->
-
     <external-path
         name="external_storage_root"
         path="." />

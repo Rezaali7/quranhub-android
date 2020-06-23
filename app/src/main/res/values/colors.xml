@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#283e4a</color>
-    <color name="colorPrimaryDark">#001822</color>
-    <color name="colorPrimaryLight">#526976</color>
-    <color name="colorAccent">#328cae</color>
-    <color name="colorAccentLight">#6abce0</color>
-    <color name="colorAccentDark">#005f7f</color>
-    <color name="colorControlHighlight">#33BDBDBD</color>
+    <color name="color_primary">#283e4a</color>
+    <color name="color_primary_light">#526976</color>
+    <color name="color_primary_dark">#001822</color>
+    <color name="color_accent">#328cae</color>
+    <color name="color_accent_light">#6abce0</color>
+    <color name="color_accent_dark">#005f7f</color>
+    <color name="color_control_highlight">#33BDBDBD</color>
 
     <color name="white_color">@android:color/white</color>
     <color name="black_color">@android:color/black</color>
     <color name="transparent_color">@android:color/transparent</color>
-
-    <color name="dialog_color">@color/colorPrimary</color>
-    <color name="aya_shadow_color">#3DB28752</color>
-    <color name="aya_shadow_color_night_mode">#3DE8AF6A</color>
-    <color name="drawer_selected_tint">@color/accent</color>
-    <color name="drawer_text_color">@color/colorPrimary</color>
     <color name="hint_grey">#B9C8C3</color>
     <color name="light_grey">#F0F0F0</color>
     <color name="red_color">#dd1452</color>
     <color name="dark_grey">#DAA5A5A5</color>
-    <color name="text_color">#464545</color>
+
+    <color name="dialog_color">@color/color_primary</color>
+    <color name="aya_shadow_color">#3DB28752</color>
+    <color name="aya_shadow_color_night_mode">#3DE8AF6A</color>
+    <color name="drawer_selected_tint">@color/accent</color>
+    <color name="drawer_text_color">@color/color_primary</color>
     <color name="search_bar_bg_color">#E1E9EE</color>
 
     <array name="bookmark_colors">

@@ -17,7 +17,7 @@ public class SplashActivity extends BaseActivity {
 
     private static final String TAG = SplashActivity.class.getSimpleName();
 
-    private static final int SPLASH_DURATION = 1500;  // 1.5 seconds
+    private static final int SPLASH_DURATION = 1000;  // 1 second
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -27,7 +27,7 @@
         android:layout_gravity="center_horizontal"
         android:fontFamily="@font/custom_bold_font"
         android:text="@string/no_internet"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/color_accent"
         android:textSize="@dimen/text_size_16"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

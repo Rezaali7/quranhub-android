@@ -21,15 +21,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <service
-            android:name="app.quranhub.downloads_manager.network.QuranAudioDownloaderService"
-            android:enabled="true"
-            android:exported="false" />
-
-        <service
-            android:name="app.quranhub.audio_manager.AyaAudioService"
-            android:enabled="true"
-            android:exported="false" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -41,13 +32,18 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity
-            android:name="app.quranhub.first_wizard.FirstTimeWizardActivity"
-            android:label="@string/title_activity_first_time_wizard"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <service
+            android:name="app.quranhub.downloads_manager.network.QuranAudioDownloaderService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name="app.quranhub.audio_manager.AyaAudioService"
+            android:enabled="true"
+            android:exported="false" />
+
         <activity
             android:name="app.quranhub.splash.SplashActivity"
-            android:screenOrientation="portrait"
             android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,29 +51,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="app.quranhub.first_wizard.FirstTimeWizardActivity"
+            android:label="@string/title_activity_first_time_wizard"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name="app.quranhub.main.MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan" />
+
         <activity
             android:name="app.quranhub.settings.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName="app.quranhub.main.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="app.quranhub.main.MainActivity" />
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name="app.quranhub.downloads_manager.DownloadsManagerActivity"
             android:label="@string/title_activity_downloads_manager"
             android:parentActivityName="app.quranhub.main.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="app.quranhub.main.MainActivity" />
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

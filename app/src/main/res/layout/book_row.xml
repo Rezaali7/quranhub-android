@@ -14,7 +14,7 @@
         android:layout_marginStart="@dimen/_12sdp"
         android:layout_marginEnd="@dimen/_12sdp"
         android:textAlignment="viewStart"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/color_primary"
         android:textSize="@dimen/text_size_16"
         app:layout_constraintEnd_toStartOf="@+id/translation_iv"
         app:layout_constraintStart_toStartOf="parent"

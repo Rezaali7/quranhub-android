@@ -10,7 +10,7 @@
         android:paddingTop="@dimen/_6sdp"
         android:paddingEnd="@dimen/_12sdp"
         android:paddingBottom="@dimen/_6sdp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/color_primary"
         android:textSize="@dimen/text_size_14"
         android:textStyle="bold"
         tools:text="Categoty Title" />
