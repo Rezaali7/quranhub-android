@@ -43,8 +43,10 @@
             android:exported="false" />
 
         <activity
-            android:name="app.quranhub.splash.SplashActivity"
-            android:theme="@style/SplashScreenTheme">
+            android:name="app.quranhub.main.MainActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -56,12 +58,6 @@
             android:name="app.quranhub.first_wizard.FirstTimeWizardActivity"
             android:label="@string/title_activity_first_time_wizard"
             android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name="app.quranhub.main.MainActivity"
-            android:launchMode="singleTop"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustPan" />
 
         <activity
             android:name="app.quranhub.settings.SettingsActivity"

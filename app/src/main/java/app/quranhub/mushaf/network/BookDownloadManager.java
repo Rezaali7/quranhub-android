@@ -29,11 +29,10 @@ public class BookDownloadManager {
 
     private static final String TAG = BookDownloadManager.class.getSimpleName();
 
-
     public static final String FILE_PATH = Constants.DIRECTORY.LIBRARY_PUBLIC;
 
     private DownloadManager downloadManager;
-    private boolean isCanceled = false;
+
     @NonNull
     private Context context;
 
@@ -56,15 +55,15 @@ public class BookDownloadManager {
         request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE | DownloadManager.Request.NETWORK_WIFI);
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
         request.setTitle(book.getName() + " " + context.getString(R.string.download_file)); // Title for notification.
-
-        // download pdf in root/Alharamain/Trajim/PDF_FILE_Name
         request.setDestinationInExternalPublicDir(FILE_PATH, book.getName() + ".pdf");
         long downloadId = downloadManager.enqueue(request);
         return downloadId;
     }
 
 
-    // return the downloaded file size
+    /**
+     * Return the downloaded file size
+      */
     @SuppressLint("StaticFieldLeak")
     private void getFileSize(String uri) {
 

@@ -15,6 +15,7 @@ import app.quranhub.R;
 import app.quranhub.audio_manager.AyaAudioService;
 import app.quranhub.base.BaseActivity;
 import app.quranhub.downloads_manager.DownloadsManagerActivity;
+import app.quranhub.first_wizard.FirstTimeWizardActivity;
 import app.quranhub.mushaf.fragments.BookmarksFragment;
 import app.quranhub.mushaf.fragments.BooksLibraryFragment;
 import app.quranhub.mushaf.fragments.Mus7fFragment;
@@ -44,7 +45,16 @@ public class MainActivity extends BaseActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme_NoActionBar);
         super.onCreate(savedInstanceState);
+
+        // Redirect to `FirstTimeWizardActivity` if not already done
+        if (!PreferencesUtils.isFirstTimeWizardDone(this)) {
+            Intent intent = new Intent(this, FirstTimeWizardActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
         setContentView(R.layout.activity_main);
         observeOnDrawerOpen();
         drawer = DrawerUtil.initDrawer(this, savedInstanceState, onDrawerListener);

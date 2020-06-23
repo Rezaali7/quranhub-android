@@ -40,7 +40,6 @@ public final class Constants {
 
         String NOTE_VOICE_RECORDER = "Note_Recorder";
         String AYA_VOICE_RECORDER = "Aya_Recorder";
-        String AUDIO = "Audio";
         String QURAN_AUDIO = ".quran_audio";
     }
 

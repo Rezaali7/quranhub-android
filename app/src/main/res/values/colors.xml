@@ -19,7 +19,7 @@
     <color name="dialog_color">@color/color_primary</color>
     <color name="aya_shadow_color">#3DB28752</color>
     <color name="aya_shadow_color_night_mode">#3DE8AF6A</color>
-    <color name="drawer_selected_tint">@color/accent</color>
+    <color name="drawer_selected_tint">@color/color_accent</color>
     <color name="drawer_text_color">@color/color_primary</color>
     <color name="search_bar_bg_color">#E1E9EE</color>
 

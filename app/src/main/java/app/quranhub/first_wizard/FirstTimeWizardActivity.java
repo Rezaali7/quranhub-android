@@ -23,6 +23,8 @@ import app.quranhub.Constants;
 import app.quranhub.R;
 import app.quranhub.base.BaseActivity;
 import app.quranhub.main.MainActivity;
+import app.quranhub.mushaf.data.db.MushafDatabase;
+import app.quranhub.mushaf.data.db.RoomAsset;
 import app.quranhub.utils.LocaleUtil;
 import app.quranhub.utils.PreferencesUtils;
 import app.quranhub.utils.interfaces.Searchable;
@@ -139,10 +141,15 @@ public class FirstTimeWizardActivity extends BaseActivity implements OptionsList
             public void afterTextChanged(Editable s) {
             }
         });
+
+
+        // Initialize Mus'haf metadata DB
+        RoomAsset.initializeDatabase(this, MushafDatabase.DATABASE_NAME
+                , MushafDatabase.ASSET_DB_VERSION);
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
 
         outState.putInt(STATE_CURRENT_STEP_POSITION, currentStepPosition);

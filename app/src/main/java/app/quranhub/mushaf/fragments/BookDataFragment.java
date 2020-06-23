@@ -36,7 +36,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import app.quranhub.Constants;
 import app.quranhub.R;
@@ -353,17 +352,16 @@ public class BookDataFragment extends Fragment implements Searchable, EasyPermis
     }
 
     private void openPdfFile(File file) {
-        // get pdf file from path root/Alharamain/Trajim/PDF_FILE_Name
-
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 
-        Uri uri = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N ?
-                FileProvider.getUriForFile(getActivity(), getActivity().getPackageName() + ".provider", file) : Uri.fromFile(file);
+        Uri uri = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N ? FileProvider.getUriForFile(
+                requireContext(), requireActivity().getPackageName() + ".provider", file)
+                : Uri.fromFile(file);
 
         intent.setDataAndType(uri, "application/pdf");
 
-        PackageManager pm = Objects.requireNonNull(getActivity()).getPackageManager();
+        PackageManager pm = requireActivity().getPackageManager();
         if (pm != null && intent.resolveActivity(pm) != null) {
             startActivity(Intent.createChooser(intent, "open with"));
         }
