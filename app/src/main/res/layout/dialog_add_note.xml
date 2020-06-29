@@ -25,7 +25,7 @@
             android:paddingBottom="@dimen/_8sdp"
             android:text="@string/add_note"
             android:textColor="@color/white_color"
-            android:textSize="@dimen/text_size_18"
+            android:textSize="@dimen/text_18"
             app:layout_constraintEnd_toEndOf="@id/note_type_group"
             app:layout_constraintStart_toStartOf="@id/note_type_group"
             app:layout_constraintTop_toTopOf="parent" />
@@ -47,7 +47,7 @@
                 android:layout_gravity="center_horizontal"
                 android:checked="true"
                 android:text="@string/general_comment"
-                android:textSize="@dimen/text_size_12" />
+                android:textSize="@dimen/text_12" />
 
             <RadioButton
                 android:id="@+id/comment_rb"
@@ -56,7 +56,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="@dimen/_4sdp"
                 android:text="@string/momerize_mistake"
-                android:textSize="@dimen/text_size_12" />
+                android:textSize="@dimen/text_12" />
 
             <RadioButton
                 android:id="@+id/tajweed_rb"
@@ -65,7 +65,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="@dimen/_4sdp"
                 android:text="@string/tajweed_mistake"
-                android:textSize="@dimen/text_size_12" />
+                android:textSize="@dimen/text_12" />
 
         </RadioGroup>
 
@@ -81,7 +81,7 @@
             android:hint="@string/write_here"
             android:paddingStart="@dimen/_4sdp"
             android:paddingEnd="@dimen/_4sdp"
-            android:textSize="@dimen/text_size_14"
+            android:textSize="@dimen/text_14"
             app:layout_constraintEnd_toEndOf="@id/note_type_group"
             app:layout_constraintStart_toStartOf="@id/note_type_group"
             app:layout_constraintTop_toBottomOf="@id/note_type_group" />
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_8sdp"
             android:text="@string/add_voice"
-            android:textSize="@dimen/text_size_14"
+            android:textSize="@dimen/text_14"
             app:layout_constraintStart_toStartOf="@id/add_note_et"
             app:layout_constraintTop_toBottomOf="@id/add_note_et" />
 
@@ -101,7 +101,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_8sdp"
-            android:textSize="@dimen/text_size_14"
+            android:textSize="@dimen/text_14"
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="@id/add_note_et"
             app:layout_constraintTop_toBottomOf="@id/add_note_et" />
@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_8sdp"
             android:text="0:00"
-            android:textSize="@dimen/text_size_14"
+            android:textSize="@dimen/text_14"
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="@id/add_note_et"
             app:layout_constraintTop_toBottomOf="@id/add_note_et" />

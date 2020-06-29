@@ -18,7 +18,7 @@
             android:layout_marginEnd="@dimen/_16sdp"
             android:layout_marginBottom="@dimen/_8sdp"
             android:textColor="@color/color_primary"
-            android:textSize="@dimen/text_size_14"
+            android:textSize="@dimen/text_14"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/switch_setting"
             app:layout_constraintStart_toStartOf="parent"

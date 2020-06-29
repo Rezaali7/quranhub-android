@@ -49,7 +49,7 @@
         android:paddingEnd="@dimen/_8sdp"
         android:text="1"
         android:textColor="@color/white_color"
-        android:textSize="@dimen/text_size_14"
+        android:textSize="@dimen/text_14"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/quran_seekbar"
         app:layout_constraintEnd_toEndOf="parent"

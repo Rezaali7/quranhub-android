@@ -1,10 +1,11 @@
 package app.quranhub.mushaf.model;
 
+import androidx.annotation.NonNull;
+
 public class QuranPageInfo {
 
     private int juz;
     private int sura;
-
 
     public int getJuz() {
         return juz;
@@ -22,6 +23,7 @@ public class QuranPageInfo {
         this.sura = sura;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "QuranPageInfo{" +

@@ -2,17 +2,17 @@ package app.quranhub.mushaf.fragments;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.TooltipCompat;
 import androidx.fragment.app.Fragment;
 
 import app.quranhub.R;
@@ -28,10 +28,10 @@ public class QuranToolbarFragment extends Fragment {
 
     @BindView(R.id.ll_root)
     LinearLayout rootLinearLayout;
-    @BindView(R.id.page_guz2_tv)
-    TextView pageGuz2Tv;
-    @BindView(R.id.page_sura_tv)
-    TextView pageSuraTv;
+    @BindView(R.id.btn_page_guz2)
+    Button pageGuz2Button;
+    @BindView(R.id.btn_page_sura)
+    Button pageSuraButton;
     @BindView(R.id.iv_page_dir)
     ImageView pageDirImageView;
 
@@ -39,7 +39,7 @@ public class QuranToolbarFragment extends Fragment {
 
 
     @Override
-    public void onAttach(Context context) {
+    public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         if (context instanceof ToolbarActionsListener) {
             toolbarActionsListener = (ToolbarActionsListener) context;
@@ -63,39 +63,34 @@ public class QuranToolbarFragment extends Fragment {
 
     @SuppressLint("ClickableViewAccessibility")
     private void initViews() {
-        pageSuraTv.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "fonts/diwany_thuluth.ttf"));
-        pageGuz2Tv.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "fonts/diwany_thuluth.ttf"));
+        TooltipCompat.setTooltipText(pageDirImageView, getText(R.string.tooltip_page_dir));
+
         rootLinearLayout.setOnTouchListener((v, event) -> {
             return true; // To prevent event bubbling to the views below this one
         });
     }
 
-    @OnClick(R.id.hamburger_iv)
+    @OnClick(R.id.iv_menu)
     public void onNavHamburgerClick() {
         toolbarActionsListener.onNavDrawerClick();
     }
 
-    @OnClick(R.id.page_guz2_tv)
+    @OnClick(R.id.btn_page_guz2)
     void onGuz2Click() {
         toolbarActionsListener.onGuz2Click();
     }
 
-    @OnClick(R.id.page_sura_tv)
+    @OnClick(R.id.btn_page_sura)
     void onSuraClick() {
         toolbarActionsListener.onSuraClick();
     }
 
-    @OnClick(R.id.ic_bookmark)
-    void onClickBookmark() {
-        toolbarActionsListener.onBookmarkClick();
-    }
-
     public void setSuraText(String suraName) {
-        pageSuraTv.setText(suraName);
+        pageSuraButton.setText(suraName);
     }
 
     public void setGuz2Text(String currentGuz2) {
-        pageGuz2Tv.setText(currentGuz2);
+        pageGuz2Button.setText(currentGuz2);
     }
 
     /**
@@ -106,10 +101,10 @@ public class QuranToolbarFragment extends Fragment {
     public void setPageDir(int pageDir) {
         switch (pageDir) {
             case PAGE_DIR_RIGHT:
-                pageDirImageView.setImageResource(R.drawable.quran_page_right);
+                pageDirImageView.setImageResource(R.drawable.ic_quran_page_right);
                 break;
             case PAGE_DIR_LEFT:
-                pageDirImageView.setImageResource(R.drawable.quran_page_left);
+                pageDirImageView.setImageResource(R.drawable.ic_quran_page_left);
                 break;
             default:
                 throw new IllegalArgumentException("Invalid page dir.");

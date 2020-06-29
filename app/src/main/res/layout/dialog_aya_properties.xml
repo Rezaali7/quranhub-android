@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="@dimen/margin_6"
+        android:layout_margin="@dimen/dimen_6"
         android:orientation="vertical">
 
         <ImageView
@@ -23,11 +23,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_4"
+            android:layout_marginTop="@dimen/dimen_4"
             android:gravity="center_horizontal"
             android:text="@string/share_dialog"
             android:textColor="@color/white_color"
-            android:textSize="@dimen/text_size_10" />
+            android:textSize="@dimen/text_10" />
     </LinearLayout>
 
     <LinearLayout
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="@dimen/margin_6"
+        android:layout_margin="@dimen/dimen_6"
         android:orientation="vertical"
 
         >
@@ -50,11 +50,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_4"
+            android:layout_marginTop="@dimen/dimen_4"
             android:gravity="center_horizontal"
             android:text="@string/fasil_dialog"
             android:textColor="@color/white_color"
-            android:textSize="@dimen/text_size_10" />
+            android:textSize="@dimen/text_10" />
     </LinearLayout>
 
     <LinearLayout
@@ -62,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="@dimen/margin_6"
+        android:layout_margin="@dimen/dimen_6"
         android:orientation="vertical">
 
         <ImageView
@@ -74,11 +74,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_4"
+            android:layout_marginTop="@dimen/dimen_4"
             android:gravity="center_horizontal"
             android:text="@string/listen_dialog"
             android:textColor="@color/white_color"
-            android:textSize="@dimen/text_size_10" />
+            android:textSize="@dimen/text_10" />
     </LinearLayout>
 
 
@@ -87,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="@dimen/margin_6"
+        android:layout_margin="@dimen/dimen_6"
         android:orientation="vertical">
 
         <ImageView
@@ -101,11 +101,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_4"
+            android:layout_marginTop="@dimen/dimen_4"
             android:gravity="center_horizontal"
             android:text="@string/tafseer_dialog"
             android:textColor="@color/white_color"
-            android:textSize="@dimen/text_size_10" />
+            android:textSize="@dimen/text_10" />
     </LinearLayout>
 
     <LinearLayout
@@ -113,7 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="@dimen/margin_6"
+        android:layout_margin="@dimen/dimen_6"
         android:orientation="vertical">
 
         <ImageView
@@ -126,11 +126,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_4"
+            android:layout_marginTop="@dimen/dimen_4"
             android:gravity="center_horizontal"
             android:text="@string/notes_dialog"
             android:textColor="@color/white_color"
-            android:textSize="@dimen/text_size_10" />
+            android:textSize="@dimen/text_10" />
     </LinearLayout>
 
 

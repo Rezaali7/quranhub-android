@@ -13,7 +13,7 @@
         android:layout_marginStart="@dimen/_24sdp"
         android:layout_marginTop="@dimen/_8sdp"
         android:layout_marginEnd="@dimen/_24sdp"
-        android:textSize="@dimen/text_size_14"
+        android:textSize="@dimen/text_14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

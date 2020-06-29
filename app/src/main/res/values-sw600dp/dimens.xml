@@ -9,23 +9,23 @@
     <dimen name="sidemenu_logo_width">160dp</dimen>
     <dimen name="sidemenu_logo_height">150dp</dimen>
 
-    <dimen name="margin_2">4dp</dimen>
-    <dimen name="margin_4">8dp</dimen>
-    <dimen name="margin_6">10dp</dimen>
-    <dimen name="margin_8">12dp</dimen>
-    <dimen name="margin_12">16dp</dimen>
-    <dimen name="margin_16">24dp</dimen>
-    <dimen name="margin_24">28dp</dimen>
-    <dimen name="margin_32">40dp</dimen>
-    <dimen name="margin_64">80dp</dimen>
+    <dimen name="dimen_2">4dp</dimen>
+    <dimen name="dimen_4">8dp</dimen>
+    <dimen name="dimen_6">10dp</dimen>
+    <dimen name="dimen_8">12dp</dimen>
+    <dimen name="dimen_12">16dp</dimen>
+    <dimen name="dimen_16">24dp</dimen>
+    <dimen name="dimen_24">28dp</dimen>
+    <dimen name="dimen_32">40dp</dimen>
+    <dimen name="dimen_64">80dp</dimen>
 
-    <dimen name="text_size_8">10sp</dimen>
-    <dimen name="text_size_10">12sp</dimen>
-    <dimen name="text_size_12">14sp</dimen>
-    <dimen name="text_size_14">16sp</dimen>
-    <dimen name="text_size_16">18sp</dimen>
-    <dimen name="text_size_18">20sp</dimen>
-    <dimen name="text_size_20">22sp</dimen>
+    <dimen name="text_8">10sp</dimen>
+    <dimen name="text_10">12sp</dimen>
+    <dimen name="text_12">14sp</dimen>
+    <dimen name="text_14">16sp</dimen>
+    <dimen name="text_16">18sp</dimen>
+    <dimen name="text_18">20sp</dimen>
+    <dimen name="text_20">22sp</dimen>
 
     <dimen name="icon_dialog_size">30dp</dimen>
     <dimen name="page_num_border_size">60dp</dimen>

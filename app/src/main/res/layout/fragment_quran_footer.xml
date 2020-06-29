@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
             android:textColor="@color/primary"
-            android:textSize="@dimen/text_size_18"
+            android:textSize="@dimen/text_18"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/quran_search_ib"

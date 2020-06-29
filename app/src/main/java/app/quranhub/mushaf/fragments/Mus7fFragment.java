@@ -81,9 +81,8 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
 
     private static final String TAG = Mus7fFragment.class.getSimpleName();
 
-
     private static final String ARG_INIT_PAGE = "ARG_INIT_PAGE";
-    private static final String ARG_FROM_NOTFICATION = "ARG_FROM_NOTFICATION";
+    private static final String ARG_FROM_NOTFICATION = "ARG_FROM_NOTIFICATION";
     private static final String ARG_INIT_AYA = "ARG_INIT_AYA";
     private static final int REQUEST_RECORDING_PERM = 1;
 
@@ -96,7 +95,7 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     private String currentTafseerLang;
     private Handler seekbarPageHanlder;
     private Runnable seekbarPageRunnable;
-    private ArrayList<ArrayList<Integer>> pageSuras;          // 2D list include suras numbers in each page
+    private ArrayList<ArrayList<Integer>> pageSuras;    // 2D list include suras numbers in each page
     private String[] surasName;
     private AyaAudioPopup ayaAudioPopup;
     private QuranPageFragment quranPageFragment;
@@ -105,7 +104,6 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     private Aya selectedAyaAudio;
     private int recitationId;
     private boolean isOriented = false;
-
 
     @BindView(R.id.quran_viewpager)
     ViewPager viewPager;
@@ -130,7 +128,6 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     @BindView(R.id.page_seek_tv)
     TextView pageSeekTv;
 
-
     private String bookDbName = "default", bookName;
     private BottomSheetBehavior sheetBehavior;
     private QuranViewPagerAdapter pagerAdapter;
@@ -144,11 +141,9 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     private Aya notficationCurrentAya;
     private Intent audioServiceIntent;
 
-
     public static Mus7fFragment newInstance() {
         return new Mus7fFragment();
     }
-
 
     /**
      * Create a Mus7fFragment instance initialized at the given page.
@@ -544,9 +539,10 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     @Override
     public void showQuranPageInfo(QuranPageInfo quranPageInfo) {
         String suraName = getResources().getStringArray(R.array.sura_name)[quranPageInfo.getSura() - 1];
+        String guz2Name = getResources().getStringArray(R.array.agza2_name)[quranPageInfo.getJuz() - 1];
         toolbarFragment.setSuraText(suraName);
+        toolbarFragment.setGuz2Text(guz2Name);
     }
-
 
     @Override
     public void showMessage(String message) {
@@ -556,12 +552,12 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     @Override
     public void onDestroyView() {
         presenter.onDetach();
-        SharedPrefsUtil.saveInteger(getActivity(), "last_open_page", quranPageIndex);
+        SharedPrefsUtil.saveInteger(requireActivity(), "last_open_page", quranPageIndex);
         super.onDestroyView();
 
-        if (PreferencesUtils.getScreenReadingBacklightSetting(getContext())) {
+        if (PreferencesUtils.getScreenReadingBacklightSetting(requireContext())) {
             // re-enable the screen timeout
-            ScreenUtil.keepScreenOn(getActivity(), false);
+            ScreenUtil.keepScreenOn(requireActivity(), false);
         }
         dismissAudioPopup();
     }
@@ -693,9 +689,9 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     // show list of available books for translation language
     @OnClick(R.id.tv_book_name)
     void onBookNameClicked() {
-        String transLang = PreferencesUtils.getQuranTranslationLanguage(Objects.requireNonNull(getContext()));
+        String transLang = PreferencesUtils.getQuranTranslationLanguage(requireContext());
         TranslationsDialogFragment translationsDialog = TranslationsDialogFragment.newInstance(transLang, this);
-        translationsDialog.show(getFragmentManager(), "trans_dialog");
+        translationsDialog.show(getChildFragmentManager(), "trans_dialog");
     }
 
     // open tafseer screen to show its Ayas with thier translation
@@ -797,7 +793,7 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
             if (quranPageFragment.getCurrentAyaIndex() != quranPageFragment.getNumOfAyaInPage() - 1) {
                 audioServiceIntent.setAction(AyaAudioService.ACTION_NEXT);
                 audioServiceIntent.putExtra(AyaAudioService.AYA_ID_KEY, quranPageFragment.getCurrentAyaId() + 1);
-                Objects.requireNonNull(getActivity()).startService(audioServiceIntent);
+                requireActivity().startService(audioServiceIntent);
             } else {
                 swipToNextQuranPage();
             }
@@ -810,7 +806,7 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
             if (quranPageFragment.getCurrentAyaIndex() != 0) {
                 audioServiceIntent.setAction(AyaAudioService.ACTION_PREVIOUS);
                 audioServiceIntent.putExtra(AyaAudioService.AYA_ID_KEY, quranPageFragment.getCurrentAyaId() - 1);
-                Objects.requireNonNull(getActivity()).startService(audioServiceIntent);
+                requireActivity().startService(audioServiceIntent);
             } else {
                 swipToPrevQuranPage();
             }
@@ -861,7 +857,7 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
         ayaHasRecorder = false;
         isAudioDialogOpen = false;
         ayaAudioPopup.dismissPopup();
-        Objects.requireNonNull(getActivity()).stopService(audioServiceIntent);
+        requireActivity().stopService(audioServiceIntent);
     }
 
 
@@ -874,8 +870,8 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     private void getRecordingPerm() {
         String[] permissions = new String[]{Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(getActivity(), permissions[0]) == PackageManager.PERMISSION_GRANTED
-                    && ContextCompat.checkSelfPermission(getActivity(), permissions[1]) == PackageManager.PERMISSION_GRANTED) {
+            if (ContextCompat.checkSelfPermission(requireActivity(), permissions[0]) == PackageManager.PERMISSION_GRANTED
+                    && ContextCompat.checkSelfPermission(requireActivity(), permissions[1]) == PackageManager.PERMISSION_GRANTED) {
                 startAyaRecording();
             } else {
                 requestPermissions(permissions, REQUEST_RECORDING_PERM);
@@ -1040,13 +1036,13 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     // play audio for selected aya
     public void resumeAyaAudio() {
         audioServiceIntent.setAction(AyaAudioService.ACTION_RESUME);
-        Objects.requireNonNull(getActivity()).startService(audioServiceIntent);
+        requireActivity().startService(audioServiceIntent);
     }
 
     // pause audio of selected aya
     public void pauseAyaAudio() {
         audioServiceIntent.setAction(AyaAudioService.ACTION_PAUSE);
-        Objects.requireNonNull(getActivity()).startService(audioServiceIntent);
+        requireActivity().startService(audioServiceIntent);
     }
 
     public void playAudioService() {
@@ -1054,7 +1050,7 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
         if (quranPageFragment.getCurrentAya() != null) {
             audioServiceIntent.putExtra(AyaAudioService.AYA_ID_KEY, quranPageFragment.getCurrentAyaId());
             audioServiceIntent.setAction(AyaAudioService.ACTION_PLAY);
-            Objects.requireNonNull(getActivity()).startService(audioServiceIntent);
+            requireActivity().startService(audioServiceIntent);
         }
     }
 

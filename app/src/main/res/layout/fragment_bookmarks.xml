@@ -39,7 +39,7 @@
             android:layout_marginStart="32dp"
             android:text="@string/fwasil_menu"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/text_size_18"
+            android:textSize="@dimen/text_18"
             app:layout_constraintBottom_toBottomOf="@+id/hamburger_iv"
             app:layout_constraintStart_toEndOf="@+id/hamburger_iv"
             app:layout_constraintTop_toTopOf="@+id/hamburger_iv" />

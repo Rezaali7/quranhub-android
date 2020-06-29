@@ -566,5 +566,6 @@
     <string name="confirm_delete_description_reciters">سيتم حذف ملفات الصوتيات الخاصة بهذا القارئ</string>
     <string name="confirm_delete_description_suras">سيتم حذف ملفات الصوتيات الخاصة بهذه السورة</string>
     <string name="delete">حذف</string>
+    <string name="tooltip_page_dir">ما إذا كانت صفحة القرآن الحالية في اليسار أو اليمين في المصحف.</string>
 
 </resources>

@@ -32,7 +32,7 @@
         android:paddingBottom="@dimen/_12sdp"
         android:textAlignment="viewStart"
         android:textColor="@color/color_primary"
-        android:textSize="@dimen/text_size_14"
+        android:textSize="@dimen/text_14"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/iv_check_box"
         app:layout_constraintStart_toEndOf="@+id/iv_option_thumbnail"

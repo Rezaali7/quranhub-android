@@ -20,7 +20,7 @@
         android:paddingEnd="@dimen/_16sdp"
         android:paddingBottom="@dimen/_8sdp"
         android:textColor="@color/white_color"
-        android:textSize="@dimen/text_size_16"
+        android:textSize="@dimen/text_16"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

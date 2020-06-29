@@ -20,7 +20,7 @@
         android:paddingBottom="@dimen/_8sdp"
         android:text="@string/suras"
         android:textColor="@color/white_color"
-        android:textSize="@dimen/text_size_18"
+        android:textSize="@dimen/text_18"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,7 +34,7 @@
         android:layout_marginEnd="@dimen/_12sdp"
         android:background="@drawable/search_bar_gray"
         android:drawableStart="@drawable/search_bar_white_small_ic"
-        android:drawablePadding="@dimen/margin_8"
+        android:drawablePadding="@dimen/dimen_8"
         android:hint="@string/search"
         android:inputType="textNoSuggestions"
         android:textColor="@android:color/white"

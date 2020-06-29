@@ -43,7 +43,7 @@
         android:layout_marginStart="@dimen/_8sdp"
         android:text="00:00"
         android:textColor="@color/white_color"
-        android:textSize="@dimen/text_size_14"
+        android:textSize="@dimen/text_14"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/recorder_progress"
         app:layout_constraintTop_toTopOf="parent" />
