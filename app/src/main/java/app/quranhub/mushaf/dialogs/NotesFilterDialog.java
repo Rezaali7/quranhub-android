@@ -51,7 +51,7 @@ public class NotesFilterDialog extends DialogFragment implements FilterAdapter.O
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        dialogView = inflater.inflate(R.layout.note_filter_dialog, null);
+        dialogView = inflater.inflate(R.layout.dialog_note_filter, null);
         ButterKnife.bind(this, dialogView);
         initializeDialog();
         setFilterOptions();

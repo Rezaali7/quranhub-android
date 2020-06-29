@@ -64,7 +64,7 @@ public class AyaActionsDialog extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        dialogView = inflater.inflate(R.layout.aya_properties_dialog, null);
+        dialogView = inflater.inflate(R.layout.dialog_aya_properties, null);
         ButterKnife.bind(this, dialogView);
         intializeDialog();
         return dialog;

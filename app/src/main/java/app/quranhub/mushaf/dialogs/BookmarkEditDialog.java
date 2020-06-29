@@ -79,7 +79,7 @@ public class BookmarkEditDialog extends DialogFragment implements ItemSelectionL
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        dialogView = inflater.inflate(R.layout.bookmark_filter_dialog, null);
+        dialogView = inflater.inflate(R.layout.dialog_bookmark_filter, null);
         ButterKnife.bind(this, dialogView);
         getArgs();
         initializeDialog();

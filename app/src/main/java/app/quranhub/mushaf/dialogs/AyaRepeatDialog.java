@@ -82,7 +82,7 @@ public class AyaRepeatDialog extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        dialogView = inflater.inflate(R.layout.aya_repeat_dialog, null);
+        dialogView = inflater.inflate(R.layout.dialog_aya_repeat, null);
         ButterKnife.bind(this, dialogView);
         initializeDialog();
         getArgs();

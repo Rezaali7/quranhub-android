@@ -80,7 +80,7 @@ public class OptionDialog extends DialogFragment implements FilterAdapter.Option
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        dialogView = inflater.inflate(R.layout.sura_list_dialog, null);
+        dialogView = inflater.inflate(R.layout.dialog_sura_list, null);
         ButterKnife.bind(this, dialogView);
         intializeDialog();
         setRecyclerList();

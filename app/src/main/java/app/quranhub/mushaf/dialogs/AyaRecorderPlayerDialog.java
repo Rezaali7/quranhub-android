@@ -68,7 +68,7 @@ public class AyaRecorderPlayerDialog extends DialogFragment implements RecorderM
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        dialogView = inflater.inflate(R.layout.play_aya_recorder_dialog, null);
+        dialogView = inflater.inflate(R.layout.dialog_play_aya_recorder, null);
         ButterKnife.bind(this, dialogView);
         intializeDialog();
         setRecordingFile();

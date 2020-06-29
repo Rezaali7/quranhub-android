@@ -33,7 +33,7 @@ public class OpenFileDialog extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        dialogView = inflater.inflate(R.layout.open_file_dialog, null);
+        dialogView = inflater.inflate(R.layout.dialog_open_file, null);
         ButterKnife.bind(this, dialogView);
         intializeDialog();
         return dialog;

@@ -53,7 +53,7 @@ public class AyaRecorderDialog extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        dialogView = inflater.inflate(R.layout.aya_recorder_dialog, null);
+        dialogView = inflater.inflate(R.layout.dialog_aya_recorder, null);
         ButterKnife.bind(this, dialogView);
         getArgs();
         intializeDialog();

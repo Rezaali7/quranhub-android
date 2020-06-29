@@ -108,7 +108,7 @@ public class AddNoteDialog extends DialogFragment implements RecorderMediaUtil.M
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        dialogView = inflater.inflate(R.layout.add_note_dialog, null);
+        dialogView = inflater.inflate(R.layout.dialog_add_note, null);
         ButterKnife.bind(this, dialogView);
         initializeDialog();
         getArgs();
