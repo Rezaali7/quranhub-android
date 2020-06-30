@@ -125,7 +125,7 @@
             android:id="@+id/view_dropshadow"
             android:layout_width="match_parent"
             android:layout_height="5dp"
-            android:background="@drawable/footer_dropshadow"
+            android:background="@drawable/footerbar_dropshadow"
             app:layout_constraintBottom_toTopOf="@+id/cl_bottom_bar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

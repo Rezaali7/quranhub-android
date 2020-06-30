@@ -11,21 +11,22 @@
     <!-- Drop shadow -->
     <View
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="@drawable/footer_dropshadow" />
+        android:layout_height="@dimen/dropshadow_height"
+        android:background="@drawable/footerbar_dropshadow" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white_color"
         android:paddingTop="@dimen/_4sdp"
-        android:paddingBottom="@dimen/_4sdp">
+        android:paddingBottom="@dimen/_4sdp"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_12sdp">
 
         <ImageButton
             android:id="@+id/quran_night_mode_ib"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginStart="@dimen/_12sdp"
             android:background="?selectableItemBackgroundBorderless"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +40,6 @@
             android:fontFamily="sans-serif"
             android:textColor="@color/primary"
             android:textSize="@dimen/text_18"
-            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/quran_search_ib"
             app:layout_constraintStart_toEndOf="@+id/quran_night_mode_ib"
@@ -50,7 +50,6 @@
             android:id="@+id/quran_search_ib"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginEnd="@dimen/_12sdp"
             android:background="?selectableItemBackgroundBorderless"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

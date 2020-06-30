@@ -61,7 +61,7 @@ import app.quranhub.mushaf.model.RepeatModel;
 import app.quranhub.mushaf.model.SuraVersesNumber;
 import app.quranhub.mushaf.presenter.Mus7fPresenter;
 import app.quranhub.mushaf.presenter.Mus7fPresenterImp;
-import app.quranhub.mushaf.view.MushfView;
+import app.quranhub.mushaf.view.MushafView;
 import app.quranhub.utils.LocaleUtil;
 import app.quranhub.utils.PreferencesUtils;
 import app.quranhub.utils.ScreenUtil;
@@ -69,17 +69,18 @@ import app.quranhub.utils.SharedPrefsUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 import me.toptas.fancyshowcase.FancyShowCaseQueue;
 import me.toptas.fancyshowcase.FancyShowCaseView;
 import me.toptas.fancyshowcase.FocusShape;
 
 
-public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFragment.QuranFooterCallbacks
+public class MushafFragment extends Fragment implements MushafView, QuranFooterbarFragment.QuranFooterCallbacks
         , TranslationsDataFragment.TranslationSelectionListener, AyaAudioPopup.AyaAudioListener,
         AyaRecorderDialog.StopRecordingListener, QuranRecitersDialogFragment.ReciterSelectionListener,
         AyaRecorderPlayerDialog.AyaRecorderPlayerListener, AyaRepeatDialog.AyaRepeateListener {
 
-    private static final String TAG = Mus7fFragment.class.getSimpleName();
+    private static final String TAG = MushafFragment.class.getSimpleName();
 
     private static final String ARG_INIT_PAGE = "ARG_INIT_PAGE";
     private static final String ARG_FROM_NOTFICATION = "ARG_FROM_NOTIFICATION";
@@ -113,7 +114,7 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     TextView translationTv;
     @BindView(R.id.tv_book_name)
     TextView bookNameTv;
-    @BindView(R.id.coordinate_sheet)
+    @BindView(R.id.coordinate_root)
     CoordinatorLayout sheetLayout;
     @BindView(R.id.bottom_sheet)
     ConstraintLayout constraintSheet;
@@ -127,12 +128,13 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     SeekBar quranSeekBar;
     @BindView(R.id.page_seek_tv)
     TextView pageSeekTv;
+    private Unbinder butterknifeUnbinder;
 
     private String bookDbName = "default", bookName;
     private BottomSheetBehavior sheetBehavior;
     private QuranViewPagerAdapter pagerAdapter;
-    private QuranFooterFragment footerFragment;
-    private QuranToolbarFragment toolbarFragment;
+    private QuranFooterbarFragment footerbarFragment;
+    private QuranHeaderbarFragment headerbarFragment;
     private Mus7fPresenter presenter;
     private boolean isBottomSheetVisible = false, isAudioDialogOpen = false, isAudioPlay = false;
     private boolean initAudioOnFirstAya = false, initAudioInRepeatGroup = false, initAyaFromNotifcation = false;
@@ -141,47 +143,47 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     private Aya notficationCurrentAya;
     private Intent audioServiceIntent;
 
-    public static Mus7fFragment newInstance() {
-        return new Mus7fFragment();
+    public static MushafFragment newInstance() {
+        return new MushafFragment();
     }
 
     /**
-     * Create a Mus7fFragment instance initialized at the given page.
+     * Create a MushafFragment instance initialized at the given page.
      *
      * @param initPageNumber
      * @return
      */
-    public static Mus7fFragment newInstance(int initPageNumber) {
-        Mus7fFragment mus7fFragment = new Mus7fFragment();
+    public static MushafFragment newInstance(int initPageNumber) {
+        MushafFragment mushafFragment = new MushafFragment();
         Bundle bundle = new Bundle();
         bundle.putInt(ARG_INIT_PAGE, initPageNumber);
-        mus7fFragment.setArguments(bundle);
-        return mus7fFragment;
+        mushafFragment.setArguments(bundle);
+        return mushafFragment;
     }
 
     /**
-     * Create a Mus7fFragment instance initialized at the given page & highlighting the given aya.
+     * Create a MushafFragment instance initialized at the given page & highlighting the given aya.
      *
      * @param initPageNumber
      * @param initAyaId
      * @return
      */
-    public static Mus7fFragment newInstance(int initPageNumber, int initAyaId) {
-        Mus7fFragment mus7fFragment = new Mus7fFragment();
+    public static MushafFragment newInstance(int initPageNumber, int initAyaId) {
+        MushafFragment mushafFragment = new MushafFragment();
         Bundle bundle = new Bundle();
         bundle.putInt(ARG_INIT_PAGE, initPageNumber);
         bundle.putInt(ARG_INIT_AYA, initAyaId);
-        mus7fFragment.setArguments(bundle);
-        return mus7fFragment;
+        mushafFragment.setArguments(bundle);
+        return mushafFragment;
     }
 
-    public static Mus7fFragment newNotifcationInstance(int ayaId) {
-        Mus7fFragment mus7fFragment = new Mus7fFragment();
+    public static MushafFragment newNotificationInstance(int ayaId) {
+        MushafFragment mushafFragment = new MushafFragment();
         Bundle bundle = new Bundle();
         bundle.putBoolean(ARG_FROM_NOTFICATION, true);
         bundle.putInt(ARG_INIT_AYA, ayaId);
-        mus7fFragment.setArguments(bundle);
-        return mus7fFragment;
+        mushafFragment.setArguments(bundle);
+        return mushafFragment;
     }
 
     @Override
@@ -204,15 +206,15 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_mus7f, container, false);
-        ButterKnife.bind(this, view);
+        View view = inflater.inflate(R.layout.fragment_mushaf, container, false);
+        butterknifeUnbinder = ButterKnife.bind(this, view);
         initPresenter();
 
         return view;
     }
 
     private void observeOnBottomSheetChanged() {
-        sheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+        sheetBehavior.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
             public void onStateChanged(@NonNull View view, int newState) {
                 if (newState == BottomSheetBehavior.STATE_HIDDEN) {
@@ -228,11 +230,10 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     }
 
     private void initPresenter() {
-        presenter = new Mus7fPresenterImp(getActivity());
+        presenter = new Mus7fPresenterImp(requireActivity());
         presenter.onAttach(this);
         presenter.getSurasInPage();
         presenter.getSuraNumofVerses();
-
     }
 
     @Override
@@ -240,7 +241,7 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
         super.onActivityCreated(savedInstanceState);
         quranPageIndex = Constants.QURAN.NUM_OF_PAGES - 1;
         initAyaId = -1; // No aya selected
-        initFragmnets();
+        initFragments();
         getFragmentArguments(savedInstanceState != null);
         getPrevState(savedInstanceState);
         listenViewPagerSwipe();
@@ -249,12 +250,11 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
 
         observeOnQuranSeekbarChange();
 
-        if (PreferencesUtils.getScreenReadingBacklightSetting(getContext())) {
+        if (PreferencesUtils.getScreenReadingBacklightSetting(requireContext())) {
             // disable the screen timeout
-            ScreenUtil.keepScreenOn(getActivity(), true);
+            ScreenUtil.keepScreenOn(requireActivity(), true);
         }
 
-        setupMus7afShowcase();
         checkOrientationType();
     }
 
@@ -282,7 +282,7 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
             if (getArguments().getBoolean(ARG_FROM_NOTFICATION, false) && initAyaId != -1 && !withPrevState) {
                 selectNotificationAya();
             }
-            SharedPrefsUtil.saveInteger(getActivity(), "last_open_page", quranPageIndex);
+            SharedPrefsUtil.saveInteger(requireActivity(), "last_open_page", quranPageIndex);
         }
     }
 
@@ -290,7 +290,7 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
         presenter.getNotificationAya(initAyaId);
         openAyaAudioDialog();
         checkAyaRecorderState(initAyaId);
-        if (SharedPrefsUtil.getBoolean(getActivity(), AyaAudioService.AUDIO_PLAYING, false)) {
+        if (SharedPrefsUtil.getBoolean(requireActivity(), AyaAudioService.AUDIO_PLAYING, false)) {
             ayaAudioPopup.setPlayState();
         }
     }
@@ -367,7 +367,7 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
         if (ScreenUtil.isPortrait(requireActivity())) { // FancyShowCaseView works very bad on landscape
             // Showcase to notify the user about the clicking action on the sura name in `toolbarFragment`
             FancyShowCaseView suraNameShowCaseView = new FancyShowCaseView.Builder(requireActivity())
-                    .focusOn(toolbarFragment.getView())
+                    .focusOn(headerbarFragment.requireView())
                     .title(getString(R.string.showcase_title_sura_index))
                     .enableAutoTextPosition()
                     .focusShape(FocusShape.ROUNDED_RECTANGLE)
@@ -397,6 +397,15 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     public void onStart() {
         super.onStart();
         registerEventBus();
+
+        setupMus7afShowcase();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        SharedPrefsUtil.saveInteger(requireActivity(), "last_open_page", quranPageIndex);
     }
 
     @Override
@@ -405,22 +414,33 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
         unRegisterEventBus();
     }
 
+    @Override
+    public void onDestroyView() {
+        presenter.onDetach();
+        super.onDestroyView();
+
+        butterknifeUnbinder.unbind();
+
+        if (PreferencesUtils.getScreenReadingBacklightSetting(requireContext())) {
+            // re-enable the screen timeout
+            ScreenUtil.keepScreenOn(requireActivity(), false);
+        }
+        dismissAudioPopup();
+    }
+
     private void listenViewPagerSwipe() {
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                Log.e(TAG, "onPageScrolled: ");
             }
 
             @Override
             public void onPageSelected(int position) {
-                Log.d("hh9", "onPageSelected: " + position);
                 setSelectedPageViews(position);
             }
 
             @Override
             public void onPageScrollStateChanged(int state) {
-                Log.e(TAG, "onPageScrollStateChanged: ");
             }
         });
     }
@@ -459,7 +479,7 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
         // set current aya with draw shadown when open mushaf from audio notification
         if (initAyaFromNotifcation) {
             initAyaFromNotifcation = false;
-            if (SharedPrefsUtil.getBoolean(getActivity(), AyaAudioService.AUDIO_PLAYING, false)) {
+            if (SharedPrefsUtil.getBoolean(requireActivity(), AyaAudioService.AUDIO_PLAYING, false)) {
                 isAudioPlay = true;
             }
             quranPageFragment.setCurrentAyaFromNotification(notficationCurrentAya);
@@ -477,33 +497,32 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
 
     private void setPageDir() {
         if (quranPageIndex % 2 == 0) { // quranPageIndex is even
-            toolbarFragment.setPageDir(QuranToolbarFragment.PAGE_DIR_LEFT);
+            headerbarFragment.setPageDir(QuranHeaderbarFragment.PAGE_DIR_LEFT);
         } else { // quranPageIndex is odd
-            toolbarFragment.setPageDir(QuranToolbarFragment.PAGE_DIR_RIGHT);
+            headerbarFragment.setPageDir(QuranHeaderbarFragment.PAGE_DIR_RIGHT);
         }
     }
 
     private void setPageNumber(int position) {
         String page = LocaleUtil.formatNumber(Constants.QURAN.NUM_OF_PAGES - position);
-        footerFragment.setCurrentPage(page);
+        footerbarFragment.setCurrentPage(page);
     }
 
     private void setSeekbarProgress(int position) {
         quranSeekBar.setProgress(Constants.QURAN.NUM_OF_PAGES - position);
     }
 
-    private void initFragmnets() {
-        currentTafsserId = PreferencesUtils.getQuranTranslationBook(getActivity());
-        currentTafseerLang = PreferencesUtils.getQuranTranslationLanguage(getActivity());
+    private void initFragments() {
+        currentTafsserId = PreferencesUtils.getQuranTranslationBook(requireActivity());
+        currentTafseerLang = PreferencesUtils.getQuranTranslationLanguage(requireActivity());
         recitationId = PreferencesUtils.getRecitationSetting(requireContext());
-        ayaAudioPopup = new AyaAudioPopup(getActivity(), this);
+        ayaAudioPopup = new AyaAudioPopup(requireActivity(), this);
         bookName = getString(R.string.translation_muyassar);
         translationTv.setMovementMethod(new ScrollingMovementMethod());
         sheetBehavior = BottomSheetBehavior.from(constraintSheet);
         FragmentManager fragmentManager = getChildFragmentManager();
-        footerFragment = (QuranFooterFragment) fragmentManager.findFragmentById(R.id.footer_fragment);
-        toolbarFragment = (QuranToolbarFragment) fragmentManager.findFragmentById(R.id.toolbar_fragment);
-        setPageNumber(quranPageIndex);
+        footerbarFragment = (QuranFooterbarFragment) fragmentManager.findFragmentById(R.id.footerbar_fragment);
+        headerbarFragment = (QuranHeaderbarFragment) fragmentManager.findFragmentById(R.id.toolbar_fragment);
         presenter.getQuranPageInfo(quranPageIndex);
     }
 
@@ -540,26 +559,13 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     public void showQuranPageInfo(QuranPageInfo quranPageInfo) {
         String suraName = getResources().getStringArray(R.array.sura_name)[quranPageInfo.getSura() - 1];
         String guz2Name = getResources().getStringArray(R.array.agza2_name)[quranPageInfo.getJuz() - 1];
-        toolbarFragment.setSuraText(suraName);
-        toolbarFragment.setGuz2Text(guz2Name);
+        headerbarFragment.setSuraText(suraName);
+        headerbarFragment.setGuz2Text(guz2Name);
     }
 
     @Override
     public void showMessage(String message) {
         Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
-    }
-
-    @Override
-    public void onDestroyView() {
-        presenter.onDetach();
-        SharedPrefsUtil.saveInteger(requireActivity(), "last_open_page", quranPageIndex);
-        super.onDestroyView();
-
-        if (PreferencesUtils.getScreenReadingBacklightSetting(requireContext())) {
-            // re-enable the screen timeout
-            ScreenUtil.keepScreenOn(requireActivity(), false);
-        }
-        dismissAudioPopup();
     }
 
     public void dismissAudioPopup() {
@@ -690,8 +696,9 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
     @OnClick(R.id.tv_book_name)
     void onBookNameClicked() {
         String transLang = PreferencesUtils.getQuranTranslationLanguage(requireContext());
-        TranslationsDialogFragment translationsDialog = TranslationsDialogFragment.newInstance(transLang, this);
-        translationsDialog.show(getChildFragmentManager(), "trans_dialog");
+        TranslationsDialogFragment translationsDialog = TranslationsDialogFragment.newInstance(
+                transLang, this);
+        translationsDialog.show(getParentFragmentManager(), "trans_dialog");
     }
 
     // open tafseer screen to show its Ayas with thier translation
@@ -785,7 +792,6 @@ public class Mus7fFragment extends Fragment implements MushfView, QuranFooterFra
         Aya currentAya = quranPageFragment.getCurrentAya();
         AyaRepeatDialog repeatDialog = AyaRepeatDialog.getInstance(suraVersesNumberArrayList, currentAya);
         repeatDialog.show(getChildFragmentManager(), "AyaRepeatDialog");
-
     }
 
     public void playNextAyaAudio() {

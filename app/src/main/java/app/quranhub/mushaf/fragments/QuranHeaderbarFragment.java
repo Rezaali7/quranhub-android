@@ -14,14 +14,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.TooltipCompat;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.MutableLiveData;
 
 import app.quranhub.R;
 import app.quranhub.utils.interfaces.ToolbarActionsListener;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
-public class QuranToolbarFragment extends Fragment {
+public class QuranHeaderbarFragment extends Fragment {
+
+    private static final String TAG = QuranHeaderbarFragment.class.getSimpleName();
 
     public static final int PAGE_DIR_RIGHT = 0;
     public static final int PAGE_DIR_LEFT = 1;
@@ -34,9 +38,11 @@ public class QuranToolbarFragment extends Fragment {
     Button pageSuraButton;
     @BindView(R.id.iv_page_dir)
     ImageView pageDirImageView;
+    private Unbinder butterknifeUnbinder;
 
     private ToolbarActionsListener toolbarActionsListener;
 
+    private MutableLiveData<Integer> pageDirLiveData;
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -47,11 +53,18 @@ public class QuranToolbarFragment extends Fragment {
     }
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        pageDirLiveData = new MutableLiveData<>();
+    }
+
+    @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_quran_toolbar, container, false);
-        ButterKnife.bind(this, view);
+        View view = inflater.inflate(R.layout.fragment_quran_headerbar, container, false);
+        butterknifeUnbinder = ButterKnife.bind(this, view);
         return view;
     }
 
@@ -59,6 +72,30 @@ public class QuranToolbarFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initViews();
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        pageDirLiveData.observe(getViewLifecycleOwner(), pageDir -> {
+            switch (pageDir) {
+                case PAGE_DIR_RIGHT:
+                    pageDirImageView.setImageResource(R.drawable.ic_quran_page_right);
+                    break;
+                case PAGE_DIR_LEFT:
+                    pageDirImageView.setImageResource(R.drawable.ic_quran_page_left);
+                    break;
+                default:
+                    throw new IllegalArgumentException("Invalid page dir");
+            }
+        });
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        butterknifeUnbinder.unbind();
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -99,17 +136,7 @@ public class QuranToolbarFragment extends Fragment {
      * @param pageDir either {@link #PAGE_DIR_LEFT} or {@link #PAGE_DIR_RIGHT}.
      */
     public void setPageDir(int pageDir) {
-        switch (pageDir) {
-            case PAGE_DIR_RIGHT:
-                pageDirImageView.setImageResource(R.drawable.ic_quran_page_right);
-                break;
-            case PAGE_DIR_LEFT:
-                pageDirImageView.setImageResource(R.drawable.ic_quran_page_left);
-                break;
-            default:
-                throw new IllegalArgumentException("Invalid page dir.");
-        }
-
+        pageDirLiveData.setValue(pageDir);
     }
 
 }

@@ -44,7 +44,7 @@
     <dimen name="app_bar_padding">16dp</dimen>
     <!---->
 
-    <dimen name="dropshadow_width">4dp</dimen>
+    <dimen name="dropshadow_height">4dp</dimen>
 
 
 </resources>

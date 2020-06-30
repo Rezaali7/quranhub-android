@@ -89,7 +89,7 @@ public class QuranPageFragment extends Fragment
     ConstraintLayout failedContainer;
 
     private Unbinder butterknifeUnbinder;
-    private Mus7fFragment mus7fFragment;
+    private MushafFragment mushafFragment;
     private String quranImageUrl;
     private int quranPageNum;
     private int initSelectedAyaId;
@@ -201,8 +201,8 @@ public class QuranPageFragment extends Fragment
     }
 
     private void setParentFragment() {
-        if (mus7fFragment == null) {
-            mus7fFragment = (Mus7fFragment) getParentFragment();
+        if (mushafFragment == null) {
+            mushafFragment = (MushafFragment) getParentFragment();
         }
     }
 
@@ -518,8 +518,8 @@ public class QuranPageFragment extends Fragment
     @Override
     public void onTafserClick() {
         Fragment fragment = getParentFragment();
-        if (fragment instanceof Mus7fFragment) {
-            ((Mus7fFragment) fragment).openTranslationDialog(
+        if (fragment instanceof MushafFragment) {
+            ((MushafFragment) fragment).openTranslationDialog(
                     currentAya);
         }
     }
@@ -810,7 +810,7 @@ public class QuranPageFragment extends Fragment
     }
 
     public void onAyaAudioNotFound() {
-        mus7fFragment.togglePauseState(false);
+        mushafFragment.togglePauseState(false);
         ayaAudioDownloaded = false;
 
         String reciterId = PreferencesUtils.getReciterSheikhSetting(requireContext());
@@ -843,21 +843,21 @@ public class QuranPageFragment extends Fragment
 
     @Override
     public void onListenClick() {
-        mus7fFragment.openAyaAudioDialog();
-        mus7fFragment.checkAyaRecorderState(currentAya.getId());
-        mus7fFragment.playAudioService();
+        mushafFragment.openAyaAudioDialog();
+        mushafFragment.checkAyaRecorderState(currentAya.getId());
+        mushafFragment.playAudioService();
     }
 
     // get aya position of start repeat interval in current page
     private int getFirstAyaNumberInPage() {
-        if (pageAyasList.get(0).getSura() != mus7fFragment.getFromSuraDownloaded()) {
+        if (pageAyasList.get(0).getSura() != mushafFragment.getFromSuraDownloaded()) {
             for (int i = 0; i < pageAyasList.size(); i++) {
-                if (pageAyasList.get(i).getSura() == mus7fFragment.getFromSuraDownloaded() && pageAyasList.get(i).getSuraAya() == mus7fFragment.getFirstAyaInRepeatGroup()) {
+                if (pageAyasList.get(i).getSura() == mushafFragment.getFromSuraDownloaded() && pageAyasList.get(i).getSuraAya() == mushafFragment.getFirstAyaInRepeatGroup()) {
                     return i;
                 }
             }
         }
-        return mus7fFragment.getFirstAyaInRepeatGroup() - pageAyasList.get(0).getSuraAya();
+        return mushafFragment.getFirstAyaInRepeatGroup() - pageAyasList.get(0).getSuraAya();
     }
 
     // draw shadow of current aya played in notification audio when launch app from notification
@@ -886,9 +886,9 @@ public class QuranPageFragment extends Fragment
             currentAya = pageAyasList.get(currentAyaIndex);
             previousAya = null;
             drawShadow();
-            mus7fFragment.checkAyaRecorderState(currentAya.getId());
+            mushafFragment.checkAyaRecorderState(currentAya.getId());
             playFirstAyaAudio = false;
-            mus7fFragment.playAudioService();
+            mushafFragment.playAudioService();
         }
     }
 
@@ -901,9 +901,9 @@ public class QuranPageFragment extends Fragment
             else
                 previousAya = null;
             drawShadow();
-            mus7fFragment.checkAyaRecorderState(currentAya.getId());
+            mushafFragment.checkAyaRecorderState(currentAya.getId());
             playMiddleAyaAudio = false;
-            mus7fFragment.playAudioService();
+            mushafFragment.playAudioService();
         }
     }
 
@@ -924,7 +924,7 @@ public class QuranPageFragment extends Fragment
 
     @Override
     public void onClickDownload() {
-        mus7fFragment.setSelectedAyaAudio(currentAya);
+        mushafFragment.setSelectedAyaAudio(currentAya);
     }
 
     public void setCurrentAyaFromNotification(Aya aya) {

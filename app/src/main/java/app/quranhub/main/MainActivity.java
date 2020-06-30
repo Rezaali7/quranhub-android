@@ -18,7 +18,7 @@ import app.quranhub.downloads_manager.DownloadsManagerActivity;
 import app.quranhub.first_wizard.FirstTimeWizardActivity;
 import app.quranhub.mushaf.fragments.BookmarksFragment;
 import app.quranhub.mushaf.fragments.BooksLibraryFragment;
-import app.quranhub.mushaf.fragments.Mus7fFragment;
+import app.quranhub.mushaf.fragments.MushafFragment;
 import app.quranhub.mushaf.fragments.MyNotesFragment;
 import app.quranhub.mushaf.fragments.PdfViewerFragment;
 import app.quranhub.mushaf.fragments.SearchFragment;
@@ -89,8 +89,8 @@ public class MainActivity extends BaseActivity
         if (isDismissAllow && currentFragment.equals("mushaf")) {
             isDismissAllow = false;
             Fragment fragment = getSupportFragmentManager().findFragmentByTag("Mushaf");
-            if (fragment != null && fragment instanceof Mus7fFragment) {
-                ((Mus7fFragment) fragment).dismissAudioPopup();
+            if (fragment != null && fragment instanceof MushafFragment) {
+                ((MushafFragment) fragment).dismissAudioPopup();
             }
         }
     }
@@ -120,22 +120,22 @@ public class MainActivity extends BaseActivity
 
     private void launchMushafFragment() {
         currentFragment = "mushaf";
-        Mus7fFragment mus7fFragment;
+        MushafFragment mushafFragment;
 
         // get current aya id if Main activity is launched from audio notification OR launch app with audio notification app
         if ((getIntent().getExtras() != null && getIntent().getExtras().getBoolean(AyaAudioService.FROM_NOTIFICATION)) || SharedPrefsUtil.getBoolean(this, AyaAudioService.SERVICE_RUNNING, false)) {
             int ayaId = SharedPrefsUtil.getInteger(this, AyaAudioService.AYA_ID_KEY, 1);
-            mus7fFragment = Mus7fFragment.newNotifcationInstance(ayaId);
+            mushafFragment = MushafFragment.newNotificationInstance(ayaId);
         } else if (PreferencesUtils.getLastReadPageSetting(this)) {
             int pageNumber = Constants.QURAN.NUM_OF_PAGES - SharedPrefsUtil.getInteger(this
                     , "last_open_page", Constants.QURAN.NUM_OF_PAGES - 1);
-            mus7fFragment = Mus7fFragment.newInstance(pageNumber);
+            mushafFragment = MushafFragment.newInstance(pageNumber);
         } else {
-            mus7fFragment = new Mus7fFragment();
+            mushafFragment = new MushafFragment();
         }
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, mus7fFragment, "Mushaf");
+        transaction.replace(R.id.container, mushafFragment, "Mushaf");
         transaction.commit();
 
 
@@ -147,9 +147,9 @@ public class MainActivity extends BaseActivity
         super.onNewIntent(intent);
         if ((getIntent().getExtras() != null && getIntent().getExtras().getBoolean(AyaAudioService.FROM_NOTIFICATION)) || SharedPrefsUtil.getBoolean(this, AyaAudioService.SERVICE_RUNNING, false)) {
             int ayaId = SharedPrefsUtil.getInteger(this, AyaAudioService.AYA_ID_KEY, 1);
-            Mus7fFragment mus7fFragment = Mus7fFragment.newNotifcationInstance(ayaId);
+            MushafFragment mushafFragment = MushafFragment.newNotificationInstance(ayaId);
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.container, mus7fFragment, "Mushaf");
+            transaction.replace(R.id.container, mushafFragment, "Mushaf");
             transaction.commit();
         }
     }
@@ -342,9 +342,9 @@ public class MainActivity extends BaseActivity
     @Override
     public void gotoQuranPage(int pageNumber) {
         currentFragment = "mushaf";
-        Mus7fFragment mus7fFragment = Mus7fFragment.newInstance(pageNumber);
+        MushafFragment mushafFragment = MushafFragment.newInstance(pageNumber);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, mus7fFragment, "Mushaf");
+        transaction.replace(R.id.container, mushafFragment, "Mushaf");
         transaction.commit();
         selectNavDrawerItem(DrawerUtil.IDENTIFIER_MUSHAF, false);
     }
@@ -352,9 +352,9 @@ public class MainActivity extends BaseActivity
     @Override
     public void gotoQuranPageAya(int pageNumber, int ayaId, boolean addToStack) {
 
-        Mus7fFragment mus7fFragment = Mus7fFragment.newInstance(pageNumber, ayaId);
+        MushafFragment mushafFragment = MushafFragment.newInstance(pageNumber, ayaId);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, mus7fFragment, "Mushaf");
+        transaction.replace(R.id.container, mushafFragment, "Mushaf");
         if (addToStack) {
             transaction.addToBackStack(null);
         }

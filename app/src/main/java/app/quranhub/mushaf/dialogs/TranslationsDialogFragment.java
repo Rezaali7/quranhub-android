@@ -58,7 +58,7 @@ public class TranslationsDialogFragment extends DialogFragment implements Transl
     }
 
     @Override
-    public void onAttach(Context context) {
+    public void onAttach(@NonNull Context context) {
         super.onAttach(context);
 
         if (getTargetFragment() instanceof TranslationsDataFragment.TranslationSelectionListener) {

@@ -8,7 +8,7 @@ import app.quranhub.mushaf.data.entity.TranslationBook;
 import app.quranhub.mushaf.model.QuranPageInfo;
 import app.quranhub.mushaf.model.SuraVersesNumber;
 
-public interface MushfView extends BaseView {
+public interface MushafView extends BaseView {
 
     void showQuranPageInfo(QuranPageInfo quranPageInfo);
 

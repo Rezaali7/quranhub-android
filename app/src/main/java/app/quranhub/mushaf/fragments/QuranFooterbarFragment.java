@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.TooltipCompat;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.MutableLiveData;
 
 import app.quranhub.R;
 import app.quranhub.mushaf.presenter.QuranFooterPresenter;
@@ -28,9 +29,9 @@ import butterknife.OnClick;
 import butterknife.Unbinder;
 
 
-public class QuranFooterFragment extends Fragment implements QuranFooterView {
+public class QuranFooterbarFragment extends Fragment implements QuranFooterView {
 
-    private static final String TAG = QuranFooterFragment.class.getSimpleName();
+    private static final String TAG = QuranFooterbarFragment.class.getSimpleName();
 
     private QuranFooterPresenter presenter;
 
@@ -44,13 +45,14 @@ public class QuranFooterFragment extends Fragment implements QuranFooterView {
     ImageButton nightModeImageButton;
     @BindView(R.id.quran_search_ib)
     ImageButton searchImageButton;
+    private Unbinder butterknifeUnbinder;
 
     private QuranFooterCallbacks footerCallbacks;
 
-    private Unbinder butterknifeUnbinder;
+    private MutableLiveData<String> pageNumTextLiveData;
 
     @Override
-    public void onAttach(Context context) {
+    public void onAttach(@NonNull Context context) {
         super.onAttach(context);
 
         if (getParentFragment() instanceof QuranFooterCallbacks) {
@@ -62,10 +64,17 @@ public class QuranFooterFragment extends Fragment implements QuranFooterView {
     }
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        pageNumTextLiveData = new MutableLiveData<>();
+    }
+
+    @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_quran_footer, container, false);
+        View view = inflater.inflate(R.layout.fragment_quran_footerbar, container, false);
         butterknifeUnbinder = ButterKnife.bind(this, view);
         return view;
     }
@@ -100,6 +109,10 @@ public class QuranFooterFragment extends Fragment implements QuranFooterView {
         super.onActivityCreated(savedInstanceState);
 
         presenter.onAttach(this);
+
+        pageNumTextLiveData.observe(getViewLifecycleOwner(), pageNumText -> {
+            quranPageTv.setText(pageNumText);
+        });
     }
 
     @Override
@@ -124,8 +137,8 @@ public class QuranFooterFragment extends Fragment implements QuranFooterView {
                 nightMode ? R.drawable.ic_nightmode_on : R.drawable.ic_nightmode_off);
     }
 
-    public void setCurrentPage(String pageNumber) {
-        quranPageTv.setText(pageNumber);
+    public void setCurrentPage(String pageNumText) {
+        pageNumTextLiveData.setValue(pageNumText);
     }
 
     @Override

@@ -15,11 +15,11 @@ import app.quranhub.mushaf.interactor.Mus7fInteractor;
 import app.quranhub.mushaf.interactor.Mus7fInteractorImp;
 import app.quranhub.mushaf.model.QuranPageInfo;
 import app.quranhub.mushaf.model.SuraVersesNumber;
-import app.quranhub.mushaf.view.MushfView;
+import app.quranhub.mushaf.view.MushafView;
 import app.quranhub.utils.PreferencesUtils;
 
-public class Mus7fPresenterImp extends BasePresenterImp<MushfView>
-        implements Mus7fPresenter<MushfView>, Mus7fInteractor.ResultListener {
+public class Mus7fPresenterImp extends BasePresenterImp<MushafView>
+        implements Mus7fPresenter<MushafView>, Mus7fInteractor.ResultListener {
 
     private static final String TAG = Mus7fPresenterImp.class.getSimpleName();
 
