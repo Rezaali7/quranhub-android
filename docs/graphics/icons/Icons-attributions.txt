@@ -1,0 +1,4 @@
+Icons attributions:
+* Google Material Design Icons
+* Good Ware: https://www.flaticon.com/authors/good-ware
+
