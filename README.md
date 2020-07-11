@@ -9,8 +9,8 @@ The QuranHub Android mobile app provides the following features:
 - The Quran in both Hafs & Warsh recitations.
 - Quran audio by various reciters.
 - Customizable audio repeat.
-- Quran tafsir & translation in various languages.
-- Ability to highlight verses to show more options like playing their audio or showing their tafsir.
+- Quran tafsir (explanation) & translation in various languages.
+- Ability to highlight verses (ayas) to show more options like playing their audio or showing their tafsir.
 - Verse bookmarking, and sharing.
 - Ability to add text & audio notes to verses.
 - Advanced search in the Quran.
