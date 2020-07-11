@@ -1,4 +1,5 @@
 # QuranHub for Android
+
 [![License](https://img.shields.io/github/license/QuranHub/quranhub-android)](https://github.com/QuranHub/quranhub-android/blob/master/LICENSE)
 [![Latest release](https://img.shields.io/github/v/release/QuranHub/quranhub-android)](https://github.com/QuranHub/quranhub-android/releases/latest)
 
@@ -25,17 +26,18 @@ Download the app from the Google Play Store:
 </a>
 
 ## What's New
-
 See the project's Releases page for a list of versions with their changelogs.
 
-##### [View releases](https://github.com/QuranHub/quranhub-android/releases)
+**[View Releases](https://github.com/QuranHub/quranhub-android/releases)**
 
 If you Watch this repository, GitHub will send you an email every time we publish an update.
 
 ## Contributing
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
 
-Please read [CONTRIBUTING.md](https://github.com/QuranHub/quranhub-android/blob/master/CONTRIBUTING.md) for details on contributing to the project and our code of conduct.
+Please read [CONTRIBUTING.md](https://github.com/QuranHub/quranhub-android/blob/master/CONTRIBUTING.md) for our code of conduct and details on contributing to the project.
+
+Also, refer to the repository's [project boards](https://github.com/QuranHub/quranhub-android/projects) where we organize and prioritize the work.
 
 #### Steps for contributing to this repository:
 1.  Fork it.
@@ -52,6 +54,9 @@ We use  [SemVer](http://semver.org/)  for versioning.
 
 #### Documentation & Wiki
 Info and documentation are available in this repository's [GitHub Wiki](https://github.com/QuranHub/quranhub-android/wiki). If you have any questions feel free to open a new issue on this repository.
+
+## License
+This project is licensed under the **GNU General Public License v3.0** - see the [LICENSE](https://github.com/QuranHub/quranhub-android/blob/master/LICENSE) file for details.
 
 ## Acknowledgments
 - [Mohamed Halim ElGendy](https://www.linkedin.com/in/mohalimelgendy/): Initial project analysis, planning & management.
