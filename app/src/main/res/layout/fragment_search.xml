@@ -11,7 +11,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
-        android:background="@drawable/header_1"
+        android:background="?colorPrimary"
+        android:elevation="8dp"
         android:paddingStart="@dimen/app_bar_padding"
         android:paddingEnd="@dimen/app_bar_padding"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,22 +21,22 @@
 
         <ImageButton
             android:id="@+id/hamburger_iv"
-            android:layout_width="@dimen/app_bar_icon_dimen"
-            android:layout_height="@dimen/app_bar_icon_dimen"
-            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
             android:background="?selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_drawer"
+            android:src="@drawable/ic_menu_white_24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/dimen_24"
             android:text="@string/search"
-            android:textAppearance="@style/ActionBarTitleTextAppearance"
             android:textColor="@color/white_color"
-            android:textSize="@dimen/text_16"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
             app:layout_constraintStart_toEndOf="@id/hamburger_iv"
             app:layout_constraintTop_toTopOf="@id/hamburger_iv" />
@@ -55,15 +56,15 @@
             android:id="@+id/search_box"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:layout_marginStart="@dimen/dimen_8"
+            android:layout_marginBottom="@dimen/dimen_8"
             android:background="@drawable/search_bar"
             android:padding="0dp"
             app:layout_constraintBottom_toTopOf="@id/filter_container"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/more_iv"
-            app:layout_constraintTop_toBottomOf="@+id/hamburger_iv">
+            app:layout_constraintTop_toBottomOf="@+id/textView">
 
             <EditText
                 android:id="@+id/et_search"
@@ -73,16 +74,13 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp"
                 android:background="@color/transparent_color"
-                android:drawableStart="@drawable/search_bar_white_small_ic"
-                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/advanced_search_gray_ic"
+                android:drawablePadding="16dp"
                 android:hint="@string/search"
                 android:inputType="textNoSuggestions"
-                android:textColor="@android:color/white"
-                android:textColorHint="@color/hint_grey"
                 android:textSize="@dimen/text_18"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/ib_clear_search"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -96,10 +94,10 @@
                 android:layout_marginBottom="4dp"
                 android:background="@color/transparent_color"
                 android:src="@drawable/clear_search_delete_gray_small_ic"
+                android:tint="@color/dark_grey"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/et_search"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:visibility="visible" />

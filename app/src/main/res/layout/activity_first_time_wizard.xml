@@ -11,7 +11,6 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/custom_toolbar_height"
-        android:background="@drawable/header_1"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
@@ -28,13 +27,13 @@
             android:layout_marginEnd="@dimen/_12sdp"
             android:layout_marginBottom="@dimen/_6sdp"
             android:background="@drawable/search_bar"
-            android:drawableStart="@drawable/search_bar_white_small_ic"
-            android:drawablePadding="8dp"
-            android:ems="10"
+            android:drawableStart="@drawable/advanced_search_gray_ic"
+            android:drawablePadding="16dp"
             android:hint="@string/search"
             android:inputType="textNoSuggestions"
-            android:textColor="@android:color/white"
-            android:textColorHint="@color/hint_grey" />
+            android:textColorHint="@color/hint_grey"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/text_14" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

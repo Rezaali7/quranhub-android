@@ -21,7 +21,7 @@
     <color name="aya_shadow_color_night_mode">#3DE8AF6A</color>
     <color name="drawer_selected_tint">@color/color_accent</color>
     <color name="drawer_text_color">@color/color_primary</color>
-    <color name="search_bar_bg_color">#E1E9EE</color>
+    <color name="search_bar_bg_color">@color/white_color</color>
 
     <array name="bookmark_colors">
         <item>#ef9a9a</item>

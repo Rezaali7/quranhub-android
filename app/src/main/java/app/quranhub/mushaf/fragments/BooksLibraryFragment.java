@@ -24,7 +24,7 @@ import butterknife.OnClick;
 
 public class BooksLibraryFragment extends Fragment {
 
-    private static final String FRAGMENT_BOOOKS = "FRAGMENT_BOOOKS";
+    private static final String FRAGMENT_BOOKS = "FRAGMENT_BOOKS";
     private static final String FRAGMENT_LIBRARY = "FRAGMENT_LIBRARY";
     private static final String STATE_SELECTED_TAB = "STATE_SELECTED_TAB";
     private static final String STATE_INPUT_SEARCH = "STATE_INPUT_SEARCH";
@@ -47,9 +47,8 @@ public class BooksLibraryFragment extends Fragment {
     @BindView(R.id.edit_btn)
     ImageView editBtn;
 
-
     @Override
-    public void onAttach(Context context) {
+    public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         if (context instanceof ToolbarActionsListener) {
             navDrawerListener = (ToolbarActionsListener) context;
@@ -140,7 +139,7 @@ public class BooksLibraryFragment extends Fragment {
         searchEt.getText().clear();
         inputSearch = "";
         if (tab == LIBRARY_TAB) {
-            editBtn.setVisibility(View.GONE);
+            editBtn.setVisibility(View.INVISIBLE);
             libraryFragment = (LibraryFragment) getChildFragmentManager().findFragmentByTag(FRAGMENT_LIBRARY);
             if (libraryFragment == null) {
                 libraryFragment = new LibraryFragment();
@@ -150,11 +149,11 @@ public class BooksLibraryFragment extends Fragment {
             }
         } else if (tab == BOOKS_TAB) {
             editBtn.setVisibility(View.VISIBLE);
-            bookDataFragment = (BookDataFragment) getChildFragmentManager().findFragmentByTag(FRAGMENT_BOOOKS);
+            bookDataFragment = (BookDataFragment) getChildFragmentManager().findFragmentByTag(FRAGMENT_BOOKS);
             if (bookDataFragment == null) {
                 bookDataFragment = BookDataFragment.getInstance(true);
                 getChildFragmentManager().beginTransaction()
-                        .replace(R.id.data_container, bookDataFragment, FRAGMENT_BOOOKS)
+                        .replace(R.id.data_container, bookDataFragment, FRAGMENT_BOOKS)
                         .commit();
             }
         }

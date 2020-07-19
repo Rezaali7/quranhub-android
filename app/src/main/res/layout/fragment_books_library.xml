@@ -10,7 +10,8 @@
         android:id="@+id/toolbar_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/header_1"
+        android:background="?colorPrimary"
+        android:elevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,11 +25,11 @@
 
         <ImageButton
             android:id="@+id/hamburger_iv"
-            android:layout_width="@dimen/app_bar_icon_dimen"
-            android:layout_height="@dimen/app_bar_icon_dimen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_16"
             android:background="?selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_drawer"
+            android:src="@drawable/ic_menu_white_24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/guideline_top" />
 
@@ -73,7 +74,7 @@
             android:layout_marginEnd="@dimen/dimen_16"
             android:background="?selectableItemBackgroundBorderless"
             android:src="@drawable/edit_gold_ic"
-            android:visibility="gone"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/guideline_top" />
 
@@ -86,13 +87,11 @@
             android:layout_marginEnd="@dimen/dimen_16"
             android:layout_marginBottom="@dimen/dimen_8"
             android:background="@drawable/search_bar"
-            android:drawableStart="@drawable/search_bar_white_small_ic"
-            android:drawablePadding="8dp"
-            android:ems="10"
+            android:drawableStart="@drawable/advanced_search_gray_ic"
+            android:drawablePadding="16dp"
             android:hint="@string/search"
             android:inputType="textNoSuggestions"
-            android:textColor="@android:color/white"
-            android:textColorHint="@color/hint_grey"
+            android:textSize="@dimen/text_14"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

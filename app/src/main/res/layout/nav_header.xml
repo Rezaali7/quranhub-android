@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/sidemenu_bg_height"
         android:scaleType="fitXY"
-        android:src="@drawable/sidemenu_top"
+        android:src="?colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

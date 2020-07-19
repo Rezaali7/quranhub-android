@@ -10,6 +10,7 @@
         android:id="@+id/toolbar_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:elevation="8dp"
         android:background="@color/color_primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,12 +21,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="@dimen/_12sdp" />
+            app:layout_constraintGuide_begin="@dimen/dimen_16" />
 
         <ImageButton
             android:id="@+id/hamburger_iv"
-            android:layout_width="@dimen/app_bar_icon_dimen"
-            android:layout_height="@dimen/app_bar_icon_dimen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_16"
             android:background="?selectableItemBackgroundBorderless"
             android:src="@drawable/ic_menu_white_24dp"
@@ -88,8 +89,7 @@
             android:drawablePadding="16dp"
             android:hint="@string/search"
             android:inputType="textNoSuggestions"
-            android:textColorHint="@color/hint_grey"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_14"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
