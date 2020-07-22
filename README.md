@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/github/license/QuranHub/quranhub-android)](https://github.com/QuranHub/quranhub-android/blob/master/LICENSE)
 [![Latest release](https://img.shields.io/github/v/release/QuranHub/quranhub-android)](https://github.com/QuranHub/quranhub-android/releases/latest)
 
-[QuranHub](https://quranhub.app) is an open source project that aims to be the single destination to read & study the Quran.
+[QuranHub](https://quranhub.app) is an open-source project that aims to be the single destination to read & study the Quran.
 
 The QuranHub Android mobile app provides the following features:
 - The Quran in both Hafs & Warsh recitations.
@@ -14,8 +14,8 @@ The QuranHub Android mobile app provides the following features:
 - Verse bookmarking, and sharing.
 - Ability to add text & audio notes to verses.
 - Advanced search in the Quran.
-- Quran reader night mode.
-- Islamic library with various books to download as PDF files and view in the app.
+- Quran reader (mus'haf) night mode for easier reading in the Quran.
+- Islamic library with various books to download as PDF files and view inside the app.
 - Quran topics with their verses in the Quran.
 
 Download the app from the Google Play Store:  
@@ -26,7 +26,7 @@ Download the app from the Google Play Store:
 </a>
 
 ## What's New
-See the project's Releases page for a list of versions with their changelogs.
+See the project's *releases page* for a list of versions with their changelogs.
 
 **[View Releases](https://github.com/QuranHub/quranhub-android/releases)**
 
@@ -59,8 +59,8 @@ Info and documentation are available in this repository's [GitHub Wiki](https://
 This project is licensed under the **GNU General Public License v3.0** - see the [LICENSE](https://github.com/QuranHub/quranhub-android/blob/master/LICENSE) file for details.
 
 ## Acknowledgments
-- [Mohamed Halim ElGendy](https://www.linkedin.com/in/mohalimelgendy/): Initial project analysis, planning & management.
-- [Nada Mahany](https://www.linkedin.com/in/nada-mahany-81bbb2103/): Initial project analysis & Android app testing.
+- [Mohamed Halim ElGendy](https://www.linkedin.com/in/mohalimelgendy/): Project analysis. Initial planning & project management.
+- [Nada Mahany](https://www.linkedin.com/in/nada-mahany-81bbb2103/): Android app testing.
 - [Mostafa Hussien](https://github.com/mostafa9696): Android development.
-- [Abdallah Abdelazim](https://github.com/Abdallah-Abdelazim): Project open source maintainer. Android & backend development.
+- [Abdallah Abdelazim](https://github.com/Abdallah-Abdelazim): Project open-source maintainer. Mobile & web (backend/frontend) development.
 - [Abdelrahman Elhellawy](https://github.com/Elhellawy): Backend development.
