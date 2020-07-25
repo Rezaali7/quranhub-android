@@ -65,5 +65,5 @@ This project is licensed under the **GNU General Public License v3.0** - see the
 - [Mohamed Halim ElGendy](https://www.linkedin.com/in/mohalimelgendy/): Project analysis. Initial planning & project management.
 - [Nada Mahany](https://www.linkedin.com/in/nada-mahany-81bbb2103/): Android app testing.
 - [Mostafa Hussien](https://github.com/mostafa9696): Android development.
-- [Abdallah Abdelazim](https://github.com/Abdallah-Abdelazim): Project open-source maintainer. Mobile & web (backend/frontend) development.
+- [Abdallah Abdelazim](https://github.com/Abdallah-Abdelazim): Project open-source maintainer & lead developer. Mobile & web (backend/frontend) development.
 - [Abdelrahman Elhellawy](https://github.com/Elhellawy): Backend development.
