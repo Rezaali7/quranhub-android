@@ -29,9 +29,9 @@ import butterknife.OnClick;
 import butterknife.Unbinder;
 
 
-public class QuranFooterbarFragment extends Fragment implements QuranFooterView {
+public class MushafBottomBarFragment extends Fragment implements QuranFooterView {
 
-    private static final String TAG = QuranFooterbarFragment.class.getSimpleName();
+    private static final String TAG = MushafBottomBarFragment.class.getSimpleName();
 
     private QuranFooterPresenter presenter;
 
@@ -74,7 +74,7 @@ public class QuranFooterbarFragment extends Fragment implements QuranFooterView 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_quran_footerbar, container, false);
+        View view = inflater.inflate(R.layout.fragment_mushaf_bottom_bar, container, false);
         butterknifeUnbinder = ButterKnife.bind(this, view);
         return view;
     }

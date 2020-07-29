@@ -87,7 +87,7 @@
             android:layout_marginEnd="@dimen/dimen_16"
             android:layout_marginBottom="@dimen/dimen_8"
             android:background="@drawable/search_bar"
-            android:drawableStart="@drawable/advanced_search_gray_ic"
+            android:drawableStart="@drawable/advanced_search_grey_ic"
             android:drawablePadding="16dp"
             android:hint="@string/search"
             android:inputType="textNoSuggestions"

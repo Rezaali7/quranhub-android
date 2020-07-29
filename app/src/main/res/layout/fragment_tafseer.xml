@@ -10,49 +10,48 @@
         android:id="@+id/toolbar_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/header_1"
+        android:background="?colorPrimary"
+        android:elevation="8dp"
         android:paddingTop="@dimen/dimen_16"
-        android:paddingBottom="@dimen/dimen_16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
             android:id="@+id/hamburger_iv"
-            android:layout_width="@dimen/app_bar_icon_dimen"
-            android:layout_height="@dimen/app_bar_icon_dimen"
-            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
             android:background="?selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_drawer"
-            app:layout_constraintBottom_toTopOf="@id/et_search"
+            android:src="@drawable/ic_menu_white_24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lang_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12"
+            android:ellipsize="end"
+            android:maxWidth="@dimen/_60sdp"
+            android:maxLines="1"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
+            app:layout_constraintStart_toEndOf="@id/hamburger_iv"
+            app:layout_constraintTop_toTopOf="@id/hamburger_iv"
+            tools:text="Bahasa Indonsia" />
 
         <ImageButton
             android:id="@+id/filter_lang_btn"
             android:layout_width="@dimen/app_bar_icon_dimen"
             android:layout_height="@dimen/app_bar_icon_dimen"
             android:background="?selectableItemBackgroundBorderless"
-            android:paddingTop="@dimen/_4sdp"
-            android:paddingBottom="@dimen/_4sdp"
+            android:paddingTop="@dimen/dimen_4"
+            android:paddingBottom="@dimen/dimen_4"
             android:src="@drawable/filter_more_gold_ic"
             app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
             app:layout_constraintStart_toEndOf="@id/lang_tv"
-            app:layout_constraintTop_toTopOf="@id/hamburger_iv" />
-
-        <TextView
-            android:id="@+id/lang_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_8"
-            android:ellipsize="end"
-            android:maxWidth="@dimen/_60sdp"
-            android:maxLines="1"
-            android:text="Bahasa Indonsia"
-            android:textColor="@color/white_color"
-            android:textSize="@dimen/text_12"
-            app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
-            app:layout_constraintStart_toEndOf="@id/hamburger_iv"
             app:layout_constraintTop_toTopOf="@id/hamburger_iv" />
 
         <TextView
@@ -72,12 +71,11 @@
             android:layout_width="@dimen/app_bar_icon_dimen"
             android:layout_height="@dimen/app_bar_icon_dimen"
             android:background="?selectableItemBackgroundBorderless"
-            android:paddingTop="@dimen/_4sdp"
-            android:paddingBottom="@dimen/_4sdp"
+            android:paddingTop="@dimen/dimen_4"
+            android:paddingBottom="@dimen/dimen_4"
             android:src="@drawable/filter_more_gold_ic"
             app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
             app:layout_constraintStart_toEndOf="@id/sura_tv"
-
             app:layout_constraintTop_toTopOf="@id/hamburger_iv" />
 
         <TextView
@@ -87,18 +85,18 @@
             android:ellipsize="end"
             android:maxWidth="@dimen/_70sdp"
             android:maxLines="1"
-            android:text="الميسر"
             android:textColor="@color/white_color"
             android:textSize="@dimen/text_12"
             app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
             app:layout_constraintEnd_toStartOf="@id/filter_book_btn"
-            app:layout_constraintTop_toTopOf="@id/hamburger_iv" />
+            app:layout_constraintTop_toTopOf="@id/hamburger_iv"
+            tools:text="الميسر" />
 
         <ImageButton
             android:id="@+id/filter_book_btn"
             android:layout_width="@dimen/app_bar_icon_dimen"
             android:layout_height="@dimen/app_bar_icon_dimen"
-            android:layout_marginEnd="@dimen/_14sdp"
+            android:layout_marginEnd="@dimen/dimen_16"
             android:background="?selectableItemBackgroundBorderless"
             android:src="@drawable/filter_more_gold_ic"
             app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
@@ -110,22 +108,19 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_16"
-            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/dimen_16"
             android:layout_marginEnd="@dimen/dimen_16"
             android:layout_marginBottom="@dimen/dimen_8"
             android:background="@drawable/search_bar"
-            android:drawableStart="@drawable/search_bar_white_small_ic"
-            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/advanced_search_grey_ic"
+            android:drawablePadding="@dimen/dimen_16"
             android:hint="@string/search"
             android:inputType="textNoSuggestions"
-            android:textColor="@android:color/white"
-            android:textColorHint="@color/hint_grey"
-            android:textSize="18sp"
+            android:textSize="@dimen/text_14"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hamburger_iv" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

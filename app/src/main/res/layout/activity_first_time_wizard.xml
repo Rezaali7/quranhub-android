@@ -27,7 +27,7 @@
             android:layout_marginEnd="@dimen/_12sdp"
             android:layout_marginBottom="@dimen/_6sdp"
             android:background="@drawable/search_bar"
-            android:drawableStart="@drawable/advanced_search_gray_ic"
+            android:drawableStart="@drawable/advanced_search_grey_ic"
             android:drawablePadding="16dp"
             android:hint="@string/search"
             android:inputType="textNoSuggestions"
@@ -124,7 +124,7 @@
             android:id="@+id/view_dropshadow"
             android:layout_width="match_parent"
             android:layout_height="5dp"
-            android:background="@drawable/footerbar_dropshadow"
+            android:background="@drawable/bar_bottom_dropshadow"
             app:layout_constraintBottom_toTopOf="@+id/cl_bottom_bar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

@@ -23,9 +23,9 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 
-public class QuranHeaderbarFragment extends Fragment {
+public class MushafTopBarFragment extends Fragment {
 
-    private static final String TAG = QuranHeaderbarFragment.class.getSimpleName();
+    private static final String TAG = MushafTopBarFragment.class.getSimpleName();
 
     public static final int PAGE_DIR_RIGHT = 0;
     public static final int PAGE_DIR_LEFT = 1;
@@ -63,7 +63,7 @@ public class QuranHeaderbarFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_quran_headerbar, container, false);
+        View view = inflater.inflate(R.layout.fragment_mushaf_top_bar, container, false);
         butterknifeUnbinder = ButterKnife.bind(this, view);
         return view;
     }

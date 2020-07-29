@@ -75,7 +75,7 @@ import me.toptas.fancyshowcase.FancyShowCaseView;
 import me.toptas.fancyshowcase.FocusShape;
 
 
-public class MushafFragment extends Fragment implements MushafView, QuranFooterbarFragment.QuranFooterCallbacks
+public class MushafFragment extends Fragment implements MushafView, MushafBottomBarFragment.QuranFooterCallbacks
         , TranslationsDataFragment.TranslationSelectionListener, AyaAudioPopup.AyaAudioListener,
         AyaRecorderDialog.StopRecordingListener, QuranRecitersDialogFragment.ReciterSelectionListener,
         AyaRecorderPlayerDialog.AyaRecorderPlayerListener, AyaRepeatDialog.AyaRepeateListener {
@@ -133,8 +133,8 @@ public class MushafFragment extends Fragment implements MushafView, QuranFooterb
     private String bookDbName = "default", bookName;
     private BottomSheetBehavior sheetBehavior;
     private QuranViewPagerAdapter pagerAdapter;
-    private QuranFooterbarFragment footerbarFragment;
-    private QuranHeaderbarFragment headerbarFragment;
+    private MushafBottomBarFragment footerbarFragment;
+    private MushafTopBarFragment headerbarFragment;
     private Mus7fPresenter presenter;
     private boolean isBottomSheetVisible = false, isAudioDialogOpen = false, isAudioPlay = false;
     private boolean initAudioOnFirstAya = false, initAudioInRepeatGroup = false, initAyaFromNotifcation = false;
@@ -497,9 +497,9 @@ public class MushafFragment extends Fragment implements MushafView, QuranFooterb
 
     private void setPageDir() {
         if (quranPageIndex % 2 == 0) { // quranPageIndex is even
-            headerbarFragment.setPageDir(QuranHeaderbarFragment.PAGE_DIR_LEFT);
+            headerbarFragment.setPageDir(MushafTopBarFragment.PAGE_DIR_LEFT);
         } else { // quranPageIndex is odd
-            headerbarFragment.setPageDir(QuranHeaderbarFragment.PAGE_DIR_RIGHT);
+            headerbarFragment.setPageDir(MushafTopBarFragment.PAGE_DIR_RIGHT);
         }
     }
 
@@ -521,8 +521,8 @@ public class MushafFragment extends Fragment implements MushafView, QuranFooterb
         translationTv.setMovementMethod(new ScrollingMovementMethod());
         sheetBehavior = BottomSheetBehavior.from(constraintSheet);
         FragmentManager fragmentManager = getChildFragmentManager();
-        footerbarFragment = (QuranFooterbarFragment) fragmentManager.findFragmentById(R.id.footerbar_fragment);
-        headerbarFragment = (QuranHeaderbarFragment) fragmentManager.findFragmentById(R.id.toolbar_fragment);
+        footerbarFragment = (MushafBottomBarFragment) fragmentManager.findFragmentById(R.id.footerbar_fragment);
+        headerbarFragment = (MushafTopBarFragment) fragmentManager.findFragmentById(R.id.top_bar_fragment);
         presenter.getQuranPageInfo(quranPageIndex);
     }
 

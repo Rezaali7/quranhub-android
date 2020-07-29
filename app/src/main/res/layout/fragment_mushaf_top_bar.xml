@@ -79,6 +79,6 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dropshadow_height"
-        android:background="@drawable/toolbar_dropshadow" />
+        android:background="@drawable/bar_top_dropshadow" />
 
 </LinearLayout>

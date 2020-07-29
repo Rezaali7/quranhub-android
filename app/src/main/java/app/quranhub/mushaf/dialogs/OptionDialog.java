@@ -12,6 +12,7 @@ import android.view.Window;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -72,11 +73,12 @@ public class OptionDialog extends DialogFragment implements FilterAdapter.Option
 
 
     @Override
-    public void onAttach(Context context) {
+    public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         listener = (ItemClickListener) getParentFragment();
     }
 
+    @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         LayoutInflater inflater = getActivity().getLayoutInflater();
@@ -117,13 +119,12 @@ public class OptionDialog extends DialogFragment implements FilterAdapter.Option
     private void setRecyclerList() {
         adapter = new FilterAdapter(options, suraName, this, requestCode);
         suraRv.setLayoutManager(new LinearLayoutManager(getActivity()));
-        suraRv.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
+        suraRv.addItemDecoration(new DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL));
         suraRv.setAdapter(adapter);
     }
 
-
     private void intializeDialog() {
-        dialog = new Dialog(Objects.requireNonNull(getActivity()));
+        dialog = new Dialog(requireActivity());
         dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(dialogView);
         Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawableResource(android.R.color.transparent);
@@ -134,7 +135,6 @@ public class OptionDialog extends DialogFragment implements FilterAdapter.Option
             headerTv.setText(getArguments().getString(HEADER_ARGS));
         }
     }
-
 
     @Override
     public void onOptionClick(String suraName, int suraIndex) {

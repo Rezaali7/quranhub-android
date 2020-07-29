@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -21,11 +22,11 @@ import app.quranhub.mushaf.fragments.BooksLibraryFragment;
 import app.quranhub.mushaf.fragments.MushafFragment;
 import app.quranhub.mushaf.fragments.MyNotesFragment;
 import app.quranhub.mushaf.fragments.PdfViewerFragment;
+import app.quranhub.mushaf.fragments.QuranTopicsFragment;
 import app.quranhub.mushaf.fragments.SearchFragment;
-import app.quranhub.mushaf.fragments.SubjectsFragment;
 import app.quranhub.mushaf.fragments.SuraGuz2IndexFragment;
 import app.quranhub.mushaf.fragments.TafseerFragment;
-import app.quranhub.mushaf.fragments.TopicAyaFragment;
+import app.quranhub.mushaf.fragments.TopicAyasFragment;
 import app.quranhub.mushaf.listener.QuranNavigationCallbacks;
 import app.quranhub.mushaf.model.TopicCategory;
 import app.quranhub.settings.SettingsActivity;
@@ -89,14 +90,14 @@ public class MainActivity extends BaseActivity
         if (isDismissAllow && currentFragment.equals("mushaf")) {
             isDismissAllow = false;
             Fragment fragment = getSupportFragmentManager().findFragmentByTag("Mushaf");
-            if (fragment != null && fragment instanceof MushafFragment) {
+            if (fragment instanceof MushafFragment) {
                 ((MushafFragment) fragment).dismissAudioPopup();
             }
         }
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState = drawer.saveInstanceState(outState);
         outState.putString("fragment", currentFragment);
@@ -223,9 +224,9 @@ public class MainActivity extends BaseActivity
     @Override
     public void openTopics() {
         checkPrevFragment();
-        SubjectsFragment subjectsFragment = new SubjectsFragment();
+        QuranTopicsFragment quranTopicsFragment = new QuranTopicsFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, subjectsFragment);
+        transaction.replace(R.id.container, quranTopicsFragment);
         transaction.commit();
         currentFragment = "subjects";
     }
@@ -327,7 +328,7 @@ public class MainActivity extends BaseActivity
     public void openTopicAyasFragment(TopicCategory category) {
         checkPrevFragment();
         currentFragment = "tafseer";
-        TopicAyaFragment fragment = TopicAyaFragment.getInstance(category);
+        TopicAyasFragment fragment = TopicAyasFragment.getInstance(category);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.container, fragment);
         transaction.addToBackStack(null);

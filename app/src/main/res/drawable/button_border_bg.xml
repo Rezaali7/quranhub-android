@@ -3,11 +3,11 @@
 
     <corners android:radius="6dp" />
 
-    <gradient
-        android:endColor="#368F70"
-        android:startColor=" #33775F" />
-
     <stroke
         android:width="2dp"
         android:color="@color/white_color" />
+
+    <padding
+        android:left="@dimen/_6sdp"
+        android:right="@dimen/_6sdp" />
 </shape>

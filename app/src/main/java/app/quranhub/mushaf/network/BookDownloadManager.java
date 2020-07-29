@@ -63,7 +63,7 @@ public class BookDownloadManager {
 
     /**
      * Return the downloaded file size
-      */
+     */
     @SuppressLint("StaticFieldLeak")
     private void getFileSize(String uri) {
 

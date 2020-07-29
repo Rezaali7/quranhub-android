@@ -74,7 +74,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp"
                 android:background="@color/transparent_color"
-                android:drawableStart="@drawable/advanced_search_gray_ic"
+                android:drawableStart="@drawable/advanced_search_grey_ic"
                 android:drawablePadding="16dp"
                 android:hint="@string/search"
                 android:inputType="textNoSuggestions"

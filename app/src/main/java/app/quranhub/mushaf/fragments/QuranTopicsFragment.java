@@ -32,7 +32,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class SubjectsFragment extends Fragment implements ItemSelectionListener<TopicCategory> {
+public class QuranTopicsFragment extends Fragment implements ItemSelectionListener<TopicCategory> {
 
     @BindView(R.id.et_search)
     EditText searchEt;
@@ -58,7 +58,7 @@ public class SubjectsFragment extends Fragment implements ItemSelectionListener<
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_subjects, container, false);
+        View view = inflater.inflate(R.layout.fragment_quran_topics, container, false);
         ButterKnife.bind(this, view);
         intiRecycler();
         bindViewModel();

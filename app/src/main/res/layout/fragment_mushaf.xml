@@ -21,14 +21,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/toolbar_fragment"
-            android:name="app.quranhub.mushaf.fragments.QuranHeaderbarFragment"
+            android:id="@+id/top_bar_fragment"
+            android:name="app.quranhub.mushaf.fragments.MushafTopBarFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:layout="@layout/fragment_quran_headerbar" />
+            tools:layout="@layout/fragment_mushaf_top_bar" />
 
         <SeekBar
             android:id="@+id/quran_seekbar"
@@ -64,19 +64,19 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/footerbar_fragment"
-            android:name="app.quranhub.mushaf.fragments.QuranFooterbarFragment"
+            android:name="app.quranhub.mushaf.fragments.MushafBottomBarFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout="@layout/fragment_quran_footerbar" />
+            tools:layout="@layout/fragment_mushaf_bottom_bar" />
 
         <androidx.constraintlayout.widget.Group
             android:id="@+id/bars_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:constraint_referenced_ids="toolbar_fragment,footerbar_fragment" />
+            app:constraint_referenced_ids="top_bar_fragment,footerbar_fragment" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

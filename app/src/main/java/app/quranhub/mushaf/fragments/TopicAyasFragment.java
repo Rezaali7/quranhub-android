@@ -34,7 +34,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class TopicAyaFragment extends Fragment implements ItemSelectionListener<SearchModel> {
+public class TopicAyasFragment extends Fragment implements ItemSelectionListener<SearchModel> {
 
     @BindView(R.id.topics_rv)
     RecyclerView topicsRv;
@@ -53,10 +53,10 @@ public class TopicAyaFragment extends Fragment implements ItemSelectionListener<
     private TopicCategory category;
     private static final String CATEGORY_ARGS = "CATEGORY_ARGS";
 
-    public static TopicAyaFragment getInstance(TopicCategory category) {
+    public static TopicAyasFragment getInstance(TopicCategory category) {
         Bundle bundle = new Bundle();
         bundle.putParcelable(CATEGORY_ARGS, category);
-        TopicAyaFragment fragment = new TopicAyaFragment();
+        TopicAyasFragment fragment = new TopicAyasFragment();
         fragment.setArguments(bundle);
         return fragment;
     }
@@ -76,7 +76,7 @@ public class TopicAyaFragment extends Fragment implements ItemSelectionListener<
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_topic_aya, container, false);
+        View view = inflater.inflate(R.layout.fragment_topic_ayas, container, false);
         ButterKnife.bind(this, view);
         setViews();
         getPrevState(savedInstanceState);

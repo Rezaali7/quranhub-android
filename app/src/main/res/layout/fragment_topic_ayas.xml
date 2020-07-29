@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="app.quranhub.mushaf.fragments.SubjectsFragment">
+    tools:context="app.quranhub.mushaf.fragments.TopicAyasFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/toolbar_layout"
@@ -28,15 +28,20 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/topic_tv"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_24"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:ellipsize="end"
+            android:maxLines="2"
             android:text="@string/topics_menu"
             android:textColor="@color/white_color"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="@id/hamburger_iv"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/hamburger_iv"
-            app:layout_constraintTop_toTopOf="@id/hamburger_iv" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/et_search"
@@ -47,7 +52,7 @@
             android:layout_marginEnd="@dimen/dimen_16"
             android:layout_marginBottom="@dimen/dimen_8"
             android:background="@drawable/search_bar"
-            android:drawableStart="@drawable/advanced_search_gray_ic"
+            android:drawableStart="@drawable/advanced_search_grey_ic"
             android:drawablePadding="@dimen/dimen_16"
             android:hint="@string/search"
             android:inputType="textNoSuggestions"
@@ -55,8 +60,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hamburger_iv" />
-
+            app:layout_constraintTop_toBottomOf="@+id/topic_tv" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -64,7 +68,6 @@
         android:id="@+id/topics_rv"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/light_grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -12,7 +12,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dropshadow_height"
-        android:background="@drawable/footerbar_dropshadow" />
+        android:background="@drawable/bar_bottom_dropshadow" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -54,7 +54,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/advanced_search_gray_ic" />
+            app:srcCompat="@drawable/advanced_search_grey_ic" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

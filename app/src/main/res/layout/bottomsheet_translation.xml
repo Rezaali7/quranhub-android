@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottom_sheet"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white_color"
     app:behavior_hideable="false"
     app:behavior_peekHeight="0dp"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/dialog_header"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/top_corner_bg"
+        app:layout_constraintBottom_toTopOf="@id/dialog_body"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -31,7 +33,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <Button
             android:id="@+id/tv_book_name"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/_25sdp"
@@ -43,28 +45,17 @@
             android:gravity="center"
             android:maxWidth="@dimen/_90sdp"
             android:maxLines="1"
-            android:paddingLeft="@dimen/_6sdp"
-            android:paddingRight="@dimen/_6sdp"
             android:text="@string/translation_muyassar"
+            android:textAllCaps="false"
             android:textColor="@color/white_color"
             android:textSize="@dimen/text_14"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tafser_tv"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/close_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_8sdp"
-            android:src="@drawable/ic_close_dialog"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <Button
             android:id="@+id/more_btn"
-            android:layout_width="@dimen/_60sdp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/_25sdp"
             android:layout_marginTop="@dimen/_6sdp"
             android:layout_marginEnd="@dimen/_16sdp"
@@ -79,61 +70,86 @@
             app:layout_constraintEnd_toStartOf="@id/close_btn"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageButton
+            android:id="@+id/close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_close_dialog"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <TextView
-        android:id="@+id/translation_sheet_tv"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialog_body"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/white_color"
-        android:fadeScrollbars="false"
-        android:layoutDirection="ltr"
-        android:paddingTop="@dimen/_6sdp"
-        android:paddingBottom="@dimen/_6sdp"
-        android:scrollIndicators="end"
-        android:scrollbarStyle="insideInset"
-        android:scrollbars="vertical"
-        android:textSize="@dimen/text_14"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/next_iv"
-        app:layout_constraintStart_toEndOf="@+id/prev_iv"
-        app:layout_constraintTop_toBottomOf="@id/dialog_header" />
-
-    <ImageView
-        android:id="@+id/next_iv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_8sdp"
-        android:background="@color/white_color"
-        android:layoutDirection="ltr"
-        android:src="@drawable/ic_arrow_right"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dialog_header" />
-
-    <ImageView
-        android:id="@+id/prev_iv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_8sdp"
-        android:background="@color/white_color"
-        android:layoutDirection="ltr"
-        android:padding="0dp"
-        android:src="@drawable/ic_arrow_left"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dialog_header" />
-
-
-    <ProgressBar
-        android:id="@+id/sheet_progrees_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/_6sdp"
+        android:padding="@dimen/_8sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dialog_header" />
+        app:layout_constraintTop_toBottomOf="@id/dialog_header">
+
+        <TextView
+            android:id="@+id/translation_sheet_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white_color"
+            android:fadeScrollbars="false"
+            android:layoutDirection="ltr"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            android:scrollIndicators="end"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/next_iv"
+            app:layout_constraintStart_toEndOf="@+id/prev_iv"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="This is a test." />
+
+        <ImageButton
+            android:id="@+id/prev_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layoutDirection="ltr"
+            android:padding="0dp"
+            android:src="@drawable/ic_arrow_left"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/next_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layoutDirection="ltr"
+            android:src="@drawable/ic_arrow_right"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/sheet_progrees_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_6sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

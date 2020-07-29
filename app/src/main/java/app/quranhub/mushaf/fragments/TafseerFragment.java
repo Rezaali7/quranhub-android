@@ -42,9 +42,9 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-public class TafseerFragment extends Fragment
-        implements OptionDialog.ItemClickListener, TranslationsDataFragment.TranslationSelectionListener, OptionsListDialogFragment.ItemSelectionListener {
-
+public class TafseerFragment extends Fragment implements OptionDialog.ItemClickListener
+        , TranslationsDataFragment.TranslationSelectionListener
+        , OptionsListDialogFragment.ItemSelectionListener {
 
     @BindView(R.id.tafseer_rv)
     RecyclerView tafseerRv;
@@ -89,13 +89,12 @@ public class TafseerFragment extends Fragment
     }
 
     @Override
-    public void onAttach(Context context) {
+    public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         if (context instanceof ToolbarActionsListener) {
             navDrawerListener = (ToolbarActionsListener) context;
         }
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -222,10 +221,9 @@ public class TafseerFragment extends Fragment
         });
     }
 
-
     private void getArgumentsData() {
-        currentTafsserId = PreferencesUtils.getQuranTranslationBook(getActivity());
-        currentTafseerLang = PreferencesUtils.getQuranTranslationLanguage(getActivity());
+        currentTafsserId = PreferencesUtils.getQuranTranslationBook(requireActivity());
+        currentTafseerLang = PreferencesUtils.getQuranTranslationLanguage(requireActivity());
         if (getArguments() != null) {
             suraName = getArguments().getString(ARG_SURA_NAME);
             suraNumber = getArguments().getInt(ARG_SURA_NUMBER);
@@ -236,45 +234,44 @@ public class TafseerFragment extends Fragment
             suraTv.setText(suraName);
         }
         int currentTranslationLanguageIndex = Constants.SUPPORTED_LANGUAGES.CODES.indexOf(
-                PreferencesUtils.getQuranTranslationLanguage(getContext()));
+                PreferencesUtils.getQuranTranslationLanguage(requireContext()));
         langTv.setText(
                 getString(Constants.SUPPORTED_LANGUAGES.NAMES_STR_IDS[currentTranslationLanguageIndex]));
-
     }
 
     @OnClick(R.id.filter_sura_btn)
-    public void onOpenSuraFileter() {
+    public void onOpenSuraFilter() {
         String[] optionsArr = getResources().getStringArray(R.array.sura_name);
         ArrayList<String> options = new ArrayList<>();
         options.addAll(Arrays.asList(optionsArr));
-        DialogFragment fragment = OptionDialog.getInstance(options, suraName, 1, getString(R.string.chapters));
-        fragment.show(getChildFragmentManager(), "OptionDialog");
+        DialogFragment fragment = OptionDialog.getInstance(options, suraName, 1
+                , getString(R.string.suras));
+        fragment.show(getChildFragmentManager(), "trans_sura_dialog");
     }
 
     @OnClick(R.id.filter_book_btn)
     public void onOpenBooksFilter() {
-        String transLang = PreferencesUtils.getQuranTranslationLanguage(getContext());
-        TranslationsDialogFragment translationsDialog = TranslationsDialogFragment.newInstance(transLang, this);
-        translationsDialog.show(getFragmentManager(), "trans_dialog");
+        String transLang = PreferencesUtils.getQuranTranslationLanguage(requireContext());
+        TranslationsDialogFragment translationsDialog = TranslationsDialogFragment.newInstance(
+                transLang, this);
+        translationsDialog.show(getParentFragmentManager(), "trans_book_dialog");
     }
 
     @OnClick(R.id.filter_lang_btn)
     public void onOpenLangFilter() {
         int currentTranslationLanguageIndex = Constants.SUPPORTED_LANGUAGES.CODES.indexOf(
-                PreferencesUtils.getQuranTranslationLanguage(getContext()));
+                PreferencesUtils.getQuranTranslationLanguage(requireContext()));
         OptionsListDialogFragment translationLangDialog = OptionsListDialogFragment.getInstance(
                 getString(R.string.translation_lang_setting_dialog_title),
                 Constants.SUPPORTED_LANGUAGES.NAMES_STR_IDS, currentTranslationLanguageIndex
                 , this, RC_TRANS_LANG_SETTING);
-        translationLangDialog.show(getActivity().getSupportFragmentManager()
-                , "TransLangDialog");
+        translationLangDialog.show(getParentFragmentManager(), "trans_lang_dialog");
     }
 
     @OnClick(R.id.hamburger_iv)
     public void onNavHamburgerClick() {
         navDrawerListener.onNavDrawerClick();
     }
-
 
     @Override
     public void onTranslationSelected(TranslationBook translationBook) {
@@ -288,7 +285,7 @@ public class TafseerFragment extends Fragment
     @Override
     public void onItemSelected(int requestCode, int itemIndex) {
         String langCode = Constants.SUPPORTED_LANGUAGES.CODES.get(itemIndex);
-        PreferencesUtils.persistQuranTranslationLanguage(getContext(), langCode);
+        PreferencesUtils.persistQuranTranslationLanguage(requireContext(), langCode);
         currentTafseerLang = langCode;
         langTv.setText(getString(Constants.SUPPORTED_LANGUAGES.NAMES_STR_IDS[itemIndex]));
     }
