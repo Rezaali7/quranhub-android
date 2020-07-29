@@ -13,8 +13,8 @@
     <color name="transparent_color">@android:color/transparent</color>
     <color name="hint_grey">#B9C8C3</color>
     <color name="light_grey">#F0F0F0</color>
-    <color name="red_color">#dd1452</color>
     <color name="dark_grey">#DAA5A5A5</color>
+    <color name="red_color">#dd1452</color>
 
     <color name="dialog_color">@color/color_primary</color>
     <color name="aya_shadow_color">#3DB28752</color>
