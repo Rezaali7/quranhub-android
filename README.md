@@ -1,3 +1,5 @@
+![QuranHub Banner Image](https://www.quranhub.app/image/quranhub_banner.png)
+
 # QuranHub for Android
 
 [![PayPal Donation Badge](https://img.shields.io/badge/donate-PayPal-blue)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=abdallah.abdelazim96@gmail.com&lc=US&item_name=Donation+to+QuranHub&no_note=0&cn=&currency_code=USD&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted)
