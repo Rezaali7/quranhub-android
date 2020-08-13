@@ -39,7 +39,8 @@ import app.quranhub.utils.SharedPrefsUtil;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
-public class AyaAudioService extends BaseService implements MediaPlayer.OnPreparedListener, MediaPlayer.OnCompletionListener {
+public class AyaAudioService extends BaseService
+        implements MediaPlayer.OnPreparedListener, MediaPlayer.OnCompletionListener {
 
     private static final String NOTIFICATION_CHANNEL_ID = "AyaAudioService.NOTIFICATION_CHANNEL_ID";
     private static final int NOTIFICATION_ID = 2;

@@ -5,10 +5,6 @@
     <!-- 7 Inch screens (1.25 * standard sizes) -->
     <!---->
 
-    <dimen name="sidemenu_bg_height">170dp</dimen>
-    <dimen name="sidemenu_logo_width">160dp</dimen>
-    <dimen name="sidemenu_logo_height">150dp</dimen>
-
     <dimen name="dimen_2">4dp</dimen>
     <dimen name="dimen_4">8dp</dimen>
     <dimen name="dimen_6">10dp</dimen>
@@ -27,12 +23,13 @@
     <dimen name="text_18">20sp</dimen>
     <dimen name="text_20">22sp</dimen>
 
+    <dimen name="tab_bar_width">312dp</dimen>
+    <dimen name="tab_bar_height">32dp</dimen>
+
     <dimen name="icon_dialog_size">30dp</dimen>
     <dimen name="page_num_border_size">60dp</dimen>
 
     <dimen name="custom_toolbar_height">136dp</dimen>
-    <dimen name="tab_bar_width">312dp</dimen>
-    <dimen name="tab_bar_height">32dp</dimen>
     <dimen name="bookmark_item_body_height">72dp</dimen>
     <dimen name="filter_dialog_width">450dp</dimen>
     <dimen name="failed_img_dimens">200dp</dimen>

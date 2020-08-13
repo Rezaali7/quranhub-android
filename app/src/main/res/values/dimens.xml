@@ -5,13 +5,6 @@
     <!-- 4 inch screens (0.75 * standard sizes) -->
     <!---->
 
-    <dimen name="sidemenu_bg_height">105dp</dimen>
-    <dimen name="sidemenu_logo_width">105dp</dimen>
-    <dimen name="sidemenu_logo_height">90dp</dimen>
-
-    <dimen name="tab_bar_width">200dp</dimen>
-    <dimen name="tab_bar_height">24dp</dimen>
-
     <dimen name="dimen_2">2dp</dimen>
     <dimen name="dimen_4">2dp</dimen>
     <dimen name="dimen_6">4dp</dimen>
@@ -30,6 +23,9 @@
     <dimen name="text_18">16sp</dimen>
     <dimen name="text_20">18sp</dimen>
 
+    <dimen name="tab_bar_width">200dp</dimen>
+    <dimen name="tab_bar_height">24dp</dimen>
+
     <dimen name="icon_dialog_size">14dp</dimen>
 
     <dimen name="custom_toolbar_height">100dp</dimen>
@@ -45,6 +41,5 @@
     <!---->
 
     <dimen name="dropshadow_height">4dp</dimen>
-
 
 </resources>

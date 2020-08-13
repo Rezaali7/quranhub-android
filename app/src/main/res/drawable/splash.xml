@@ -7,7 +7,7 @@
 
     <!-- Logo -->
     <item
-        android:drawable="@drawable/quranhub_logo_144dp"
+        android:drawable="@drawable/quranhub_logo_dark_bg_144dp"
         android:gravity="center" />
 
 </layer-list>

@@ -5,10 +5,6 @@
     <!-- 5 Inch (standard sizes) -->
     <!---->
 
-    <dimen name="sidemenu_bg_height">140dp</dimen>
-    <dimen name="sidemenu_logo_width">140dp</dimen>
-    <dimen name="sidemenu_logo_height">120dp</dimen>
-
     <dimen name="dimen_2">2dp</dimen>
     <dimen name="dimen_4">4dp</dimen>
     <dimen name="dimen_6">6dp</dimen>
@@ -26,13 +22,14 @@
     <dimen name="text_18">18sp</dimen>
     <dimen name="text_20">20sp</dimen>
 
+    <dimen name="tab_bar_width">240dp</dimen>
+    <dimen name="tab_bar_height">28dp</dimen>
+
     <dimen name="icon_dialog_size">16dp</dimen>
 
     <dimen name="custom_toolbar_height">112dp</dimen>
     <dimen name="page_num_border_size">45dp</dimen>
 
-    <dimen name="tab_bar_width">240dp</dimen>
-    <dimen name="tab_bar_height">28dp</dimen>
     <dimen name="bookmark_item_body_height">64dp</dimen>
     <dimen name="filter_dialog_width">320dp</dimen>
     <dimen name="failed_img_dimens">180dp</dimen>

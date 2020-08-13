@@ -1,16 +1,14 @@
 package app.quranhub.utils;
 
 import android.app.Activity;
-import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 
 import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.Drawer.OnDrawerListener;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
@@ -29,24 +27,27 @@ public final class DrawerUtil {
     public static final int IDENTIFIER_BOOKMARKS = 4;
     public static final int IDENTIFIER_MY_NOTES = 5;
     public static final int IDENTIFIER_SETTINGS = 6;
-    public static final int IDENTIFIER_DOWNLOAD_MANAGER = 7;
-
+    public static final int IDENTIFIER_DOWNLOADS_MANAGER = 7;
 
     private DrawerUtil() { /* prevent instantiation */}
 
     /**
-     * creates and adds the side nav drawer to the passed activity.
+     * Creates and adds the side nav drawer to the passed activity.
      *
-     * @param activity           activity to add nav drawer to (must implement DrawerUtil.Mus7afDrawerItemClickListener).
-     * @param savedInstanceState
+     * @param activity           activity to add nav drawer to.
+     *                           Must implement {@link DrawerUtil.Mus7afDrawerItemClickListener}.
+     * @param savedInstanceState The passed activity's {@code savedInstanceState} bundle.
      * @return the drawer instance.
+     * @throws IllegalArgumentException if the passed activity doesn't implement
+     *                                  {@link DrawerUtil.Mus7afDrawerItemClickListener}.
      */
     @NonNull
-    public static Drawer initDrawer(Activity activity, Bundle savedInstanceState
-            , Drawer.OnDrawerListener onDrawerListener) {
+    public static Drawer initDrawer(@NonNull Activity activity, Bundle savedInstanceState
+            , @NonNull OnDrawerListener onDrawerListener) {
 
         if (!(activity instanceof Mus7afDrawerItemClickListener)) {
-            throw new IllegalArgumentException("The passed activity argument must implement DrawerUtil.Mus7afDrawerItemClickListener");
+            throw new IllegalArgumentException("The passed activity argument must implement " +
+                    "DrawerUtil.Mus7afDrawerItemClickListener");
         }
 
         Mus7afDrawerItemClickListener clickListener = (Mus7afDrawerItemClickListener) activity;
@@ -54,15 +55,11 @@ public final class DrawerUtil {
         Drawer drawer = new DrawerBuilder()
                 .withActivity(activity)
                 .withHasStableIds(true)
-                .withHeader(setNavHeader(activity)).withHeaderDivider(false)
+                .withHeader(R.layout.nav_drawer_header)
+                .withHeaderDivider(true)
                 .withActionBarDrawerToggle(false)
-                .withSliderBackgroundColorRes(android.R.color.white)
-                .withOnDrawerNavigationListener(new Drawer.OnDrawerNavigationListener() {
-                    @Override
-                    public boolean onNavigationClickListener(View clickedView) {
-                        return false;
-                    }
-                })
+                .withOnDrawerListener(onDrawerListener)
+                .withSavedInstance(savedInstanceState)
                 .addDrawerItems(
                         new PrimaryDrawerItem()
                                 .withName(activity.getString(R.string.mushaf))
@@ -125,7 +122,7 @@ public final class DrawerUtil {
                                 .withName(activity.getString(R.string.downloads_menu))
                                 .withTypeface(Typeface.createFromAsset(activity.getAssets(), "fonts/droid_arabic_kufi.ttf"))
                                 .withIcon(R.drawable.downloads_green_sidemenu_ic)
-                                .withIdentifier(IDENTIFIER_DOWNLOAD_MANAGER)
+                                .withIdentifier(IDENTIFIER_DOWNLOADS_MANAGER)
                                 .withTextColorRes(R.color.drawer_text_color)
                                 .withSelectedIcon(R.drawable.downloads_gold_sidemenu_ic)
                                 .withSelectedTextColorRes(R.color.drawer_selected_tint)
@@ -162,7 +159,7 @@ public final class DrawerUtil {
                                 Log.d(TAG, "Item 6 clicked: settings");
                                 clickListener.openSettings();
                                 break;
-                            case IDENTIFIER_DOWNLOAD_MANAGER:
+                            case IDENTIFIER_DOWNLOADS_MANAGER:
                                 Log.d(TAG, "Item 7 clicked: download manager");
                                 clickListener.openDownloadsManager();
                                 break;
@@ -171,19 +168,8 @@ public final class DrawerUtil {
                     }
                     return false;
                 })
-                .withOnDrawerListener(onDrawerListener)
-                .withSavedInstance(savedInstanceState)
                 .build();
         return drawer;
-    }
-
-    private static View setNavHeader(Context context) {
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.nav_header, null);
-        view.setOnClickListener(v -> {
-            // TODO
-        });
-        return view;
     }
 
     public interface Mus7afDrawerItemClickListener {
