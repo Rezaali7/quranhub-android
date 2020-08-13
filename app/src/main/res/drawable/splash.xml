@@ -2,14 +2,12 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android"
     android:opacity="opaque">
 
-    <item
-        android:id="@+id/background"
-        android:drawable="@color/color_primary" />
+    <!-- Background -->
+    <item android:drawable="?colorPrimaryDark" />
 
-    <item android:id="@+id/app_logo">
-        <bitmap
-            android:gravity="center"
-            android:src="@drawable/quranhub_logo_144dp" />
-    </item>
+    <!-- Logo -->
+    <item
+        android:drawable="@drawable/quranhub_logo_144dp"
+        android:gravity="center" />
 
 </layer-list>
